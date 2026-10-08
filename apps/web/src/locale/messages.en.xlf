@@ -6,8 +6,8 @@
         <note category="location">apps/web/src/app/home/home.ts:8,9</note>
       </notes>
       <segment>
-        <source>Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú.</source>
-        <target><pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;">Strong</pc> software, built in Peru.</target>
+        <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú. </source>
+        <target><pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">Strong</pc> software, built in Peru.</target>
       </segment>
     </unit>
     <unit id="hero.lead">
@@ -133,7 +133,7 @@
         <note category="location">apps/web/src/app/home/home.ts:45,47</note>
       </notes>
       <segment>
-        <source>Caso de estudio próximamente.</source>
+        <source> Caso de estudio próximamente. </source>
         <target>Case study coming soon.</target>
       </segment>
     </unit>

@@ -5,3 +5,6 @@
 /.nx/workspace-data
 .nx/self-healing
 .angular
+
+# pnpm owns its lockfile; formatting it makes every install rewrite the whole file
+pnpm-lock.yaml

@@ -1,0 +1,56 @@
+{
+  "rules": {
+    "color-no-hex": true,
+    "color-named": "never",
+    "function-disallowed-list": [
+      "rgb",
+      "rgba",
+      "hsl",
+      "hsla",
+      "hwb",
+      "lab",
+      "lch",
+      "oklab",
+      "oklch"
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.css"],
+      "extends": ["stylelint-config-standard", "stylelint-config-tailwindcss"],
+      "rules": {
+        "import-notation": "string",
+        "custom-property-pattern": [
+          "^[a-z][a-z0-9]*(-[a-z0-9]+)*(-\\*)?$",
+          {
+            "message": "Expected kebab-case, or a Tailwind namespace reset such as --color-*"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.scss"],
+      "extends": ["stylelint-config-standard-scss"],
+      "rules": {
+        "selector-pseudo-class-no-unknown": [
+          true,
+          {
+            "ignorePseudoClasses": ["host", "host-context"]
+          }
+        ],
+        "selector-pseudo-element-no-unknown": [
+          true,
+          {
+            "ignorePseudoElements": ["ng-deep"]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/src/styles.scss"],
+      "rules": {
+        "color-no-hex": null
+      }
+    }
+  ]
+}

@@ -36,7 +36,15 @@ export default [
       '**/*.cjs',
       '**/*.mjs',
     ],
-    // Override or add rules here
-    rules: {},
+    rules: {
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'TSEnumDeclaration',
+          message:
+            'No TypeScript enums; use a union of string literals or an `as const` object.',
+        },
+      ],
+    },
   },
 ];

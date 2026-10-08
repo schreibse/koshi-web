@@ -10,25 +10,15 @@ export default [
     rules: {
       '@angular-eslint/directive-selector': [
         'error',
-        {
-          type: 'attribute',
-          prefix: 'ks',
-          style: 'camelCase',
-        },
+        { type: 'attribute', prefix: 'ks', style: 'camelCase' },
       ],
       '@angular-eslint/component-selector': [
         'error',
-        {
-          type: 'element',
-          prefix: 'ks',
-          style: 'kebab-case',
-        },
+        { type: 'element', prefix: 'ks', style: 'kebab-case' },
       ],
+      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
+      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/prefer-output-emitter-ref': 'error',
     },
-  },
-  {
-    files: ['**/*.html'],
-    // Override or add rules here
-    rules: {},
   },
 ];

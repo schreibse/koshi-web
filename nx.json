@@ -31,6 +31,10 @@
     "@angular/build:unit-test": {
       "cache": true,
       "inputs": ["default", "^production"]
+    },
+    "stylelint": {
+      "cache": true,
+      "inputs": ["default", "{workspaceRoot}/.stylelintrc.json"]
     }
   },
   "generators": {

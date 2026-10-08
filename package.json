@@ -2,7 +2,10 @@
   "name": "@koshi/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky",
+    "commitlint": "commitlint --from origin/main --to HEAD --verbose"
+  },
   "private": true,
   "packageManager": "pnpm@11.20.0",
   "devDependencies": {
@@ -12,6 +15,8 @@
     "@angular/cli": "~22.1.0",
     "@angular/compiler-cli": "~22.1.0",
     "@angular/language-service": "~22.1.0",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
     "@eslint/js": "^9.8.0",
     "@nx/angular": "23.2.0",
     "@nx/eslint": "23.2.0",
@@ -22,14 +27,25 @@
     "@swc-node/register": "1.11.1",
     "@swc/core": "1.15.8",
     "@swc/helpers": "0.5.18",
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^24.0.0",
     "@typescript-eslint/utils": "^8.58.0",
     "angular-eslint": "^22.1.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
+    "lint-staged": "^17.6.0",
     "nx": "23.2.0",
+    "nx-stylelint": "^19.0.0",
+    "postcss": "^8.5.29",
     "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-config-tailwindcss": "^1.0.1",
+    "tailwindcss": "^4.3.3",
     "tslib": "^2.3.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.58.0",
@@ -47,5 +63,12 @@
     "@angular/router": "~22.1.0",
     "@angular/ssr": "~22.1.0",
     "rxjs": "~7.8.0"
+  },
+  "lint-staged": {
+    "!(*.{css,scss})": "prettier --write --ignore-unknown",
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
   }
 }

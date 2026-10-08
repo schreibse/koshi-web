@@ -1,13 +1,15 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 type Theme = 'dark' | 'light';
 
 @Component({
   selector: 'ks-theme-toggle',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <button
       type="button"
+      class="grid size-10 cursor-pointer place-items-center rounded-base border border-line bg-transparent text-ink"
       (click)="toggle()"
       i18n-aria-label="@@theme.toggle"
       aria-label="Cambiar tema claro/oscuro"
@@ -19,27 +21,12 @@ type Theme = 'dark' | 'light';
         fill="none"
         stroke="currentColor"
         stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
         aria-hidden="true"
       >
         <circle cx="12" cy="12" r="9" />
         <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
       </svg>
     </button>
-  `,
-  styles: `
-    button {
-      display: grid;
-      place-items: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: none;
-      color: var(--text);
-      cursor: pointer;
-    }
   `,
 })
 export class ThemeToggle {

@@ -1,19 +1,23 @@
-import { Component, LOCALE_ID, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'ks-language-switch',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <a [href]="href()" [attr.hreflang]="other" [attr.lang]="other">{{
-      other.toUpperCase()
-    }}</a>
-  `,
-  styles: `
-    a {
-      color: var(--text);
-      font-weight: 600;
-      text-decoration: none;
-    }
+    <a
+      class="font-semibold text-ink no-underline"
+      [href]="href()"
+      [attr.hreflang]="other"
+      [attr.lang]="other"
+    >
+      {{ other.toUpperCase() }}
+    </a>
   `,
 })
 export class LanguageSwitch {

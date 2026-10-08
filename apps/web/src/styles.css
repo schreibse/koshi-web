@@ -1,0 +1,20 @@
+/* Tailwind theme and utilities only; preflight stays out so Angular Material keeps its own base styles. */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source('./app');
+
+@theme inline {
+  --color-*: initial;
+  --color-page: var(--ks-page);
+  --color-surface: var(--ks-surface);
+  --color-ink: var(--ks-ink);
+  --color-muted: var(--ks-muted);
+  --color-accent: var(--ks-accent);
+  --color-on-accent: var(--ks-on-accent);
+  --color-line: var(--ks-line);
+  --font-*: initial;
+  --font-sans: var(--ks-font);
+  --radius-*: initial;
+  --radius-base: var(--ks-radius);
+}

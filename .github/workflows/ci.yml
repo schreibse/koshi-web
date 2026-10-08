@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
 
@@ -27,5 +29,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - if: github.event_name == 'pull_request'
+        run: pnpm exec commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
       - run: pnpm nx format:check --all
-      - run: pnpm nx run-many -t lint test build
+      - run: pnpm nx run-many -t lint stylelint test build

@@ -3,15 +3,15 @@
   <file id="ngi18n" original="ng.template">
     <unit id="hero.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:8,9</note>
+        <note category="location">apps/web/src/app/home/home.ts:10,12</note>
       </notes>
       <segment>
-        <source>Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú.</source>
+        <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú. </source>
       </segment>
     </unit>
     <unit id="hero.lead">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:10,12</note>
+        <note category="location">apps/web/src/app/home/home.ts:13,15</note>
       </notes>
       <segment>
         <source> Desarrollo frontend con Angular y backend con NestJS para empresas en Perú y el extranjero. </source>
@@ -19,7 +19,7 @@
     </unit>
     <unit id="hero.cta">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:13,14</note>
+        <note category="location">apps/web/src/app/home/home.ts:16,17</note>
       </notes>
       <segment>
         <source>Hablemos →</source>
@@ -27,7 +27,7 @@
     </unit>
     <unit id="hero.work">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:14,16</note>
+        <note category="location">apps/web/src/app/home/home.ts:17,19</note>
       </notes>
       <segment>
         <source>Ver proyectos</source>
@@ -35,7 +35,7 @@
     </unit>
     <unit id="services.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:20,21</note>
+        <note category="location">apps/web/src/app/home/home.ts:23,24</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -43,7 +43,7 @@
     </unit>
     <unit id="services.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:21,22</note>
+        <note category="location">apps/web/src/app/home/home.ts:24,25</note>
       </notes>
       <segment>
         <source>Lo que construyo</source>
@@ -51,7 +51,7 @@
     </unit>
     <unit id="services.frontend.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:24,25</note>
+        <note category="location">apps/web/src/app/home/home.ts:27,28</note>
       </notes>
       <segment>
         <source>Frontend con Angular</source>
@@ -59,7 +59,7 @@
     </unit>
     <unit id="services.frontend.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:25,28</note>
+        <note category="location">apps/web/src/app/home/home.ts:28,30</note>
       </notes>
       <segment>
         <source>Aplicaciones web rápidas, accesibles y fáciles de mantener.</source>
@@ -67,7 +67,7 @@
     </unit>
     <unit id="services.backend.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:28,29</note>
+        <note category="location">apps/web/src/app/home/home.ts:31,32</note>
       </notes>
       <segment>
         <source>Backend con NestJS</source>
@@ -75,7 +75,7 @@
     </unit>
     <unit id="services.backend.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:29,32</note>
+        <note category="location">apps/web/src/app/home/home.ts:32,34</note>
       </notes>
       <segment>
         <source>APIs y servicios en TypeScript, probados y documentados.</source>
@@ -83,7 +83,7 @@
     </unit>
     <unit id="services.team.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:32,33</note>
+        <note category="location">apps/web/src/app/home/home.ts:35,36</note>
       </notes>
       <segment>
         <source>Refuerzo para tu equipo</source>
@@ -91,7 +91,7 @@
     </unit>
     <unit id="services.team.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:33,35</note>
+        <note category="location">apps/web/src/app/home/home.ts:36,38</note>
       </notes>
       <segment>
         <source>Un desarrollador senior que se integra a tu equipo y proceso.</source>
@@ -99,7 +99,7 @@
     </unit>
     <unit id="work.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:41,42</note>
+        <note category="location">apps/web/src/app/home/home.ts:44,45</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -107,7 +107,7 @@
     </unit>
     <unit id="work.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:42,43</note>
+        <note category="location">apps/web/src/app/home/home.ts:45,46</note>
       </notes>
       <segment>
         <source>Trabajo reciente</source>
@@ -115,16 +115,16 @@
     </unit>
     <unit id="work.placeholder">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:44,45</note>
-        <note category="location">apps/web/src/app/home/home.ts:45,47</note>
+        <note category="location">apps/web/src/app/home/home.ts:48,50</note>
+        <note category="location">apps/web/src/app/home/home.ts:51,53</note>
       </notes>
       <segment>
-        <source>Caso de estudio próximamente.</source>
+        <source> Caso de estudio próximamente. </source>
       </segment>
     </unit>
     <unit id="process.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:52,53</note>
+        <note category="location">apps/web/src/app/home/home.ts:59,60</note>
       </notes>
       <segment>
         <source>Cómo trabajo</source>
@@ -132,7 +132,7 @@
     </unit>
     <unit id="process.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:53,54</note>
+        <note category="location">apps/web/src/app/home/home.ts:60,61</note>
       </notes>
       <segment>
         <source>Tres pasos, sin sorpresas</source>
@@ -140,7 +140,7 @@
     </unit>
     <unit id="process.talk.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:56,57</note>
+        <note category="location">apps/web/src/app/home/home.ts:64,65</note>
       </notes>
       <segment>
         <source>Conversamos</source>
@@ -148,7 +148,7 @@
     </unit>
     <unit id="process.talk.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:57,59</note>
+        <note category="location">apps/web/src/app/home/home.ts:65,67</note>
       </notes>
       <segment>
         <source>Entiendo tu objetivo, tu equipo y tu plazo.</source>
@@ -156,7 +156,7 @@
     </unit>
     <unit id="process.plan.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:60,61</note>
+        <note category="location">apps/web/src/app/home/home.ts:69,70</note>
       </notes>
       <segment>
         <source>Planificamos</source>
@@ -164,7 +164,7 @@
     </unit>
     <unit id="process.plan.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:61,63</note>
+        <note category="location">apps/web/src/app/home/home.ts:70,72</note>
       </notes>
       <segment>
         <source>Alcance claro, entregas cortas y un precio acordado.</source>
@@ -172,7 +172,7 @@
     </unit>
     <unit id="process.build.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:64,65</note>
+        <note category="location">apps/web/src/app/home/home.ts:74,75</note>
       </notes>
       <segment>
         <source>Construyo</source>
@@ -180,7 +180,7 @@
     </unit>
     <unit id="process.build.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:65,67</note>
+        <note category="location">apps/web/src/app/home/home.ts:75,77</note>
       </notes>
       <segment>
         <source>Avances visibles cada semana, código que tu equipo puede mantener.</source>
@@ -188,7 +188,7 @@
     </unit>
     <unit id="about.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:73,74</note>
+        <note category="location">apps/web/src/app/home/home.ts:83,84</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -196,7 +196,7 @@
     </unit>
     <unit id="about.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:74,75</note>
+        <note category="location">apps/web/src/app/home/home.ts:84,85</note>
       </notes>
       <segment>
         <source>Una persona, un compromiso</source>
@@ -204,7 +204,7 @@
     </unit>
     <unit id="about.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:76,78</note>
+        <note category="location">apps/web/src/app/home/home.ts:86,88</note>
       </notes>
       <segment>
         <source> Koshisoftware es una empresa individual en Perú. Trabajas directamente con quien escribe el código, en tu zona horaria y en tu idioma. </source>
@@ -212,7 +212,7 @@
     </unit>
     <unit id="contact.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:84,85</note>
+        <note category="location">apps/web/src/app/home/home.ts:94,95</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -220,7 +220,7 @@
     </unit>
     <unit id="contact.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:85,86</note>
+        <note category="location">apps/web/src/app/home/home.ts:95,96</note>
       </notes>
       <segment>
         <source>¿Tienes un proyecto en mente?</source>
@@ -228,7 +228,7 @@
     </unit>
     <unit id="contact.email">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:87,88</note>
+        <note category="location">apps/web/src/app/home/home.ts:97,98</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
@@ -236,7 +236,7 @@
     </unit>
     <unit id="footer.koshi">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-footer.ts:10,11</note>
+        <note category="location">apps/web/src/app/layout/site-footer.ts:12,13</note>
       </notes>
       <segment>
         <source>Koshi significa «fuerte» en shipibo.</source>
@@ -244,7 +244,7 @@
     </unit>
     <unit id="nav.services">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:13,14</note>
+        <note category="location">apps/web/src/app/layout/site-header.ts:15,16</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -252,7 +252,7 @@
     </unit>
     <unit id="nav.work">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:14,15</note>
+        <note category="location">apps/web/src/app/layout/site-header.ts:16,17</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -260,7 +260,7 @@
     </unit>
     <unit id="nav.about">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:15,16</note>
+        <note category="location">apps/web/src/app/layout/site-header.ts:17,18</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -268,7 +268,7 @@
     </unit>
     <unit id="nav.contact">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:16,18</note>
+        <note category="location">apps/web/src/app/layout/site-header.ts:18,20</note>
       </notes>
       <segment>
         <source>Hablemos</source>
@@ -276,7 +276,7 @@
     </unit>
     <unit id="theme.toggle">
       <notes>
-        <note category="location">apps/web/src/app/layout/theme-toggle.ts:9,10</note>
+        <note category="location">apps/web/src/app/layout/theme-toggle.ts:15,17</note>
       </notes>
       <segment>
         <source>Cambiar tema claro/oscuro</source>
