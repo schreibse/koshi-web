@@ -49,6 +49,19 @@ pnpm nx extract-i18n web           # refresh source messages after changing copy
 Commits follow [Conventional Commits](https://www.conventionalcommits.org) (checked by commitlint).
 `main` is protected: every change goes through a pull request with green CI.
 
+## Releasing
+
+Versions and `CHANGELOG.md` come from the Conventional Commits via Nx release. Because `main` is protected,
+a release lands as a pull request first and is tagged after the merge:
+
+```sh
+git switch -c release/next
+pnpm nx release --skip-publish           # bumps apps/web/package.json, writes CHANGELOG.md, commits
+# open a PR, rebase-merge it, then on main:
+git tag -a vX.Y.Z -m vX.Y.Z && git push origin vX.Y.Z
+gh release create vX.Y.Z --verify-tag --notes-file <(awk '/^## /{n++} n==1' CHANGELOG.md | tail -n +2)
+```
+
 ## License
 
 The code is [MIT](LICENSE)-licensed. The Koshisoftware name, wordmark, site copy and images are not
