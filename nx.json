@@ -24,7 +24,13 @@
         "testTargetName": "test"
       }
     },
-    "./tools/nx/path-tags.ts"
+    "./tools/nx/path-tags.ts",
+    {
+      "plugin": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
   ],
   "analytics": false,
   "targetDefaults": {

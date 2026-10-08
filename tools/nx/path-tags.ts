@@ -51,6 +51,16 @@ function tagsFor(root: string): string[] {
     return [`platform:${APPS[segments[1]]}`, 'type:app'];
   }
 
+  const tested = segments[1]?.replace(/-e2e$/, '');
+  if (
+    segments[0] === 'apps' &&
+    segments.length === 2 &&
+    segments[1] === `${tested}-e2e` &&
+    tested in APPS
+  ) {
+    return [`platform:${APPS[tested]}`, 'type:e2e'];
+  }
+
   if (segments[0] === 'libs' && segments.length === 4) {
     const [, platform, domain, type] = segments;
     if (LIB_TYPES[platform]?.includes(type) && KEBAB.test(domain)) {
@@ -59,7 +69,7 @@ function tagsFor(root: string): string[] {
   }
 
   throw new Error(
-    `${root} is outside the layout: apps/web, functions, or ` +
+    `${root} is outside the layout: apps/web, apps/web-e2e, functions, or ` +
       `libs/<frontend|shared>/<domain>/<type>.`,
   );
 }
