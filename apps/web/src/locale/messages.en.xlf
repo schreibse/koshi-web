@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es" trgLang="en">
+  <file id="ngi18n" original="ng.template">
+    <unit id="hero.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:8,9</note>
+      </notes>
+      <segment>
+        <source>Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú.</source>
+        <target><pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em&gt;" dispEnd="&lt;/em&gt;">Strong</pc> software, built in Peru.</target>
+      </segment>
+    </unit>
+    <unit id="hero.lead">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:10,12</note>
+      </notes>
+      <segment>
+        <source> Desarrollo frontend con Angular y backend con NestJS para empresas en Perú y el extranjero. </source>
+        <target>Angular frontend and NestJS backend development for companies in Peru and abroad.</target>
+      </segment>
+    </unit>
+    <unit id="hero.cta">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:13,14</note>
+      </notes>
+      <segment>
+        <source>Hablemos →</source>
+        <target>Let's talk →</target>
+      </segment>
+    </unit>
+    <unit id="hero.work">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:14,16</note>
+      </notes>
+      <segment>
+        <source>Ver proyectos</source>
+        <target>See projects</target>
+      </segment>
+    </unit>
+    <unit id="services.eyebrow">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:20,21</note>
+      </notes>
+      <segment>
+        <source>Servicios</source>
+        <target>Services</target>
+      </segment>
+    </unit>
+    <unit id="services.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:21,22</note>
+      </notes>
+      <segment>
+        <source>Lo que construyo</source>
+        <target>What I build</target>
+      </segment>
+    </unit>
+    <unit id="services.frontend.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:24,25</note>
+      </notes>
+      <segment>
+        <source>Frontend con Angular</source>
+        <target>Angular frontend</target>
+      </segment>
+    </unit>
+    <unit id="services.frontend.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:25,28</note>
+      </notes>
+      <segment>
+        <source>Aplicaciones web rápidas, accesibles y fáciles de mantener.</source>
+        <target>Fast, accessible web applications that are easy to maintain.</target>
+      </segment>
+    </unit>
+    <unit id="services.backend.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:28,29</note>
+      </notes>
+      <segment>
+        <source>Backend con NestJS</source>
+        <target>NestJS backend</target>
+      </segment>
+    </unit>
+    <unit id="services.backend.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:29,32</note>
+      </notes>
+      <segment>
+        <source>APIs y servicios en TypeScript, probados y documentados.</source>
+        <target>APIs and services in TypeScript, tested and documented.</target>
+      </segment>
+    </unit>
+    <unit id="services.team.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:32,33</note>
+      </notes>
+      <segment>
+        <source>Refuerzo para tu equipo</source>
+        <target>Extra hands for your team</target>
+      </segment>
+    </unit>
+    <unit id="services.team.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:33,35</note>
+      </notes>
+      <segment>
+        <source>Un desarrollador senior que se integra a tu equipo y proceso.</source>
+        <target>A senior developer who joins your team and your process.</target>
+      </segment>
+    </unit>
+    <unit id="work.eyebrow">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:41,42</note>
+      </notes>
+      <segment>
+        <source>Proyectos</source>
+        <target>Projects</target>
+      </segment>
+    </unit>
+    <unit id="work.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:42,43</note>
+      </notes>
+      <segment>
+        <source>Trabajo reciente</source>
+        <target>Recent work</target>
+      </segment>
+    </unit>
+    <unit id="work.placeholder">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:44,45</note>
+        <note category="location">apps/web/src/app/home/home.ts:45,47</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio próximamente.</source>
+        <target>Case study coming soon.</target>
+      </segment>
+    </unit>
+    <unit id="process.eyebrow">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:52,53</note>
+      </notes>
+      <segment>
+        <source>Cómo trabajo</source>
+        <target>How I work</target>
+      </segment>
+    </unit>
+    <unit id="process.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:53,54</note>
+      </notes>
+      <segment>
+        <source>Tres pasos, sin sorpresas</source>
+        <target>Three steps, no surprises</target>
+      </segment>
+    </unit>
+    <unit id="process.talk.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:56,57</note>
+      </notes>
+      <segment>
+        <source>Conversamos</source>
+        <target>We talk</target>
+      </segment>
+    </unit>
+    <unit id="process.talk.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:57,59</note>
+      </notes>
+      <segment>
+        <source>Entiendo tu objetivo, tu equipo y tu plazo.</source>
+        <target>I learn your goal, your team and your timeline.</target>
+      </segment>
+    </unit>
+    <unit id="process.plan.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:60,61</note>
+      </notes>
+      <segment>
+        <source>Planificamos</source>
+        <target>We plan</target>
+      </segment>
+    </unit>
+    <unit id="process.plan.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:61,63</note>
+      </notes>
+      <segment>
+        <source>Alcance claro, entregas cortas y un precio acordado.</source>
+        <target>Clear scope, short deliveries and an agreed price.</target>
+      </segment>
+    </unit>
+    <unit id="process.build.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:64,65</note>
+      </notes>
+      <segment>
+        <source>Construyo</source>
+        <target>I build</target>
+      </segment>
+    </unit>
+    <unit id="process.build.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:65,67</note>
+      </notes>
+      <segment>
+        <source>Avances visibles cada semana, código que tu equipo puede mantener.</source>
+        <target>Visible progress every week, code your team can maintain.</target>
+      </segment>
+    </unit>
+    <unit id="about.eyebrow">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:73,74</note>
+      </notes>
+      <segment>
+        <source>Nosotros</source>
+        <target>About</target>
+      </segment>
+    </unit>
+    <unit id="about.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:74,75</note>
+      </notes>
+      <segment>
+        <source>Una persona, un compromiso</source>
+        <target>One person, one commitment</target>
+      </segment>
+    </unit>
+    <unit id="about.text">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:76,78</note>
+      </notes>
+      <segment>
+        <source> Koshisoftware es una empresa individual en Perú. Trabajas directamente con quien escribe el código, en tu zona horaria y en tu idioma. </source>
+        <target>Koshisoftware is a single-owner company in Peru. You work directly with the person writing the code, in your time zone and your language.</target>
+      </segment>
+    </unit>
+    <unit id="contact.eyebrow">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:84,85</note>
+      </notes>
+      <segment>
+        <source>Contacto</source>
+        <target>Contact</target>
+      </segment>
+    </unit>
+    <unit id="contact.title">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:85,86</note>
+      </notes>
+      <segment>
+        <source>¿Tienes un proyecto en mente?</source>
+        <target>Have a project in mind?</target>
+      </segment>
+    </unit>
+    <unit id="contact.email">
+      <notes>
+        <note category="location">apps/web/src/app/home/home.ts:87,88</note>
+      </notes>
+      <segment>
+        <source>Escríbeme</source>
+        <target>Email me</target>
+      </segment>
+    </unit>
+    <unit id="footer.koshi">
+      <notes>
+        <note category="location">apps/web/src/app/layout/site-footer.ts:10,11</note>
+      </notes>
+      <segment>
+        <source>Koshi significa «fuerte» en shipibo.</source>
+        <target>Koshi means “strong” in Shipibo.</target>
+      </segment>
+    </unit>
+    <unit id="nav.services">
+      <notes>
+        <note category="location">apps/web/src/app/layout/site-header.ts:13,14</note>
+      </notes>
+      <segment>
+        <source>Servicios</source>
+        <target>Services</target>
+      </segment>
+    </unit>
+    <unit id="nav.work">
+      <notes>
+        <note category="location">apps/web/src/app/layout/site-header.ts:14,15</note>
+      </notes>
+      <segment>
+        <source>Proyectos</source>
+        <target>Projects</target>
+      </segment>
+    </unit>
+    <unit id="nav.about">
+      <notes>
+        <note category="location">apps/web/src/app/layout/site-header.ts:15,16</note>
+      </notes>
+      <segment>
+        <source>Nosotros</source>
+        <target>About</target>
+      </segment>
+    </unit>
+    <unit id="nav.contact">
+      <notes>
+        <note category="location">apps/web/src/app/layout/site-header.ts:16,18</note>
+      </notes>
+      <segment>
+        <source>Hablemos</source>
+        <target>Let's talk</target>
+      </segment>
+    </unit>
+    <unit id="theme.toggle">
+      <notes>
+        <note category="location">apps/web/src/app/layout/theme-toggle.ts:9,10</note>
+      </notes>
+      <segment>
+        <source>Cambiar tema claro/oscuro</source>
+        <target>Toggle light/dark theme</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
