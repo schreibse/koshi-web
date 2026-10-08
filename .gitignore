@@ -52,3 +52,5 @@ Thumbs.db
 
 __screenshots__/
 .claude/plans/
+
+vitest.config.*.timestamp*

@@ -33,4 +33,4 @@ jobs:
         run: pnpm exec commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
       - run: pnpm nx format:check --all
-      - run: pnpm nx run-many -t lint stylelint test build
+      - run: pnpm nx run-many -t lint stylelint typecheck test build

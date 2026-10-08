@@ -1,0 +1,12 @@
+{
+  "name": "functions",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "functions",
+  "projectType": "application",
+  "targets": {
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": { "command": "tsc --noEmit -p functions/tsconfig.json" }
+    }
+  }
+}

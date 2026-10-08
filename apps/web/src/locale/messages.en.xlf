@@ -3,7 +3,7 @@
   <file id="ngi18n" original="ng.template">
     <unit id="hero.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:8,9</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:10,12</note>
       </notes>
       <segment>
         <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú. </source>
@@ -12,7 +12,7 @@
     </unit>
     <unit id="hero.lead">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:10,12</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:13,15</note>
       </notes>
       <segment>
         <source> Desarrollo frontend con Angular y backend con NestJS para empresas en Perú y el extranjero. </source>
@@ -21,7 +21,7 @@
     </unit>
     <unit id="hero.cta">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:13,14</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:18,20</note>
       </notes>
       <segment>
         <source>Hablemos →</source>
@@ -30,7 +30,7 @@
     </unit>
     <unit id="hero.work">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:14,16</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:20,22</note>
       </notes>
       <segment>
         <source>Ver proyectos</source>
@@ -39,7 +39,7 @@
     </unit>
     <unit id="services.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:20,21</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:26,27</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -48,70 +48,70 @@
     </unit>
     <unit id="services.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:21,22</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:28,30</note>
       </notes>
       <segment>
-        <source>Lo que construyo</source>
+        <source> Lo que construyo </source>
         <target>What I build</target>
       </segment>
     </unit>
     <unit id="services.frontend.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:24,25</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:33,35</note>
       </notes>
       <segment>
-        <source>Frontend con Angular</source>
+        <source> Frontend con Angular </source>
         <target>Angular frontend</target>
       </segment>
     </unit>
     <unit id="services.frontend.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:25,28</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:36,38</note>
       </notes>
       <segment>
-        <source>Aplicaciones web rápidas, accesibles y fáciles de mantener.</source>
+        <source> Aplicaciones web rápidas, accesibles y fáciles de mantener. </source>
         <target>Fast, accessible web applications that are easy to maintain.</target>
       </segment>
     </unit>
     <unit id="services.backend.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:28,29</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:41,43</note>
       </notes>
       <segment>
-        <source>Backend con NestJS</source>
+        <source> Backend con NestJS </source>
         <target>NestJS backend</target>
       </segment>
     </unit>
     <unit id="services.backend.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:29,32</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:44,46</note>
       </notes>
       <segment>
-        <source>APIs y servicios en TypeScript, probados y documentados.</source>
+        <source> APIs y servicios en TypeScript, probados y documentados. </source>
         <target>APIs and services in TypeScript, tested and documented.</target>
       </segment>
     </unit>
     <unit id="services.team.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:32,33</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:49,51</note>
       </notes>
       <segment>
-        <source>Refuerzo para tu equipo</source>
+        <source> Refuerzo para tu equipo </source>
         <target>Extra hands for your team</target>
       </segment>
     </unit>
     <unit id="services.team.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:33,35</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:52,54</note>
       </notes>
       <segment>
-        <source>Un desarrollador senior que se integra a tu equipo y proceso.</source>
+        <source> Un desarrollador senior que se integra a tu equipo y proceso. </source>
         <target>A senior developer who joins your team and your process.</target>
       </segment>
     </unit>
     <unit id="work.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:41,42</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:61,62</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -120,17 +120,17 @@
     </unit>
     <unit id="work.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:42,43</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:63,65</note>
       </notes>
       <segment>
-        <source>Trabajo reciente</source>
+        <source> Trabajo reciente </source>
         <target>Recent work</target>
       </segment>
     </unit>
     <unit id="work.placeholder">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:44,45</note>
-        <note category="location">apps/web/src/app/home/home.ts:45,47</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:70,72</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:76,78</note>
       </notes>
       <segment>
         <source> Caso de estudio próximamente. </source>
@@ -139,7 +139,7 @@
     </unit>
     <unit id="process.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:52,53</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:84,85</note>
       </notes>
       <segment>
         <source>Cómo trabajo</source>
@@ -148,70 +148,70 @@
     </unit>
     <unit id="process.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:53,54</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:86,88</note>
       </notes>
       <segment>
-        <source>Tres pasos, sin sorpresas</source>
+        <source> Tres pasos, sin sorpresas </source>
         <target>Three steps, no surprises</target>
       </segment>
     </unit>
     <unit id="process.talk.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:56,57</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:92,94</note>
       </notes>
       <segment>
-        <source>Conversamos</source>
+        <source> Conversamos </source>
         <target>We talk</target>
       </segment>
     </unit>
     <unit id="process.talk.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:57,59</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:95,97</note>
       </notes>
       <segment>
-        <source>Entiendo tu objetivo, tu equipo y tu plazo.</source>
+        <source> Entiendo tu objetivo, tu equipo y tu plazo. </source>
         <target>I learn your goal, your team and your timeline.</target>
       </segment>
     </unit>
     <unit id="process.plan.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:60,61</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:101,103</note>
       </notes>
       <segment>
-        <source>Planificamos</source>
+        <source> Planificamos </source>
         <target>We plan</target>
       </segment>
     </unit>
     <unit id="process.plan.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:61,63</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:104,106</note>
       </notes>
       <segment>
-        <source>Alcance claro, entregas cortas y un precio acordado.</source>
+        <source> Alcance claro, entregas cortas y un precio acordado. </source>
         <target>Clear scope, short deliveries and an agreed price.</target>
       </segment>
     </unit>
     <unit id="process.build.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:64,65</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:110,112</note>
       </notes>
       <segment>
-        <source>Construyo</source>
+        <source> Construyo </source>
         <target>I build</target>
       </segment>
     </unit>
     <unit id="process.build.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:65,67</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:113,115</note>
       </notes>
       <segment>
-        <source>Avances visibles cada semana, código que tu equipo puede mantener.</source>
+        <source> Avances visibles cada semana, código que tu equipo puede mantener. </source>
         <target>Visible progress every week, code your team can maintain.</target>
       </segment>
     </unit>
     <unit id="about.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:73,74</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:122,123</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -220,16 +220,16 @@
     </unit>
     <unit id="about.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:74,75</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:124,126</note>
       </notes>
       <segment>
-        <source>Una persona, un compromiso</source>
+        <source> Una persona, un compromiso </source>
         <target>One person, one commitment</target>
       </segment>
     </unit>
     <unit id="about.text">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:76,78</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:127,129</note>
       </notes>
       <segment>
         <source> Koshisoftware es una empresa individual en Perú. Trabajas directamente con quien escribe el código, en tu zona horaria y en tu idioma. </source>
@@ -238,7 +238,7 @@
     </unit>
     <unit id="contact.eyebrow">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:84,85</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:135,136</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -247,16 +247,16 @@
     </unit>
     <unit id="contact.title">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:85,86</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:137,139</note>
       </notes>
       <segment>
-        <source>¿Tienes un proyecto en mente?</source>
+        <source> ¿Tienes un proyecto en mente? </source>
         <target>Have a project in mind?</target>
       </segment>
     </unit>
     <unit id="contact.email">
       <notes>
-        <note category="location">apps/web/src/app/home/home.ts:87,88</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:144,146</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
@@ -265,16 +265,16 @@
     </unit>
     <unit id="footer.koshi">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-footer.ts:10,11</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:13,15</note>
       </notes>
       <segment>
-        <source>Koshi significa «fuerte» en shipibo.</source>
+        <source> Koshi significa «fuerte» en shipibo. </source>
         <target>Koshi means “strong” in Shipibo.</target>
       </segment>
     </unit>
     <unit id="nav.services">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:13,14</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:23,26</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -283,7 +283,7 @@
     </unit>
     <unit id="nav.work">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:14,15</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:29,31</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -292,7 +292,7 @@
     </unit>
     <unit id="nav.about">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:15,16</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:35,37</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -301,7 +301,7 @@
     </unit>
     <unit id="nav.contact">
       <notes>
-        <note category="location">apps/web/src/app/layout/site-header.ts:16,18</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:38,40</note>
       </notes>
       <segment>
         <source>Hablemos</source>
@@ -310,7 +310,7 @@
     </unit>
     <unit id="theme.toggle">
       <notes>
-        <note category="location">apps/web/src/app/layout/theme-toggle.ts:9,10</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/theme-toggle.ts:15,18</note>
       </notes>
       <segment>
         <source>Cambiar tema claro/oscuro</source>

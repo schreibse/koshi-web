@@ -16,7 +16,6 @@
       }
     }
   },
-  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
@@ -75,20 +74,11 @@
         }
       }
     },
-    "lint": {
-      "executor": "@nx/eslint:lint"
-    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/web/**/*.css", "apps/web/**/*.scss"]
-      }
-    },
-    "test": {
-      "executor": "@angular/build:unit-test",
-      "options": {
-        "watch": false
       }
     },
     "serve-static": {

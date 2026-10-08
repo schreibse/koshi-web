@@ -1,0 +1,7 @@
+{
+  "name": "frontend-layout-ui",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/layout/ui/src",
+  "prefix": "ks",
+  "projectType": "library"
+}

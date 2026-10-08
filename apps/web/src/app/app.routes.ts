@@ -1,6 +1,10 @@
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
-  { path: '', loadComponent: () => import('./home/home').then((m) => m.Home) },
+  {
+    path: '',
+    loadComponent: () =>
+      import('@koshi/frontend/home/feature').then((m) => m.Home),
+  },
   { path: '**', redirectTo: '' },
 ];

@@ -1,4 +1,4 @@
-import { preferredLocale } from './preferred-locale';
+import { preferredLocale } from '@koshi/shared/locale/util';
 
 // Only `/` runs this function; everything else is served as static files.
 export const onRequestGet = ({ request }: { request: Request }): Response => {

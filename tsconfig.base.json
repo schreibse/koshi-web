@@ -13,7 +13,13 @@
     "lib": ["es2022", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "paths": {}
+    "paths": {
+      "@koshi/frontend/home/feature": [
+        "./libs/frontend/home/feature/src/index.ts"
+      ],
+      "@koshi/frontend/layout/ui": ["./libs/frontend/layout/ui/src/index.ts"],
+      "@koshi/shared/locale/util": ["./libs/shared/locale/util/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

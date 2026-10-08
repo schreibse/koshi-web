@@ -1,0 +1,7 @@
+{
+  "name": "frontend-home-feature",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/home/feature/src",
+  "prefix": "ks",
+  "projectType": "library"
+}

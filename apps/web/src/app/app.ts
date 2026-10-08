@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SiteFooter } from './layout/site-footer';
-import { SiteHeader } from './layout/site-header';
+import { SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
 
 @Component({
   imports: [RouterOutlet, SiteHeader, SiteFooter],
