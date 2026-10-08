@@ -34,3 +34,13 @@ jobs:
 
       - run: pnpm nx format:check --all
       - run: pnpm nx run-many -t lint stylelint typecheck test build
+
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm nx e2e web-e2e
+
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: dist/.playwright/apps/web-e2e/playwright-report
+          retention-days: 7
