@@ -9,11 +9,12 @@ import { Wordmark } from './wordmark';
   template: `
     <div class="mx-auto max-w-6xl px-4 md:px-10">
       <ks-wordmark />
-      <p class="text-muted" i18n="@@footer.koshi">
-        Koshi significa «fuerte» en shipibo.
-      </p>
-      <p class="mt-4 text-muted">
-        Koshisoftware E.I.R.L. · RUC 00000000000 · Lima, Perú
+      <p class="mt-4 flex flex-col text-muted md:flex-row md:gap-2">
+        <span>KOSHISOFTWARE E.I.R.L.</span>
+        <span class="hidden md:inline" aria-hidden="true">·</span>
+        <span>RUC 20612884201</span>
+        <span class="hidden md:inline" aria-hidden="true">·</span>
+        <span>Punta Hermosa, Lima, Perú</span>
       </p>
     </div>
   `,
