@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'ks-home',
@@ -149,4 +150,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </section>
   `,
 })
-export class Home {}
+export class Home {
+  constructor() {
+    inject(Meta).updateTag({
+      name: 'description',
+      content: $localize`:@@home.description:Koshisoftware desarrolla aplicaciones web con Angular y NestJS para empresas en Perú y el extranjero.`,
+    });
+  }
+}

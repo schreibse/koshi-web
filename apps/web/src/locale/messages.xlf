@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es">
   <file id="ngi18n" original="ng.template">
+    <unit id="home.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:6</note>
+      </notes>
+      <segment>
+        <source>Koshisoftware · Desarrollo Angular y NestJS en Perú</source>
+      </segment>
+    </unit>
     <unit id="hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:10,12</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:11,13</note>
       </notes>
       <segment>
         <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">fuerte</pc>, hecho en Perú. </source>
@@ -11,7 +19,7 @@
     </unit>
     <unit id="hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:13,15</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:14,16</note>
       </notes>
       <segment>
         <source> Desarrollo frontend con Angular y backend con NestJS para empresas en Perú y el extranjero. </source>
@@ -19,7 +27,7 @@
     </unit>
     <unit id="hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:18,20</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:19,21</note>
       </notes>
       <segment>
         <source>Hablemos →</source>
@@ -27,7 +35,7 @@
     </unit>
     <unit id="hero.work">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:20,22</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:21,23</note>
       </notes>
       <segment>
         <source>Ver proyectos</source>
@@ -35,7 +43,7 @@
     </unit>
     <unit id="services.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:26,27</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:27,28</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -43,7 +51,7 @@
     </unit>
     <unit id="services.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:28,30</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:29,31</note>
       </notes>
       <segment>
         <source> Lo que construyo </source>
@@ -51,7 +59,7 @@
     </unit>
     <unit id="services.frontend.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:33,35</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:34,36</note>
       </notes>
       <segment>
         <source> Frontend con Angular </source>
@@ -59,7 +67,7 @@
     </unit>
     <unit id="services.frontend.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:36,38</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:37,39</note>
       </notes>
       <segment>
         <source> Aplicaciones web rápidas, accesibles y fáciles de mantener. </source>
@@ -67,7 +75,7 @@
     </unit>
     <unit id="services.backend.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:41,43</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:42,44</note>
       </notes>
       <segment>
         <source> Backend con NestJS </source>
@@ -75,7 +83,7 @@
     </unit>
     <unit id="services.backend.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:44,46</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:45,47</note>
       </notes>
       <segment>
         <source> APIs y servicios en TypeScript, probados y documentados. </source>
@@ -83,7 +91,7 @@
     </unit>
     <unit id="services.team.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:49,51</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:50,52</note>
       </notes>
       <segment>
         <source> Refuerzo para tu equipo </source>
@@ -91,7 +99,7 @@
     </unit>
     <unit id="services.team.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:52,54</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:53,55</note>
       </notes>
       <segment>
         <source> Un desarrollador senior que se integra a tu equipo y proceso. </source>
@@ -99,7 +107,7 @@
     </unit>
     <unit id="work.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:61,62</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:62,63</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -107,7 +115,7 @@
     </unit>
     <unit id="work.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:63,65</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:64,66</note>
       </notes>
       <segment>
         <source> Trabajo reciente </source>
@@ -115,8 +123,8 @@
     </unit>
     <unit id="work.placeholder">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:70,72</note>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:76,78</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:71,73</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:77,79</note>
       </notes>
       <segment>
         <source> Caso de estudio próximamente. </source>
@@ -124,7 +132,7 @@
     </unit>
     <unit id="process.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:84,85</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:85,86</note>
       </notes>
       <segment>
         <source>Cómo trabajo</source>
@@ -132,7 +140,7 @@
     </unit>
     <unit id="process.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:86,88</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:87,89</note>
       </notes>
       <segment>
         <source> Tres pasos, sin sorpresas </source>
@@ -140,7 +148,7 @@
     </unit>
     <unit id="process.talk.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:92,94</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:93,95</note>
       </notes>
       <segment>
         <source> Conversamos </source>
@@ -148,7 +156,7 @@
     </unit>
     <unit id="process.talk.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:95,97</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:96,98</note>
       </notes>
       <segment>
         <source> Entiendo tu objetivo, tu equipo y tu plazo. </source>
@@ -156,7 +164,7 @@
     </unit>
     <unit id="process.plan.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:101,103</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:102,104</note>
       </notes>
       <segment>
         <source> Planificamos </source>
@@ -164,7 +172,7 @@
     </unit>
     <unit id="process.plan.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:104,106</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:105,107</note>
       </notes>
       <segment>
         <source> Alcance claro, entregas cortas y un precio acordado. </source>
@@ -172,7 +180,7 @@
     </unit>
     <unit id="process.build.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:110,112</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:111,113</note>
       </notes>
       <segment>
         <source> Construyo </source>
@@ -180,7 +188,7 @@
     </unit>
     <unit id="process.build.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:113,115</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:114,116</note>
       </notes>
       <segment>
         <source> Avances visibles cada semana, código que tu equipo puede mantener. </source>
@@ -188,7 +196,7 @@
     </unit>
     <unit id="about.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:122,123</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:123,124</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -196,7 +204,7 @@
     </unit>
     <unit id="about.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:124,126</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:125,127</note>
       </notes>
       <segment>
         <source> Una persona, un compromiso </source>
@@ -204,7 +212,7 @@
     </unit>
     <unit id="about.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:127,129</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:128,130</note>
       </notes>
       <segment>
         <source> Koshisoftware es una empresa individual en Perú. Trabajas directamente con quien escribe el código, en tu zona horaria y en tu idioma. </source>
@@ -212,7 +220,7 @@
     </unit>
     <unit id="contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:135,136</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:136,137</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -220,7 +228,7 @@
     </unit>
     <unit id="contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:137,139</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:138,140</note>
       </notes>
       <segment>
         <source> ¿Tienes un proyecto en mente? </source>
@@ -228,10 +236,18 @@
     </unit>
     <unit id="contact.email">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:144,146</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:145,147</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
+      </segment>
+    </unit>
+    <unit id="home.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:157</note>
+      </notes>
+      <segment>
+        <source>Koshisoftware desarrolla aplicaciones web con Angular y NestJS para empresas en Perú y el extranjero.</source>
       </segment>
     </unit>
     <unit id="footer.koshi">
