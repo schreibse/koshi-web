@@ -31,7 +31,11 @@
             "input": "apps/web/public"
           }
         ],
-        "styles": ["apps/web/src/styles.css", "apps/web/src/styles.scss"],
+        "styles": [
+          "@fontsource-variable/geist/index.css",
+          "apps/web/src/styles.css",
+          "apps/web/src/styles.scss"
+        ],
         "server": "apps/web/src/main.server.ts",
         "outputMode": "static",
         "localize": true,
