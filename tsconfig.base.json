@@ -18,7 +18,13 @@
         "./libs/frontend/home/feature/src/index.ts"
       ],
       "@koshi/frontend/layout/ui": ["./libs/frontend/layout/ui/src/index.ts"],
-      "@koshi/shared/locale/util": ["./libs/shared/locale/util/src/index.ts"]
+      "@koshi/shared/locale/util": ["./libs/shared/locale/util/src/index.ts"],
+      "@koshi/shared/reclamacion/util": [
+        "./libs/shared/reclamacion/util/src/index.ts"
+      ],
+      "@koshi/frontend/reclamaciones/feature": [
+        "./libs/frontend/reclamaciones/feature/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -21,6 +21,20 @@ export const appRoutes: Route[] = [
     component: Home,
   },
   {
+    path: 'libro-de-reclamaciones',
+    title: $localize`:@@reclamaciones.pageTitle:Libro de Reclamaciones · Koshisoftware`,
+    loadComponent: () =>
+      import('@koshi/frontend/reclamaciones/feature').then(
+        (m) => m.LibroDeReclamaciones,
+      ),
+  },
+  {
+    path: 'libro-de-reclamaciones/hoja',
+    title: $localize`:@@recibo.pageTitle:Hoja de reclamación · Koshisoftware`,
+    loadComponent: () =>
+      import('@koshi/frontend/reclamaciones/feature').then((m) => m.Recibo),
+  },
+  {
     path: slug('empresas', locale),
     title: $localize`:@@empresas.pageTitle:Webs para empresas en Perú · Koshisoftware`,
     component: Empresas,

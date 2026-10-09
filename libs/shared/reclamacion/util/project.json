@@ -1,0 +1,6 @@
+{
+  "name": "shared-reclamacion-util",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/reclamacion/util/src",
+  "projectType": "library"
+}
