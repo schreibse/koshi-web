@@ -16,7 +16,7 @@ import {
   required,
 } from '@angular/forms/signals';
 import { Meta } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import {
   Contacto,
   DOCUMENTOS,
@@ -51,7 +51,7 @@ const contactoVacio = (): Contacto => ({
 
 @Component({
   selector: 'ks-libro-de-reclamaciones',
-  imports: [Campo, FormField, FormRoot, Proveedor],
+  imports: [Campo, FormField, FormRoot, Proveedor, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     .grupo {
@@ -310,6 +310,11 @@ const contactoVacio = (): Contacto => ({
         </fieldset>
 
         <div class="grid gap-5 border-t border-line pt-8">
+          <p class="text-sm text-muted" i18n="@@reclamaciones.privacy">
+            Usamos tus datos solo para atender esta reclamación y los guardamos
+            dos años en servidores de Cloudflare, fuera del Perú. Más en la
+            <a routerLink="privacidad">política de privacidad</a>.
+          </p>
           <ks-campo [state]="hoja.conforme()">
             <span class="flex items-start gap-3">
               <input
