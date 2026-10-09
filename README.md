@@ -1,13 +1,14 @@
 # koshisoftware
 
 [![CI](https://github.com/schreibse/koshi-web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/schreibse/koshi-web/actions/workflows/ci.yml)
+[![Deploy](https://img.shields.io/github/check-runs/schreibse/koshi-web/main?nameFilter=Cloudflare%20Pages&logo=cloudflare&label=deploy)](https://koshisoftware.pages.dev)
 [![License: MIT](https://img.shields.io/github/license/schreibse/koshi-web)](LICENSE)
 [![Angular](https://img.shields.io/github/package-json/dependency-version/schreibse/koshi-web/@angular/core?logo=angular&label=angular)](https://angular.dev)
 [![Nx](https://img.shields.io/github/package-json/dependency-version/schreibse/koshi-web/dev/nx?logo=nx&label=nx)](https://nx.dev)
 [![TypeScript](https://img.shields.io/github/package-json/dependency-version/schreibse/koshi-web/dev/typescript?logo=typescript&label=typescript)](https://www.typescriptlang.org)
 
 The website of Koshisoftware E.I.R.L.: senior Angular frontend and NestJS backend work for
-clients in Peru and abroad. _Koshi_ means "strong" in Shipibo.
+clients in Peru and abroad.
 
 The site is bilingual (Spanish and English), prerendered to static HTML and deployed to Cloudflare Pages.
 
