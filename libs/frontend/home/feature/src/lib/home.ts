@@ -1,24 +1,39 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { HeroEditor } from './hero-editor';
 
 @Component({
   selector: 'ks-home',
+  imports: [HeroEditor],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="mx-auto max-w-6xl px-4 py-20 md:px-10 md:py-36">
-      <span class="eyebrow">Angular · NestJS · TypeScript</span>
-      <h1 class="max-w-[14ch] text-5xl md:text-7xl" i18n="@@hero.title">
-        Software <em class="text-accent not-italic">fuerte</em>, hecho en Perú.
-      </h1>
-      <p class="mt-6 max-w-xl text-xl text-muted" i18n="@@hero.lead">
-        Desarrollo frontend con Angular y backend con NestJS para empresas en
-        Perú y el extranjero.
-      </p>
-      <div class="mt-10 flex flex-wrap gap-3">
-        <a href="#contacto" class="btn btn-primary" i18n="@@hero.cta"
-          >Hablemos →</a
-        >
-        <a href="#proyectos" class="btn" i18n="@@hero.work">Ver proyectos</a>
+    <section class="overflow-x-clip">
+      <div
+        class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-14 px-4 py-20 md:px-10 md:py-28 lg:grid-cols-2"
+      >
+        <div>
+          <span class="eyebrow">Angular · NestJS · TypeScript</span>
+          <h1
+            class="max-w-[14ch] text-5xl md:text-7xl lg:text-6xl"
+            i18n="@@hero.title"
+          >
+            Software <em class="text-accent not-italic">fuerte</em>, hecho en
+            Perú.
+          </h1>
+          <p class="mt-6 max-w-xl text-xl text-muted" i18n="@@hero.lead">
+            Desarrollo frontend con Angular y backend con NestJS para empresas
+            en Perú y el extranjero.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a href="#contacto" class="btn btn-primary" i18n="@@hero.cta"
+              >Hablemos →</a
+            >
+            <a href="#proyectos" class="btn" i18n="@@hero.work"
+              >Ver proyectos</a
+            >
+          </div>
+        </div>
+        <ks-hero-editor />
       </div>
     </section>
 

@@ -335,5 +335,32 @@
         <target>Toggle light/dark theme</target>
       </segment>
     </unit>
+    <unit id="hero.code.web">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:23</note>
+      </notes>
+      <segment>
+        <source>Lista de pedidos con signals</source>
+        <target>Order list with signals</target>
+      </segment>
+    </unit>
+    <unit id="hero.code.api">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:40</note>
+      </notes>
+      <segment>
+        <source>API de pedidos, probada y documentada</source>
+        <target>Orders API, tested and documented</target>
+      </segment>
+    </unit>
+    <unit id="hero.code.tabs">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:81,82</note>
+      </notes>
+      <segment>
+        <source>Código de ejemplo</source>
+        <target>Sample code</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

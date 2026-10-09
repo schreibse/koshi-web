@@ -33,6 +33,7 @@
         ],
         "styles": [
           "@fontsource-variable/geist/index.css",
+          "@fontsource-variable/geist-mono/index.css",
           "apps/web/src/styles.css",
           "apps/web/src/styles.scss"
         ],
