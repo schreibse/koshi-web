@@ -5,5 +5,5 @@ compatibility_date = "2026-10-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "koshi-reclamaciones"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "44544861-9656-4972-b0c5-8f2ace9fd9f4"
 migrations_dir = "functions/migrations"
