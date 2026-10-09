@@ -19,7 +19,7 @@
     </unit>
     <unit id="hero.code.api">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:40</note>
+        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:50</note>
       </notes>
       <segment>
         <source>API de pedidos, probada y documentada</source>
@@ -27,7 +27,7 @@
     </unit>
     <unit id="hero.code.tabs">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:81,82</note>
+        <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:101,103</note>
       </notes>
       <segment>
         <source>Código de ejemplo</source>
