@@ -7,7 +7,12 @@
   --ks-on-accent: #1c1410;
   --ks-line: #3d2c20;
   --ks-font: 'Geist Variable', system-ui, sans-serif;
+  --ks-font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --ks-radius: 4px;
+  --ks-code-string: #a3b98a;
+  --ks-window-shadow:
+    0 50px 90px -10px #000, 0 20px 30px -10px #000, 0 0 0 1px #ffffff26;
+  --ks-window-backdrop: #4d3929;
 
   color-scheme: dark;
 }
@@ -20,6 +25,9 @@
   --ks-accent: #a4442b;
   --ks-on-accent: #f4eee3;
   --ks-line: #d9cdbb;
+  --ks-code-string: #4a6838;
+  --ks-window-shadow: 0 30px 60px -20px #000a;
+  --ks-window-backdrop: transparent;
 
   color-scheme: light;
 }
@@ -72,6 +80,24 @@
     border-color: var(--ks-accent);
     background: var(--ks-accent);
     color: var(--ks-on-accent);
+  }
+
+  /* A black shadow is invisible on the near-black page, so dark mode lifts the area behind the window. */
+  .window-backdrop {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      background: radial-gradient(
+        closest-side,
+        var(--ks-window-backdrop),
+        transparent
+      );
+      content: '';
+      inset: -30% -20%;
+    }
   }
 
   .eyebrow {

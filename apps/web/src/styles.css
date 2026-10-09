@@ -15,8 +15,10 @@
   --color-accent: var(--ks-accent);
   --color-on-accent: var(--ks-on-accent);
   --color-line: var(--ks-line);
+  --color-code-string: var(--ks-code-string);
   --font-*: initial;
   --font-sans: var(--ks-font);
+  --font-mono: var(--ks-font-mono);
   --radius-*: initial;
   --radius-base: var(--ks-radius);
 }
