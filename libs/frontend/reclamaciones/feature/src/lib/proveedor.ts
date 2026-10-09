@@ -15,7 +15,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <dt class="text-muted" i18n="@@reclamaciones.provider.address">
         Dirección
       </dt>
-      <dd>Punta Hermosa, Lima, Perú</dd>
+      <dd>
+        MZA. J2 LOTE. 7 DPTO. 301 OTR. MALECÓN SUPERIOR LIMA - LIMA - PUNTA
+        HERMOSA
+      </dd>
     </dl>
   `,
 })
