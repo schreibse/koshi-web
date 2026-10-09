@@ -274,14 +274,6 @@
         <source>Koshisoftware desarrolla aplicaciones web con Angular y NestJS para empresas en Perú y el extranjero.</source>
       </segment>
     </unit>
-    <unit id="footer.koshi">
-      <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:13,15</note>
-      </notes>
-      <segment>
-        <source> Koshi significa «fuerte» en shipibo. </source>
-      </segment>
-    </unit>
     <unit id="nav.services">
       <notes>
         <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:23,26</note>
