@@ -1,5 +1,5 @@
-const SUPPORTED = ['es', 'en'] as const;
-type Locale = (typeof SUPPORTED)[number];
+export const SUPPORTED_LOCALES = ['es', 'en'] as const;
+type Locale = (typeof SUPPORTED_LOCALES)[number];
 const FALLBACK: Locale = 'en';
 
 export function preferredLocale(acceptLanguage: string | null): Locale {
@@ -16,7 +16,7 @@ export function preferredLocale(acceptLanguage: string | null): Locale {
     .filter(({ q }) => q > 0)
     .sort((a, b) => b.q - a.q);
   const match = ranked.find(({ language }) =>
-    (SUPPORTED as readonly string[]).includes(language),
+    (SUPPORTED_LOCALES as readonly string[]).includes(language),
   );
   return (match?.language as Locale) ?? FALLBACK;
 }
