@@ -105,7 +105,7 @@ const kindClass: Record<Kind, string> = {
                 type="button"
                 role="tab"
                 [id]="'hero-tab-' + tab"
-                aria-controls="hero-code"
+                [attr.aria-controls]="'hero-code-' + tab"
                 [attr.aria-selected]="tab === active()"
                 [tabIndex]="tab === active() ? 0 : -1"
                 class="cursor-pointer rounded-[5px] border-0 px-3 py-0.5 font-sans"
@@ -138,19 +138,26 @@ const kindClass: Record<Kind, string> = {
             </svg>
           </span>
         </div>
-        <pre
-          id="hero-code"
-          role="tabpanel"
-          tabindex="0"
-          [attr.aria-labelledby]="'hero-tab-' + active()"
-          class="m-0 overflow-x-auto px-5 py-4 font-mono text-[0.78rem] leading-[1.7]"
-        ><code>@for (line of file().lines; track $index) {<span class="block min-h-[1lh]">@for (token of line; track $index) {<span [class]="classOf(token)">{{ textOf(token) }}</span>}</span>}</code></pre>
+        <!-- Both panels share one cell, so the window keeps the taller one's height when they swap. -->
+        <div class="grid">
+          @for (tab of tabs; track tab) {
+            <pre
+              [id]="'hero-code-' + tab"
+              role="tabpanel"
+              tabindex="0"
+              [attr.aria-labelledby]="'hero-tab-' + tab"
+              class="m-0 overflow-x-auto px-5 py-4 font-mono text-[0.78rem] leading-[1.7] [grid-area:1/1]"
+              [class.invisible]="tab !== active()"
+            ><code>@for (line of files[tab].lines; track $index) {<span class="block min-h-[1lh]">@for (token of line; track $index) {<span [class]="classOf(token)">{{ textOf(token) }}</span>}</span>}</code></pre>
+          }
+        </div>
       </div>
     </div>
   `,
 })
 export class HeroEditor {
   protected readonly tabs: readonly Tab[] = ['web', 'api'];
+  protected readonly files = files;
   protected readonly active = signal<Tab>('web');
   protected readonly file = computed(() => files[this.active()]);
   protected paused = false;

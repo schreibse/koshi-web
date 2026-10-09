@@ -23,7 +23,7 @@ describe('HeroEditor', () => {
     const host = fixture.nativeElement as HTMLElement;
     return {
       title: () => host.querySelector('.font-bold')?.textContent?.trim(),
-      code: () => host.querySelector('pre')?.textContent ?? '',
+      code: () => host.querySelector('pre:not(.invisible)')?.textContent ?? '',
       tab: (name: string) =>
         host.querySelector<HTMLButtonElement>(`#hero-tab-${name}`),
       tick: async (ms: number) => {
