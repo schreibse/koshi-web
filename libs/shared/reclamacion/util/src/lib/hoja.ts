@@ -75,6 +75,29 @@ export function errores(hoja: HojaDeReclamacion): string[] {
   return out;
 }
 
+/** Copies only the known fields, so a crafted request cannot store anything else. */
+export function normalizada(hoja: HojaDeReclamacion): HojaDeReclamacion {
+  const contacto = (c: Contacto): Contacto => ({
+    nombre: c.nombre.trim(),
+    domicilio: c.domicilio.trim(),
+    telefono: c.telefono.trim(),
+    email: c.email.trim(),
+  });
+  return {
+    consumidor: {
+      ...contacto(hoja.consumidor),
+      documento: hoja.consumidor.documento,
+      numeroDocumento: hoja.consumidor.numeroDocumento.trim(),
+    },
+    apoderado: hoja.apoderado && contacto(hoja.apoderado),
+    servicio: hoja.servicio.trim(),
+    monto: hoja.monto,
+    tipo: hoja.tipo,
+    detalle: hoja.detalle.trim(),
+    pedido: hoja.pedido.trim(),
+  };
+}
+
 /** The correlative number as Anexo I prints it: `000000001-2026`. */
 export function numeroDeHoja(secuencia: number, anio: number): string {
   return `${String(secuencia).padStart(9, '0')}-${anio}`;

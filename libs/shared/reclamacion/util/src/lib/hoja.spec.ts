@@ -1,4 +1,10 @@
-import { HojaDeReclamacion, MAX_TEXTO, errores, numeroDeHoja } from './hoja';
+import {
+  HojaDeReclamacion,
+  MAX_TEXTO,
+  errores,
+  normalizada,
+  numeroDeHoja,
+} from './hoja';
 
 const contacto = {
   nombre: 'Ana Quispe',
@@ -68,5 +74,17 @@ describe('errores', () => {
 describe('numeroDeHoja', () => {
   it('pads to nine digits and appends the year', () => {
     expect(numeroDeHoja(7, 2026)).toBe('000000007-2026');
+  });
+});
+
+describe('normalizada', () => {
+  it('drops unknown fields and trims the text', () => {
+    const crafted = {
+      ...hoja({ detalle: '  Tarde.  ' }),
+      extra: '<script>',
+    } as HojaDeReclamacion;
+    (crafted.consumidor as unknown as Record<string, unknown>)['rol'] = 'admin';
+
+    expect(normalizada(crafted)).toEqual(hoja({ detalle: 'Tarde.' }));
   });
 });

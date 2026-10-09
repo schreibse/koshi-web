@@ -62,7 +62,8 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.58.0",
     "vite": "^8.0.0",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "wrangler": "^4.149.0"
   },
   "dependencies": {
     "@angular-devkit/build-angular": "~22.1.0",

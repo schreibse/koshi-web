@@ -5,3 +5,4 @@ allowBuilds:
   msgpackr-extract: true
   '@swc/core': true
   nx: true
+  workerd: true
