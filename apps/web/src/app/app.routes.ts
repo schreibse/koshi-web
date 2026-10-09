@@ -35,6 +35,12 @@ export const appRoutes: Route[] = [
       import('@koshi/frontend/reclamaciones/feature').then((m) => m.Recibo),
   },
   {
+    path: 'libro-de-reclamaciones/privacidad',
+    title: $localize`:@@privacidad.pageTitle:Política de privacidad · Koshisoftware`,
+    loadComponent: () =>
+      import('@koshi/frontend/reclamaciones/feature').then((m) => m.Privacidad),
+  },
+  {
     path: slug('empresas', locale),
     title: $localize`:@@empresas.pageTitle:Webs para empresas en Perú · Koshisoftware`,
     component: Empresas,
