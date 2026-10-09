@@ -12,3 +12,5 @@ export const onRequestGet = ({ request }: { request: Request }): Response => {
     },
   });
 };
+
+export const onRequestHead = onRequestGet;
