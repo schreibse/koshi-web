@@ -3,6 +3,7 @@ import {
   Component,
   inject,
   signal,
+  viewChild,
 } from '@angular/core';
 import {
   FormField,
@@ -28,6 +29,7 @@ import {
 import { Campo } from './campo';
 import { Proveedor } from './proveedor';
 import { HojaRegistrada } from './recibo';
+import { Verificacion } from './verificacion';
 
 interface Borrador extends Contacto {
   documento: Documento;
@@ -51,7 +53,7 @@ const contactoVacio = (): Contacto => ({
 
 @Component({
   selector: 'ks-libro-de-reclamaciones',
-  imports: [Campo, FormField, FormRoot, Proveedor, RouterLink],
+  imports: [Campo, FormField, FormRoot, Proveedor, RouterLink, Verificacion],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     .grupo {
@@ -328,6 +330,7 @@ const contactoVacio = (): Contacto => ({
               >
             </span>
           </ks-campo>
+          <ks-verificacion [(token)]="token" />
           <div class="flex flex-wrap items-center gap-4">
             <button
               type="submit"
@@ -341,10 +344,22 @@ const contactoVacio = (): Contacto => ({
               Recibirás una copia en tu correo.
             </p>
           </div>
-          @if (fallo()) {
-            <p class="text-accent" role="alert" i18n="@@reclamaciones.failed">
-              No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos.
-            </p>
+          @switch (fallo()) {
+            @case ('verificacion') {
+              <p
+                class="text-accent"
+                role="alert"
+                i18n="@@reclamaciones.failed.verification"
+              >
+                Completa la verificación de seguridad y vuelve a enviar.
+              </p>
+            }
+            @case ('envio') {
+              <p class="text-accent" role="alert" i18n="@@reclamaciones.failed">
+                No pudimos registrar tu hoja. Inténtalo de nuevo en unos
+                minutos.
+              </p>
+            }
           }
         </div>
       </form>
@@ -356,7 +371,9 @@ export class LibroDeReclamaciones {
   private readonly route = inject(ActivatedRoute);
 
   protected readonly documentos = DOCUMENTOS;
-  protected readonly fallo = signal(false);
+  protected readonly fallo = signal<'verificacion' | 'envio' | null>(null);
+  protected readonly token = signal<string | null>(null);
+  private readonly verificacion = viewChild.required(Verificacion);
 
   private readonly borrador = signal<Borrador>({
     ...contactoVacio(),
@@ -409,15 +426,26 @@ export class LibroDeReclamaciones {
     {
       submission: {
         action: async () => {
-          this.fallo.set(false);
+          this.fallo.set(null);
+          const token = this.token();
+          if (!token) {
+            this.fallo.set('verificacion');
+            return;
+          }
           const hoja = aHoja(this.borrador());
           const respuesta = await fetch('/api/reclamaciones', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Turnstile-Token': token,
+            },
             body: JSON.stringify(hoja),
           }).catch(() => null);
           if (!respuesta?.ok) {
-            this.fallo.set(true);
+            this.verificacion().reset();
+            this.fallo.set(
+              respuesta?.status === 403 ? 'verificacion' : 'envio',
+            );
             return;
           }
           const { numero, registrada } = await respuesta.json();

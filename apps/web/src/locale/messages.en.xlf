@@ -1553,6 +1553,15 @@
         <target>You will receive a copy by email.</target>
       </segment>
     </unit>
+    <unit id="reclamaciones.failed.verification">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:354,356</note>
+      </notes>
+      <segment>
+        <source> Completa la verificación de seguridad y vuelve a enviar. </source>
+        <target>Complete the security check and submit again.</target>
+      </segment>
+    </unit>
     <unit id="reclamaciones.failed">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:337,339</note>
@@ -1855,8 +1864,8 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,65</note>
       </notes>
       <segment>
-        <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. </source>
-        <target>This site and its database run on the infrastructure of Cloudflare, Inc. (United States), which processes the data as our processor, on our behalf and under contract. Your data is therefore stored outside Peru.</target>
+        <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. </source>
+        <target>This site and its database run on the infrastructure of Cloudflare, Inc. (United States), which processes the data as our processor, on our behalf and under contract. Your data is therefore stored outside Peru. To protect the form from automated submissions, Cloudflare Turnstile analyses your IP address and technical data from your browser.</target>
       </segment>
     </unit>
     <unit id="privacidad.retention.title">

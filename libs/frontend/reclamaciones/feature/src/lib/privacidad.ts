@@ -61,7 +61,9 @@ import { Proveedor } from './proveedor';
         Este sitio y su base de datos funcionan en la infraestructura de
         Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado,
         por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera
-        del Perú.
+        del Perú. Para proteger el formulario de envíos automatizados,
+        Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu
+        navegador.
       </p>
 
       <h2 i18n="@@privacidad.retention.title">Cuánto tiempo los guardamos</h2>
