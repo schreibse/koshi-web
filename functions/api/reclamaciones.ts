@@ -6,6 +6,7 @@ import {
 } from '@koshi/shared/reclamacion/util';
 
 const MAX_BYTES = 32_000;
+const SITEVERIFY = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
 // One statement, so D1's single writer hands out each number exactly once.
 const INSERTAR = `
@@ -27,6 +28,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const invalidos = errores(hoja);
   if (invalidos.length)
     return Response.json({ errores: invalidos }, { status: 422 });
+  // After validation: the token is single-use, so a 422 must not spend it.
+  if (!(await humano(request, env.TURNSTILE_SECRET))) return error(403);
 
   const ahora = new Date();
   const anio = Number(
@@ -48,3 +51,17 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 };
 
 const error = (status: number) => new Response(null, { status });
+
+async function humano(request: Request, secret: string): Promise<boolean> {
+  const token = request.headers.get('X-Turnstile-Token');
+  if (!token) return false;
+  const datos = new FormData();
+  datos.append('secret', secret);
+  datos.append('response', token);
+  const ip = request.headers.get('CF-Connecting-IP');
+  if (ip) datos.append('remoteip', ip);
+  const respuesta = await fetch(SITEVERIFY, { method: 'POST', body: datos });
+  if (!respuesta.ok) return false;
+  const { success } = await respuesta.json<{ success: boolean }>();
+  return success;
+}

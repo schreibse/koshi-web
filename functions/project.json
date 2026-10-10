@@ -8,7 +8,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "wrangler types functions/worker-configuration.d.ts",
+          "wrangler types functions/worker-configuration.d.ts --env-file .dev.vars.example",
           "tsc --noEmit -p functions/tsconfig.json"
         ],
         "parallel": false
