@@ -1,3 +1,9 @@
+## 0.1.6 (2026-10-11)
+
+### 🚀 Features
+
+- **home:** show sixteen tools, four by four, with ESLint and Git ([38d2b4a](https://github.com/schreibse/koshi-web/commit/38d2b4a))
+
 ## 0.1.5 (2026-10-11)
 
 ### 🚀 Features
