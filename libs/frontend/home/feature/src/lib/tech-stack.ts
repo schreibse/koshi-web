@@ -4,7 +4,8 @@ import {
   siAngular,
   siCloudflare,
   siDocker,
-  siGithubactions,
+  siEslint,
+  siGit,
   siGitlab,
   siNestjs,
   siNgrx,
@@ -43,9 +44,10 @@ const STACK: Tool[] = [
   simple(siTailwindcss, 'https://tailwindcss.com'),
   simple(siStorybook, 'https://storybook.js.org'),
   simple(siVitest, 'https://vitest.dev'),
+  simple(siEslint, 'https://eslint.org'),
   { title: 'Playwright', url: 'https://playwright.dev', ...PLAYWRIGHT_LOGO },
   simple(siDocker, 'https://www.docker.com'),
-  simple(siGithubactions, 'https://github.com/features/actions'),
+  simple(siGit, 'https://git-scm.com'),
   simple(siGitlab, 'https://about.gitlab.com'),
   simple(siCloudflare, 'https://www.cloudflare.com'),
 ];
@@ -68,12 +70,10 @@ const STACK: Tool[] = [
           Tecnologías con las que trabajo
         </h2>
         <ul
-          class="m-0 grid list-none grid-cols-2 border-t border-l border-line p-0 md:grid-cols-5"
+          class="m-0 grid list-none grid-cols-2 border-t border-l border-line p-0 md:grid-cols-4"
         >
           @for (tool of stack; track tool.url) {
-            <li
-              class="flex border-r border-b border-line max-md:last:odd:col-span-2"
-            >
+            <li class="flex border-r border-b border-line">
               <a
                 [href]="tool.url"
                 target="_blank"
