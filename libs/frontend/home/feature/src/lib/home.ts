@@ -15,7 +15,7 @@ import { TechStack } from './tech-stack';
         <div>
           <span class="eyebrow">Angular · NestJS · TypeScript</span>
           <h1
-            class="max-w-[14ch] text-5xl md:text-7xl lg:text-6xl"
+            class="max-w-[8.5em] text-5xl md:text-7xl lg:text-6xl"
             i18n="@@hero.title"
           >
             Software <em class="text-accent not-italic">fuerte</em>, hecho en

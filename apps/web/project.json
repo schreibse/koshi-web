@@ -29,14 +29,10 @@
           {
             "glob": "**/*",
             "input": "apps/web/public"
-          },
-          {
-            "glob": "geist-latin-wght-normal.woff2",
-            "input": "node_modules/@fontsource-variable/geist/files",
-            "output": "fonts"
           }
         ],
         "styles": [
+          "@fontsource-variable/geist/index.css",
           "@fontsource-variable/geist-mono/index.css",
           "apps/web/src/styles.css",
           "apps/web/src/styles.scss"
