@@ -1,3 +1,13 @@
+## 0.1.5 (2026-10-11)
+
+### 🚀 Features
+
+- **home:** add NgRx, PostgreSQL, Tailwind CSS, Storybook and Playwright to the stack ([1a4f3de](https://github.com/schreibse/koshi-web/commit/1a4f3de))
+
+### 🩹 Fixes
+
+- **web:** load Geist as before and keep the hero heading one height in any font ([5c36db0](https://github.com/schreibse/koshi-web/commit/5c36db0))
+
 ## 0.1.4 (2026-10-11)
 
 ### 🩹 Fixes
