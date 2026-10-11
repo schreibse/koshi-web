@@ -5,6 +5,7 @@ import {
   PLATFORM_ID,
   inject,
 } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { HojaDeReclamacion } from '@koshi/shared/reclamacion/util';
 import { Proveedor } from './proveedor';
@@ -111,6 +112,13 @@ export class Recibo {
   )
     ? (history.state?.recibo ?? null)
     : null;
+
+  constructor() {
+    inject(Meta).updateTag({
+      name: 'description',
+      content: $localize`:@@recibo.description:Constancia de la hoja de reclamación registrada en el Libro de Reclamaciones de Koshisoftware E.I.R.L.`,
+    });
+  }
 
   protected imprimir(): void {
     print();

@@ -1571,6 +1571,24 @@
         <target>We could not register your sheet. Please try again in a few minutes.</target>
       </segment>
     </unit>
+    <unit id="privacidad.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:98</note>
+      </notes>
+      <segment>
+        <source>Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.</source>
+        <target>How Koshisoftware E.I.R.L. handles the personal data filed in the Complaints Book (Libro de Reclamaciones).</target>
+      </segment>
+    </unit>
+    <unit id="recibo.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:119</note>
+      </notes>
+      <segment>
+        <source>Constancia de la hoja de reclamación registrada en el Libro de Reclamaciones de Koshisoftware E.I.R.L.</source>
+        <target>Record of the complaint sheet filed in the Complaints Book (Libro de Reclamaciones) of Koshisoftware E.I.R.L.</target>
+      </segment>
+    </unit>
     <unit id="reclamaciones.description">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:428</note>

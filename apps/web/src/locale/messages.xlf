@@ -1173,7 +1173,7 @@
     <unit id="reclamaciones.eyebrow">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:76,78</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:22,24</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:23,25</note>
       </notes>
       <segment>
         <source>Libro de Reclamaciones</source>
@@ -1417,7 +1417,7 @@
     </unit>
     <unit id="recibo.number">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:38,39</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:39,40</note>
       </notes>
       <segment>
         <source>Hoja n.º</source>
@@ -1425,7 +1425,7 @@
     </unit>
     <unit id="recibo.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:42,44</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:43,45</note>
       </notes>
       <segment>
         <source> Recibimos tu reclamación </source>
@@ -1433,7 +1433,7 @@
     </unit>
     <unit id="recibo.lead">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:45,47</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:46,48</note>
       </notes>
       <segment>
         <source> Enviamos una copia de esta hoja a <ph id="0" equiv="INTERPOLATION" disp="{{ r.hoja.consumidor.email }}"/>. Te responderemos por correo en un plazo máximo de 15 días hábiles. </source>
@@ -1441,7 +1441,7 @@
     </unit>
     <unit id="recibo.sent">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:50,52</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:51,53</note>
       </notes>
       <segment>
         <source> Lo que nos enviaste </source>
@@ -1449,7 +1449,7 @@
     </unit>
     <unit id="recibo.date">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:55,56</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:56,57</note>
       </notes>
       <segment>
         <source>Fecha</source>
@@ -1457,7 +1457,7 @@
     </unit>
     <unit id="recibo.type">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:59,60</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:60,61</note>
       </notes>
       <segment>
         <source>Tipo</source>
@@ -1465,7 +1465,7 @@
     </unit>
     <unit id="recibo.consumer">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:61,62</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:62,63</note>
       </notes>
       <segment>
         <source>Consumidor</source>
@@ -1473,7 +1473,7 @@
     </unit>
     <unit id="recibo.guardian">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:67,68</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:68,69</note>
       </notes>
       <segment>
         <source>Apoderado</source>
@@ -1481,7 +1481,7 @@
     </unit>
     <unit id="recibo.service">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:70,71</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:71,72</note>
       </notes>
       <segment>
         <source>Servicio</source>
@@ -1489,7 +1489,7 @@
     </unit>
     <unit id="recibo.amount">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:72,73</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:73,74</note>
       </notes>
       <segment>
         <source>Monto reclamado</source>
@@ -1497,7 +1497,7 @@
     </unit>
     <unit id="recibo.detail">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:74,75</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:75,76</note>
       </notes>
       <segment>
         <source>Detalle</source>
@@ -1505,7 +1505,7 @@
     </unit>
     <unit id="recibo.request">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:76,77</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:77,78</note>
       </notes>
       <segment>
         <source>Pedido</source>
@@ -1513,7 +1513,7 @@
     </unit>
     <unit id="recibo.print">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:88,89</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:89,90</note>
       </notes>
       <segment>
         <source> Imprimir o guardar PDF </source>
@@ -1521,7 +1521,7 @@
     </unit>
     <unit id="recibo.home">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:91,93</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:92,94</note>
       </notes>
       <segment>
         <source>Volver al inicio</source>
@@ -1529,7 +1529,7 @@
     </unit>
     <unit id="recibo.none.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:96,98</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:97,99</note>
       </notes>
       <segment>
         <source> No hay una hoja que mostrar </source>
@@ -1537,7 +1537,7 @@
     </unit>
     <unit id="recibo.none.lead">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:99,101</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:100,102</note>
       </notes>
       <segment>
         <source> Si ya enviaste una, la copia está en tu correo. </source>
@@ -1545,8 +1545,8 @@
     </unit>
     <unit id="recibo.none.back">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:88,91</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:102,105</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:89,92</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:103,106</note>
       </notes>
       <segment>
         <source>Ir al Libro de Reclamaciones</source>
@@ -1570,7 +1570,7 @@
     </unit>
     <unit id="privacidad.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:25,27</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:26,28</note>
       </notes>
       <segment>
         <source> Política de privacidad </source>
@@ -1578,7 +1578,7 @@
     </unit>
     <unit id="privacidad.lead">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:28,31</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:29,32</note>
       </notes>
       <segment>
         <source> Cómo tratamos los datos que nos das al presentar una hoja de reclamación, conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, y su Reglamento. </source>
@@ -1586,7 +1586,7 @@
     </unit>
     <unit id="privacidad.owner.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:33,36</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:34,37</note>
       </notes>
       <segment>
         <source>Responsable</source>
@@ -1594,7 +1594,7 @@
     </unit>
     <unit id="privacidad.purpose.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:36,37</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:37,38</note>
       </notes>
       <segment>
         <source>Para qué usamos tus datos</source>
@@ -1602,7 +1602,7 @@
     </unit>
     <unit id="privacidad.purpose">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:38,42</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:39,43</note>
       </notes>
       <segment>
         <source> Para registrar tu reclamo o queja, responderte, conservar la hoja como exige el Reglamento del Libro de Reclamaciones y entregarla al INDECOPI si la solicita. No los usamos para publicidad ni para ningún otro fin, y no tomamos decisiones automatizadas ni elaboramos perfiles con ellos. </source>
@@ -1610,7 +1610,7 @@
     </unit>
     <unit id="privacidad.basis.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:44,45</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:45,46</note>
       </notes>
       <segment>
         <source>Datos obligatorios</source>
@@ -1618,7 +1618,7 @@
     </unit>
     <unit id="privacidad.basis">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:46,49</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:47,50</note>
       </notes>
       <segment>
         <source> Todos los campos del formulario son obligatorios: son los que el Reglamento exige en la hoja de reclamación. Sin ellos no podemos registrar ni responder tu reclamación. No incluyas en el detalle datos sensibles, como de salud, que no sean necesarios para tu reclamo. </source>
@@ -1626,7 +1626,7 @@
     </unit>
     <unit id="privacidad.bank.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:52,53</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:53,54</note>
       </notes>
       <segment>
         <source>Banco de datos y destinatarios</source>
@@ -1634,7 +1634,7 @@
     </unit>
     <unit id="privacidad.bank">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:54,57</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:55,58</note>
       </notes>
       <segment>
         <source> Tus datos se guardan en el banco de datos «Libro de Reclamaciones» de Koshisoftware E.I.R.L. Solo los ven Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades competentes. </source>
@@ -1642,7 +1642,7 @@
     </unit>
     <unit id="privacidad.transfer.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:59,60</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:60,61</note>
       </notes>
       <segment>
         <source>Transferencia internacional</source>
@@ -1650,7 +1650,7 @@
     </unit>
     <unit id="privacidad.transfer">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,66</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:62,67</note>
       </notes>
       <segment>
         <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. </source>
@@ -1658,7 +1658,7 @@
     </unit>
     <unit id="privacidad.retention.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:69,70</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:70,71</note>
       </notes>
       <segment>
         <source>Cuánto tiempo los guardamos</source>
@@ -1666,7 +1666,7 @@
     </unit>
     <unit id="privacidad.retention">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:71,75</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:72,76</note>
       </notes>
       <segment>
         <source> Dos años desde que presentas la hoja, el plazo que exige el Reglamento del Libro de Reclamaciones. Después los eliminamos. </source>
@@ -1674,7 +1674,7 @@
     </unit>
     <unit id="privacidad.rights.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:75,76</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:76,77</note>
       </notes>
       <segment>
         <source>Tus derechos</source>
@@ -1682,7 +1682,7 @@
     </unit>
     <unit id="privacidad.rights">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:77,81</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:78,82</note>
       </notes>
       <segment>
         <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
@@ -1694,6 +1694,22 @@
       </notes>
       <segment>
         <source> Completa la verificación de seguridad y vuelve a enviar. </source>
+      </segment>
+    </unit>
+    <unit id="privacidad.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:98</note>
+      </notes>
+      <segment>
+        <source>Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.</source>
+      </segment>
+    </unit>
+    <unit id="recibo.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:119</note>
+      </notes>
+      <segment>
+        <source>Constancia de la hoja de reclamación registrada en el Libro de Reclamaciones de Koshisoftware E.I.R.L.</source>
       </segment>
     </unit>
   </file>

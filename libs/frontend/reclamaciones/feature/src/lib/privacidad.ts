@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { Proveedor } from './proveedor';
 
@@ -90,4 +91,11 @@ import { Proveedor } from './proveedor';
     </article>
   `,
 })
-export class Privacidad {}
+export class Privacidad {
+  constructor() {
+    inject(Meta).updateTag({
+      name: 'description',
+      content: $localize`:@@privacidad.description:Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.`,
+    });
+  }
+}
