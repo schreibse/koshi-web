@@ -1,20 +1,16 @@
-// Local fonts resized to Geist's metrics (Capsize), so the swap to Geist does not shift layout.
+// fontsource ships Geist with `swap`; `optional` keeps a late Geist from repainting the hero (layout shift, late LCP).
+// The latin face lives in index.html, next to its preload.
 @font-face {
-  font-family: 'Geist Fallback Arial';
-  src: local('Arial'), local('ArialMT');
-  ascent-override: 95.9379%;
-  descent-override: 28.1609%;
-  line-gap-override: 0%;
-  size-adjust: 104.7553%;
-}
-
-@font-face {
-  font-family: 'Geist Fallback Roboto';
-  src: local('Roboto Regular'), local('Roboto-Regular');
-  ascent-override: 95.7277%;
-  descent-override: 28.0992%;
-  line-gap-override: 0%;
-  size-adjust: 104.9853%;
+  font-family: 'Geist Variable';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2')
+    format('woff2-variations');
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 :root {
@@ -27,9 +23,7 @@
   --ks-line: #3d2c20;
   --ks-tint: #1f241a;
   --ks-tint-strong: #2a3324;
-  --ks-font:
-    'Geist Variable', 'Geist Fallback Arial', 'Geist Fallback Roboto', arial,
-    roboto, system-ui, sans-serif;
+  --ks-font: 'Geist Variable', system-ui, sans-serif;
   --ks-font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --ks-radius: 4px;
   --ks-code-string: #a3b98a;
