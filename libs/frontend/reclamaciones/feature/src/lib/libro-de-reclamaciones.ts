@@ -15,6 +15,7 @@ import {
   maxLength,
   min,
   required,
+  validate,
 } from '@angular/forms/signals';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
@@ -25,6 +26,7 @@ import {
   HojaDeReclamacion,
   MAX_TEXTO,
   Tipo,
+  numeroDocumentoValido,
 } from '@koshi/shared/reclamacion/util';
 import { Campo } from './campo';
 import { Proveedor } from './proveedor';
@@ -118,7 +120,15 @@ const contactoVacio = (): Contacto => ({
             >
               <select class="input" [formField]="hoja.documento">
                 @for (documento of documentos; track documento) {
-                  <option [value]="documento">{{ documento }}</option>
+                  <option [value]="documento">
+                    @if (documento === 'Otro') {
+                      <ng-container i18n="@@reclamaciones.idType.other"
+                        >Otro</ng-container
+                      >
+                    } @else {
+                      {{ documento }}
+                    }
+                  </option>
                 }
               </select>
             </ks-campo>
@@ -407,6 +417,11 @@ export class LibroDeReclamaciones {
       required(path.monto);
       required(path.conforme);
       email(path.email);
+      validate(path.numeroDocumento, ({ value, valueOf }) =>
+        !value() || numeroDocumentoValido(valueOf(path.documento), value())
+          ? undefined
+          : { kind: 'documento' },
+      );
       min(path.monto, 0);
       maxLength(path.detalle, MAX_TEXTO);
       maxLength(path.pedido, MAX_TEXTO);

@@ -1164,7 +1164,7 @@
     </unit>
     <unit id="reclamaciones.error.invalid">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:44</note>
       </notes>
       <segment>
         <source>Revisa este campo.</source>
@@ -1172,7 +1172,7 @@
     </unit>
     <unit id="reclamaciones.eyebrow">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:76,78</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:78,80</note>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:23,25</note>
       </notes>
       <segment>
@@ -1181,7 +1181,7 @@
     </unit>
     <unit id="reclamaciones.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:79,81</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:81,83</note>
       </notes>
       <segment>
         <source> Hoja de reclamación </source>
@@ -1189,7 +1189,7 @@
     </unit>
     <unit id="reclamaciones.lead">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:83,86</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:85,88</note>
       </notes>
       <segment>
         <source> Conforme al Código de Protección y Defensa del Consumidor, puedes registrar aquí un reclamo o una queja. Te respondemos por correo en un plazo máximo de 15 días hábiles, improrrogable. </source>
@@ -1197,7 +1197,7 @@
     </unit>
     <unit id="reclamaciones.otherRoutes">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:89,92</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:91,94</note>
       </notes>
       <segment>
         <source> La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. </source>
@@ -1205,7 +1205,7 @@
     </unit>
     <unit id="reclamaciones.consumer.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:99,101</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:101,103</note>
       </notes>
       <segment>
         <source> Tus datos </source>
@@ -1213,8 +1213,8 @@
     </unit>
     <unit id="reclamaciones.name">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:103,104</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:180,181</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:105,106</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:190,191</note>
       </notes>
       <segment>
         <source>Nombre completo</source>
@@ -1222,7 +1222,7 @@
     </unit>
     <unit id="reclamaciones.idType">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:115,116</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:117,118</note>
       </notes>
       <segment>
         <source>Documento</source>
@@ -1230,7 +1230,7 @@
     </unit>
     <unit id="reclamaciones.idNumber">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:126,127</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:136,137</note>
       </notes>
       <segment>
         <source>Número de documento</source>
@@ -1238,8 +1238,8 @@
     </unit>
     <unit id="reclamaciones.address">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:134,135</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:187,188</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:144,145</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:197,198</note>
       </notes>
       <segment>
         <source>Domicilio</source>
@@ -1247,8 +1247,8 @@
     </unit>
     <unit id="reclamaciones.phone">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:146,147</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:195,196</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:156,157</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:205,206</note>
       </notes>
       <segment>
         <source>Teléfono</source>
@@ -1256,8 +1256,8 @@
     </unit>
     <unit id="reclamaciones.email">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:158,159</note>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:206,207</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:168,169</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:216,217</note>
       </notes>
       <segment>
         <source>Correo electrónico</source>
@@ -1265,7 +1265,7 @@
     </unit>
     <unit id="reclamaciones.minor">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:172,174</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:182,184</note>
       </notes>
       <segment>
         <source>Soy menor de edad</source>
@@ -1273,7 +1273,7 @@
     </unit>
     <unit id="reclamaciones.guardian">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:177,179</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:187,189</note>
       </notes>
       <segment>
         <source> Datos de tu madre, padre o apoderado </source>
@@ -1281,7 +1281,7 @@
     </unit>
     <unit id="reclamaciones.service.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:224,226</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:234,236</note>
       </notes>
       <segment>
         <source> Servicio contratado </source>
@@ -1289,7 +1289,7 @@
     </unit>
     <unit id="reclamaciones.service">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:228,229</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:238,239</note>
       </notes>
       <segment>
         <source>Descripción del servicio</source>
@@ -1297,7 +1297,7 @@
     </unit>
     <unit id="reclamaciones.amount">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:235,236</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:245,246</note>
       </notes>
       <segment>
         <source>Monto reclamado (S/)</source>
@@ -1305,7 +1305,7 @@
     </unit>
     <unit id="reclamaciones.claim.title">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:252,254</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:262,264</note>
       </notes>
       <segment>
         <source> Tu reclamación </source>
@@ -1313,7 +1313,7 @@
     </unit>
     <unit id="reclamaciones.reclamo">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:264,266</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:274,276</note>
       </notes>
       <segment>
         <source>Reclamo</source>
@@ -1321,7 +1321,7 @@
     </unit>
     <unit id="reclamaciones.reclamo.definition">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:269,272</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:279,282</note>
       </notes>
       <segment>
         <source>Disconformidad relacionada a los productos o servicios.</source>
@@ -1329,7 +1329,7 @@
     </unit>
     <unit id="reclamaciones.queja">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:280,282</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:290,292</note>
       </notes>
       <segment>
         <source>Queja</source>
@@ -1337,7 +1337,7 @@
     </unit>
     <unit id="reclamaciones.queja.definition">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:285,288</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:295,298</note>
       </notes>
       <segment>
         <source>Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público.</source>
@@ -1345,7 +1345,7 @@
     </unit>
     <unit id="reclamaciones.detail">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:292</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:302</note>
       </notes>
       <segment>
         <source>Detalle</source>
@@ -1353,7 +1353,7 @@
     </unit>
     <unit id="reclamaciones.request">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:303</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:313</note>
       </notes>
       <segment>
         <source>Pedido</source>
@@ -1361,7 +1361,7 @@
     </unit>
     <unit id="reclamaciones.confirm">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:328,330</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:338,340</note>
       </notes>
       <segment>
         <source>Confirmo que los datos son verdaderos y presento esta hoja de reclamación.</source>
@@ -1369,7 +1369,7 @@
     </unit>
     <unit id="reclamaciones.submit">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:341,342</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:351,352</note>
       </notes>
       <segment>
         <source> Enviar reclamación </source>
@@ -1377,7 +1377,7 @@
     </unit>
     <unit id="reclamaciones.copyNote">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:344,346</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:354,356</note>
       </notes>
       <segment>
         <source> Recibirás una copia en tu correo. </source>
@@ -1385,7 +1385,7 @@
     </unit>
     <unit id="reclamaciones.failed">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:359,361</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:369,371</note>
       </notes>
       <segment>
         <source> No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos. </source>
@@ -1393,7 +1393,7 @@
     </unit>
     <unit id="reclamaciones.description">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:465</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:480</note>
       </notes>
       <segment>
         <source>Libro de Reclamaciones virtual de Koshisoftware E.I.R.L.</source>
@@ -1562,7 +1562,7 @@
     </unit>
     <unit id="reclamaciones.privacy">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:316,319</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:326,329</note>
       </notes>
       <segment>
         <source> Usamos tus datos solo para atender esta reclamación y los guardamos dos años en servidores de Cloudflare, fuera del Perú. Más en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a routerLink=&quot;privacidad&quot;&gt;" dispEnd="&lt;/a&gt;">política de privacidad</pc>. </source>
@@ -1690,7 +1690,7 @@
     </unit>
     <unit id="reclamaciones.failed.verification">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:354,356</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:364,366</note>
       </notes>
       <segment>
         <source> Completa la verificación de seguridad y vuelve a enviar. </source>
@@ -1710,6 +1710,22 @@
       </notes>
       <segment>
         <source>Constancia de la hoja de reclamación registrada en el Libro de Reclamaciones de Koshisoftware E.I.R.L.</source>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.error.idNumber">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>
+      </notes>
+      <segment>
+        <source>DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.</source>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.idType.other">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:126,128</note>
+      </notes>
+      <segment>
+        <source>Otro</source>
       </segment>
     </unit>
   </file>

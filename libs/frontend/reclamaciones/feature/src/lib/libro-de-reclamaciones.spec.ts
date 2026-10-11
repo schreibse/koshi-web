@@ -74,6 +74,16 @@ describe('LibroDeReclamaciones', () => {
     expect(page.host.textContent).toContain('Este campo es obligatorio.');
   });
 
+  it('rejects a document number that does not fit its type', async () => {
+    const page = await render();
+    page.fill();
+    page.type('Número de documento', '1234567');
+    await page.submit();
+
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(page.host.textContent).toContain('DNI: 8 dígitos.');
+  });
+
   it('files a complete sheet and opens its receipt', async () => {
     const page = await render();
     const navigate = vi
