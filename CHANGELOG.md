@@ -1,3 +1,9 @@
+## 0.1.4 (2026-10-11)
+
+### 🩹 Fixes
+
+- **web:** preload Geist and stop it repainting the hero late ([472ea00](https://github.com/schreibse/koshi-web/commit/472ea00))
+
 ## 0.1.3 (2026-10-11)
 
 ### 🚀 Features
