@@ -1,3 +1,9 @@
+## 0.1.2 (2026-10-11)
+
+### 🚀 Features
+
+- **web:** move the site and contact address to koshisoftware.pe ([c2a159f](https://github.com/schreibse/koshi-web/commit/c2a159f))
+
 ## 0.1.1 (2026-10-09)
 
 ### 🚀 Features
