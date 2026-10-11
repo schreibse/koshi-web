@@ -154,7 +154,7 @@ import { HeroEditor } from './hero-editor';
         </h2>
         <div class="flex flex-wrap gap-3">
           <a
-            href="mailto:hola@koshisoftware.com"
+            href="mailto:hola@koshisoftware.pe"
             class="btn btn-primary"
             i18n="@@contact.email"
             >Escríbeme</a
