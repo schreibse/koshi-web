@@ -57,65 +57,11 @@
     </unit>
     <unit id="services.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:29,31</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:47,49</note>
       </notes>
       <segment>
-        <source> Lo que construyo </source>
-        <target>What I build</target>
-      </segment>
-    </unit>
-    <unit id="services.frontend.title">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:34,36</note>
-      </notes>
-      <segment>
-        <source> Frontend con Angular </source>
-        <target>Angular frontend</target>
-      </segment>
-    </unit>
-    <unit id="services.frontend.text">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:37,39</note>
-      </notes>
-      <segment>
-        <source> Aplicaciones web rápidas, accesibles y fáciles de mantener. </source>
-        <target>Fast, accessible web applications that are easy to maintain.</target>
-      </segment>
-    </unit>
-    <unit id="services.backend.title">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:42,44</note>
-      </notes>
-      <segment>
-        <source> Backend con NestJS </source>
-        <target>NestJS backend</target>
-      </segment>
-    </unit>
-    <unit id="services.backend.text">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:45,47</note>
-      </notes>
-      <segment>
-        <source> APIs y servicios en TypeScript, probados y documentados. </source>
-        <target>APIs and services in TypeScript, tested and documented.</target>
-      </segment>
-    </unit>
-    <unit id="services.team.title">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:50,52</note>
-      </notes>
-      <segment>
-        <source> Refuerzo para tu equipo </source>
-        <target>Extra hands for your team</target>
-      </segment>
-    </unit>
-    <unit id="services.team.text">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:53,55</note>
-      </notes>
-      <segment>
-        <source> Un desarrollador senior que se integra a tu equipo y proceso. </source>
-        <target>A senior developer who joins your team and your process.</target>
+        <source> Lo que hago </source>
+        <target>What I do</target>
       </segment>
     </unit>
     <unit id="work.eyebrow">
@@ -351,6 +297,213 @@
       <segment>
         <source>Código de ejemplo</source>
         <target>Sample code</target>
+      </segment>
+    </unit>
+    <unit id="stack.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/tech-stack.ts:43,45</note>
+      </notes>
+      <segment>
+        <source> Tecnologías con las que trabajo </source>
+        <target>Technologies I work with</target>
+      </segment>
+    </unit>
+    <unit id="services.build.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:184</note>
+      </notes>
+      <segment>
+        <source>Construir</source>
+        <target>Build</target>
+      </segment>
+    </unit>
+    <unit id="services.build.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:185</note>
+      </notes>
+      <segment>
+        <source>Aplicaciones y APIs en TypeScript, rápidas y fáciles de mantener.</source>
+        <target>Apps and APIs in TypeScript, fast and easy to maintain.</target>
+      </segment>
+    </unit>
+    <unit id="services.build.angular">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:187</note>
+      </notes>
+      <segment>
+        <source>Aplicaciones Angular multilenguaje</source>
+        <target>Multilingual Angular apps</target>
+      </segment>
+    </unit>
+    <unit id="services.build.nest">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:188</note>
+      </notes>
+      <segment>
+        <source>APIs y servicios con NestJS</source>
+        <target>APIs and services with NestJS</target>
+      </segment>
+    </unit>
+    <unit id="services.build.team">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:189</note>
+      </notes>
+      <segment>
+        <source>Un desarrollador senior en tu equipo</source>
+        <target>A senior developer on your team</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:193</note>
+      </notes>
+      <segment>
+        <source>Mejorar</source>
+        <target>Improve</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:194</note>
+      </notes>
+      <segment>
+        <source>Tu código actual, más rápido, accesible y al día.</source>
+        <target>Your existing code, faster, accessible and up to date.</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.review">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:196</note>
+      </notes>
+      <segment>
+        <source>Code reviews</source>
+        <target>Code reviews</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.upgrade">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:197</note>
+      </notes>
+      <segment>
+        <source>Upgrades de Angular</source>
+        <target>Angular upgrades</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.rescue">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:198</note>
+      </notes>
+      <segment>
+        <source>Migración de AngularJS y proyectos abandonados</source>
+        <target>AngularJS migrations and abandoned projects</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.lighthouse">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:199</note>
+      </notes>
+      <segment>
+        <source>Lighthouse y SEO con SSR</source>
+        <target>Lighthouse and SEO with SSR</target>
+      </segment>
+    </unit>
+    <unit id="services.improve.a11y">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:200</note>
+      </notes>
+      <segment>
+        <source>Accesibilidad y UX</source>
+        <target>Accessibility and UX</target>
+      </segment>
+    </unit>
+    <unit id="services.ship.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:204</note>
+      </notes>
+      <segment>
+        <source>Entregar</source>
+        <target>Ship</target>
+      </segment>
+    </unit>
+    <unit id="services.ship.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:205</note>
+      </notes>
+      <segment>
+        <source>Herramientas y procesos que escalan con tu equipo.</source>
+        <target>Tools and processes that scale with your team.</target>
+      </segment>
+    </unit>
+    <unit id="services.ship.nx">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:207</note>
+      </notes>
+      <segment>
+        <source>Monorepos con Nx</source>
+        <target>Nx monorepos</target>
+      </segment>
+    </unit>
+    <unit id="services.ship.ci">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:208</note>
+      </notes>
+      <segment>
+        <source>Pipelines de CI/CD</source>
+        <target>CI/CD pipelines</target>
+      </segment>
+    </unit>
+    <unit id="services.ship.tests">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:209</note>
+      </notes>
+      <segment>
+        <source>Tests con Vitest y Playwright</source>
+        <target>Tests with Vitest and Playwright</target>
+      </segment>
+    </unit>
+    <unit id="services.teach.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:213</note>
+      </notes>
+      <segment>
+        <source>Enseñar</source>
+        <target>Teach</target>
+      </segment>
+    </unit>
+    <unit id="services.teach.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:214</note>
+      </notes>
+      <segment>
+        <source>Tu equipo aprende haciendo, en línea.</source>
+        <target>Your team learns by doing, online.</target>
+      </segment>
+    </unit>
+    <unit id="services.teach.workshops">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:216</note>
+      </notes>
+      <segment>
+        <source>Talleres de Angular, NestJS y Nx</source>
+        <target>Angular, NestJS and Nx workshops</target>
+      </segment>
+    </unit>
+    <unit id="services.teach.mentoring">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:217</note>
+      </notes>
+      <segment>
+        <source>Mentoría y pair programming</source>
+        <target>Mentoring and pair programming</target>
+      </segment>
+    </unit>
+    <unit id="stack.newTab">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/tech-stack.ts:65,67</note>
+      </notes>
+      <segment>
+        <source>(se abre en una pestaña nueva)</source>
+        <target>(opens in a new tab)</target>
       </segment>
     </unit>
   </file>

@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { HeroEditor } from './hero-editor';
+import { TechStack } from './tech-stack';
 
 @Component({
   selector: 'ks-home',
-  imports: [HeroEditor],
+  imports: [HeroEditor, TechStack],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="overflow-x-clip">
@@ -37,37 +38,39 @@ import { HeroEditor } from './hero-editor';
       </div>
     </section>
 
+    <ks-tech-stack />
+
     <section id="servicios" class="border-t border-line py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
         <span class="eyebrow" i18n="@@services.eyebrow">Servicios</span>
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@services.title">
-          Lo que construyo
+          Lo que hago
         </h2>
-        <ul class="m-0 grid list-none gap-6 p-0 md:grid-cols-3">
-          <li class="rounded-base bg-surface p-8">
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@services.frontend.title">
-              Frontend con Angular
-            </h3>
-            <p class="text-muted" i18n="@@services.frontend.text">
-              Aplicaciones web rápidas, accesibles y fáciles de mantener.
-            </p>
-          </li>
-          <li class="rounded-base bg-surface p-8">
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@services.backend.title">
-              Backend con NestJS
-            </h3>
-            <p class="text-muted" i18n="@@services.backend.text">
-              APIs y servicios en TypeScript, probados y documentados.
-            </p>
-          </li>
-          <li class="rounded-base bg-surface p-8">
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@services.team.title">
-              Refuerzo para tu equipo
-            </h3>
-            <p class="text-muted" i18n="@@services.team.text">
-              Un desarrollador senior que se integra a tu equipo y proceso.
-            </p>
-          </li>
+        <ul class="m-0 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-4">
+          @for (servicio of servicios; track servicio.titulo) {
+            <li class="rounded-base bg-surface p-8">
+              <h3 class="mb-2 text-[1.35rem]">{{ servicio.titulo }}</h3>
+              <p class="mb-5 text-muted">{{ servicio.texto }}</p>
+              <ul class="m-0 grid list-none gap-2 p-0 text-base">
+                @for (punto of servicio.puntos; track punto) {
+                  <li class="flex gap-2">
+                    <svg
+                      aria-hidden="true"
+                      class="mt-1 size-4 flex-none stroke-accent"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    {{ punto }}
+                  </li>
+                }
+              </ul>
+            </li>
+          }
         </ul>
       </div>
     </section>
@@ -166,6 +169,8 @@ import { HeroEditor } from './hero-editor';
   `,
 })
 export class Home {
+  protected readonly servicios = SERVICIOS;
+
   constructor() {
     inject(Meta).updateTag({
       name: 'description',
@@ -173,3 +178,43 @@ export class Home {
     });
   }
 }
+
+const SERVICIOS = [
+  {
+    titulo: $localize`:@@services.build.title:Construir`,
+    texto: $localize`:@@services.build.text:Aplicaciones y APIs en TypeScript, rápidas y fáciles de mantener.`,
+    puntos: [
+      $localize`:@@services.build.angular:Aplicaciones Angular multilenguaje`,
+      $localize`:@@services.build.nest:APIs y servicios con NestJS`,
+      $localize`:@@services.build.team:Un desarrollador senior en tu equipo`,
+    ],
+  },
+  {
+    titulo: $localize`:@@services.improve.title:Mejorar`,
+    texto: $localize`:@@services.improve.text:Tu código actual, más rápido, accesible y al día.`,
+    puntos: [
+      $localize`:@@services.improve.review:Code reviews`,
+      $localize`:@@services.improve.upgrade:Upgrades de Angular`,
+      $localize`:@@services.improve.rescue:Migración de AngularJS y proyectos abandonados`,
+      $localize`:@@services.improve.lighthouse:Lighthouse y SEO con SSR`,
+      $localize`:@@services.improve.a11y:Accesibilidad y UX`,
+    ],
+  },
+  {
+    titulo: $localize`:@@services.ship.title:Entregar`,
+    texto: $localize`:@@services.ship.text:Herramientas y procesos que escalan con tu equipo.`,
+    puntos: [
+      $localize`:@@services.ship.nx:Monorepos con Nx`,
+      $localize`:@@services.ship.ci:Pipelines de CI/CD`,
+      $localize`:@@services.ship.tests:Tests con Vitest y Playwright`,
+    ],
+  },
+  {
+    titulo: $localize`:@@services.teach.title:Enseñar`,
+    texto: $localize`:@@services.teach.text:Tu equipo aprende haciendo, en línea.`,
+    puntos: [
+      $localize`:@@services.teach.workshops:Talleres de Angular, NestJS y Nx`,
+      $localize`:@@services.teach.mentoring:Mentoría y pair programming`,
+    ],
+  },
+];
