@@ -1,28 +1,53 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
+  SimpleIcon,
   siAngular,
   siCloudflare,
   siDocker,
   siGithubactions,
   siGitlab,
   siNestjs,
+  siNgrx,
   siNodedotjs,
   siNx,
+  siPostgresql,
+  siStorybook,
+  siTailwindcss,
   siTypescript,
   siVitest,
 } from 'simple-icons';
+import { PLAYWRIGHT_LOGO } from './playwright-logo';
 
-const STACK = [
-  { icon: siAngular, url: 'https://angular.dev' },
-  { icon: siNestjs, url: 'https://nestjs.com' },
-  { icon: siTypescript, url: 'https://www.typescriptlang.org' },
-  { icon: siNx, url: 'https://nx.dev' },
-  { icon: siNodedotjs, url: 'https://nodejs.org' },
-  { icon: siVitest, url: 'https://vitest.dev' },
-  { icon: siDocker, url: 'https://www.docker.com' },
-  { icon: siGithubactions, url: 'https://github.com/features/actions' },
-  { icon: siGitlab, url: 'https://about.gitlab.com' },
-  { icon: siCloudflare, url: 'https://www.cloudflare.com' },
+interface Tool {
+  title: string;
+  url: string;
+  viewBox: string;
+  paths: string[];
+}
+
+const simple = (icon: SimpleIcon, url: string): Tool => ({
+  title: icon.title,
+  url,
+  viewBox: '0 0 24 24',
+  paths: [icon.path],
+});
+
+const STACK: Tool[] = [
+  simple(siAngular, 'https://angular.dev'),
+  simple(siNestjs, 'https://nestjs.com'),
+  simple(siTypescript, 'https://www.typescriptlang.org'),
+  simple(siNx, 'https://nx.dev'),
+  simple(siNgrx, 'https://ngrx.io'),
+  simple(siNodedotjs, 'https://nodejs.org'),
+  simple(siPostgresql, 'https://www.postgresql.org'),
+  simple(siTailwindcss, 'https://tailwindcss.com'),
+  simple(siStorybook, 'https://storybook.js.org'),
+  simple(siVitest, 'https://vitest.dev'),
+  { title: 'Playwright', url: 'https://playwright.dev', ...PLAYWRIGHT_LOGO },
+  simple(siDocker, 'https://www.docker.com'),
+  simple(siGithubactions, 'https://github.com/features/actions'),
+  simple(siGitlab, 'https://about.gitlab.com'),
+  simple(siCloudflare, 'https://www.cloudflare.com'),
 ];
 
 /** The tools Koshisoftware works with, logo plus name: most visitors know the names, not the marks. */
@@ -46,21 +71,25 @@ const STACK = [
           class="m-0 grid list-none grid-cols-2 border-t border-l border-line p-0 md:grid-cols-5"
         >
           @for (tool of stack; track tool.url) {
-            <li class="border-r border-b border-line">
+            <li
+              class="flex border-r border-b border-line max-md:last:odd:col-span-2"
+            >
               <a
                 [href]="tool.url"
                 target="_blank"
                 rel="noopener"
-                class="flex h-full items-center justify-center gap-2.5 px-3 py-5 font-semibold text-ink no-underline hover:bg-surface"
+                class="flex flex-1 items-center justify-center gap-2.5 px-2 py-5 text-base font-semibold whitespace-nowrap text-ink no-underline hover:bg-surface md:px-3 md:text-lg"
               >
                 <svg
                   aria-hidden="true"
                   class="size-6 flex-none fill-current"
-                  viewBox="0 0 24 24"
+                  [attr.viewBox]="tool.viewBox"
                 >
-                  <path [attr.d]="tool.icon.path" />
+                  @for (d of tool.paths; track $index) {
+                    <path [attr.d]="d" />
+                  }
                 </svg>
-                {{ tool.icon.title }}
+                {{ tool.title }}
                 <span class="sr-only" i18n="@@stack.newTab"
                   >(se abre en una pestaña nueva)</span
                 >
