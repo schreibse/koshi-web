@@ -1,3 +1,13 @@
+## 0.1.3 (2026-10-11)
+
+### 🚀 Features
+
+- **home:** group the services for development teams and show the tech stack ([aeef5d3](https://github.com/schreibse/koshi-web/commit/aeef5d3))
+
+### 🩹 Fixes
+
+- **web:** match the font fallback to Geist's metrics ([538183b](https://github.com/schreibse/koshi-web/commit/538183b))
+
 ## 0.1.2 (2026-10-11)
 
 ### 🚀 Features
