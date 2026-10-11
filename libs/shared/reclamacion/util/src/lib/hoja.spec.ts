@@ -4,6 +4,7 @@ import {
   errores,
   normalizada,
   numeroDeHoja,
+  numeroDocumentoValido,
 } from './hoja';
 
 const contacto = {
@@ -36,7 +37,7 @@ describe('errores', () => {
           consumidor: {
             ...contacto,
             email: 'no-es-correo',
-            documento: 'RUC' as never,
+            documento: 'Licencia' as never,
             numeroDocumento: ' ',
           },
           monto: -1,
@@ -71,6 +72,31 @@ describe('errores', () => {
   });
 });
 
+describe('numeroDocumentoValido', () => {
+  it.each([
+    ['DNI', '12345678'],
+    ['DNI', '12 345 678'],
+    ['RUC', '20123456789'],
+    ['CE', '001234567'],
+    ['Pasaporte', 'ab-123456'],
+    ['CPP/PTP', 'CPP1234567890AB'],
+    ['Otro', 'X123456789012345'.slice(0, 15)],
+  ] as const)('accepts %s %s', (documento, numero) => {
+    expect(numeroDocumentoValido(documento, numero)).toBe(true);
+  });
+
+  it.each([
+    ['DNI', '1234567'],
+    ['DNI', '12345678-9'],
+    ['RUC', '2012345678'],
+    ['CE', '1234567890123'],
+    ['Pasaporte', 'AB.123'],
+    ['Otro', ''],
+  ] as const)('rejects %s %s', (documento, numero) => {
+    expect(numeroDocumentoValido(documento, numero)).toBe(false);
+  });
+});
+
 describe('numeroDeHoja', () => {
   it('pads to nine digits and appends the year', () => {
     expect(numeroDeHoja(7, 2026)).toBe('000000007-2026');
@@ -86,5 +112,17 @@ describe('normalizada', () => {
     (crafted.consumidor as unknown as Record<string, unknown>)['rol'] = 'admin';
 
     expect(normalizada(crafted)).toEqual(hoja({ detalle: 'Tarde.' }));
+  });
+
+  it('stores the document number without spaces or hyphens, in capitals', () => {
+    const consumidor = {
+      ...hoja().consumidor,
+      documento: 'Pasaporte' as const,
+    };
+    expect(
+      normalizada(
+        hoja({ consumidor: { ...consumidor, numeroDocumento: ' ab-12 34 ' } }),
+      ).consumidor.numeroDocumento,
+    ).toBe('AB1234');
   });
 });

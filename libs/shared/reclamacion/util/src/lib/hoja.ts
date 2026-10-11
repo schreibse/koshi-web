@@ -1,8 +1,34 @@
 export const TIPOS = ['reclamo', 'queja'] as const;
 export type Tipo = (typeof TIPOS)[number];
 
-export const DOCUMENTOS = ['DNI', 'CE', 'Pasaporte'] as const;
+export const DOCUMENTOS = [
+  'DNI',
+  'CE',
+  'Pasaporte',
+  'CPP/PTP',
+  'RUC',
+  'Otro',
+] as const;
 export type Documento = (typeof DOCUMENTOS)[number];
+
+// Lengths from SUNAT's Catálogo 06; only DNI and RUC are fixed, since the Libro must not turn a consumer away.
+const FORMATOS: Record<Documento, RegExp> = {
+  DNI: /^\d{8}$/,
+  CE: /^[A-Z0-9]{1,12}$/,
+  Pasaporte: /^[A-Z0-9]{1,12}$/,
+  'CPP/PTP': /^[A-Z0-9]{1,15}$/,
+  RUC: /^\d{11}$/,
+  Otro: /^[A-Z0-9]{1,15}$/,
+};
+
+const compacto = (numero: string) => numero.replace(/[\s-]/g, '').toUpperCase();
+
+export function numeroDocumentoValido(
+  documento: Documento,
+  numero: string,
+): boolean {
+  return FORMATOS[documento].test(compacto(numero));
+}
 
 export interface Contacto {
   nombre: string;
@@ -48,10 +74,16 @@ export function errores(hoja: HojaDeReclamacion): string[] {
   };
 
   contacto('consumidor', hoja.consumidor);
-  if (!DOCUMENTOS.includes(hoja.consumidor?.documento)) {
+  const { documento, numeroDocumento } = hoja.consumidor ?? {};
+  if (!DOCUMENTOS.includes(documento)) {
     out.push('consumidor.documento');
+    linea('consumidor.numeroDocumento', numeroDocumento);
+  } else if (
+    typeof numeroDocumento !== 'string' ||
+    !numeroDocumentoValido(documento, numeroDocumento)
+  ) {
+    out.push('consumidor.numeroDocumento');
   }
-  linea('consumidor.numeroDocumento', hoja.consumidor?.numeroDocumento);
   if (hoja.apoderado !== null) contacto('apoderado', hoja.apoderado);
   linea('servicio', hoja.servicio);
   if (
@@ -87,7 +119,7 @@ export function normalizada(hoja: HojaDeReclamacion): HojaDeReclamacion {
     consumidor: {
       ...contacto(hoja.consumidor),
       documento: hoja.consumidor.documento,
-      numeroDocumento: hoja.consumidor.numeroDocumento.trim(),
+      numeroDocumento: compacto(hoja.consumidor.numeroDocumento),
     },
     apoderado: hoja.apoderado && contacto(hoja.apoderado),
     servicio: hoja.servicio.trim(),

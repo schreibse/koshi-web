@@ -1306,6 +1306,24 @@
         <target>Enter a valid email address.</target>
       </segment>
     </unit>
+    <unit id="reclamaciones.error.idNumber">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>
+      </notes>
+      <segment>
+        <source>DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.</source>
+        <target>DNI: 8 digits. RUC: 11 digits. Others: letters and numbers only.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.idType.other">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:126,128</note>
+      </notes>
+      <segment>
+        <source>Otro</source>
+        <target>Other</target>
+      </segment>
+    </unit>
     <unit id="reclamaciones.error.invalid">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>

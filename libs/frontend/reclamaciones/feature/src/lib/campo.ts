@@ -38,6 +38,8 @@ export class Campo {
         return $localize`:@@reclamaciones.error.required:Este campo es obligatorio.`;
       case 'email':
         return $localize`:@@reclamaciones.error.email:Escribe un correo válido.`;
+      case 'documento':
+        return $localize`:@@reclamaciones.error.idNumber:DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.`;
       default:
         return $localize`:@@reclamaciones.error.invalid:Revisa este campo.`;
     }
