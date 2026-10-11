@@ -1,3 +1,22 @@
+// Local fonts resized to Geist's metrics (Capsize), so the swap to Geist does not shift layout.
+@font-face {
+  font-family: 'Geist Fallback Arial';
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 95.9379%;
+  descent-override: 28.1609%;
+  line-gap-override: 0%;
+  size-adjust: 104.7553%;
+}
+
+@font-face {
+  font-family: 'Geist Fallback Roboto';
+  src: local('Roboto Regular'), local('Roboto-Regular');
+  ascent-override: 95.7277%;
+  descent-override: 28.0992%;
+  line-gap-override: 0%;
+  size-adjust: 104.9853%;
+}
+
 :root {
   --ks-page: #1c1410;
   --ks-surface: #2b1d14;
@@ -8,7 +27,9 @@
   --ks-line: #3d2c20;
   --ks-tint: #1f241a;
   --ks-tint-strong: #2a3324;
-  --ks-font: 'Geist Variable', system-ui, sans-serif;
+  --ks-font:
+    'Geist Variable', 'Geist Fallback Arial', 'Geist Fallback Roboto', arial,
+    roboto, system-ui, sans-serif;
   --ks-font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --ks-radius: 4px;
   --ks-code-string: #a3b98a;
