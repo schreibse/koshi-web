@@ -9,7 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { SUPPORTED_LOCALES } from '@koshi/shared/locale/util';
 import { filter } from 'rxjs';
 
-const SITE_ORIGIN = 'https://koshisoftware.pages.dev';
+const SITE_ORIGIN = 'https://koshisoftware.pe';
 
 /** Keeps canonical and hreflang links in the head in step with the current route. */
 export function provideHeadLinks(): EnvironmentProviders {

@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
-const origin = 'https://koshisoftware.pages.dev';
+const origin = 'https://koshisoftware.pe';
 
 const locales = [
   {
