@@ -27,13 +27,13 @@ const files: Record<Tab, { name: string; lines: Token[][] }> = {
       [
         '    ',
         k('@for'),
-        ' (pedido ',
+        ' (p ',
         k('of'),
         ' pedidos(); ',
         k('track'),
-        ' pedido.id) {',
+        ' p.id) {',
       ],
-      ['      <', s('ks-pedido-card'), ' [pedido]="pedido" />'],
+      ['      <', s('ks-pedido-card'), ' [pedido]="p" />'],
       ['    }'],
       ['  `,'],
       ['})'],
@@ -45,22 +45,12 @@ const files: Record<Tab, { name: string; lines: Token[][] }> = {
   api: {
     name: 'pedidos.controller.ts',
     lines: [
-      [
-        c(
-          `// ${$localize`:@@hero.code.api:API de pedidos, probada y documentada`}`,
-        ),
-      ],
+      [c(`// ${$localize`:@@hero.code.api:API de pedidos, con tests y docs`}`)],
       [k('@Controller'), '(', s("'pedidos'"), ')'],
       [k('export class'), ' ', s('PedidosController'), ' {'],
-      [
-        '  ',
-        k('constructor'),
-        '(',
-        k('private readonly'),
-        ' pedidos: ',
-        s('PedidosService'),
-        ') {}',
-      ],
+      ['  ', k('constructor'), '('],
+      ['    ', k('private'), ' pedidos: ', s('PedidosService'), ','],
+      ['  ) {}'],
       [],
       ['  ', k('@Get'), '(', s("':id'"), ')'],
       ['  buscar(', k('@Param'), '(', s("'id'"), ') id: ', s('string'), ') {'],
@@ -146,7 +136,7 @@ const kindClass: Record<Kind, string> = {
               role="tabpanel"
               tabindex="0"
               [attr.aria-labelledby]="'hero-tab-' + tab"
-              class="m-0 overflow-x-auto px-5 py-4 font-mono text-[0.78rem] leading-[1.7] [grid-area:1/1]"
+              class="m-0 overflow-x-auto px-4 py-4 font-mono text-[0.7rem] leading-[1.7] [grid-area:1/1] min-[360px]:text-[0.78rem] md:px-5"
               [class.invisible]="tab !== active()"
             ><code>@for (line of files[tab].lines; track $index) {<span class="block min-h-[1lh]">@for (token of line; track $index) {<span [class]="classOf(token)">{{ textOf(token) }}</span>}</span>}</code></pre>
           }
