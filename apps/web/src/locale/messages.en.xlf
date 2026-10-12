@@ -286,7 +286,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/hero-editor.ts:40</note>
       </notes>
       <segment>
-        <source>API de pedidos, probada y documentada</source>
+        <source>API de pedidos, con tests y docs</source>
         <target>Orders API, tested and documented</target>
       </segment>
     </unit>
