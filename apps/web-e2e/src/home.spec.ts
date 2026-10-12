@@ -108,13 +108,14 @@ for (const locale of locales) {
   });
 }
 
-const businessPages = [
+const localizedPages = [
   {
     path: '/es/empresas',
     lang: 'es',
     heading: 'Tu web en español e inglés, lista para vender',
     title: 'Webs para empresas en Perú · Koshisoftware',
     switchTo: { label: 'EN', path: '/en/business', lang: 'en' },
+    alternates: { es: '/es/empresas/', en: '/en/business/' },
   },
   {
     path: '/en/business',
@@ -122,10 +123,31 @@ const businessPages = [
     heading: 'Your website in Spanish and English, ready to sell',
     title: 'Websites for businesses in Peru · Koshisoftware',
     switchTo: { label: 'ES', path: '/es/empresas', lang: 'es' },
+    alternates: { es: '/es/empresas/', en: '/en/business/' },
   },
+  ...(['es', 'en'] as const).map((lang) => ({
+    path:
+      lang === 'es'
+        ? '/es/proyectos/koshisoftware'
+        : '/en/projects/koshisoftware',
+    lang,
+    heading: 'koshisoftware.pe',
+    title:
+      lang === 'es'
+        ? 'Caso de estudio: koshisoftware.pe · Koshisoftware'
+        : 'Case study: koshisoftware.pe · Koshisoftware',
+    switchTo:
+      lang === 'es'
+        ? { label: 'EN', path: '/en/projects/koshisoftware', lang: 'en' }
+        : { label: 'ES', path: '/es/proyectos/koshisoftware', lang: 'es' },
+    alternates: {
+      es: '/es/proyectos/koshisoftware/',
+      en: '/en/projects/koshisoftware/',
+    },
+  })),
 ] as const;
 
-for (const page of businessPages) {
+for (const page of localizedPages) {
   test.describe(`${page.path}`, () => {
     test('renders in its language', async ({ page: tab }) => {
       await tab.goto(page.path);
@@ -146,10 +168,7 @@ for (const page of businessPages) {
             'href',
             `${origin}${page.path}/`,
           );
-          for (const [hreflang, path] of [
-            ['es', '/es/empresas/'],
-            ['en', '/en/business/'],
-          ]) {
+          for (const [hreflang, path] of Object.entries(page.alternates)) {
             await expect(
               tab.locator(`link[rel="alternate"][hreflang="${hreflang}"]`),
             ).toHaveAttribute('href', `${origin}${path}`);
@@ -188,6 +207,20 @@ for (const page of businessPages) {
         expect(violations).toEqual([]);
       });
     }
+  });
+}
+
+for (const { home, caso } of [
+  { home: '/es/', caso: /\/es\/proyectos\/koshisoftware\/?$/ },
+  { home: '/en/', caso: /\/en\/projects\/koshisoftware\/?$/ },
+]) {
+  test(`${home} links its project to the case study`, async ({ page }) => {
+    await page.goto(home);
+    await page
+      .locator('#proyectos')
+      .getByRole('link', { name: /koshisoftware\.pe/ })
+      .click();
+    await expect(page).toHaveURL(caso);
   });
 }
 

@@ -3,6 +3,7 @@ import { Locale } from './preferred-locale';
 /** Pages whose path differs per locale; a page missing here has the same path in every locale. */
 const SLUGS = {
   empresas: { es: 'empresas', en: 'business' },
+  proyectos: { es: 'proyectos', en: 'projects' },
 } satisfies Record<string, Record<Locale, string>>;
 
 export type LocalizedPage = keyof typeof SLUGS;

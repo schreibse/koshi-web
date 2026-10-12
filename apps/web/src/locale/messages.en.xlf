@@ -82,16 +82,6 @@
         <target>Recent work</target>
       </segment>
     </unit>
-    <unit id="work.placeholder">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:71,73</note>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:77,79</note>
-      </notes>
-      <segment>
-        <source> Caso de estudio próximamente. </source>
-        <target>Case study coming soon.</target>
-      </segment>
-    </unit>
     <unit id="process.eyebrow">
       <notes>
         <note category="location">libs/frontend/home/feature/src/lib/home.ts:85,86</note>
@@ -981,6 +971,303 @@
       <segment>
         <source>inicio/</source>
         <target>home/</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:27</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio: koshisoftware.pe · Koshisoftware</source>
+        <target>Case study: koshisoftware.pe · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.alt">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:10</note>
+      </notes>
+      <segment>
+        <source>Página de inicio de koshisoftware.pe</source>
+        <target>Home page of koshisoftware.pe</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.category">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:11</note>
+      </notes>
+      <segment>
+        <source>Web de empresa · Angular</source>
+        <target>Business website · Angular</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:12</note>
+      </notes>
+      <segment>
+        <source>Esta web: bilingüe, hecha en Angular y tan rápida como una página estática. 100 en las cuatro categorías de Lighthouse, en móvil y escritorio.</source>
+        <target>This website: bilingual, built with Angular and as fast as a static page. 100 in all four Lighthouse categories, on mobile and desktop.</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.tag.prerender">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:15</note>
+      </notes>
+      <segment>
+        <source>SSR + prerender</source>
+        <target>SSR + prerendering</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.tag.hydration">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:16</note>
+      </notes>
+      <segment>
+        <source>Hidratación incremental</source>
+        <target>Incremental hydration</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.tag.languages">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:18</note>
+      </notes>
+      <segment>
+        <source>Español + inglés</source>
+        <target>Spanish + English</target>
+      </segment>
+    </unit>
+    <unit id="caso.lighthouse.performance">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:23</note>
+      </notes>
+      <segment>
+        <source>Rendimiento</source>
+        <target>Performance</target>
+      </segment>
+    </unit>
+    <unit id="caso.lighthouse.a11y">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:24</note>
+      </notes>
+      <segment>
+        <source>Accesibilidad</source>
+        <target>Accessibility</target>
+      </segment>
+    </unit>
+    <unit id="caso.lighthouse.practices">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:25</note>
+      </notes>
+      <segment>
+        <source>Buenas prácticas</source>
+        <target>Best practices</target>
+      </segment>
+    </unit>
+    <unit id="caso.back">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:40,43</note>
+      </notes>
+      <segment>
+        <source>← Proyectos</source>
+        <target>← Projects</target>
+      </segment>
+    </unit>
+    <unit id="caso.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:46,47</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio</source>
+        <target>Case study</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.measured">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:74,76</note>
+      </notes>
+      <segment>
+        <source> Mediana de tres pasadas en producción, móvil y escritorio, medida el 12/10/2026. </source>
+        <target> Median of three runs in production, mobile and desktop, measured on 2026-10-12. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.challenge.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:79,80</note>
+      </notes>
+      <segment>
+        <source>El reto</source>
+        <target>The challenge</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.challenge.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:81,85</note>
+      </notes>
+      <segment>
+        <source> Una aplicación Angular suele descargar y ejecutar todo su JavaScript antes de responder. Para una web de empresa eso cuesta visitas: Google mide la velocidad en el celular y la usa para ordenar sus resultados. La meta era la experiencia de una página estática, en español e inglés, sin renunciar a partes interactivas como el editor del inicio. </source>
+        <target> An Angular app usually downloads and runs all of its JavaScript before it responds. For a business website that costs visitors: Google measures speed on phones and uses it to rank results. The goal was the experience of a static page, in Spanish and English, without giving up interactive parts like the editor on the home page. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.approach.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:89,91</note>
+      </notes>
+      <segment>
+        <source>El enfoque</source>
+        <target>The approach</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.approach.prerender">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:92,94</note>
+      </notes>
+      <segment>
+        <source> Cada página se prerenderiza en el build, una vez por idioma, y Cloudflare Pages la sirve como HTML. </source>
+        <target> Every page is prerendered at build time, once per language, and Cloudflare Pages serves it as HTML. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.approach.hydration">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:96,98</note>
+      </notes>
+      <segment>
+        <source> Hidratación incremental: cada sección carga su JavaScript recién cuando entra en pantalla, y los clics de antes se reproducen después. </source>
+        <target> Incremental hydration: each section loads its JavaScript only when it scrolls into view, and earlier clicks are replayed afterwards. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.approach.languages">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:101,103</note>
+      </notes>
+      <segment>
+        <source> Cada idioma tiene su propia URL, con canonical y hreflang, para que Google muestre la versión correcta. </source>
+        <target> Each language has its own URL, with canonical and hreflang, so Google shows the right version. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.approach.measure">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:105,107</note>
+      </notes>
+      <segment>
+        <source> Lighthouse se mide en producción después de cada versión, no solo en local. </source>
+        <target> Lighthouse is measured in production after every release, not just locally. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.result.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:110,111</note>
+      </notes>
+      <segment>
+        <source>El resultado</source>
+        <target>The result</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.result.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:112,115</note>
+      </notes>
+      <segment>
+        <source> 100 en rendimiento, accesibilidad, buenas prácticas y SEO, en móvil y escritorio, en las cuatro páginas públicas. La página de inicio descarga solo el JavaScript de lo que se ve; el resto llega al hacer scroll. </source>
+        <target> 100 in performance, accessibility, best practices and SEO, on mobile and desktop, on all four public pages. The home page downloads only the JavaScript for what is on screen; the rest arrives as you scroll. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.setbacks.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:118,120</note>
+      </notes>
+      <segment>
+        <source>Dos tropiezos en el camino</source>
+        <target>Two setbacks along the way</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.setbacks.font">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:121,123</note>
+      </notes>
+      <segment>
+        <source> Una fuente de respaldo mejor ajustada hizo que el navegador midiera el titular dos veces: el rendimiento móvil cayó de 100 a 86. Volví a la carga anterior y fijé el ancho del titular. </source>
+        <target> A better-matched fallback font made the browser measure the headline twice: mobile performance dropped from 100 to 86. I went back to the previous font loading and fixed the headline’s width. </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.setbacks.contrast">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:126,129</note>
+      </notes>
+      <segment>
+        <source> El ejemplo de la página para empresas cambiaba de idioma con un fundido. En los cuadros intermedios el texto quedaba semitransparente y Lighthouse marcó contraste insuficiente. Ahora cambia sin fundido. </source>
+        <target> The example on the business page switched languages with a fade. In the frames in between, the text was half transparent and Lighthouse flagged insufficient contrast. Now it switches without a fade. </target>
+      </segment>
+    </unit>
+    <unit id="caso.client">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:141,142</note>
+      </notes>
+      <segment>
+        <source> Cliente </source>
+        <target> Client </target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.client">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:144,145</note>
+      </notes>
+      <segment>
+        <source> Koshisoftware (esta web) </source>
+        <target> Koshisoftware (this website) </target>
+      </segment>
+    </unit>
+    <unit id="caso.year">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:149</note>
+      </notes>
+      <segment>
+        <source>Año</source>
+        <target>Year</target>
+      </segment>
+    </unit>
+    <unit id="caso.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:153</note>
+      </notes>
+      <segment>
+        <source>Rol</source>
+        <target>Role</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:154,155</note>
+      </notes>
+      <segment>
+        <source> Diseño, desarrollo y despliegue </source>
+        <target> Design, development and deployment </target>
+      </segment>
+    </unit>
+    <unit id="caso.code">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:172,173</note>
+      </notes>
+      <segment>
+        <source>Ver el código</source>
+        <target>View the code</target>
+      </segment>
+    </unit>
+    <unit id="caso.ks.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:205</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, prerender e hidratación incremental, en español e inglés.</source>
+        <target>Case study: how koshisoftware.pe reached 100 in Lighthouse with Angular, prerendering and incremental hydration, in Spanish and English.</target>
+      </segment>
+    </unit>
+    <unit id="work.read">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:121,122</note>
+      </notes>
+      <segment>
+        <source>Leer el caso de estudio</source>
+        <target>Read the case study</target>
       </segment>
     </unit>
   </file>
