@@ -1,3 +1,13 @@
+## 0.1.9 (2026-10-12)
+
+### 🚀 Features
+
+- **web:** a 404 page, cross-locale redirects and slashed page URLs ([92caf7a](https://github.com/schreibse/koshi-web/commit/92caf7a))
+
+### 🩹 Fixes
+
+- **home:** swap the example's languages without a fade ([37cdce9](https://github.com/schreibse/koshi-web/commit/37cdce9))
+
 ## 0.1.8 (2026-10-12)
 
 ### 🚀 Features
