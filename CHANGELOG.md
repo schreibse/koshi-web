@@ -1,3 +1,13 @@
+## 0.1.11 (2026-10-12)
+
+### 🚀 Features
+
+- **home:** case study of this site, linked from the projects section ([424acfe](https://github.com/schreibse/koshi-web/commit/424acfe))
+
+### 🩹 Fixes
+
+- **home:** case study wording in Peruvian Spanish ([b3bb743](https://github.com/schreibse/koshi-web/commit/b3bb743))
+
 ## 0.1.10 (2026-10-12)
 
 ### 🩹 Fixes
