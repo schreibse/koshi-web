@@ -1,5 +1,5 @@
 export const SUPPORTED_LOCALES = ['es', 'en'] as const;
-type Locale = (typeof SUPPORTED_LOCALES)[number];
+export type Locale = (typeof SUPPORTED_LOCALES)[number];
 const FALLBACK: Locale = 'en';
 
 export function preferredLocale(acceptLanguage: string | null): Locale {
