@@ -1,3 +1,13 @@
+## 0.1.7 (2026-10-12)
+
+### 🚀 Features
+
+- **home:** show the process as a five-stage pipeline, hydrated on scroll ([5f185fd](https://github.com/schreibse/koshi-web/commit/5f185fd))
+
+### 🩹 Fixes
+
+- **web:** hydrate pages with i18n instead of rendering them twice ([bc3b8ef](https://github.com/schreibse/koshi-web/commit/bc3b8ef))
+
 ## 0.1.6 (2026-10-11)
 
 ### 🚀 Features
