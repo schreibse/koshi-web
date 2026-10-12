@@ -1,3 +1,9 @@
+## 0.1.10 (2026-10-12)
+
+### 🩹 Fixes
+
+- **home:** really swap the example's languages without a fade ([b4bc61b](https://github.com/schreibse/koshi-web/commit/b4bc61b))
+
 ## 0.1.9 (2026-10-12)
 
 ### 🚀 Features
