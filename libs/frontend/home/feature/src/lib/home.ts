@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { HeroEditor } from './hero-editor';
+import { ProcessPipeline } from './process-pipeline';
 import { TechStack } from './tech-stack';
 
 @Component({
   selector: 'ks-home',
-  imports: [HeroEditor, TechStack],
+  imports: [HeroEditor, ProcessPipeline, TechStack],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="overflow-x-clip">
@@ -38,7 +39,9 @@ import { TechStack } from './tech-stack';
       </div>
     </section>
 
-    <ks-tech-stack />
+    @defer (hydrate on viewport) {
+      <ks-tech-stack />
+    }
 
     <section id="servicios" class="border-t border-line py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
@@ -98,43 +101,9 @@ import { TechStack } from './tech-stack';
       </div>
     </section>
 
-    <section class="border-t border-line bg-tint py-16 md:py-28">
-      <div class="mx-auto max-w-6xl px-4 md:px-10">
-        <span class="eyebrow" i18n="@@process.eyebrow">Cómo trabajo</span>
-        <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@process.title">
-          Tres pasos, sin sorpresas
-        </h2>
-        <ol class="m-0 grid list-none gap-6 p-0 md:grid-cols-3">
-          <li class="rounded-base bg-tint-strong p-8">
-            <span class="mb-4 block font-extrabold">01</span>
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@process.talk.title">
-              Conversamos
-            </h3>
-            <p class="text-muted" i18n="@@process.talk.text">
-              Entiendo tu objetivo, tu equipo y tu plazo.
-            </p>
-          </li>
-          <li class="rounded-base bg-tint-strong p-8">
-            <span class="mb-4 block font-extrabold">02</span>
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@process.plan.title">
-              Planificamos
-            </h3>
-            <p class="text-muted" i18n="@@process.plan.text">
-              Alcance claro, entregas cortas y un precio acordado.
-            </p>
-          </li>
-          <li class="rounded-base bg-tint-strong p-8">
-            <span class="mb-4 block font-extrabold">03</span>
-            <h3 class="mb-2 text-[1.35rem]" i18n="@@process.build.title">
-              Construyo
-            </h3>
-            <p class="text-muted" i18n="@@process.build.text">
-              Avances visibles cada semana, código que tu equipo puede mantener.
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
+    @defer (hydrate on viewport) {
+      <ks-process-pipeline />
+    }
 
     <section id="nosotros" class="border-t border-line py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
