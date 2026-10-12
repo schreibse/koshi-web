@@ -103,65 +103,65 @@
     </unit>
     <unit id="process.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:87,89</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:65,67</note>
       </notes>
       <segment>
-        <source> Tres pasos, sin sorpresas </source>
-        <target>Three steps, no surprises</target>
+        <source> Cinco pasos, sin sorpresas </source>
+        <target>Five steps, no surprises</target>
       </segment>
     </unit>
     <unit id="process.talk.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:93,95</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:31</note>
       </notes>
       <segment>
-        <source> Conversamos </source>
+        <source>Conversamos</source>
         <target>We talk</target>
       </segment>
     </unit>
     <unit id="process.talk.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:96,98</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:32</note>
       </notes>
       <segment>
-        <source> Entiendo tu objetivo, tu equipo y tu plazo. </source>
+        <source>Entiendo tu objetivo, tu equipo y tu plazo.</source>
         <target>I learn your goal, your team and your timeline.</target>
       </segment>
     </unit>
     <unit id="process.plan.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:102,104</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:36</note>
       </notes>
       <segment>
-        <source> Planificamos </source>
+        <source>Planificamos</source>
         <target>We plan</target>
       </segment>
     </unit>
     <unit id="process.plan.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:105,107</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:37</note>
       </notes>
       <segment>
-        <source> Alcance claro, entregas cortas y un precio acordado. </source>
+        <source>Alcance claro, entregas cortas y un precio acordado.</source>
         <target>Clear scope, short deliveries and an agreed price.</target>
       </segment>
     </unit>
     <unit id="process.build.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:111,113</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:41</note>
       </notes>
       <segment>
-        <source> Construyo </source>
+        <source>Construyo</source>
         <target>I build</target>
       </segment>
     </unit>
     <unit id="process.build.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:114,116</note>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:42</note>
       </notes>
       <segment>
-        <source> Avances visibles cada semana, código que tu equipo puede mantener. </source>
-        <target>Visible progress every week, code your team can maintain.</target>
+        <source>Avances visibles cada semana, en una URL de prueba.</source>
+        <target>Visible progress every week, on a preview URL.</target>
       </segment>
     </unit>
     <unit id="about.eyebrow">
@@ -504,6 +504,51 @@
       <segment>
         <source>(se abre en una pestaña nueva)</source>
         <target>(opens in a new tab)</target>
+      </segment>
+    </unit>
+    <unit id="process.launch.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:46</note>
+      </notes>
+      <segment>
+        <source>Lanzamos</source>
+        <target>We launch</target>
+      </segment>
+    </unit>
+    <unit id="process.launch.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:47</note>
+      </notes>
+      <segment>
+        <source>Tests, Lighthouse 100 y salida a producción sin sustos.</source>
+        <target>Tests, Lighthouse 100 and a calm go-live.</target>
+      </segment>
+    </unit>
+    <unit id="process.support.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:51</note>
+      </notes>
+      <segment>
+        <source>Acompaño</source>
+        <target>I stay on</target>
+      </segment>
+    </unit>
+    <unit id="process.support.text">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:52</note>
+      </notes>
+      <segment>
+        <source>Mantenimiento, mejoras y capacitación para tu equipo.</source>
+        <target>Maintenance, improvements and training for your team.</target>
+      </segment>
+    </unit>
+    <unit id="process.pipeline">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:73,74</note>
+      </notes>
+      <segment>
+        <source>pipeline #tu-proyecto</source>
+        <target>pipeline #your-project</target>
       </segment>
     </unit>
   </file>
