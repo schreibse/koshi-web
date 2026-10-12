@@ -22,3 +22,19 @@ export function localizedUrl(url: string, from: Locale, to: Locale): string {
   const page = Object.values(SLUGS).find((slugs) => slugs[from] === first);
   return page ? `/${page[to]}${rest}` : url;
 }
+
+/** Cloudflare serves every page as a directory, so a page's own URL ends in a slash. */
+export function withTrailingSlash(url: string): string {
+  return url.replace(/^([^?#]*[^/?#])(?=[?#]|$)/, '$1/');
+}
+
+/** A slug of another locale, mapped to this locale's slug for the same page. */
+export function crossLocaleRedirects(
+  locale: Locale,
+): { from: string; to: string }[] {
+  return Object.values(SLUGS).flatMap((slugs) =>
+    Object.entries(slugs)
+      .filter(([other, from]) => other !== locale && from !== slugs[locale])
+      .map(([, from]) => ({ from, to: slugs[locale] })),
+  );
+}

@@ -10,6 +10,7 @@ import {
   Locale,
   SUPPORTED_LOCALES,
   localizedUrl,
+  withTrailingSlash,
   toLocale,
 } from '@koshi/shared/locale/util';
 import { filter } from 'rxjs';
@@ -21,22 +22,34 @@ export function provideHeadLinks(): EnvironmentProviders {
   return provideAppInitializer(() => {
     const document = inject(DOCUMENT);
     const locale = toLocale(inject(LOCALE_ID));
-    inject(Router)
-      .events.pipe(filter((event) => event instanceof NavigationEnd))
+    const router = inject(Router);
+    router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(({ urlAfterRedirects }) =>
-        replaceHeadLinks(document, locale, urlAfterRedirects),
+        replaceHeadLinks(
+          document,
+          locale,
+          urlAfterRedirects,
+          isNotFound(router),
+        ),
       );
   });
 }
 
-function replaceHeadLinks(document: Document, locale: Locale, url: string) {
+function replaceHeadLinks(
+  document: Document,
+  locale: Locale,
+  url: string,
+  notFound: boolean,
+) {
   // Hydration re-runs this on top of the prerendered links.
   document.head
     .querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
     .forEach((link) => link.remove());
 
+  if (notFound) return;
   const localized = (target: Locale) =>
-    `${SITE_ORIGIN}/${target}${localizedUrl(url, locale, target)}`;
+    `${SITE_ORIGIN}/${target}${withTrailingSlash(localizedUrl(url, locale, target))}`;
   appendLink(document, { rel: 'canonical', href: localized(locale) });
   for (const target of SUPPORTED_LOCALES) {
     appendLink(document, {
@@ -61,4 +74,10 @@ function appendLink(document: Document, attributes: Record<string, string>) {
     link.setAttribute(name, value);
   }
   document.head.appendChild(link);
+}
+
+function isNotFound(router: Router): boolean {
+  let route = router.routerState.snapshot.root;
+  while (route.firstChild) route = route.firstChild;
+  return route.data['notFound'] === true;
 }

@@ -21,14 +21,14 @@ describe('LanguageSwitch', () => {
 
   it('links from Spanish to the same page in English', async () => {
     const a = await link('es');
-    expect(a.getAttribute('href')).toBe('/en/servicios');
+    expect(a.getAttribute('href')).toBe('/en/servicios/');
     expect(a.getAttribute('hreflang')).toBe('en');
     expect(a.textContent?.trim()).toBe('EN');
   });
 
   it('links from English to Spanish', async () => {
     const a = await link('en-US');
-    expect(a.getAttribute('href')).toBe('/es/servicios');
+    expect(a.getAttribute('href')).toBe('/es/servicios/');
   });
 
   it('follows a navigation that ends after it rendered, translating the slug', async () => {
@@ -47,6 +47,6 @@ describe('LanguageSwitch', () => {
       (fixture.nativeElement as HTMLElement)
         .querySelector('a')
         ?.getAttribute('href'),
-    ).toBe('/en/business');
+    ).toBe('/en/business/');
   });
 });

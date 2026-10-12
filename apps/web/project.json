@@ -18,6 +18,14 @@
   },
   "targets": {
     "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build-app"],
+      "outputs": ["{workspaceRoot}/dist/apps/web"],
+      "options": {
+        "command": "for l in es en; do d=dist/apps/web/browser/$l; if [ -f $d/404/index.html ]; then mv $d/404/index.html $d/404.html && rmdir $d/404; fi; done"
+      }
+    },
+    "build-app": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
@@ -72,10 +80,10 @@
       "defaultConfiguration": "development",
       "configurations": {
         "production": {
-          "buildTarget": "web:build:production"
+          "buildTarget": "web:build-app:production"
         },
         "development": {
-          "buildTarget": "web:build:development"
+          "buildTarget": "web:build-app:development"
         }
       }
     },
@@ -98,7 +106,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "web:build",
+        "buildTarget": "web:build-app",
         "format": "xlf2",
         "outputPath": "apps/web/src/locale"
       }

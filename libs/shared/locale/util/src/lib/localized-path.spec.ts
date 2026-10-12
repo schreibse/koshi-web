@@ -1,4 +1,10 @@
-import { localizedUrl, slug, toLocale } from './localized-path';
+import {
+  crossLocaleRedirects,
+  localizedUrl,
+  slug,
+  toLocale,
+  withTrailingSlash,
+} from './localized-path';
 
 describe('slug', () => {
   it('gives each locale its own path', () => {
@@ -38,5 +44,29 @@ describe('localizedUrl', () => {
 
   it('leaves a slug of the other locale alone, as it is no page in this one', () => {
     expect(localizedUrl('/business', 'es', 'en')).toBe('/business');
+  });
+});
+
+describe('withTrailingSlash', () => {
+  it.each([
+    ['/', '/'],
+    ['/empresas', '/empresas/'],
+    ['/empresas/', '/empresas/'],
+    ['/empresas#incluye', '/empresas/#incluye'],
+    ['/empresas?ref=x', '/empresas/?ref=x'],
+    ['/#contacto', '/#contacto'],
+  ])('%s → %s', (url, expected) => {
+    expect(withTrailingSlash(url)).toBe(expected);
+  });
+});
+
+describe('crossLocaleRedirects', () => {
+  it("sends the other locale's slug to this locale's page", () => {
+    expect(crossLocaleRedirects('en')).toEqual([
+      { from: 'empresas', to: 'business' },
+    ]);
+    expect(crossLocaleRedirects('es')).toEqual([
+      { from: 'business', to: 'empresas' },
+    ]);
   });
 });

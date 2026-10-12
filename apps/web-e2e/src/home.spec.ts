@@ -144,11 +144,11 @@ for (const page of businessPages) {
           await expect(tab).toHaveTitle(page.title);
           await expect(tab.locator('link[rel="canonical"]')).toHaveAttribute(
             'href',
-            `${origin}${page.path}`,
+            `${origin}${page.path}/`,
           );
           for (const [hreflang, path] of [
-            ['es', '/es/empresas'],
-            ['en', '/en/business'],
+            ['es', '/es/empresas/'],
+            ['en', '/en/business/'],
           ]) {
             await expect(
               tab.locator(`link[rel="alternate"][hreflang="${hreflang}"]`),
@@ -188,5 +188,32 @@ for (const page of businessPages) {
         expect(violations).toEqual([]);
       });
     }
+  });
+}
+
+test('a slug of the other locale redirects to this one', async ({ page }) => {
+  await page.goto('/en/empresas');
+  await expect(page).toHaveURL(/\/en\/business\/?$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+});
+
+for (const { lang, heading, home } of [
+  { lang: 'es', heading: 'Página no encontrada', home: 'inicio/' },
+  { lang: 'en', heading: 'Page not found', home: 'home/' },
+] as const) {
+  test(`404 page in ${lang} offers the way home and stays out of search`, async ({
+    page,
+  }) => {
+    await page.goto(`/${lang}/404.html`);
+    await expect(
+      page.getByRole('heading', { level: 1, name: heading }),
+    ).toBeVisible();
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+      'content',
+      'noindex',
+    );
+    await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+    await page.getByRole('link', { name: home, exact: true }).click();
+    await expect(page).toHaveURL(new RegExp(`/${lang}/$`));
   });
 }
