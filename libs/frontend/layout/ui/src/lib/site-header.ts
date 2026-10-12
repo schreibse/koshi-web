@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 import { LanguageSwitch } from './language-switch';
 import { ThemeToggle } from './theme-toggle';
 import { Wordmark } from './wordmark';
@@ -34,6 +40,12 @@ import { Wordmark } from './wordmark';
           i18n="@@nav.about"
           >Nosotros</a
         >
+        <a
+          [href]="empresas"
+          class="hidden text-muted no-underline hover:text-ink md:inline"
+          i18n="@@nav.business"
+          >Empresas</a
+        >
         <a href="#contacto" class="btn btn-primary" i18n="@@nav.contact"
           >Hablemos</a
         >
@@ -45,4 +57,6 @@ import { Wordmark } from './wordmark';
     </div>
   `,
 })
-export class SiteHeader {}
+export class SiteHeader {
+  protected readonly empresas = slug('empresas', toLocale(inject(LOCALE_ID)));
+}
