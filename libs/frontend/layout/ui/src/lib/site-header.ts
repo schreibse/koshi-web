@@ -58,5 +58,5 @@ import { Wordmark } from './wordmark';
   `,
 })
 export class SiteHeader {
-  protected readonly empresas = slug('empresas', toLocale(inject(LOCALE_ID)));
+  protected readonly empresas = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/`;
 }

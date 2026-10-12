@@ -152,7 +152,7 @@ import { TechStack } from './tech-stack';
 })
 export class Home {
   protected readonly servicios = SERVICIOS;
-  protected readonly empresas = slug('empresas', toLocale(inject(LOCALE_ID)));
+  protected readonly empresas = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/`;
 
   constructor() {
     inject(Meta).updateTag({

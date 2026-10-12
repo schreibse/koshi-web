@@ -3,7 +3,7 @@
   <file id="ngi18n" original="ng.template">
     <unit id="home.pageTitle">
       <notes>
-        <note category="location">apps/web/src/app/app.routes.ts:10</note>
+        <note category="location">apps/web/src/app/app.routes.ts:15</note>
       </notes>
       <segment>
         <source>Koshisoftware · Desarrollo Angular y NestJS en Perú</source>
@@ -11,10 +11,18 @@
     </unit>
     <unit id="empresas.pageTitle">
       <notes>
-        <note category="location">apps/web/src/app/app.routes.ts:16</note>
+        <note category="location">apps/web/src/app/app.routes.ts:21</note>
       </notes>
       <segment>
         <source>Webs para empresas en Perú · Koshisoftware</source>
+      </segment>
+    </unit>
+    <unit id="notFound.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:32</note>
+      </notes>
+      <segment>
+        <source>Página no encontrada · Koshisoftware</source>
       </segment>
     </unit>
     <unit id="empresas.web.title">
@@ -179,7 +187,7 @@
     </unit>
     <unit id="empresas.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:123,125</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:125,127</note>
       </notes>
       <segment>
         <source>Para empresas</source>
@@ -187,7 +195,7 @@
     </unit>
     <unit id="empresas.hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:128,130</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:130,132</note>
       </notes>
       <segment>
         <source> Tu web en español e inglés, lista para vender </source>
@@ -195,7 +203,7 @@
     </unit>
     <unit id="empresas.hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:134,136</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:136,138</note>
       </notes>
       <segment>
         <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y en regla. </source>
@@ -203,7 +211,7 @@
     </unit>
     <unit id="empresas.hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:139,141</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:141,143</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -211,7 +219,7 @@
     </unit>
     <unit id="empresas.hero.more">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:142,144</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:144,146</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -219,7 +227,7 @@
     </unit>
     <unit id="empresas.hero.example">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:150,152</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:152,154</note>
       </notes>
       <segment>
         <source>Ejemplo: la misma web en español y en inglés</source>
@@ -227,7 +235,7 @@
     </unit>
     <unit id="empresas.offer.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:263,264</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:265,266</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -235,7 +243,7 @@
     </unit>
     <unit id="empresas.offer.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:265,267</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:267,269</note>
       </notes>
       <segment>
         <source> Todo lo que tu web necesita </source>
@@ -243,7 +251,7 @@
     </unit>
     <unit id="empresas.modes.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:299,301</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:301,303</note>
       </notes>
       <segment>
         <source>Cómo trabajamos</source>
@@ -251,7 +259,7 @@
     </unit>
     <unit id="empresas.modes.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:302,304</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:304,306</note>
       </notes>
       <segment>
         <source> Un proyecto o una cuota mensual </source>
@@ -259,7 +267,7 @@
     </unit>
     <unit id="empresas.modes.project.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:310,312</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:312,314</note>
       </notes>
       <segment>
         <source> Proyecto </source>
@@ -267,7 +275,7 @@
     </unit>
     <unit id="empresas.modes.project.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:313,315</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:315,317</note>
       </notes>
       <segment>
         <source> Conversamos, te envío una propuesta con precio cerrado y construyo tu web. </source>
@@ -275,7 +283,7 @@
     </unit>
     <unit id="empresas.modes.monthly.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:322,324</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:324,326</note>
       </notes>
       <segment>
         <source> Soporte mensual </source>
@@ -283,7 +291,7 @@
     </unit>
     <unit id="empresas.modes.monthly.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:325,327</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:327,329</note>
       </notes>
       <segment>
         <source> Una cuota fija para mantenimiento, cambios pequeños y tranquilidad. </source>
@@ -291,7 +299,7 @@
     </unit>
     <unit id="empresas.contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:335,336</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:337,338</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -299,7 +307,7 @@
     </unit>
     <unit id="empresas.contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:337,339</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:339,341</note>
       </notes>
       <segment>
         <source> ¿Hablamos de tu web? </source>
@@ -307,7 +315,7 @@
     </unit>
     <unit id="empresas.contact.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:340,343</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:342,345</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -315,7 +323,7 @@
     </unit>
     <unit id="empresas.description">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:356</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:358</note>
       </notes>
       <segment>
         <source>Webs WordPress en español e inglés para empresas en Perú: diseño, mantenimiento, Libro de Reclamaciones y facturación electrónica.</source>
@@ -776,6 +784,46 @@
       </notes>
       <segment>
         <source>(se abre en una pestaña nueva)</source>
+      </segment>
+    </unit>
+    <unit id="notFound.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:25,26</note>
+      </notes>
+      <segment>
+        <source>Error 404</source>
+      </segment>
+    </unit>
+    <unit id="notFound.title">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:27,29</note>
+      </notes>
+      <segment>
+        <source> Página no encontrada </source>
+      </segment>
+    </unit>
+    <unit id="notFound.error">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:53,54</note>
+      </notes>
+      <segment>
+        <source> bash: cd: <ph id="0" equiv="INTERPOLATION" disp="{{ ruta() }}"/>: No existe el archivo o el directorio </source>
+      </segment>
+    </unit>
+    <unit id="notFound.links">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:65,66</note>
+      </notes>
+      <segment>
+        <source>Páginas</source>
+      </segment>
+    </unit>
+    <unit id="notFound.home">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:66,67</note>
+      </notes>
+      <segment>
+        <source>inicio/</source>
       </segment>
     </unit>
     <unit id="nav.services">

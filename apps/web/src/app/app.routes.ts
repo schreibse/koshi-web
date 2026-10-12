@@ -1,5 +1,10 @@
 import { Route } from '@angular/router';
-import { slug, toLocale } from '@koshi/shared/locale/util';
+import { NotFound } from '@koshi/frontend/layout/ui';
+import {
+  crossLocaleRedirects,
+  slug,
+  toLocale,
+} from '@koshi/shared/locale/util';
 
 // Each locale is its own build; $localize.locale says which one this is.
 const locale = toLocale($localize.locale ?? 'es');
@@ -17,5 +22,15 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@koshi/frontend/home/feature').then((m) => m.Empresas),
   },
-  { path: '**', redirectTo: '' },
+  ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
+    path: from,
+    redirectTo: `/${to}`,
+  })),
+  // Prerendered as /404, then moved to 404.html for Cloudflare Pages (see the web build target).
+  ...['404', '**'].map((path): Route => ({
+    path,
+    title: $localize`:@@notFound.pageTitle:Página no encontrada · Koshisoftware`,
+    component: NotFound,
+    data: { notFound: true },
+  })),
 ];

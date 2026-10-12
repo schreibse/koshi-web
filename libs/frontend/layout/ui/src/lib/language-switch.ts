@@ -8,7 +8,12 @@ import {
 import { toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs';
-import { Locale, localizedUrl, toLocale } from '@koshi/shared/locale/util';
+import {
+  Locale,
+  localizedUrl,
+  toLocale,
+  withTrailingSlash,
+} from '@koshi/shared/locale/util';
 
 @Component({
   selector: 'ks-language-switch',
@@ -39,6 +44,7 @@ export class LanguageSwitch {
 
   // A plain href, not routerLink: each locale is a separate build under its own base href.
   protected readonly href = computed(
-    () => `/${this.other}${localizedUrl(this.url(), this.locale, this.other)}`,
+    () =>
+      `/${this.other}${withTrailingSlash(localizedUrl(this.url(), this.locale, this.other))}`,
   );
 }

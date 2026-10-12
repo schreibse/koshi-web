@@ -22,7 +22,7 @@ describe('SiteHeader', () => {
       '#servicios',
       '#proyectos',
       '#nosotros',
-      'empresas',
+      'empresas/',
       '#contacto',
     ]);
   });

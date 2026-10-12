@@ -929,5 +929,59 @@
         <target>Senior web development · Peru and remote</target>
       </segment>
     </unit>
+    <unit id="notFound.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:32</note>
+      </notes>
+      <segment>
+        <source>Página no encontrada · Koshisoftware</source>
+        <target>Page not found · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="notFound.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:25,26</note>
+      </notes>
+      <segment>
+        <source>Error 404</source>
+        <target>Error 404</target>
+      </segment>
+    </unit>
+    <unit id="notFound.title">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:27,29</note>
+      </notes>
+      <segment>
+        <source> Página no encontrada </source>
+        <target>Page not found</target>
+      </segment>
+    </unit>
+    <unit id="notFound.error">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:53,54</note>
+      </notes>
+      <segment>
+        <source> bash: cd: <ph id="0" equiv="INTERPOLATION" disp="{{ ruta() }}"/>: No existe el archivo o el directorio </source>
+        <target>bash: cd: <ph id="0" equiv="INTERPOLATION" disp="{{ ruta() }}"/>: No such file or directory</target>
+      </segment>
+    </unit>
+    <unit id="notFound.links">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:65,66</note>
+      </notes>
+      <segment>
+        <source>Páginas</source>
+        <target>Pages</target>
+      </segment>
+    </unit>
+    <unit id="notFound.home">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/not-found.ts:66,67</note>
+      </notes>
+      <segment>
+        <source>inicio/</source>
+        <target>home/</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
