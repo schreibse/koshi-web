@@ -75,14 +75,13 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
     }
     .idiomas > * {
       grid-area: 1 / 1;
-      /* A swap, not a fade: half-transparent text fails the contrast check. */
-      animation-timing-function: step-end;
     }
     .idiomas > :first-child {
-      animation: es 7s infinite;
+      /* A swap, not a fade: half-transparent text fails the contrast check. */
+      animation: es 7s step-end infinite;
     }
     .idiomas > :last-child {
-      animation: en 7s infinite;
+      animation: en 7s step-end infinite;
     }
     @keyframes es {
       0%,
