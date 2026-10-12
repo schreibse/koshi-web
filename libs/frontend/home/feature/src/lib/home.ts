@@ -1,5 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 import { HeroEditor } from './hero-editor';
 import { ProcessPipeline } from './process-pipeline';
 import { TechStack } from './tech-stack';
@@ -14,12 +20,14 @@ import { TechStack } from './tech-stack';
         class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-14 px-4 py-20 md:px-10 md:py-28 lg:grid-cols-2"
       >
         <div>
-          <span class="eyebrow">Angular · NestJS · TypeScript</span>
+          <span class="eyebrow" i18n="@@hero.eyebrow"
+            >Desarrollo web senior · Perú y remoto</span
+          >
           <h1
             class="max-w-[8.5em] text-5xl md:text-7xl lg:text-6xl"
             i18n="@@hero.title"
           >
-            Software <em class="text-accent not-italic">fuerte</em>, hecho en
+            Software <em class="text-accent not-italic">koshi</em>, hecho en
             Perú.
           </h1>
           <p class="mt-6 max-w-xl text-xl text-muted" i18n="@@hero.lead">
@@ -75,6 +83,11 @@ import { TechStack } from './tech-stack';
             </li>
           }
         </ul>
+        <p class="mt-10 text-lg">
+          <a [href]="empresas" i18n="@@services.business"
+            >¿Tienes un negocio y necesitas una web? Webs para empresas →</a
+          >
+        </p>
       </div>
     </section>
 
@@ -139,6 +152,7 @@ import { TechStack } from './tech-stack';
 })
 export class Home {
   protected readonly servicios = SERVICIOS;
+  protected readonly empresas = slug('empresas', toLocale(inject(LOCALE_ID)));
 
   constructor() {
     inject(Meta).updateTag({

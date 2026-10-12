@@ -1,10 +1,13 @@
+import { LOCALE_ID } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { SiteHeader } from './site-header';
 
 describe('SiteHeader', () => {
-  it('shows the wordmark and links to every homepage section', async () => {
-    TestBed.configureTestingModule({ providers: [provideRouter([])] });
+  it('shows the wordmark, the homepage sections and the business page', async () => {
+    TestBed.configureTestingModule({
+      providers: [provideRouter([]), { provide: LOCALE_ID, useValue: 'es' }],
+    });
     const fixture = TestBed.createComponent(SiteHeader);
     await fixture.whenStable();
     const host = fixture.nativeElement as HTMLElement;
@@ -19,6 +22,7 @@ describe('SiteHeader', () => {
       '#servicios',
       '#proyectos',
       '#nosotros',
+      'empresas',
       '#contacto',
     ]);
   });
