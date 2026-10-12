@@ -8,11 +8,12 @@ import { provideHeadLinks } from './head-links';
 import {
   provideClientHydration,
   withEventReplay,
+  withI18nSupport,
 } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideClientHydration(withEventReplay()),
+    provideClientHydration(withEventReplay(), withI18nSupport()),
     provideBrowserGlobalErrorListeners(),
     provideRouter(appRoutes),
     provideHeadLinks(),
