@@ -22,6 +22,12 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@koshi/frontend/home/feature').then((m) => m.Empresas),
   },
+  {
+    path: `${slug('proyectos', locale)}/koshisoftware`,
+    title: $localize`:@@caso.ks.pageTitle:Caso de estudio: koshisoftware.pe · Koshisoftware`,
+    loadComponent: () =>
+      import('@koshi/frontend/home/feature').then((m) => m.CasoKoshisoftware),
+  },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
     path: from,
     redirectTo: `/${to}`,

@@ -6,13 +6,15 @@ import {
 } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
+import { KOSHISOFTWARE } from './caso-koshisoftware';
 import { HeroEditor } from './hero-editor';
 import { ProcessPipeline } from './process-pipeline';
+import { ProjectShot } from './project-shot';
 import { TechStack } from './tech-stack';
 
 @Component({
   selector: 'ks-home',
-  imports: [HeroEditor, ProcessPipeline, TechStack],
+  imports: [HeroEditor, ProcessPipeline, ProjectShot, TechStack],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="overflow-x-clip">
@@ -97,20 +99,36 @@ import { TechStack } from './tech-stack';
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@work.title">
           Trabajo reciente
         </h2>
-        <ul class="m-0 grid list-none gap-6 p-0 md:grid-cols-2">
-          <li
-            class="grid min-h-56 place-items-center rounded-base bg-surface p-8 text-muted"
-            i18n="@@work.placeholder"
-          >
-            Caso de estudio próximamente.
-          </li>
-          <li
-            class="grid min-h-56 place-items-center rounded-base bg-surface p-8 text-muted"
-            i18n="@@work.placeholder"
-          >
-            Caso de estudio próximamente.
-          </li>
-        </ul>
+        <article
+          class="grid grid-cols-[minmax(0,1fr)] items-center gap-10 rounded-base bg-surface p-6 md:p-10 lg:grid-cols-[5fr_6fr]"
+        >
+          <div class="grid content-start gap-4">
+            <span class="text-sm font-semibold text-accent">{{
+              caso.categoria
+            }}</span>
+            <h3 class="text-3xl">{{ caso.host }}</h3>
+            <p class="m-0 text-lg text-muted">{{ caso.lead }}</p>
+            <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+              @for (tag of caso.tags; track tag) {
+                <li
+                  class="rounded-full bg-tint px-2.5 py-0.5 text-sm font-semibold"
+                >
+                  {{ tag }}
+                </li>
+              }
+            </ul>
+            <a [href]="casoUrl" class="btn mt-2 justify-self-start"
+              ><ng-container i18n="@@work.read"
+                >Leer el caso de estudio</ng-container
+              ><span class="sr-only">: {{ caso.host }}</span></a
+            >
+          </div>
+          <ks-project-shot
+            [host]="caso.host"
+            [image]="caso.image"
+            [alt]="caso.alt"
+          />
+        </article>
       </div>
     </section>
 
@@ -152,7 +170,10 @@ import { TechStack } from './tech-stack';
 })
 export class Home {
   protected readonly servicios = SERVICIOS;
-  protected readonly empresas = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/`;
+  private readonly locale = toLocale(inject(LOCALE_ID));
+  protected readonly empresas = `${slug('empresas', this.locale)}/`;
+  protected readonly caso = KOSHISOFTWARE;
+  protected readonly casoUrl = `${slug('proyectos', this.locale)}/${KOSHISOFTWARE.path}/`;
 
   constructor() {
     inject(Meta).updateTag({
