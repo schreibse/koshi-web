@@ -1,3 +1,15 @@
+## 0.1.8 (2026-10-12)
+
+### 🚀 Features
+
+- **home:** add the business page and sharpen the home hero ([aab4088](https://github.com/schreibse/koshi-web/commit/aab4088))
+- **home:** show a Cusco guesthouse as the business page example ([d980e81](https://github.com/schreibse/koshi-web/commit/d980e81))
+- **web:** give pages a slug per locale ([d2305f1](https://github.com/schreibse/koshi-web/commit/d2305f1))
+
+### 🩹 Fixes
+
+- **home:** fit the hero code on phones without scrolling ([6e92494](https://github.com/schreibse/koshi-web/commit/6e92494))
+
 ## 0.1.7 (2026-10-12)
 
 ### 🚀 Features
