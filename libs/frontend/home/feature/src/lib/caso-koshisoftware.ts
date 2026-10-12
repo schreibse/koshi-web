@@ -9,7 +9,7 @@ export const KOSHISOFTWARE = {
   image: 'img/koshisoftware',
   alt: $localize`:@@caso.ks.alt:Página de inicio de koshisoftware.pe`,
   categoria: $localize`:@@caso.ks.category:Web de empresa · Angular`,
-  lead: $localize`:@@caso.ks.lead:Esta web: bilingüe, hecha en Angular y tan rápida como una página estática. 100 en las cuatro categorías de Lighthouse, en móvil y escritorio.`,
+  lead: $localize`:@@caso.ks.lead:Esta web: bilingüe, hecha en Angular y tan rápida como una página estática. 100 en las cuatro categorías de Lighthouse, en celular y computadora.`,
   tags: [
     'Angular 22',
     $localize`:@@caso.ks.tag.prerender:SSR + prerender`,
@@ -22,7 +22,7 @@ export const KOSHISOFTWARE = {
 const LIGHTHOUSE = [
   $localize`:@@caso.lighthouse.performance:Rendimiento`,
   $localize`:@@caso.lighthouse.a11y:Accesibilidad`,
-  $localize`:@@caso.lighthouse.practices:Buenas prácticas`,
+  $localize`:@@caso.lighthouse.practices:Prácticas recomendadas`,
   'SEO',
 ];
 
@@ -71,8 +71,8 @@ const LIGHTHOUSE = [
             }
           </ul>
           <p class="mt-3 text-sm text-muted" i18n="@@caso.ks.measured">
-            Mediana de tres pasadas en producción, móvil y escritorio, medida el
-            12/10/2026.
+            Mediana de tres mediciones en producción, en celular y computadora,
+            al 12/10/2026.
           </p>
 
           <div class="caso-texto max-w-2xl">
@@ -89,44 +89,45 @@ const LIGHTHOUSE = [
             <h2 i18n="@@caso.ks.approach.title">El enfoque</h2>
             <ul>
               <li i18n="@@caso.ks.approach.prerender">
-                Cada página se prerenderiza en el build, una vez por idioma, y
-                Cloudflare Pages la sirve como HTML.
+                Cada página se genera como HTML al compilar, una vez por idioma,
+                y Cloudflare Pages la sirve tal cual.
               </li>
               <li i18n="@@caso.ks.approach.hydration">
                 Hidratación incremental: cada sección carga su JavaScript recién
-                cuando entra en pantalla, y los clics de antes se reproducen
-                después.
+                cuando aparece en pantalla, y los clics que hiciste antes se
+                atienden apenas carga.
               </li>
               <li i18n="@@caso.ks.approach.languages">
                 Cada idioma tiene su propia URL, con canonical y hreflang, para
                 que Google muestre la versión correcta.
               </li>
               <li i18n="@@caso.ks.approach.measure">
-                Lighthouse se mide en producción después de cada versión, no
-                solo en local.
+                Mido con Lighthouse en producción después de cada versión, no
+                solo en mi computadora.
               </li>
             </ul>
 
             <h2 i18n="@@caso.ks.result.title">El resultado</h2>
             <p i18n="@@caso.ks.result.text">
-              100 en rendimiento, accesibilidad, buenas prácticas y SEO, en
-              móvil y escritorio, en las cuatro páginas públicas. La página de
-              inicio descarga solo el JavaScript de lo que se ve; el resto llega
-              al hacer scroll.
+              100 en rendimiento, accesibilidad, prácticas recomendadas y SEO,
+              en celular y computadora, en las cuatro páginas públicas. La
+              página de inicio descarga solo el JavaScript de lo que se ve; el
+              resto llega a medida que bajas.
             </p>
 
             <h2 i18n="@@caso.ks.setbacks.title">Dos tropiezos en el camino</h2>
             <ul>
               <li i18n="@@caso.ks.setbacks.font">
                 Una fuente de respaldo mejor ajustada hizo que el navegador
-                midiera el titular dos veces: el rendimiento móvil cayó de 100 a
-                86. Volví a la carga anterior y fijé el ancho del titular.
+                midiera el titular dos veces: el rendimiento en celular cayó de
+                100 a 86. Regresé a la forma anterior de cargar la fuente y fijé
+                el ancho del titular.
               </li>
               <li i18n="@@caso.ks.setbacks.contrast">
-                El ejemplo de la página para empresas cambiaba de idioma con un
-                fundido. En los cuadros intermedios el texto quedaba
+                El ejemplo de la página para empresas cambiaba de idioma con una
+                transición suave. En los cuadros intermedios el texto quedaba
                 semitransparente y Lighthouse marcó contraste insuficiente.
-                Ahora cambia sin fundido.
+                Ahora cambia de golpe.
               </li>
             </ul>
           </div>
@@ -202,7 +203,7 @@ export class CasoKoshisoftware {
   constructor() {
     inject(Meta).updateTag({
       name: 'description',
-      content: $localize`:@@caso.ks.description:Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, prerender e hidratación incremental, en español e inglés.`,
+      content: $localize`:@@caso.ks.description:Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, HTML pregenerado e hidratación incremental, en español e inglés.`,
     });
   }
 }

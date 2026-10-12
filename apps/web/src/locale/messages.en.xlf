@@ -1005,7 +1005,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:12</note>
       </notes>
       <segment>
-        <source>Esta web: bilingüe, hecha en Angular y tan rápida como una página estática. 100 en las cuatro categorías de Lighthouse, en móvil y escritorio.</source>
+        <source>Esta web: bilingüe, hecha en Angular y tan rápida como una página estática. 100 en las cuatro categorías de Lighthouse, en celular y computadora.</source>
         <target>This website: bilingual, built with Angular and as fast as a static page. 100 in all four Lighthouse categories, on mobile and desktop.</target>
       </segment>
     </unit>
@@ -1059,7 +1059,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:25</note>
       </notes>
       <segment>
-        <source>Buenas prácticas</source>
+        <source>Prácticas recomendadas</source>
         <target>Best practices</target>
       </segment>
     </unit>
@@ -1086,7 +1086,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:74,76</note>
       </notes>
       <segment>
-        <source> Mediana de tres pasadas en producción, móvil y escritorio, medida el 12/10/2026. </source>
+        <source> Mediana de tres mediciones en producción, en celular y computadora, al 12/10/2026. </source>
         <target> Median of three runs in production, mobile and desktop, measured on 2026-10-12. </target>
       </segment>
     </unit>
@@ -1122,7 +1122,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:92,94</note>
       </notes>
       <segment>
-        <source> Cada página se prerenderiza en el build, una vez por idioma, y Cloudflare Pages la sirve como HTML. </source>
+        <source> Cada página se genera como HTML al compilar, una vez por idioma, y Cloudflare Pages la sirve tal cual. </source>
         <target> Every page is prerendered at build time, once per language, and Cloudflare Pages serves it as HTML. </target>
       </segment>
     </unit>
@@ -1131,7 +1131,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:96,98</note>
       </notes>
       <segment>
-        <source> Hidratación incremental: cada sección carga su JavaScript recién cuando entra en pantalla, y los clics de antes se reproducen después. </source>
+        <source> Hidratación incremental: cada sección carga su JavaScript recién cuando aparece en pantalla, y los clics que hiciste antes se atienden apenas carga. </source>
         <target> Incremental hydration: each section loads its JavaScript only when it scrolls into view, and earlier clicks are replayed afterwards. </target>
       </segment>
     </unit>
@@ -1149,7 +1149,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:105,107</note>
       </notes>
       <segment>
-        <source> Lighthouse se mide en producción después de cada versión, no solo en local. </source>
+        <source> Mido con Lighthouse en producción después de cada versión, no solo en mi computadora. </source>
         <target> Lighthouse is measured in production after every release, not just locally. </target>
       </segment>
     </unit>
@@ -1167,7 +1167,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:112,115</note>
       </notes>
       <segment>
-        <source> 100 en rendimiento, accesibilidad, buenas prácticas y SEO, en móvil y escritorio, en las cuatro páginas públicas. La página de inicio descarga solo el JavaScript de lo que se ve; el resto llega al hacer scroll. </source>
+        <source> 100 en rendimiento, accesibilidad, prácticas recomendadas y SEO, en celular y computadora, en las cuatro páginas públicas. La página de inicio descarga solo el JavaScript de lo que se ve; el resto llega a medida que bajas. </source>
         <target> 100 in performance, accessibility, best practices and SEO, on mobile and desktop, on all four public pages. The home page downloads only the JavaScript for what is on screen; the rest arrives as you scroll. </target>
       </segment>
     </unit>
@@ -1185,7 +1185,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:121,123</note>
       </notes>
       <segment>
-        <source> Una fuente de respaldo mejor ajustada hizo que el navegador midiera el titular dos veces: el rendimiento móvil cayó de 100 a 86. Volví a la carga anterior y fijé el ancho del titular. </source>
+        <source> Una fuente de respaldo mejor ajustada hizo que el navegador midiera el titular dos veces: el rendimiento en celular cayó de 100 a 86. Regresé a la forma anterior de cargar la fuente y fijé el ancho del titular. </source>
         <target> A better-matched fallback font made the browser measure the headline twice: mobile performance dropped from 100 to 86. I went back to the previous font loading and fixed the headline’s width. </target>
       </segment>
     </unit>
@@ -1194,7 +1194,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:126,129</note>
       </notes>
       <segment>
-        <source> El ejemplo de la página para empresas cambiaba de idioma con un fundido. En los cuadros intermedios el texto quedaba semitransparente y Lighthouse marcó contraste insuficiente. Ahora cambia sin fundido. </source>
+        <source> El ejemplo de la página para empresas cambiaba de idioma con una transición suave. En los cuadros intermedios el texto quedaba semitransparente y Lighthouse marcó contraste insuficiente. Ahora cambia de golpe. </source>
         <target> The example on the business page switched languages with a fade. In the frames in between, the text was half transparent and Lighthouse flagged insufficient contrast. Now it switches without a fade. </target>
       </segment>
     </unit>
@@ -1257,7 +1257,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/caso-koshisoftware.ts:205</note>
       </notes>
       <segment>
-        <source>Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, prerender e hidratación incremental, en español e inglés.</source>
+        <source>Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, HTML pregenerado e hidratación incremental, en español e inglés.</source>
         <target>Case study: how koshisoftware.pe reached 100 in Lighthouse with Angular, prerendering and incremental hydration, in Spanish and English.</target>
       </segment>
     </unit>
