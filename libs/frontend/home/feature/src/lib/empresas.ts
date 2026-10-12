@@ -11,18 +11,16 @@ import { slug, toLocale } from '@koshi/shared/locale/util';
 const EJEMPLO = [
   {
     lang: 'es',
-    nav: ['Habitaciones', 'Barranco', 'Contacto'],
-    titulo: 'Tu casa frente al mar en Lima',
-    texto:
-      'Habitaciones con vista, desayuno peruano y el malecón a dos cuadras.',
+    nav: ['Habitaciones', 'Tours', 'Contacto'],
+    titulo: 'Tu casa a pasos de la Plaza de Armas',
+    texto: 'Habitaciones con calefacción, mate de coca y tours a Machu Picchu.',
     cta: 'Reservar',
   },
   {
     lang: 'en',
-    nav: ['Rooms', 'Barranco', 'Contact'],
-    titulo: 'Your home by the sea in Lima',
-    texto:
-      'Rooms with a view, Peruvian breakfast and the boardwalk two blocks away.',
+    nav: ['Rooms', 'Tours', 'Contact'],
+    titulo: 'Your home steps from the Plaza de Armas',
+    texto: 'Heated rooms, coca tea and tours to Machu Picchu.',
     cta: 'Book now',
   },
 ];
@@ -164,12 +162,12 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
                 <span class="size-2 rounded-full bg-line"></span>
                 <span
                   class="rounded-md ml-2 flex-1 truncate bg-page px-2.5 py-1 font-mono text-xs text-muted"
-                  >hostalbarranco.pe/{{ sitio.lang }}/</span
+                  >hostalcusco.pe/{{ sitio.lang }}/</span
                 >
               </div>
               <div class="bg-page px-5 pt-4 pb-6">
                 <div class="mb-6 flex items-center gap-4 text-xs text-muted">
-                  <b class="text-sm text-ink">Hostal Barranco</b>
+                  <b class="text-sm text-ink">Hostal Cusco</b>
                   <span class="flex-1"></span>
                   @for (item of sitio.nav; track item) {
                     <span class="hidden sm:inline">{{ item }}</span>
@@ -190,9 +188,61 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
                     }
                   </span>
                 </div>
-                <div
-                  class="rounded-lg mb-4 h-30 bg-[linear-gradient(135deg,var(--ks-tint-strong),var(--ks-window-backdrop)_60%,var(--ks-accent))]"
-                ></div>
+                <!-- Cusco: Andes with snow, terraces, a llama; drawn in the site's tokens. -->
+                <svg
+                  class="rounded-lg mb-4 block h-34 w-full"
+                  viewBox="0 0 400 140"
+                  preserveAspectRatio="xMidYMid slice"
+                >
+                  <rect width="400" height="140" class="fill-tint" />
+                  <circle
+                    cx="320"
+                    cy="34"
+                    r="16"
+                    class="fill-accent"
+                    opacity="0.85"
+                  />
+                  <path
+                    d="M0 100 L70 38 L120 78 L190 18 L260 84 L320 48 L400 96 V140 H0 Z"
+                    class="fill-muted"
+                    fill-opacity="0.5"
+                  />
+                  <path
+                    d="M178 29 L190 18 L203 31 L196 28 L190 33 L184 28 Z M62 45 L70 38 L78 46 L70 43 Z"
+                    class="fill-ink"
+                    opacity="0.85"
+                  />
+                  <path
+                    d="M0 118 Q120 104 250 112 T400 108 V140 H0 Z"
+                    class="fill-code-string"
+                    fill-opacity="0.55"
+                  />
+                  <path
+                    d="M0 128 Q130 116 260 124 T400 120 V140 H0 Z"
+                    class="fill-code-string"
+                    fill-opacity="0.8"
+                  />
+                  <path
+                    d="M30 112 Q120 99 250 107 M20 122 Q130 110 260 118"
+                    class="stroke-ink"
+                    stroke-opacity="0.2"
+                    fill="none"
+                  />
+                  <g
+                    class="fill-ink"
+                    opacity="0.85"
+                    transform="translate(300 92)"
+                  >
+                    <rect y="12" width="26" height="12" rx="5" />
+                    <rect x="20" y="-6" width="7" height="22" rx="3" />
+                    <path d="M22 -10 l3 -5 l2 5 z M27 -9 l3 -4 l1 5 z" />
+                    <rect x="24" y="-6" width="9" height="5" rx="2" />
+                    <rect x="2" y="22" width="3.5" height="12" />
+                    <rect x="9" y="22" width="3.5" height="12" />
+                    <rect x="15" y="22" width="3.5" height="12" />
+                    <rect x="21" y="22" width="3.5" height="12" />
+                  </g>
+                </svg>
                 <div class="mb-1.5 text-[1.35rem] leading-tight font-extrabold">
                   {{ sitio.titulo }}
                 </div>
