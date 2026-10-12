@@ -6,7 +6,12 @@ import {
   provideAppInitializer,
 } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { SUPPORTED_LOCALES } from '@koshi/shared/locale/util';
+import {
+  Locale,
+  SUPPORTED_LOCALES,
+  localizedUrl,
+  toLocale,
+} from '@koshi/shared/locale/util';
 import { filter } from 'rxjs';
 
 const SITE_ORIGIN = 'https://koshisoftware.pe';
@@ -15,7 +20,7 @@ const SITE_ORIGIN = 'https://koshisoftware.pe';
 export function provideHeadLinks(): EnvironmentProviders {
   return provideAppInitializer(() => {
     const document = inject(DOCUMENT);
-    const locale = inject(LOCALE_ID);
+    const locale = toLocale(inject(LOCALE_ID));
     inject(Router)
       .events.pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(({ urlAfterRedirects }) =>
@@ -24,13 +29,14 @@ export function provideHeadLinks(): EnvironmentProviders {
   });
 }
 
-function replaceHeadLinks(document: Document, locale: string, url: string) {
+function replaceHeadLinks(document: Document, locale: Locale, url: string) {
   // Hydration re-runs this on top of the prerendered links.
   document.head
     .querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
     .forEach((link) => link.remove());
 
-  const localized = (target: string) => `${SITE_ORIGIN}/${target}${url}`;
+  const localized = (target: Locale) =>
+    `${SITE_ORIGIN}/${target}${localizedUrl(url, locale, target)}`;
   appendLink(document, { rel: 'canonical', href: localized(locale) });
   for (const target of SUPPORTED_LOCALES) {
     appendLink(document, {

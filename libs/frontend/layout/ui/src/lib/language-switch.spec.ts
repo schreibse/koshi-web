@@ -30,4 +30,23 @@ describe('LanguageSwitch', () => {
     const a = await link('en-US');
     expect(a.getAttribute('href')).toBe('/es/servicios');
   });
+
+  it('follows a navigation that ends after it rendered, translating the slug', async () => {
+    TestBed.configureTestingModule({
+      providers: [
+        provideRouter([{ path: '**', children: [] }]),
+        { provide: LOCALE_ID, useValue: 'es' },
+      ],
+    });
+    const fixture = TestBed.createComponent(LanguageSwitch);
+    await fixture.whenStable();
+    await TestBed.inject(Router).navigateByUrl('/empresas');
+    await fixture.whenStable();
+
+    expect(
+      (fixture.nativeElement as HTMLElement)
+        .querySelector('a')
+        ?.getAttribute('href'),
+    ).toBe('/en/business');
+  });
 });
