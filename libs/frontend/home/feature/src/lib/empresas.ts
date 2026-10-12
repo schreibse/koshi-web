@@ -75,6 +75,8 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
     }
     .idiomas > * {
       grid-area: 1 / 1;
+      /* A swap, not a fade: half-transparent text fails the contrast check. */
+      animation-timing-function: step-end;
     }
     .idiomas > :first-child {
       animation: es 7s infinite;
@@ -348,7 +350,7 @@ export class Empresas {
   protected readonly ofertas = OFERTAS;
   protected readonly mail = MAIL;
   // <base href> would send a bare #incluye to the home page.
-  protected readonly incluye = `${slug('empresas', toLocale(inject(LOCALE_ID)))}#incluye`;
+  protected readonly incluye = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/#incluye`;
 
   constructor() {
     inject(Meta).updateTag({
