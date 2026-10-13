@@ -138,7 +138,7 @@ const kindClass: Record<Kind, string> = {
               [attr.aria-labelledby]="'hero-tab-' + tab"
               class="m-0 overflow-x-auto px-4 py-4 font-mono text-[0.7rem] leading-[1.7] [grid-area:1/1] min-[360px]:text-[0.78rem] md:px-5"
               [class.invisible]="tab !== active()"
-            ><code>@for (line of files[tab].lines; track $index) {<span class="block min-h-[1lh]">@for (token of line; track $index) {<span [class]="classOf(token)">{{ textOf(token) }}</span>}</span>}</code></pre>
+            >@defer (hydrate never) {<code>@for (line of files[tab].lines; track $index) {<span class="block min-h-[1lh]">@for (token of line; track $index) {<span [class]="classOf(token)">{{ textOf(token) }}</span>}</span>}</code>}</pre>
           }
         </div>
       </div>

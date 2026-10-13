@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { DeferBlockState, TestBed } from '@angular/core/testing';
 import { HeroEditor } from './hero-editor';
 
 describe('HeroEditor', () => {
@@ -20,6 +20,9 @@ describe('HeroEditor', () => {
   async function render() {
     const fixture = TestBed.createComponent(HeroEditor);
     await fixture.whenStable();
+    for (const block of await fixture.getDeferBlocks()) {
+      await block.render(DeferBlockState.Complete);
+    }
     const host = fixture.nativeElement as HTMLElement;
     return {
       title: () => host.querySelector('.font-bold')?.textContent?.trim(),

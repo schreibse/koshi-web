@@ -1,4 +1,9 @@
 import { Route } from '@angular/router';
+import {
+  CasoKoshisoftware,
+  Empresas,
+  Home,
+} from '@koshi/frontend/home/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
   crossLocaleRedirects,
@@ -13,20 +18,17 @@ export const appRoutes: Route[] = [
   {
     path: '',
     title: $localize`:@@home.pageTitle:Koshisoftware · Desarrollo Angular y NestJS en Perú`,
-    loadComponent: () =>
-      import('@koshi/frontend/home/feature').then((m) => m.Home),
+    component: Home,
   },
   {
     path: slug('empresas', locale),
     title: $localize`:@@empresas.pageTitle:Webs para empresas en Perú · Koshisoftware`,
-    loadComponent: () =>
-      import('@koshi/frontend/home/feature').then((m) => m.Empresas),
+    component: Empresas,
   },
   {
     path: `${slug('proyectos', locale)}/koshisoftware`,
     title: $localize`:@@caso.ks.pageTitle:Caso de estudio: koshisoftware.pe · Koshisoftware`,
-    loadComponent: () =>
-      import('@koshi/frontend/home/feature').then((m) => m.CasoKoshisoftware),
+    component: CasoKoshisoftware,
   },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
     path: from,
