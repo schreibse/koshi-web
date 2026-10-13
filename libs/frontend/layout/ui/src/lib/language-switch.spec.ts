@@ -1,17 +1,18 @@
+import { Location } from '@angular/common';
+import { provideLocationMocks } from '@angular/common/testing';
 import { LOCALE_ID } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { provideRouter, Router } from '@angular/router';
 import { LanguageSwitch } from './language-switch';
 
 describe('LanguageSwitch', () => {
-  async function link(locale: string): Promise<HTMLAnchorElement> {
+  async function link(locale: string, url: string): Promise<HTMLAnchorElement> {
     TestBed.configureTestingModule({
       providers: [
-        provideRouter([{ path: '**', children: [] }]),
+        provideLocationMocks(),
         { provide: LOCALE_ID, useValue: locale },
       ],
     });
-    await TestBed.inject(Router).navigateByUrl('/servicios');
+    TestBed.inject(Location).go(url);
     const fixture = TestBed.createComponent(LanguageSwitch);
     await fixture.whenStable();
     return (fixture.nativeElement as HTMLElement).querySelector(
@@ -20,33 +21,24 @@ describe('LanguageSwitch', () => {
   }
 
   it('links from Spanish to the same page in English', async () => {
-    const a = await link('es');
+    const a = await link('es', '/servicios');
     expect(a.getAttribute('href')).toBe('/en/servicios/');
     expect(a.getAttribute('hreflang')).toBe('en');
     expect(a.textContent?.trim()).toBe('EN');
   });
 
   it('links from English to Spanish', async () => {
-    const a = await link('en-US');
+    const a = await link('en-US', '/servicios');
     expect(a.getAttribute('href')).toBe('/es/servicios/');
   });
 
-  it('follows a navigation that ends after it rendered, translating the slug', async () => {
-    TestBed.configureTestingModule({
-      providers: [
-        provideRouter([{ path: '**', children: [] }]),
-        { provide: LOCALE_ID, useValue: 'es' },
-      ],
-    });
-    const fixture = TestBed.createComponent(LanguageSwitch);
-    await fixture.whenStable();
-    await TestBed.inject(Router).navigateByUrl('/empresas');
-    await fixture.whenStable();
+  it('translates the slug', async () => {
+    const a = await link('es', '/empresas');
+    expect(a.getAttribute('href')).toBe('/en/business/');
+  });
 
-    expect(
-      (fixture.nativeElement as HTMLElement)
-        .querySelector('a')
-        ?.getAttribute('href'),
-    ).toBe('/en/business/');
+  it('links the home page to the other home page', async () => {
+    const a = await link('es', '');
+    expect(a.getAttribute('href')).toBe('/en/');
   });
 });
