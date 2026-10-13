@@ -1,3 +1,9 @@
+## 0.1.14 (2026-10-13)
+
+### 🚀 Features
+
+- **web:** interim k favicon in the wordmark style ([8cc8fe7](https://github.com/schreibse/koshi-web/commit/8cc8fe7))
+
 ## 0.1.13 (2026-10-13)
 
 ### 🚀 Features
