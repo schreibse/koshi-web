@@ -1,3 +1,9 @@
+## 0.1.17 (2026-10-13)
+
+### 🔥 Performance
+
+- **home:** load the case study screenshot first ([7ae1e68](https://github.com/schreibse/koshi-web/commit/7ae1e68))
+
 ## 0.1.16 (2026-10-13)
 
 ### 🔥 Performance
