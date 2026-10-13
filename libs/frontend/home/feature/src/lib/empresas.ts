@@ -189,7 +189,7 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
                     }
                   </span>
                 </div>
-                <!-- Cusco: Andes with snow, terraces, a llama; drawn in the site's tokens. -->
+                <!-- Cusco: the cathedral on the Plaza de Armas below the Andes, drawn in the site's tokens. -->
                 <svg
                   class="rounded-lg mb-4 block h-34 w-full"
                   viewBox="0 0 400 140"
@@ -197,52 +197,74 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
                 >
                   <rect width="400" height="140" class="fill-tint" />
                   <circle
-                    cx="320"
-                    cy="34"
-                    r="16"
+                    cx="70"
+                    cy="40"
+                    r="13"
                     class="fill-accent"
-                    opacity="0.85"
+                    opacity="0.8"
                   />
                   <path
-                    d="M0 100 L70 38 L120 78 L190 18 L260 84 L320 48 L400 96 V140 H0 Z"
+                    d="M0 84 60 50 100 66 150 36 200 60 250 30 300 58 350 42 400 62V140H0Z"
                     class="fill-muted"
-                    fill-opacity="0.5"
+                    fill-opacity="0.32"
                   />
                   <path
-                    d="M178 29 L190 18 L203 31 L196 28 L190 33 L184 28 Z M62 45 L70 38 L78 46 L70 43 Z"
-                    class="fill-ink"
-                    opacity="0.85"
+                    d="M143 41 150 36 157 41 150 40ZM243 35 250 30 257 35 250 34Z"
+                    fill="#f7f2ea"
+                    opacity="0.9"
                   />
-                  <path
-                    d="M0 118 Q120 104 250 112 T400 108 V140 H0 Z"
-                    class="fill-code-string"
-                    fill-opacity="0.55"
-                  />
-                  <path
-                    d="M0 128 Q130 116 260 124 T400 120 V140 H0 Z"
-                    class="fill-code-string"
-                    fill-opacity="0.8"
-                  />
-                  <path
-                    d="M30 112 Q120 99 250 107 M20 122 Q130 110 260 118"
-                    class="stroke-ink"
-                    stroke-opacity="0.2"
-                    fill="none"
-                  />
-                  <g
-                    class="fill-ink"
-                    opacity="0.85"
-                    transform="translate(300 92)"
-                  >
-                    <rect y="12" width="26" height="12" rx="5" />
-                    <rect x="20" y="-6" width="7" height="22" rx="3" />
-                    <path d="M22 -10 l3 -5 l2 5 z M27 -9 l3 -4 l1 5 z" />
-                    <rect x="24" y="-6" width="9" height="5" rx="2" />
-                    <rect x="2" y="22" width="3.5" height="12" />
-                    <rect x="9" y="22" width="3.5" height="12" />
-                    <rect x="15" y="22" width="3.5" height="12" />
-                    <rect x="21" y="22" width="3.5" height="12" />
+                  <g class="fill-muted" fill-opacity="0.75">
+                    <path
+                      d="M160 70h10v-12l5-6 5 6v12h40v-12l5-6 5 6v12h10v50h-80z"
+                    />
+                    <path d="M186 70 200 58 214 70z" />
                   </g>
+                  <path
+                    d="M195 120v-14a5 5 0 0 1 10 0v14z"
+                    class="fill-ink"
+                    opacity="0.55"
+                  />
+                  <g class="fill-surface">
+                    <rect x="20" y="92" width="54" height="28" />
+                    <rect x="82" y="88" width="62" height="32" />
+                    <rect x="256" y="90" width="58" height="30" />
+                    <rect x="322" y="94" width="64" height="26" />
+                  </g>
+                  <g class="fill-accent" opacity="0.75">
+                    <path d="M16 94 47 82 78 94z" />
+                    <path d="M78 90 113 78 148 90z" />
+                    <path d="M252 92 285 80 318 92z" />
+                    <path d="M318 96 354 84 390 96z" />
+                  </g>
+                  <g class="fill-ink" opacity="0.5">
+                    <rect x="30" y="100" width="7" height="9" />
+                    <rect x="56" y="100" width="7" height="9" />
+                    <rect x="92" y="97" width="8" height="10" />
+                    <rect x="124" y="97" width="8" height="10" />
+                    <rect x="88" y="94" width="48" height="2" />
+                    <rect x="268" y="98" width="7" height="10" />
+                    <rect x="296" y="98" width="7" height="10" />
+                    <rect x="334" y="102" width="7" height="9" />
+                    <rect x="364" y="102" width="7" height="9" />
+                  </g>
+                  <rect
+                    y="120"
+                    width="400"
+                    height="20"
+                    class="fill-code-string"
+                    fill-opacity="0.6"
+                  />
+                  <path
+                    class="fill-ink"
+                    opacity="0.85"
+                    transform="translate(226 104) scale(0.5)"
+                    d="M3 15C0 13 1 8 5 8C6 5 10 5 11 7C12 4 17 4 18 7C19 4 23 4 25 7C26 3 25-2 26-6C25-9 27-13 30-15C31-18 35-18 36-16C38-15 40-12 41-10C41.5-8 40-7 38.5-7C37.5-3 38 3 37.5 8C38.5 11 38 15 36 17L35.5 26 35 32H33V26L32.5 19H30.5L30 26 29.5 32H27.5V26L27 19.5H14L13.5 26 13 32H11V26L10.5 19.5H8.5L8 26 7.5 32H5.5V26L5 18C3.5 17.5 3 16.5 3 15ZM3 10C.5 9.5-1 12 1 14L3 13ZM30.5-15.5C29.5-19 30-21.5 31-22 32-20.5 32.2-18 32-16ZM33.2-16.8C33-20.5 33.8-23 34.8-23.2 35.6-21.5 35.4-19 34.8-16.6Z"
+                  />
+                  <path
+                    d="M0 124H400"
+                    class="stroke-ink"
+                    stroke-opacity="0.15"
+                  />
                 </svg>
                 <div class="mb-1.5 text-[1.35rem] leading-tight font-extrabold">
                   {{ sitio.titulo }}
