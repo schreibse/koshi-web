@@ -93,6 +93,13 @@
     "git": {
       "commitMessage": "chore(release): v{version}",
       "tag": false
+    },
+    "conventionalCommits": {
+      "types": {
+        "perf": {
+          "semverBump": "patch"
+        }
+      }
     }
   }
 }
