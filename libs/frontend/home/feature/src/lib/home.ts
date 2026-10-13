@@ -53,7 +53,7 @@ import { TechStack } from './tech-stack';
       <ks-tech-stack />
     }
 
-    <section id="servicios" class="border-t border-line py-16 md:py-28">
+    <section id="servicios" class="border-t border-line bg-band py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
         <span class="eyebrow" i18n="@@services.eyebrow">Servicios</span>
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@services.title">
@@ -149,7 +149,7 @@ import { TechStack } from './tech-stack';
       </div>
     </section>
 
-    <section id="contacto" class="border-t border-line py-16 md:py-28">
+    <section id="contacto" class="cta-band py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
         <span class="eyebrow" i18n="@@contact.eyebrow">Contacto</span>
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@contact.title">

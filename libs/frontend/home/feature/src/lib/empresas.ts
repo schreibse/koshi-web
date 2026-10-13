@@ -331,7 +331,7 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
       </div>
     </section>
 
-    <section class="border-t border-line py-16 md:py-28">
+    <section class="cta-band py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
         <span class="eyebrow" i18n="@@empresas.contact.eyebrow">Contacto</span>
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@empresas.contact.title">

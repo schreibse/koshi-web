@@ -10,6 +10,7 @@
   --color-*: initial;
   --color-page: var(--ks-page);
   --color-surface: var(--ks-surface);
+  --color-band: var(--ks-band);
   --color-ink: var(--ks-ink);
   --color-muted: var(--ks-muted);
   --color-accent: var(--ks-accent);
