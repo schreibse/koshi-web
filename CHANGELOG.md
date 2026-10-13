@@ -1,3 +1,9 @@
+## 0.1.16 (2026-10-13)
+
+### 🔥 Performance
+
+- **web:** no router in the browser bundle ([02407e8](https://github.com/schreibse/koshi-web/commit/02407e8))
+
 ## 0.1.15 (2026-10-13)
 
 ### 🔥 Performance
