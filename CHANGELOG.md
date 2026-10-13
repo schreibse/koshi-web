@@ -1,3 +1,9 @@
+## 0.1.15 (2026-10-13)
+
+### 🔥 Performance
+
+- **web:** less work at startup on the home page ([cdaea26](https://github.com/schreibse/koshi-web/commit/cdaea26))
+
 ## 0.1.14 (2026-10-13)
 
 ### 🚀 Features
