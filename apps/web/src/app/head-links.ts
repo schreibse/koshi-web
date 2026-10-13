@@ -42,7 +42,6 @@ function replaceHeadLinks(
   url: string,
   notFound: boolean,
 ) {
-  // Hydration re-runs this on top of the prerendered links.
   document.head
     .querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
     .forEach((link) => link.remove());
