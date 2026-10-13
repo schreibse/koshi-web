@@ -1,3 +1,9 @@
+## 0.1.13 (2026-10-13)
+
+### 🚀 Features
+
+- **empresas:** plaza de armas illustration in the example site ([9e46970](https://github.com/schreibse/koshi-web/commit/9e46970))
+
 ## 0.1.12 (2026-10-13)
 
 ### 🚀 Features
