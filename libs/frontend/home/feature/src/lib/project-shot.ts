@@ -29,7 +29,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
         width="1280"
         height="640"
         [alt]="alt()"
-        [attr.loading]="lazy() ? 'lazy' : null"
+        [attr.loading]="priority() ? null : 'lazy'"
+        [attr.fetchpriority]="priority() ? 'high' : null"
         decoding="async"
       />
     </figure>
@@ -41,5 +42,6 @@ export class ProjectShot {
   readonly image = input.required<string>();
   readonly alt = input.required<string>();
   readonly sizes = input('(min-width: 1024px) 560px, 100vw');
-  readonly lazy = input(true);
+  /** For the page's main image: loaded eagerly and first. */
+  readonly priority = input(false);
 }

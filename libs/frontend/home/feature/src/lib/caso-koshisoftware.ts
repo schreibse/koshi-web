@@ -53,7 +53,7 @@ const LIGHTHOUSE = [
             [image]="caso.image"
             [alt]="caso.alt"
             sizes="(min-width: 1024px) 820px, 100vw"
-            [lazy]="false"
+            [priority]="true"
           />
 
           <ul
