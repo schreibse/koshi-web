@@ -1,3 +1,9 @@
+## 0.1.12 (2026-10-13)
+
+### 🚀 Features
+
+- **theme:** warmer light mode and section bands ([58034cb](https://github.com/schreibse/koshi-web/commit/58034cb))
+
 ## 0.1.11 (2026-10-12)
 
 ### 🚀 Features
