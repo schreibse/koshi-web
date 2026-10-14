@@ -1849,8 +1849,8 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:54,57</note>
       </notes>
       <segment>
-        <source> Tus datos se guardan en el banco de datos «Libro de Reclamaciones» de Koshisoftware E.I.R.L. Solo los ven Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades competentes. </source>
-        <target>Your data is kept in the “Libro de Reclamaciones” database of Koshisoftware E.I.R.L. Only Koshisoftware and, on request, INDECOPI or other competent authorities see it.</target>
+        <source> Tus datos se guardan en el banco de datos «Quejas y reclamos» de Koshisoftware E.I.R.L., inscrito en el Registro Nacional de Protección de Datos Personales con el código PJ-2026-5408. Solo los ven Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades competentes. </source>
+        <target>Your data is kept in the “Quejas y reclamos” database of Koshisoftware E.I.R.L., registered in the National Register of Personal Data Protection under code PJ-2026-5408. Only Koshisoftware and, on request, INDECOPI or other competent authorities see it.</target>
       </segment>
     </unit>
     <unit id="privacidad.transfer.title">

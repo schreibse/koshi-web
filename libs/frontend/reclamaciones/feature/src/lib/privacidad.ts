@@ -51,9 +51,11 @@ import { Proveedor } from './proveedor';
 
       <h2 i18n="@@privacidad.bank.title">Banco de datos y destinatarios</h2>
       <p i18n="@@privacidad.bank">
-        Tus datos se guardan en el banco de datos «Libro de Reclamaciones» de
-        Koshisoftware E.I.R.L. Solo los ven Koshisoftware y, si lo solicitan, el
-        INDECOPI u otras autoridades competentes.
+        Tus datos se guardan en el banco de datos «Quejas y reclamos» de
+        Koshisoftware E.I.R.L., inscrito en el Registro Nacional de Protección
+        de Datos Personales con el código PJ-2026-5408. Solo los ven
+        Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades
+        competentes.
       </p>
 
       <h2 i18n="@@privacidad.transfer.title">Transferencia internacional</h2>
