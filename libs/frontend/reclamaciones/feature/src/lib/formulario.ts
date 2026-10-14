@@ -27,12 +27,12 @@ const FECHA = new Intl.DateTimeFormat('es-PE', {
 
 /** Makes the prerendered Libro form under `raiz` validate, submit and show its receipt. */
 export function activar(raiz: HTMLElement): void {
-  const form = raiz.querySelector('form')!;
-  const apoderado = form.querySelector<HTMLElement>('[data-apoderado]')!;
-  const fallo = form.querySelector<HTMLElement>('[data-fallo]')!;
-  const enviar = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+  const form = pieza<HTMLFormElement>(raiz, 'form');
+  const apoderado = pieza<HTMLElement>(form, '[data-apoderado]');
+  const fallo = pieza<HTMLElement>(form, '[data-fallo]');
+  const enviar = pieza<HTMLButtonElement>(form, 'button[type=submit]');
   const turnstile = verificacion(
-    form.querySelector<HTMLElement>('[data-verificacion]')!,
+    pieza<HTMLElement>(form, '[data-verificacion]'),
   );
   const tocados = new Set<string>();
   let enviado = false;
@@ -85,11 +85,11 @@ export function activar(raiz: HTMLElement): void {
   const pintar = () => {
     const actuales = fallos();
     for (const campo of form.querySelectorAll('ks-campo')) {
-      const input = campo.querySelector<HTMLInputElement>('[name]')!;
+      const input = pieza<HTMLInputElement>(campo, '[name]');
       const error =
         enviado || tocados.has(input.name) ? actuales.get(input.name) : null;
-      const p = campo.querySelector<HTMLElement>('[data-error]')!;
-      p.textContent = error ? form.dataset[MENSAJE[error]]! : '';
+      const p = pieza<HTMLElement>(campo, '[data-error]');
+      p.textContent = error ? (form.dataset[MENSAJE[error]] ?? '') : '';
       p.hidden = !error;
       if (error) input.setAttribute('aria-invalid', 'true');
       else input.removeAttribute('aria-invalid');
@@ -98,7 +98,7 @@ export function activar(raiz: HTMLElement): void {
   };
 
   const avisar = (motivo: 'falloVerificacion' | 'falloEnvio' | null) =>
-    (fallo.textContent = motivo ? form.dataset[motivo]! : '');
+    (fallo.textContent = motivo ? (form.dataset[motivo] ?? '') : '');
 
   form.addEventListener('focusout', (e) => {
     const name = (e.target as HTMLInputElement).name;
@@ -163,19 +163,24 @@ function mostrarRecibo(
     detalle: hoja.detalle,
     pedido: hoja.pedido,
   };
-  const recibo = raiz.querySelector<HTMLElement>('[data-recibo]')!;
+  const recibo = pieza<HTMLElement>(raiz, '[data-recibo]');
   for (const el of recibo.querySelectorAll<HTMLElement>('[data-campo]')) {
-    el.textContent = campos[el.dataset['campo']!];
+    el.textContent = campos[el.dataset['campo'] ?? ''] ?? '';
   }
   for (const el of recibo.querySelectorAll<HTMLElement>(
     '[data-con-apoderado]',
   )) {
     el.hidden = !hoja.apoderado;
   }
-  recibo
-    .querySelector('[data-imprimir]')!
-    .addEventListener('click', () => print());
-  raiz.querySelector<HTMLElement>('[data-formulario]')!.hidden = true;
+  pieza(recibo, '[data-imprimir]').addEventListener('click', () => print());
+  pieza<HTMLElement>(raiz, '[data-formulario]').hidden = true;
   recibo.hidden = false;
-  recibo.querySelector('h1')!.focus();
+  pieza<HTMLElement>(recibo, 'h1').focus();
+}
+
+/** The prerendered markup is the contract with this script; a missing piece is a bug, not a state. */
+function pieza<T extends Element>(raiz: ParentNode, selector: string): T {
+  const elemento = raiz.querySelector<T>(selector);
+  if (!elemento) throw new Error(`Libro: falta ${selector}`);
+  return elemento;
 }
