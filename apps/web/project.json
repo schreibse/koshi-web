@@ -24,7 +24,6 @@
       "options": {
         "commands": [
           "for l in es en; do d=dist/apps/web/browser/$l; if [ -f $d/404/index.html ]; then mv $d/404/index.html $d/404.html && rmdir $d/404; fi; done",
-          "cp apps/web/robots.txt dist/apps/web/browser/",
           "{ echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?>'; echo '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">'; grep -rhoP '<link rel=\"canonical\" href=\"\\K[^\"]+' dist/apps/web/browser --include=index.html | sort -u | sed 's|.*|  <url><loc>&</loc></url>|'; echo '</urlset>'; } > dist/apps/web/browser/sitemap.xml"
         ],
         "parallel": false

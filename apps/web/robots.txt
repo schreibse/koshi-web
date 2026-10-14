@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://koshisoftware.pe/sitemap.xml
