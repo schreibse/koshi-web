@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { Router, provideRouter } from '@angular/router';
+import { activar } from './formulario';
 import { LibroDeReclamaciones } from './libro-de-reclamaciones';
 
 describe('LibroDeReclamaciones', () => {
@@ -25,15 +25,18 @@ describe('LibroDeReclamaciones', () => {
       }),
     );
     vi.stubGlobal('fetch', fetchMock);
-    TestBed.configureTestingModule({ providers: [provideRouter([])] });
   });
 
   afterEach(() => vi.unstubAllGlobals());
+
+  const settle = () => new Promise((resolve) => setTimeout(resolve));
 
   async function render() {
     const fixture = TestBed.createComponent(LibroDeReclamaciones);
     await fixture.whenStable();
     const host = fixture.nativeElement as HTMLElement;
+    activar(host);
+    await settle();
     const field = (label: string, index = 0) =>
       [...host.querySelectorAll('ks-campo')]
         .filter(
@@ -43,12 +46,12 @@ describe('LibroDeReclamaciones', () => {
     const type = (label: string, value: string) => {
       const input = field(label);
       input.value = value;
-      input.dispatchEvent(new Event('input'));
+      input.dispatchEvent(new Event('input', { bubbles: true }));
     };
     const click = (el: Element | null) => (el as HTMLElement).click();
     const submit = async () => {
       click(host.querySelector('button[type=submit]'));
-      await fixture.whenStable();
+      await settle();
     };
     const fill = () => {
       type('Nombre completo', 'Ana Quispe');
@@ -61,9 +64,10 @@ describe('LibroDeReclamaciones', () => {
       type('Detalle', 'Me atendieron mal.');
       type('Pedido', 'Una disculpa.');
       click(host.querySelector('input[value=queja]'));
-      click(host.querySelectorAll('input[type=checkbox]')[1]);
+      click(host.querySelector('input[name=conforme]'));
     };
-    return { host, fixture, type, click, submit, fill };
+    const failure = () => host.querySelector('[data-fallo]')!.textContent;
+    return { host, fixture, type, click, submit, fill, failure };
   }
 
   it('shows the errors and sends nothing while the sheet is incomplete', async () => {
@@ -72,6 +76,19 @@ describe('LibroDeReclamaciones', () => {
 
     expect(fetchMock).not.toHaveBeenCalled();
     expect(page.host.textContent).toContain('Este campo es obligatorio.');
+  });
+
+  it('shows an error once its field is left, not before', async () => {
+    const page = await render();
+    const email = page.host.querySelector<HTMLInputElement>(
+      'input[name="consumidor.email"]',
+    )!;
+    page.type('Correo electrónico', 'ana@');
+    expect(page.host.textContent).not.toContain('Escribe un correo válido.');
+
+    email.dispatchEvent(new FocusEvent('focusout', { bubbles: true }));
+    expect(page.host.textContent).toContain('Escribe un correo válido.');
+    expect(email.getAttribute('aria-invalid')).toBe('true');
   });
 
   it('rejects a document number that does not fit its type', async () => {
@@ -86,9 +103,6 @@ describe('LibroDeReclamaciones', () => {
 
   it('files a complete sheet and opens its receipt', async () => {
     const page = await render();
-    const navigate = vi
-      .spyOn(TestBed.inject(Router), 'navigate')
-      .mockResolvedValue(true);
     page.fill();
     await page.submit();
 
@@ -111,23 +125,27 @@ describe('LibroDeReclamaciones', () => {
       detalle: 'Me atendieron mal.',
       pedido: 'Una disculpa.',
     });
-    expect(navigate).toHaveBeenCalledWith(
-      ['hoja'],
-      expect.objectContaining({
-        state: {
-          recibo: expect.objectContaining({ numero: '000000001-2026' }),
-        },
-      }),
+    expect(
+      page.host.querySelector<HTMLElement>('[data-formulario]')!.hidden,
+    ).toBe(true);
+    expect(page.host.querySelector<HTMLElement>('[data-recibo]')!.hidden).toBe(
+      false,
+    );
+    expect(page.host.textContent).toContain('000000001-2026');
+    expect(page.host.textContent).toContain('09/10/2026, 15:00');
+    expect(document.activeElement?.textContent).toContain(
+      'Recibimos tu reclamación',
     );
   });
 
   it('asks for the guardian only when the consumer is a minor', async () => {
     const page = await render();
-    expect(page.host.textContent).not.toContain('apoderado');
+    const guardian = page.host.querySelector<HTMLElement>('[data-apoderado]')!;
+    expect(guardian.hidden).toBe(true);
 
-    page.click(page.host.querySelector('input[type=checkbox]'));
-    await page.fixture.whenStable();
-    expect(page.host.textContent).toContain(
+    page.click(page.host.querySelector('input[name=menor]'));
+    expect(guardian.hidden).toBe(false);
+    expect(guardian.textContent).toContain(
       'Datos de tu madre, padre o apoderado',
     );
   });

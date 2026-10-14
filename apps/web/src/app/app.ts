@@ -1,19 +1,34 @@
 import { Location } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  afterNextRender,
+  inject,
+} from '@angular/core';
 import {
   CasoKoshisoftware,
   Empresas,
   Home,
 } from '@koshi/frontend/home/feature';
 import { NotFound, SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
+import {
+  LibroDeReclamaciones,
+  Privacidad,
+} from '@koshi/frontend/reclamaciones/feature';
+import { activarLibro } from '@koshi/frontend/reclamaciones/feature/activar';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 
 const locale = toLocale($localize.locale ?? 'es');
 
-const PAGES: Record<string, 'home' | 'empresas' | 'caso'> = {
+const PAGES: Record<
+  string,
+  'home' | 'empresas' | 'caso' | 'libro' | 'privacidad'
+> = {
   '': 'home',
   [slug('empresas', locale)]: 'empresas',
   [`${slug('proyectos', locale)}/koshisoftware`]: 'caso',
+  'libro-de-reclamaciones': 'libro',
+  'libro-de-reclamaciones/privacidad': 'privacidad',
 };
 
 // Every link is a full page load, so the page is picked once from the URL; the router only runs on the server.
@@ -22,6 +37,8 @@ const PAGES: Record<string, 'home' | 'empresas' | 'caso'> = {
     Home,
     Empresas,
     CasoKoshisoftware,
+    LibroDeReclamaciones,
+    Privacidad,
     NotFound,
     SiteHeader,
     SiteFooter,
@@ -41,6 +58,16 @@ const PAGES: Record<string, 'home' | 'empresas' | 'caso'> = {
         @case ('caso') {
           <ks-caso-koshisoftware />
         }
+        @case ('libro') {
+          @defer (hydrate never) {
+            <ks-libro-de-reclamaciones />
+          }
+        }
+        @case ('privacidad') {
+          @defer (hydrate never) {
+            <ks-privacidad />
+          }
+        }
         @default {
           <ks-not-found />
         }
@@ -57,4 +84,10 @@ export class App {
         .replace(/[?#].*$/, '')
         .replace(/^\/|\/$/g, '')
     ];
+
+  constructor() {
+    afterNextRender(() => {
+      if (this.page === 'libro') activarLibro();
+    });
+  }
 }

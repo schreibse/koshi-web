@@ -1,14 +1,3 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DOCUMENT,
-  ElementRef,
-  LOCALE_ID,
-  afterNextRender,
-  inject,
-  model,
-} from '@angular/core';
-
 interface Turnstile {
   render(
     element: HTMLElement,
@@ -36,59 +25,47 @@ const SITE_KEY = '0x4AAAAAAFTUjiQYFeIJSGcF';
 // Cloudflare's test key, which always passes: the real one rejects localhost.
 const SITE_KEY_LOCAL = '1x00000000000000000000AA';
 
-/** Cloudflare Turnstile; `token` holds the current single-use token. */
-@Component({
-  selector: 'ks-verificacion',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { class: 'block min-h-[65px]' },
-  template: '',
-})
-export class Verificacion {
-  readonly token = model<string | null>(null);
+export interface Verificacion {
+  /** The current single-use token, or null. */
+  token(): string | null;
+  reset(): void;
+}
 
-  private readonly document = inject(DOCUMENT);
-  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
-  private readonly locale = inject(LOCALE_ID);
-  private widget?: string;
+/** Renders Cloudflare Turnstile into `element`. */
+export function verificacion(element: HTMLElement): Verificacion {
+  let token: string | null = null;
+  let widget: string | undefined;
+  // Blocked script: the token stays null and submitting says so.
+  cargar().then(
+    (turnstile) => {
+      widget = turnstile.render(element, {
+        sitekey: location.hostname === 'localhost' ? SITE_KEY_LOCAL : SITE_KEY,
+        language: document.documentElement.lang,
+        theme: document.documentElement.dataset['theme'] ?? 'auto',
+        callback: (nuevo) => (token = nuevo),
+        'expired-callback': () => (token = null),
+        'error-callback': () => (token = null),
+      });
+    },
+    () => undefined,
+  );
+  return {
+    token: () => token,
+    reset() {
+      token = null;
+      if (widget !== undefined) window.turnstile?.reset(widget);
+    },
+  };
+}
 
-  constructor() {
-    // Blocked script: the token stays null and submitting says so.
-    afterNextRender(() =>
-      this.cargar().then(
-        (turnstile) => this.pintar(turnstile),
-        () => undefined,
-      ),
-    );
-  }
-
-  reset(): void {
-    this.token.set(null);
-    if (this.widget !== undefined)
-      this.document.defaultView?.turnstile?.reset(this.widget);
-  }
-
-  private cargar(): Promise<Turnstile> {
-    const window = this.document.defaultView!;
-    if (window.turnstile) return Promise.resolve(window.turnstile);
-    return new Promise((resolve, reject) => {
-      const script = this.document.createElement('script');
-      script.src = SCRIPT;
-      script.async = true;
-      script.onload = () => resolve(window.turnstile!);
-      script.onerror = reject;
-      this.document.head.append(script);
-    });
-  }
-
-  private pintar(turnstile: Turnstile): void {
-    const local = this.document.location.hostname === 'localhost';
-    this.widget = turnstile.render(this.host.nativeElement, {
-      sitekey: local ? SITE_KEY_LOCAL : SITE_KEY,
-      language: this.locale,
-      theme: this.document.documentElement.dataset['theme'] ?? 'auto',
-      callback: (token) => this.token.set(token),
-      'expired-callback': () => this.token.set(null),
-      'error-callback': () => this.token.set(null),
-    });
-  }
+function cargar(): Promise<Turnstile> {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = SCRIPT;
+    script.async = true;
+    script.onload = () => resolve(window.turnstile!);
+    script.onerror = reject;
+    document.head.append(script);
+  });
 }

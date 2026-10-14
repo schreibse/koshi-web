@@ -1,12 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  input,
-} from '@angular/core';
-import { FieldState } from '@angular/forms/signals';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-/** A labelled form control that shows its first error once touched. */
+/** A labelled form control with a slot for its error message. */
 @Component({
   selector: 'ks-campo',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,29 +13,9 @@ import { FieldState } from '@angular/forms/signals';
       }
       <ng-content />
     </label>
-    @if (error(); as error) {
-      <p class="mt-1.5 text-sm text-accent">{{ error }}</p>
-    }
+    <p data-error hidden class="mt-1.5 text-sm text-accent"></p>
   `,
 })
 export class Campo {
   readonly label = input('');
-  readonly state = input.required<FieldState<unknown>>();
-
-  protected readonly error = computed(() => {
-    const state = this.state();
-    if (!state.touched()) return null;
-    switch (state.errors()[0]?.kind) {
-      case undefined:
-        return null;
-      case 'required':
-        return $localize`:@@reclamaciones.error.required:Este campo es obligatorio.`;
-      case 'email':
-        return $localize`:@@reclamaciones.error.email:Escribe un correo válido.`;
-      case 'documento':
-        return $localize`:@@reclamaciones.error.idNumber:DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.`;
-      default:
-        return $localize`:@@reclamaciones.error.invalid:Revisa este campo.`;
-    }
-  });
 }
