@@ -1279,15 +1279,6 @@
         <target>Complaints Book · Koshisoftware</target>
       </segment>
     </unit>
-    <unit id="recibo.pageTitle">
-      <notes>
-        <note category="location">apps/web/src/app/app.routes.ts:20</note>
-      </notes>
-      <segment>
-        <source>Hoja de reclamación · Koshisoftware</source>
-        <target>Complaint sheet · Koshisoftware</target>
-      </segment>
-    </unit>
     <unit id="reclamaciones.error.required">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:38</note>
@@ -1576,7 +1567,7 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:354,356</note>
       </notes>
       <segment>
-        <source> Completa la verificación de seguridad y vuelve a enviar. </source>
+        <source>Completa la verificación de seguridad y vuelve a enviar.</source>
         <target>Complete the security check and submit again.</target>
       </segment>
     </unit>
@@ -1585,7 +1576,7 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:337,339</note>
       </notes>
       <segment>
-        <source> No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos. </source>
+        <source>No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos.</source>
         <target>We could not register your sheet. Please try again in a few minutes.</target>
       </segment>
     </unit>
@@ -1596,15 +1587,6 @@
       <segment>
         <source>Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.</source>
         <target>How Koshisoftware E.I.R.L. handles the personal data filed in the Complaints Book (Libro de Reclamaciones).</target>
-      </segment>
-    </unit>
-    <unit id="recibo.description">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:119</note>
-      </notes>
-      <segment>
-        <source>Constancia de la hoja de reclamación registrada en el Libro de Reclamaciones de Koshisoftware E.I.R.L.</source>
-        <target>Record of the complaint sheet filed in the Complaints Book (Libro de Reclamaciones) of Koshisoftware E.I.R.L.</target>
       </segment>
     </unit>
     <unit id="reclamaciones.description">
@@ -1657,8 +1639,8 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:45,47</note>
       </notes>
       <segment>
-        <source> Enviamos una copia de esta hoja a <ph id="0" equiv="INTERPOLATION" disp="{{ r.hoja.consumidor.email }}"/>. Te responderemos por correo en un plazo máximo de 15 días hábiles. </source>
-        <target>We sent a copy of this sheet to <ph id="0" equiv="INTERPOLATION" disp="{{ r.hoja.consumidor.email }}"/>. We will reply by email within 15 business days at most.</target>
+        <source> Enviamos una copia de esta hoja a <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>. Te responderemos por correo en un plazo máximo de 15 días hábiles. </source>
+        <target>We sent a copy of this sheet to <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>. We will reply by email within 15 business days at most.</target>
       </segment>
     </unit>
     <unit id="recibo.sent">
@@ -1702,7 +1684,7 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:67,68</note>
       </notes>
       <segment>
-        <source>Apoderado</source>
+        <source> Apoderado </source>
         <target>Guardian</target>
       </segment>
     </unit>
@@ -1760,24 +1742,6 @@
         <target>Back to home</target>
       </segment>
     </unit>
-    <unit id="recibo.none.title">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:96,98</note>
-      </notes>
-      <segment>
-        <source> No hay una hoja que mostrar </source>
-        <target>There is no sheet to show</target>
-      </segment>
-    </unit>
-    <unit id="recibo.none.lead">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:99,101</note>
-      </notes>
-      <segment>
-        <source> Si ya enviaste una, la copia está en tu correo. </source>
-        <target>If you already sent one, the copy is in your email.</target>
-      </segment>
-    </unit>
     <unit id="recibo.none.back">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:102,105</note>
@@ -1801,8 +1765,11 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:314,317</note>
       </notes>
       <segment>
-        <source> Usamos tus datos solo para atender esta reclamación y los guardamos dos años en servidores de Cloudflare, fuera del Perú. Más en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a routerLink=&quot;privacidad&quot;&gt;" dispEnd="&lt;/a&gt;">política de privacidad</pc>. </source>
-        <target>We use your data only to handle this claim and keep it for two years on Cloudflare servers outside Peru. More in the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a routerLink=&quot;privacidad&quot;&gt;" dispEnd="&lt;/a&gt;">privacy policy</pc>.</target>
+        <source> Usamos tus datos solo para atender esta reclamación y los guardamos dos años en servidores de Cloudflare, fuera del Perú. Más en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+              &gt;" dispEnd="&lt;/a
+            &gt;">política de privacidad</pc>. </source>
+        <target>We use your data only to handle this claim and keep it for two years on Cloudflare servers outside Peru. More in the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+              &gt;" dispEnd="&lt;/a&gt;">privacy policy</pc>.</target>
       </segment>
     </unit>
     <unit id="privacidad.title">

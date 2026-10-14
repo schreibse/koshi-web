@@ -39,6 +39,11 @@
 }
 
 @layer base {
+  /* Preflight's rule, which this site leaves out: a display utility must not override `hidden`. */
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }

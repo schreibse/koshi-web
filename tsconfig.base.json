@@ -24,6 +24,9 @@
       ],
       "@koshi/frontend/reclamaciones/feature": [
         "./libs/frontend/reclamaciones/feature/src/index.ts"
+      ],
+      "@koshi/frontend/reclamaciones/feature/activar": [
+        "./libs/frontend/reclamaciones/feature/src/activar.ts"
       ]
     }
   },

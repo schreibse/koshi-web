@@ -18,7 +18,7 @@ import { Wordmark } from './wordmark';
       </p>
       <!-- Reglamento del Libro de Reclamaciones art. 9: the Anexo III notice, linked, on the home page. -->
       <a
-        href="libro-de-reclamaciones"
+        href="libro-de-reclamaciones/"
         class="mt-8 inline-flex items-center gap-3 rounded-base border border-line px-4 py-3 text-ink no-underline hover:border-ink"
       >
         <svg

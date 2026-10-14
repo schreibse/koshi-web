@@ -6,6 +6,10 @@ import {
 } from '@koshi/frontend/home/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
+  LibroDeReclamaciones,
+  Privacidad,
+} from '@koshi/frontend/reclamaciones/feature';
+import {
   crossLocaleRedirects,
   slug,
   toLocale,
@@ -23,22 +27,12 @@ export const appRoutes: Route[] = [
   {
     path: 'libro-de-reclamaciones',
     title: $localize`:@@reclamaciones.pageTitle:Libro de Reclamaciones · Koshisoftware`,
-    loadComponent: () =>
-      import('@koshi/frontend/reclamaciones/feature').then(
-        (m) => m.LibroDeReclamaciones,
-      ),
-  },
-  {
-    path: 'libro-de-reclamaciones/hoja',
-    title: $localize`:@@recibo.pageTitle:Hoja de reclamación · Koshisoftware`,
-    loadComponent: () =>
-      import('@koshi/frontend/reclamaciones/feature').then((m) => m.Recibo),
+    component: LibroDeReclamaciones,
   },
   {
     path: 'libro-de-reclamaciones/privacidad',
     title: $localize`:@@privacidad.pageTitle:Política de privacidad · Koshisoftware`,
-    loadComponent: () =>
-      import('@koshi/frontend/reclamaciones/feature').then((m) => m.Privacidad),
+    component: Privacidad,
   },
   {
     path: slug('empresas', locale),

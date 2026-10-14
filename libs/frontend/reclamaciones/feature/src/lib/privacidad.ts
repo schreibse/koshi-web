@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { RouterLink } from '@angular/router';
 import { Proveedor } from './proveedor';
 
 /** The privacy notice Ley 29733 art. 18 requires before the sheet's data is collected. */
 @Component({
   selector: 'ks-privacidad',
-  imports: [Proveedor, RouterLink],
+  imports: [Proveedor],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     h2 {
@@ -83,7 +82,7 @@ import { Proveedor } from './proveedor';
       </p>
 
       <a
-        routerLink="/libro-de-reclamaciones"
+        href="libro-de-reclamaciones/"
         class="btn mt-10"
         i18n="@@recibo.none.back"
         >Ir al Libro de Reclamaciones</a
