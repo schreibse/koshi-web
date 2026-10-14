@@ -1867,8 +1867,8 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,65</note>
       </notes>
       <segment>
-        <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. </source>
-        <target>This site and its database run on the infrastructure of Cloudflare, Inc. (United States), which processes the data as our processor, on our behalf and under contract. Your data is therefore stored outside Peru. To protect the form from automated submissions, Cloudflare Turnstile analyses your IP address and technical data from your browser.</target>
+        <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. La copia de la hoja te la enviamos por correo con Sweego (Mindbaz SAS, Francia), y recibimos y respondemos las reclamaciones en nuestro correo de Proton AG (Suiza), ambos también como encargados. </source>
+        <target>This site and its database run on the infrastructure of Cloudflare, Inc. (United States), which processes the data as our processor, on our behalf and under contract. Your data is therefore stored outside Peru. To protect the form from automated submissions, Cloudflare Turnstile analyses your IP address and technical data from your browser. We email you the copy of the sheet through Sweego (Mindbaz SAS, France), and we receive and answer claims in our Proton AG (Switzerland) mailbox; both also act as our processors.</target>
       </segment>
     </unit>
     <unit id="privacidad.retention.title">
@@ -1903,8 +1903,8 @@
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:75,79</note>
       </notes>
       <segment>
-        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
-        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a reclamaciones@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to reclamaciones@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
       </segment>
     </unit>
   </file>
