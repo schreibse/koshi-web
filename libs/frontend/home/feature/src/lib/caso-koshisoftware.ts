@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ProjectShot } from './project-shot';
 
 /** What the home's teaser and the case page both show. */
@@ -201,6 +201,9 @@ export class CasoKoshisoftware {
   protected readonly lighthouse = LIGHTHOUSE;
 
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@caso.ks.pageTitle:Caso de estudio: koshisoftware.pe · Koshisoftware`,
+    );
     const meta = inject(Meta);
     meta.updateTag({
       property: 'og:image',

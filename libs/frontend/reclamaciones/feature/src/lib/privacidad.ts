@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { Proveedor } from './proveedor';
 
 /** The privacy notice Ley 29733 art. 18 requires before the sheet's data is collected. */
@@ -92,6 +92,9 @@ import { Proveedor } from './proveedor';
 })
 export class Privacidad {
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@privacidad.pageTitle:Política de privacidad · Koshisoftware`,
+    );
     inject(Meta).updateTag({
       name: 'description',
       content: $localize`:@@privacidad.description:Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.`,
