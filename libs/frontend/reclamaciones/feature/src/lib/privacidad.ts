@@ -63,7 +63,9 @@ import { Proveedor } from './proveedor';
         por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera
         del Perú. Para proteger el formulario de envíos automatizados,
         Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu
-        navegador.
+        navegador. La copia de la hoja te la enviamos por correo con Sweego
+        (Mindbaz SAS, Francia), y recibimos y respondemos las reclamaciones en
+        nuestro correo de Proton AG (Suiza), ambos también como encargados.
       </p>
 
       <h2 i18n="@@privacidad.retention.title">Cuánto tiempo los guardamos</h2>
@@ -75,10 +77,11 @@ import { Proveedor } from './proveedor';
       <h2 i18n="@@privacidad.rights.title">Tus derechos</h2>
       <p i18n="@@privacidad.rights">
         Puedes pedir información sobre tus datos, acceder a ellos,
-        rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a la
-        dirección de arriba. Respondemos en los plazos del Reglamento de la Ley
-        N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la
-        Autoridad Nacional de Protección de Datos Personales.
+        rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a
+        reclamaciones&#64;koshisoftware.pe o a la dirección de arriba.
+        Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no
+        estás conforme con la respuesta, puedes acudir a la Autoridad Nacional
+        de Protección de Datos Personales.
       </p>
 
       <a
