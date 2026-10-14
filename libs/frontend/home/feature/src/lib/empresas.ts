@@ -4,7 +4,7 @@ import {
   LOCALE_ID,
   inject,
 } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 
 // The example client in the hero's browser window; deliberately the same text on both locale builds.
@@ -374,6 +374,9 @@ export class Empresas {
   protected readonly incluye = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/#incluye`;
 
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@empresas.pageTitle:Webs para empresas en Perú · Koshisoftware`,
+    );
     inject(Meta).updateTag({
       name: 'description',
       content: $localize`:@@empresas.description:Webs WordPress en español e inglés para empresas en Perú: diseño, mantenimiento, Libro de Reclamaciones y facturación electrónica.`,

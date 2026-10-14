@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENTOS } from '@koshi/shared/reclamacion/util';
 import { Campo } from './campo';
 import { Proveedor } from './proveedor';
@@ -343,6 +343,9 @@ export class LibroDeReclamaciones {
   };
 
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@reclamaciones.pageTitle:Libro de Reclamaciones · Koshisoftware`,
+    );
     inject(Meta).updateTag({
       name: 'description',
       content: $localize`:@@reclamaciones.description:Libro de Reclamaciones virtual de Koshisoftware E.I.R.L.`,

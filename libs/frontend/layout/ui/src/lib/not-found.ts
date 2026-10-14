@@ -6,7 +6,7 @@ import {
   LOCALE_ID,
   signal,
 } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 
 // Fluent Emoji High Contrast "llama" (Microsoft, MIT licence), via Iconify.
@@ -100,6 +100,9 @@ export class NotFound {
   protected readonly ruta = signal('/…');
 
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@notFound.pageTitle:Página no encontrada · Koshisoftware`,
+    );
     inject(Meta).updateTag({ name: 'robots', content: 'noindex' });
     afterNextRender(() => this.ruta.set(location.pathname));
   }
