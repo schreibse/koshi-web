@@ -162,7 +162,6 @@ import { TechStack } from './tech-stack';
             i18n="@@contact.email"
             >Escríbeme</a
           >
-          <a href="https://wa.me/51000000000" class="btn">WhatsApp</a>
         </div>
       </div>
     </section>
