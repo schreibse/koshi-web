@@ -128,6 +128,7 @@ export function activar(raiz: HTMLElement): void {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Content-Language': document.documentElement.lang,
         'X-Turnstile-Token': token,
       },
       body: JSON.stringify(hoja),
