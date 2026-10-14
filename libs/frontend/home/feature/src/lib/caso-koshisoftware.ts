@@ -52,7 +52,7 @@ const LIGHTHOUSE = [
             [host]="caso.host"
             [image]="caso.image"
             [alt]="caso.alt"
-            sizes="(min-width: 1024px) 820px, 100vw"
+            sizes="(min-width: 1024px) 820px, (min-width: 768px) calc(100vw - 5rem), calc(100vw - 2rem)"
             [priority]="true"
           />
 
@@ -201,7 +201,12 @@ export class CasoKoshisoftware {
   protected readonly lighthouse = LIGHTHOUSE;
 
   constructor() {
-    inject(Meta).updateTag({
+    const meta = inject(Meta);
+    meta.updateTag({
+      property: 'og:image',
+      content: 'img/og-koshisoftware.jpg',
+    });
+    meta.updateTag({
       name: 'description',
       content: $localize`:@@caso.ks.description:Caso de estudio: cómo koshisoftware.pe llegó a 100 en Lighthouse con Angular, HTML pregenerado e hidratación incremental, en español e inglés.`,
     });

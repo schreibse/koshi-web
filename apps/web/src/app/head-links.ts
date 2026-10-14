@@ -3,8 +3,10 @@ import {
   EnvironmentProviders,
   LOCALE_ID,
   inject,
+  makeEnvironmentProviders,
   provideAppInitializer,
 } from '@angular/core';
+import { BEFORE_APP_SERIALIZED } from '@angular/platform-server';
 import { NavigationEnd, Router } from '@angular/router';
 import {
   Locale,
@@ -17,23 +19,34 @@ import { filter } from 'rxjs';
 
 const SITE_ORIGIN = 'https://koshisoftware.pe';
 
-/** Keeps canonical and hreflang links in the head in step with the current route. */
+/** Canonical and hreflang links for the current route, and link-preview tags derived from them. */
 export function provideHeadLinks(): EnvironmentProviders {
-  return provideAppInitializer(() => {
-    const document = inject(DOCUMENT);
-    const locale = toLocale(inject(LOCALE_ID));
-    const router = inject(Router);
-    router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(({ urlAfterRedirects }) =>
-        replaceHeadLinks(
-          document,
-          locale,
-          urlAfterRedirects,
-          isNotFound(router),
-        ),
-      );
-  });
+  return makeEnvironmentProviders([
+    provideAppInitializer(() => {
+      const document = inject(DOCUMENT);
+      const locale = toLocale(inject(LOCALE_ID));
+      const router = inject(Router);
+      router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe(({ urlAfterRedirects }) =>
+          replaceHeadLinks(
+            document,
+            locale,
+            urlAfterRedirects,
+            isNotFound(router),
+          ),
+        );
+    }),
+    {
+      provide: BEFORE_APP_SERIALIZED,
+      multi: true,
+      useFactory: () => {
+        const document = inject(DOCUMENT);
+        const locale = toLocale(inject(LOCALE_ID));
+        return () => addPreviewTags(document, locale);
+      },
+    },
+  ]);
 }
 
 function replaceHeadLinks(
@@ -67,12 +80,57 @@ function replaceHeadLinks(
   }
 }
 
-function appendLink(document: Document, attributes: Record<string, string>) {
-  const link = document.createElement('link');
-  for (const [name, value] of Object.entries(attributes)) {
-    link.setAttribute(name, value);
+const OG_LOCALES: Record<Locale, string> = { es: 'es_PE', en: 'en_US' };
+
+/** Open Graph and Twitter tags, so shared links show title, description and image. */
+function addPreviewTags(document: Document, locale: Locale) {
+  const head = document.head;
+  const url = head.querySelector('link[rel="canonical"]')?.getAttribute('href');
+  if (!url) return;
+  const image = head.querySelector('meta[property="og:image"]');
+  // Pages may set their own og:image, relative to the locale root.
+  const imagePath = image?.getAttribute('content') ?? 'img/og-default.png';
+  image?.remove();
+  const description =
+    head.querySelector('meta[name="description"]')?.getAttribute('content') ??
+    '';
+  const tags: [string, string][] = [
+    ['og:type', 'website'],
+    ['og:site_name', 'Koshisoftware'],
+    ['og:title', document.title],
+    ['og:description', description],
+    ['og:url', url],
+    ['og:image', new URL(imagePath, `${SITE_ORIGIN}/${locale}/`).href],
+    ['og:image:width', '1200'],
+    ['og:image:height', '630'],
+    ['og:locale', OG_LOCALES[locale]],
+    ...SUPPORTED_LOCALES.filter((other) => other !== locale).map(
+      (other): [string, string] => ['og:locale:alternate', OG_LOCALES[other]],
+    ),
+  ];
+  for (const [property, content] of tags) {
+    appendElement(document, 'meta', { property, content });
   }
-  document.head.appendChild(link);
+  appendElement(document, 'meta', {
+    name: 'twitter:card',
+    content: 'summary_large_image',
+  });
+}
+
+function appendLink(document: Document, attributes: Record<string, string>) {
+  appendElement(document, 'link', attributes);
+}
+
+function appendElement(
+  document: Document,
+  tag: string,
+  attributes: Record<string, string>,
+) {
+  const element = document.createElement(tag);
+  for (const [name, value] of Object.entries(attributes)) {
+    element.setAttribute(name, value);
+  }
+  document.head.appendChild(element);
 }
 
 function isNotFound(router: Router): boolean {
