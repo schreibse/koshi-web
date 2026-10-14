@@ -1,3 +1,9 @@
+## 0.1.20 (2026-10-14)
+
+### 🩹 Fixes
+
+- **home:** drop the WhatsApp button until there is a number ([b86ba64](https://github.com/schreibse/koshi-web/commit/b86ba64))
+
 ## 0.1.19 (2026-10-14)
 
 ### 🩹 Fixes
