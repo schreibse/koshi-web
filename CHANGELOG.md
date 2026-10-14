@@ -1,3 +1,9 @@
+## 0.1.19 (2026-10-14)
+
+### 🩹 Fixes
+
+- **web:** keep Cloudflare's managed robots.txt ([b136543](https://github.com/schreibse/koshi-web/commit/b136543))
+
 ## 0.1.18 (2026-10-14)
 
 ### 🚀 Features
