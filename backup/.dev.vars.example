@@ -1,0 +1,2 @@
+# Names the secret for `wrangler types`. The real token is set with `wrangler secret put D1_API_TOKEN -c backup/wrangler.toml`.
+D1_API_TOKEN=
