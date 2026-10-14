@@ -1,3 +1,9 @@
+## 0.1.18 (2026-10-14)
+
+### 🚀 Features
+
+- **web:** link previews, a sitemap and a 960px screenshot ([ff24eab](https://github.com/schreibse/koshi-web/commit/ff24eab))
+
 ## 0.1.17 (2026-10-13)
 
 ### 🔥 Performance
