@@ -60,3 +60,4 @@ functions/worker-configuration.d.ts
 
 # local secrets for wrangler pages dev
 .dev.vars
+backup/worker-configuration.d.ts

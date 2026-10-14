@@ -1,0 +1,20 @@
+# Weekly D1 backup to R2: the Reglamento de la Ley 29733 (art. 51) asks for a weekly copy.
+name = "koshi-respaldo"
+main = "index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+[vars]
+ACCOUNT_ID = "a4a8db1beccf036f062cd091a847d76d"
+DATABASE_ID = "44544861-9656-4972-b0c5-8f2ace9fd9f4"
+
+[[workflows]]
+name = "respaldo-semanal"
+binding = "RESPALDO"
+class_name = "Respaldo"
+# Mondays 06:00 UTC (01:00 in Lima).
+schedules = ["0 6 * * 1"]
+
+[[r2_buckets]]
+binding = "RESPALDOS"
+bucket_name = "koshi-respaldos"
