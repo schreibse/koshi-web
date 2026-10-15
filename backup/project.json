@@ -1,0 +1,18 @@
+{
+  "name": "backup",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "backup",
+  "projectType": "application",
+  "targets": {
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "wrangler types backup/worker-configuration.d.ts -c backup/wrangler.toml --env-file .dev.vars.example",
+          "tsc --noEmit -p backup/tsconfig.json"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

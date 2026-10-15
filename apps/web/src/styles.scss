@@ -39,6 +39,11 @@
 }
 
 @layer base {
+  /* Preflight's rule, which this site leaves out: a display utility must not override `hidden`. */
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -78,8 +83,58 @@
     border: 1.5px solid var(--ks-ink);
     border-radius: var(--ks-radius);
     color: var(--ks-ink);
+    font: inherit;
     font-weight: 600;
     text-decoration: none;
+  }
+
+  .input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--ks-line);
+    border-radius: var(--ks-radius);
+    background: var(--ks-page);
+    color: var(--ks-ink);
+    font: inherit;
+    font-size: 1rem;
+
+    &:focus-visible {
+      border-color: var(--ks-accent);
+      outline: 1px solid var(--ks-accent);
+    }
+
+    &[aria-invalid='true'].ng-touched {
+      border-color: var(--ks-accent);
+    }
+  }
+
+  .check {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--ks-accent);
+  }
+
+  /* A radio row: the input is visually hidden, the label carries the selected state. */
+  .opcion {
+    display: grid;
+    gap: 0.15rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--ks-line);
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:has(:checked) {
+      border: 2px solid var(--ks-ink);
+      background: var(--ks-surface);
+      padding: calc(1rem - 1px) calc(1.25rem - 1px);
+    }
+
+    &:has(:focus-visible) {
+      outline: 2px solid var(--ks-accent);
+      outline-offset: 2px;
+    }
   }
 
   .btn-primary {

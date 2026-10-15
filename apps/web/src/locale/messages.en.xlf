@@ -1270,5 +1270,642 @@
         <target>Read the case study</target>
       </segment>
     </unit>
+    <unit id="reclamaciones.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:12</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones · Koshisoftware</source>
+        <target>Complaints Book · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.error.required">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:38</note>
+      </notes>
+      <segment>
+        <source>Este campo es obligatorio.</source>
+        <target>This field is required.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.error.email">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:40</note>
+      </notes>
+      <segment>
+        <source>Escribe un correo válido.</source>
+        <target>Enter a valid email address.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.error.idNumber">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>
+      </notes>
+      <segment>
+        <source>DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.</source>
+        <target>DNI: 8 digits. RUC: 11 digits. Others: letters and numbers only.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.idType.other">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:126,128</note>
+      </notes>
+      <segment>
+        <source>Otro</source>
+        <target>Other</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.error.invalid">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/campo.ts:42</note>
+      </notes>
+      <segment>
+        <source>Revisa este campo.</source>
+        <target>Check this field.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:74,76</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones</source>
+        <target>Libro de Reclamaciones</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:77,79</note>
+      </notes>
+      <segment>
+        <source> Hoja de reclamación </source>
+        <target>Complaint sheet</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.lead">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:81,84</note>
+      </notes>
+      <segment>
+        <source> Conforme al Código de Protección y Defensa del Consumidor, puedes registrar aquí un reclamo o una queja. Te respondemos por correo en un plazo máximo de 15 días hábiles, improrrogable. </source>
+        <target>Under Peru's Consumer Protection and Defence Code, you can file a claim (reclamo) or a complaint (queja) here. We reply by email within 15 business days at most; this period cannot be extended.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.otherRoutes">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:87,90</note>
+      </notes>
+      <segment>
+        <source> La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. </source>
+        <target>Filing a claim does not prevent you from using other ways of resolving the dispute, and is not a prerequisite for reporting to INDECOPI.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.consumer.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:97,99</note>
+      </notes>
+      <segment>
+        <source> Tus datos </source>
+        <target>Your details</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.name">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:101,102</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:174,175</note>
+      </notes>
+      <segment>
+        <source>Nombre completo</source>
+        <target>Full name</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.idType">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:109,110</note>
+      </notes>
+      <segment>
+        <source>Documento</source>
+        <target>ID document</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.idNumber">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:120,121</note>
+      </notes>
+      <segment>
+        <source>Número de documento</source>
+        <target>Document number</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.address">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:128,129</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:181,182</note>
+      </notes>
+      <segment>
+        <source>Domicilio</source>
+        <target>Address</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.phone">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:140,141</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:189,190</note>
+      </notes>
+      <segment>
+        <source>Teléfono</source>
+        <target>Phone</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.email">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:152,153</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:200,201</note>
+      </notes>
+      <segment>
+        <source>Correo electrónico</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.minor">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:166,168</note>
+      </notes>
+      <segment>
+        <source>Soy menor de edad</source>
+        <target>I am a minor</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.guardian">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:171,173</note>
+      </notes>
+      <segment>
+        <source> Datos de tu madre, padre o apoderado </source>
+        <target>Your parent's or guardian's details</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.service.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:218,220</note>
+      </notes>
+      <segment>
+        <source> Servicio contratado </source>
+        <target>Contracted service</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.service">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:222,223</note>
+      </notes>
+      <segment>
+        <source>Descripción del servicio</source>
+        <target>Description of the service</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.amount">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:229,230</note>
+      </notes>
+      <segment>
+        <source>Monto reclamado (S/)</source>
+        <target>Amount claimed (S/)</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.claim.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:246,248</note>
+      </notes>
+      <segment>
+        <source> Tu reclamación </source>
+        <target>Your claim</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.reclamo">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:258,260</note>
+      </notes>
+      <segment>
+        <source>Reclamo</source>
+        <target>Reclamo (claim)</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.reclamo.definition">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:263,266</note>
+      </notes>
+      <segment>
+        <source>Disconformidad relacionada a los productos o servicios.</source>
+        <target>Dissatisfaction with the products or services.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.queja">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:274,276</note>
+      </notes>
+      <segment>
+        <source>Queja</source>
+        <target>Queja (complaint)</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.queja.definition">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:279,282</note>
+      </notes>
+      <segment>
+        <source>Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público.</source>
+        <target>Dissatisfaction not related to the products or services, or with how you were attended to.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.detail">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:286</note>
+      </notes>
+      <segment>
+        <source>Detalle</source>
+        <target>Details</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.request">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:297</note>
+      </notes>
+      <segment>
+        <source>Pedido</source>
+        <target>Your request</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.confirm">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:317,319</note>
+      </notes>
+      <segment>
+        <source>Confirmo que los datos son verdaderos y presento esta hoja de reclamación.</source>
+        <target>I confirm that the details are true and I file this complaint sheet.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.submit">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:329,330</note>
+      </notes>
+      <segment>
+        <source> Enviar reclamación </source>
+        <target>Send claim</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.copyNote">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:332,334</note>
+      </notes>
+      <segment>
+        <source> Recibirás una copia en tu correo. </source>
+        <target>You will receive a copy by email.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.failed.verification">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:354,356</note>
+      </notes>
+      <segment>
+        <source>Completa la verificación de seguridad y vuelve a enviar.</source>
+        <target>Complete the security check and submit again.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.failed">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:337,339</note>
+      </notes>
+      <segment>
+        <source>No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos.</source>
+        <target>We could not register your sheet. Please try again in a few minutes.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:98</note>
+      </notes>
+      <segment>
+        <source>Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.</source>
+        <target>How Koshisoftware E.I.R.L. handles the personal data filed in the Complaints Book (Libro de Reclamaciones).</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.description">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:428</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones virtual de Koshisoftware E.I.R.L.</source>
+        <target>Virtual Complaints Book (Libro de Reclamaciones) of Koshisoftware E.I.R.L.</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.provider.name">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/proveedor.ts:10,12</note>
+      </notes>
+      <segment>
+        <source> Razón social </source>
+        <target>Company name</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.provider.address">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/proveedor.ts:16,18</note>
+      </notes>
+      <segment>
+        <source> Dirección </source>
+        <target>Address</target>
+      </segment>
+    </unit>
+    <unit id="recibo.number">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:38,39</note>
+      </notes>
+      <segment>
+        <source>Hoja n.º</source>
+        <target>Sheet no.</target>
+      </segment>
+    </unit>
+    <unit id="recibo.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:42,44</note>
+      </notes>
+      <segment>
+        <source> Recibimos tu reclamación </source>
+        <target>We received your claim</target>
+      </segment>
+    </unit>
+    <unit id="recibo.lead">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:45,47</note>
+      </notes>
+      <segment>
+        <source> Enviamos una copia de esta hoja a <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>. Te responderemos por correo en un plazo máximo de 15 días hábiles. </source>
+        <target>We sent a copy of this sheet to <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>. We will reply by email within 15 business days at most.</target>
+      </segment>
+    </unit>
+    <unit id="recibo.sent">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:50,52</note>
+      </notes>
+      <segment>
+        <source> Lo que nos enviaste </source>
+        <target>What you sent</target>
+      </segment>
+    </unit>
+    <unit id="recibo.date">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:55,56</note>
+      </notes>
+      <segment>
+        <source>Fecha</source>
+        <target>Date</target>
+      </segment>
+    </unit>
+    <unit id="recibo.type">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:59,60</note>
+      </notes>
+      <segment>
+        <source>Tipo</source>
+        <target>Type</target>
+      </segment>
+    </unit>
+    <unit id="recibo.consumer">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:61,62</note>
+      </notes>
+      <segment>
+        <source>Consumidor</source>
+        <target>Consumer</target>
+      </segment>
+    </unit>
+    <unit id="recibo.guardian">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:67,68</note>
+      </notes>
+      <segment>
+        <source> Apoderado </source>
+        <target>Guardian</target>
+      </segment>
+    </unit>
+    <unit id="recibo.service">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:70,71</note>
+      </notes>
+      <segment>
+        <source>Servicio</source>
+        <target>Service</target>
+      </segment>
+    </unit>
+    <unit id="recibo.amount">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:72,73</note>
+      </notes>
+      <segment>
+        <source>Monto reclamado</source>
+        <target>Amount claimed</target>
+      </segment>
+    </unit>
+    <unit id="recibo.detail">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:76,77</note>
+      </notes>
+      <segment>
+        <source>Detalle</source>
+        <target>Details</target>
+      </segment>
+    </unit>
+    <unit id="recibo.request">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:78,79</note>
+      </notes>
+      <segment>
+        <source>Pedido</source>
+        <target>Request</target>
+      </segment>
+    </unit>
+    <unit id="recibo.print">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:90,91</note>
+      </notes>
+      <segment>
+        <source> Imprimir o guardar PDF </source>
+        <target>Print or save as PDF</target>
+      </segment>
+    </unit>
+    <unit id="recibo.home">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:92,94</note>
+      </notes>
+      <segment>
+        <source>Volver al inicio</source>
+        <target>Back to home</target>
+      </segment>
+    </unit>
+    <unit id="recibo.none.back">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/recibo.ts:102,105</note>
+      </notes>
+      <segment>
+        <source>Ir al Libro de Reclamaciones</source>
+        <target>Go to the Complaints Book</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.pageTitle">
+      <notes>
+        <note category="location">apps/web/src/app/app.routes.ts:26</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad · Koshisoftware</source>
+        <target>Privacy policy · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.privacy">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:314,317</note>
+      </notes>
+      <segment>
+        <source> Usamos tus datos solo para atender esta reclamación y los guardamos dos años en servidores de Cloudflare, fuera del Perú. Más en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+              &gt;" dispEnd="&lt;/a
+            &gt;">política de privacidad</pc>. </source>
+        <target>We use your data only to handle this claim and keep it for two years on Cloudflare servers outside Peru. More in the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+              &gt;" dispEnd="&lt;/a&gt;">privacy policy</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:25,27</note>
+      </notes>
+      <segment>
+        <source> Política de privacidad </source>
+        <target>Privacy policy</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.lead">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:28,31</note>
+      </notes>
+      <segment>
+        <source> Cómo tratamos los datos que nos das al presentar una hoja de reclamación, conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, y su Reglamento. </source>
+        <target>How we handle the data you give us when filing a complaint sheet, under Peru's Personal Data Protection Law (Ley N.º 29733) and its regulation.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.owner.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:33,36</note>
+      </notes>
+      <segment>
+        <source>Responsable</source>
+        <target>Data controller</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.purpose.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:36,37</note>
+      </notes>
+      <segment>
+        <source>Para qué usamos tus datos</source>
+        <target>What we use your data for</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.purpose">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:38,42</note>
+      </notes>
+      <segment>
+        <source> Para registrar tu reclamo o queja, responderte, conservar la hoja como exige el Reglamento del Libro de Reclamaciones y entregarla al INDECOPI si la solicita. No los usamos para publicidad ni para ningún otro fin, y no tomamos decisiones automatizadas ni elaboramos perfiles con ellos. </source>
+        <target>To register your claim or complaint, answer it, keep the sheet as the Complaints Book regulation requires, and hand it to INDECOPI if it asks. We do not use it for advertising or any other purpose, and we make no automated decisions or profiles with it.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.basis.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:44,45</note>
+      </notes>
+      <segment>
+        <source>Datos obligatorios</source>
+        <target>Required data</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.basis">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:46,49</note>
+      </notes>
+      <segment>
+        <source> Todos los campos del formulario son obligatorios: son los que el Reglamento exige en la hoja de reclamación. Sin ellos no podemos registrar ni responder tu reclamación. No incluyas en el detalle datos sensibles, como de salud, que no sean necesarios para tu reclamo. </source>
+        <target>Every field of the form is required: they are the ones the regulation prescribes for the complaint sheet. Without them we cannot register or answer your claim. Do not include sensitive data, such as health details, in the description unless your claim needs it.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.bank.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:52,53</note>
+      </notes>
+      <segment>
+        <source>Banco de datos y destinatarios</source>
+        <target>Database and recipients</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.bank">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:54,57</note>
+      </notes>
+      <segment>
+        <source> Tus datos se guardan en el banco de datos «Quejas y reclamos» de Koshisoftware E.I.R.L., inscrito en el Registro Nacional de Protección de Datos Personales con el código PJ-2026-5408. Solo los ven Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades competentes. </source>
+        <target>Your data is kept in the “Quejas y reclamos” database of Koshisoftware E.I.R.L., registered in the National Register of Personal Data Protection under code PJ-2026-5408. Only Koshisoftware and, on request, INDECOPI or other competent authorities see it.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.transfer.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:59,60</note>
+      </notes>
+      <segment>
+        <source>Transferencia internacional</source>
+        <target>International transfer</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.transfer">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,65</note>
+      </notes>
+      <segment>
+        <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. La copia de la hoja te la enviamos por correo con Sweego (Mindbaz SAS, Francia), y recibimos y respondemos las reclamaciones en nuestro correo de Proton AG (Suiza), ambos también como encargados. </source>
+        <target>This site and its database run on the infrastructure of Cloudflare, Inc. (United States), which processes the data as our processor, on our behalf and under contract. Your data is therefore stored outside Peru. To protect the form from automated submissions, Cloudflare Turnstile analyses your IP address and technical data from your browser. We email you the copy of the sheet through Sweego (Mindbaz SAS, France), and we receive and answer claims in our Proton AG (Switzerland) mailbox; both also act as our processors.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.retention.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:67,68</note>
+      </notes>
+      <segment>
+        <source>Cuánto tiempo los guardamos</source>
+        <target>How long we keep it</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.retention">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:69,73</note>
+      </notes>
+      <segment>
+        <source> Dos años desde que presentas la hoja, el plazo que exige el Reglamento del Libro de Reclamaciones. Después los eliminamos. </source>
+        <target>Two years from when you file the sheet, the period the Complaints Book regulation requires. After that we delete it.</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.rights.title">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:73,74</note>
+      </notes>
+      <segment>
+        <source>Tus derechos</source>
+        <target>Your rights</target>
+      </segment>
+    </unit>
+    <unit id="privacidad.rights">
+      <notes>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:75,79</note>
+      </notes>
+      <segment>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a reclamaciones@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to reclamaciones@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

@@ -4,7 +4,7 @@ import {
   LOCALE_ID,
   inject,
 } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 import { KOSHISOFTWARE } from './caso-koshisoftware';
 import { HeroEditor } from './hero-editor';
@@ -175,6 +175,9 @@ export class Home {
   protected readonly casoUrl = `${slug('proyectos', this.locale)}/${KOSHISOFTWARE.path}/`;
 
   constructor() {
+    inject(Title).setTitle(
+      $localize`:@@home.pageTitle:Koshisoftware · Desarrollo Angular y NestJS en Perú`,
+    );
     inject(Meta).updateTag({
       name: 'description',
       content: $localize`:@@home.description:Koshisoftware desarrolla aplicaciones web con Angular y NestJS para empresas en Perú y el extranjero.`,

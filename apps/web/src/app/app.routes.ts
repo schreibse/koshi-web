@@ -6,6 +6,10 @@ import {
 } from '@koshi/frontend/home/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
+  LibroDeReclamaciones,
+  Privacidad,
+} from '@koshi/frontend/reclamaciones/feature';
+import {
   crossLocaleRedirects,
   slug,
   toLocale,
@@ -17,17 +21,22 @@ const locale = toLocale($localize.locale ?? 'es');
 export const appRoutes: Route[] = [
   {
     path: '',
-    title: $localize`:@@home.pageTitle:Koshisoftware · Desarrollo Angular y NestJS en Perú`,
     component: Home,
   },
   {
+    path: 'libro-de-reclamaciones',
+    component: LibroDeReclamaciones,
+  },
+  {
+    path: 'libro-de-reclamaciones/privacidad',
+    component: Privacidad,
+  },
+  {
     path: slug('empresas', locale),
-    title: $localize`:@@empresas.pageTitle:Webs para empresas en Perú · Koshisoftware`,
     component: Empresas,
   },
   {
     path: `${slug('proyectos', locale)}/koshisoftware`,
-    title: $localize`:@@caso.ks.pageTitle:Caso de estudio: koshisoftware.pe · Koshisoftware`,
     component: CasoKoshisoftware,
   },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
@@ -37,7 +46,6 @@ export const appRoutes: Route[] = [
   // Prerendered as /404, then moved to 404.html for Cloudflare Pages (see the web build target).
   ...['404', '**'].map((path): Route => ({
     path,
-    title: $localize`:@@notFound.pageTitle:Página no encontrada · Koshisoftware`,
     component: NotFound,
     data: { notFound: true },
   })),

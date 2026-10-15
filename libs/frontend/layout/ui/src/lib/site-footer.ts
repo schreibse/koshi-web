@@ -16,6 +16,29 @@ import { Wordmark } from './wordmark';
         <span class="hidden md:inline" aria-hidden="true">·</span>
         <span>Punta Hermosa, Lima, Perú</span>
       </p>
+      <!-- Reglamento del Libro de Reclamaciones art. 9: the Anexo III notice, linked, on the home page. -->
+      <a
+        href="libro-de-reclamaciones/"
+        class="mt-8 inline-flex items-center gap-3 rounded-base border border-line px-4 py-3 text-ink no-underline hover:border-ink"
+      >
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 7v14" />
+          <path
+            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+          />
+        </svg>
+        <span class="font-semibold">Libro de Reclamaciones</span>
+      </a>
     </div>
   `,
 })
