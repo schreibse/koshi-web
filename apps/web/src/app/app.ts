@@ -46,7 +46,7 @@ const PAGES: Record<
   selector: 'ks-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ks-site-header />
+    <ks-site-header class="print:hidden" />
     <main>
       @switch (page) {
         @case ('home') {
@@ -73,7 +73,7 @@ const PAGES: Record<
         }
       }
     </main>
-    <ks-site-footer />
+    <ks-site-footer class="print:hidden" />
   `,
 })
 export class App {

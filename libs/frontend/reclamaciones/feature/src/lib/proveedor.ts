@@ -5,7 +5,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'ks-proveedor',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <dl class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-[0.9rem]">
+    <dl
+      class="grid grid-cols-[var(--etiqueta,auto)_minmax(0,1fr)] gap-x-[var(--hueco,1rem)] gap-y-1 text-[0.9rem]"
+    >
       <dt class="text-muted" i18n="@@reclamaciones.provider.name">
         Razón social
       </dt>
