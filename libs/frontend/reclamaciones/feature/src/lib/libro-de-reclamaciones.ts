@@ -313,7 +313,9 @@ import { Proveedor } from './proveedor';
         <dt class="text-muted" i18n="@@recibo.request">Pedido</dt>
         <dd class="whitespace-pre-line" data-campo="pedido"></dd>
       </dl>
-      <div class="mt-6"><ks-proveedor /></div>
+      <div class="mt-6 sm:[--etiqueta:180px] sm:[--hueco:1.5rem]">
+        <ks-proveedor />
+      </div>
 
       <div
         class="no-print mx-auto mt-8 grid w-fit gap-3 text-center sm:mx-0 sm:flex sm:flex-wrap"
