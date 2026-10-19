@@ -1,3 +1,28 @@
+## 0.1.21 (2026-10-19)
+
+### 🚀 Features
+
+- **backup:** weekly D1 export to R2 ([ffe392a](https://github.com/schreibse/koshi-web/commit/ffe392a))
+- **functions:** file complaint sheets in D1 with gap-free yearly numbers ([34b4284](https://github.com/schreibse/koshi-web/commit/34b4284))
+- **reclamaciones:** add the Libro de Reclamaciones form and receipt pages ([2a55c99](https://github.com/schreibse/koshi-web/commit/2a55c99))
+- **reclamaciones:** show the fiscal address on the sheet ([7fcfb05](https://github.com/schreibse/koshi-web/commit/7fcfb05))
+- **reclamaciones:** add the privacy notice for the complaint sheet ([5dfe4d7](https://github.com/schreibse/koshi-web/commit/5dfe4d7))
+- **reclamaciones:** protect the sheet with Turnstile ([a59f9c6](https://github.com/schreibse/koshi-web/commit/a59f9c6))
+- **reclamaciones:** describe the sheet and privacy pages for search ([6b11435](https://github.com/schreibse/koshi-web/commit/6b11435))
+- **reclamaciones:** check document numbers by type, add CPP/PTP, RUC and Otro ([b83bc0e](https://github.com/schreibse/koshi-web/commit/b83bc0e))
+- **reclamaciones:** render the Libro statically with a page-only form script ([01233fb](https://github.com/schreibse/koshi-web/commit/01233fb))
+- **reclamaciones:** email the consumer and Koshi a copy of each sheet ([8862b85](https://github.com/schreibse/koshi-web/commit/8862b85))
+- **reclamaciones:** name Sweego, Proton and the rights email in the privacy notice ([81a9d83](https://github.com/schreibse/koshi-web/commit/81a9d83))
+- **reclamaciones:** give the registered database name and code in the privacy notice ([e00f818](https://github.com/schreibse/koshi-web/commit/e00f818))
+- **web:** link the Libro de Reclamaciones from the footer ([8e753e4](https://github.com/schreibse/koshi-web/commit/8e753e4))
+
+### 🩹 Fixes
+
+- **backup:** start the export from a cron trigger and poll it in one step ([25348c1](https://github.com/schreibse/koshi-web/commit/25348c1))
+- **reclamaciones:** print the receipt without site chrome, provider rows aligned ([181a1e8](https://github.com/schreibse/koshi-web/commit/181a1e8))
+- **web:** stop Cloudflare preloading chunks from the wrong path ([eb272f1](https://github.com/schreibse/koshi-web/commit/eb272f1))
+- **web:** let each page set its title so extract-i18n keeps it ([dd485fb](https://github.com/schreibse/koshi-web/commit/dd485fb))
+
 ## 0.1.20 (2026-10-14)
 
 ### 🩹 Fixes
