@@ -645,8 +645,8 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:50</note>
       </notes>
       <segment>
-        <source>En regla</source>
-        <target>Compliant</target>
+        <source>Páginas legales</source>
+        <target>Legal pages</target>
       </segment>
     </unit>
     <unit id="empresas.legal.text">
@@ -654,8 +654,8 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:51</note>
       </notes>
       <segment>
-        <source>Lo que la ley peruana pide a tu web.</source>
-        <target>What Peruvian law asks of your website.</target>
+        <source>Las preparamos e integramos en tu web.</source>
+        <target>We set them up and build them into your site.</target>
       </segment>
     </unit>
     <unit id="empresas.legal.libro">
@@ -753,8 +753,8 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:135,137</note>
       </notes>
       <segment>
-        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y en regla. </source>
-        <target>Fast, responsive WordPress sites for businesses in Peru: maintained, secure and compliant.</target>
+        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y con Libro de Reclamaciones virtual. </source>
+        <target>Fast, responsive WordPress sites for businesses in Peru: maintained, secure and with an online complaints book.</target>
       </segment>
     </unit>
     <unit id="empresas.hero.cta">

@@ -45,8 +45,8 @@ const OFERTAS = [
     ],
   },
   {
-    titulo: $localize`:@@empresas.legal.title:En regla`,
-    texto: $localize`:@@empresas.legal.text:Lo que la ley peruana pide a tu web.`,
+    titulo: $localize`:@@empresas.legal.title:Páginas legales`,
+    texto: $localize`:@@empresas.legal.text:Las preparamos e integramos en tu web.`,
     puntos: [
       $localize`:@@empresas.legal.libro:Libro de Reclamaciones virtual`,
       $localize`:@@empresas.legal.privacy:Política de privacidad (Ley 29733)`,
@@ -65,7 +65,7 @@ const OFERTAS = [
 
 const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localize`:@@empresas.mailSubject:Web para mi empresa`)}`;
 
-/** The offer for small businesses: multilingual WordPress sites, kept up to date and compliant. */
+/** The offer for small businesses: multilingual WordPress sites, kept up to date, with their legal pages. */
 @Component({
   selector: 'ks-empresas',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -133,7 +133,7 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
             i18n="@@empresas.hero.lead"
           >
             Sitios WordPress rápidos y responsivos para empresas en Perú:
-            mantenidos, seguros y en regla.
+            mantenidos, seguros y con Libro de Reclamaciones virtual.
           </p>
           <div class="mt-10 flex flex-wrap gap-3">
             <a [href]="mail" class="btn btn-primary" i18n="@@empresas.hero.cta"
