@@ -1,3 +1,9 @@
+## 0.1.23 (2026-10-20)
+
+### 🩹 Fixes
+
+- **web:** keep Cloudflare from turning the chunk preload into a Link header ([33f5add](https://github.com/schreibse/koshi-web/commit/33f5add))
+
 ## 0.1.22 (2026-10-20)
 
 ### 🚀 Features
