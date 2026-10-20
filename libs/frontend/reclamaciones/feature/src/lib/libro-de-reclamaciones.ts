@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENTOS } from '@koshi/shared/reclamacion/util';
 import { Campo } from './campo';
-import { Proveedor } from './proveedor';
+import { Proveedor } from '@koshi/frontend/layout/ui';
 
 /** The Libro's markup, prerendered and never hydrated; `formulario.ts` makes it work in the browser. */
 @Component({
