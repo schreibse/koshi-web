@@ -5,6 +5,7 @@ import {
   Empresas,
   Home,
   PoliticaDePrivacidad,
+  SobreMi,
 } from '@koshi/frontend/home/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
@@ -48,6 +49,10 @@ export const appRoutes: Route[] = [
   {
     path: slug('privacidad', locale),
     component: PoliticaDePrivacidad,
+  },
+  {
+    path: slug('sobre-mi', locale),
+    component: SobreMi,
   },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
     path: from,

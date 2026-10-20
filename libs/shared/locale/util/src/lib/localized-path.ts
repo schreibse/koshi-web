@@ -5,6 +5,7 @@ const SLUGS = {
   empresas: { es: 'empresas', en: 'business' },
   proyectos: { es: 'proyectos', en: 'projects' },
   privacidad: { es: 'privacidad', en: 'privacy' },
+  'sobre-mi': { es: 'sobre-mi', en: 'about' },
 } satisfies Record<string, Record<Locale, string>>;
 
 export type LocalizedPage = keyof typeof SLUGS;

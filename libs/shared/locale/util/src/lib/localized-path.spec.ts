@@ -68,11 +68,13 @@ describe('crossLocaleRedirects', () => {
       { from: 'empresas', to: 'business' },
       { from: 'proyectos', to: 'projects' },
       { from: 'privacidad', to: 'privacy' },
+      { from: 'sobre-mi', to: 'about' },
     ]);
     expect(crossLocaleRedirects('es')).toEqual([
       { from: 'business', to: 'empresas' },
       { from: 'projects', to: 'proyectos' },
       { from: 'privacy', to: 'privacidad' },
+      { from: 'about', to: 'sobre-mi' },
     ]);
   });
 });

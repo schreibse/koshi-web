@@ -151,6 +151,9 @@ import { TechStack } from './tech-stack';
           Koshisoftware es una empresa individual en Perú. Trabajas directamente
           con quien escribe el código, en tu zona horaria y en tu idioma.
         </p>
+        <p class="mt-8 text-lg">
+          <a [href]="sobreMi" i18n="@@about.more">Más sobre mí →</a>
+        </p>
       </div>
     </section>
 
@@ -176,6 +179,7 @@ export class Home {
   protected readonly servicios = SERVICIOS;
   private readonly locale = toLocale(inject(LOCALE_ID));
   protected readonly empresas = `${slug('empresas', this.locale)}/`;
+  protected readonly sobreMi = `${slug('sobre-mi', this.locale)}/`;
   protected readonly casos = [KOSHISOFTWARE, LIBRO].map((caso) => ({
     ...caso,
     url: `${slug('proyectos', this.locale)}/${caso.path}/`,

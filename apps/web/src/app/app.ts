@@ -11,6 +11,7 @@ import {
   Empresas,
   Home,
   PoliticaDePrivacidad,
+  SobreMi,
 } from '@koshi/frontend/home/feature';
 import { NotFound, SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
 import {
@@ -29,6 +30,7 @@ const PAGES: Record<
   | 'caso'
   | 'casoLibro'
   | 'politica'
+  | 'sobreMi'
   | 'libro'
   | 'privacidad'
 > = {
@@ -37,6 +39,7 @@ const PAGES: Record<
   [`${slug('proyectos', locale)}/koshisoftware`]: 'caso',
   [`${slug('proyectos', locale)}/libro-de-reclamaciones`]: 'casoLibro',
   [slug('privacidad', locale)]: 'politica',
+  [slug('sobre-mi', locale)]: 'sobreMi',
   'libro-de-reclamaciones': 'libro',
   'libro-de-reclamaciones/privacidad': 'privacidad',
 };
@@ -49,6 +52,7 @@ const PAGES: Record<
     CasoKoshisoftware,
     CasoLibro,
     PoliticaDePrivacidad,
+    SobreMi,
     LibroDeReclamaciones,
     Privacidad,
     NotFound,
@@ -78,6 +82,11 @@ const PAGES: Record<
         @case ('politica') {
           @defer (hydrate never) {
             <ks-politica-de-privacidad />
+          }
+        }
+        @case ('sobreMi') {
+          @defer (hydrate never) {
+            <ks-sobre-mi />
           }
         }
         @case ('libro') {
