@@ -35,10 +35,10 @@ import { Wordmark } from './wordmark';
           >Proyectos</a
         >
         <a
-          href="#nosotros"
+          [href]="sobreMi"
           class="hidden text-muted no-underline hover:text-ink md:inline"
           i18n="@@nav.about"
-          >Nosotros</a
+          >Sobre mí</a
         >
         <a
           [href]="empresas"
@@ -58,5 +58,7 @@ import { Wordmark } from './wordmark';
   `,
 })
 export class SiteHeader {
-  protected readonly empresas = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/`;
+  private readonly locale = toLocale(inject(LOCALE_ID));
+  protected readonly empresas = `${slug('empresas', this.locale)}/`;
+  protected readonly sobreMi = `${slug('sobre-mi', this.locale)}/`;
 }

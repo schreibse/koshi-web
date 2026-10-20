@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { SiteHeader } from './site-header';
 
 describe('SiteHeader', () => {
-  it('shows the wordmark, the homepage sections and the business page', async () => {
+  it('shows the wordmark, the homepage sections, the about page and the business page', async () => {
     TestBed.configureTestingModule({
       providers: [{ provide: LOCALE_ID, useValue: 'es' }],
     });
@@ -20,7 +20,7 @@ describe('SiteHeader', () => {
     expect(anchors).toEqual([
       '#servicios',
       '#proyectos',
-      '#nosotros',
+      'sobre-mi/',
       'empresas/',
       '#contacto',
     ]);

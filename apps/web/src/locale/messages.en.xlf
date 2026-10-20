@@ -240,8 +240,8 @@
         <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:35,37</note>
       </notes>
       <segment>
-        <source>Nosotros</source>
-        <target>About</target>
+        <source>Sobre mí</source>
+        <target>About me</target>
       </segment>
     </unit>
     <unit id="nav.contact">
@@ -2319,6 +2319,183 @@
       <segment>
         <source>Caso de estudio: cómo Koshisoftware implementó su Libro de Reclamaciones virtual, con numeración correlativa, copia al correo y respaldo semanal, y las normas peruanas que cita.</source>
         <target>Case study: how Koshisoftware built its online Libro de Reclamaciones, with sequential numbering, an email copy and weekly backups, and the Peruvian rules it cites.</target>
+      </segment>
+    </unit>
+    <unit id="about.more">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:155,157</note>
+      </notes>
+      <segment>
+        <source>Más sobre mí →</source>
+        <target>More about me →</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage1.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:9</note>
+      </notes>
+      <segment>
+        <source>Desarrollador de software</source>
+        <target>Software developer</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage1.detail">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:10</note>
+      </notes>
+      <segment>
+        <source>SharePoint con C# y PowerShell; web con JavaScript, HTML y CSS.</source>
+        <target>First alongside my studies; then SharePoint with C# and PowerShell, and web with JavaScript, HTML and CSS.</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage2.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:15</note>
+      </notes>
+      <segment>
+        <source>Desarrollador senior, frontend</source>
+        <target>Senior developer, frontend</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage2.detail">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:16</note>
+      </notes>
+      <segment>
+        <source>Angular y TypeScript; backend en C# y Java (Spring).</source>
+        <target>Angular and TypeScript; backend in C# and Java (Spring).</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage3.years">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:19</note>
+      </notes>
+      <segment>
+        <source>2021–hoy</source>
+        <target>2021–today</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage3.place">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:20</note>
+      </notes>
+      <segment>
+        <source>Perú</source>
+        <target>Peru</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage3.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:21</note>
+      </notes>
+      <segment>
+        <source>Freelance</source>
+        <target>Freelance</target>
+      </segment>
+    </unit>
+    <unit id="sobre.stage3.detail">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:22</note>
+      </notes>
+      <segment>
+        <source>En remoto para clientes en Austria; desde 2024 con mi empresa, KOSHISOFTWARE E.I.R.L.</source>
+        <target>Remote for clients in Austria; since 2024 with my own company, KOSHISOFTWARE E.I.R.L.</target>
+      </segment>
+    </unit>
+    <unit id="sobre.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:115</note>
+      </notes>
+      <segment>
+        <source>Sobre mí · Koshisoftware</source>
+        <target>About me · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="sobre.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:119</note>
+      </notes>
+      <segment>
+        <source>Stephan Schreiber, fundador de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.</source>
+        <target>Stephan Schreiber, founder of Koshisoftware: web developer working with Angular from Peru, trained in Austria.</target>
+      </segment>
+    </unit>
+    <unit id="sobre.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:38,39</note>
+      </notes>
+      <segment>
+        <source>Sobre mí</source>
+        <target>About me</target>
+      </segment>
+    </unit>
+    <unit id="sobre.intro">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:41,44</note>
+      </notes>
+      <segment>
+        <source> Desarrollo aplicaciones web con Angular, y pruebo y mido lo que construyo. Programo desde 2009: me formé en la FH JOANNEUM, trabajé varios años en empresas de Graz, Austria, y desde 2021 soy freelance en Perú. Hoy lo hago con mi propia empresa, KOSHISOFTWARE E.I.R.L. </source>
+        <target>I build web applications with Angular, and I test and measure what I build. Since 2009: trained at FH JOANNEUM, years in companies in Graz, Austria, and since 2021 freelance from Peru. Today through my own company, KOSHISOFTWARE E.I.R.L.</target>
+      </segment>
+    </unit>
+    <unit id="sobre.career.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:47,48</note>
+      </notes>
+      <segment>
+        <source>Trayectoria</source>
+        <target>Career</target>
+      </segment>
+    </unit>
+    <unit id="sobre.education.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:60,61</note>
+      </notes>
+      <segment>
+        <source>Formación</source>
+        <target>Education</target>
+      </segment>
+    </unit>
+    <unit id="sobre.master">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:67,69</note>
+      </notes>
+      <segment>
+        <source> Information Management, programa de maestría, 2009–2012 </source>
+        <target>Information Management, master degree programme, 2009–2012</target>
+      </segment>
+    </unit>
+    <unit id="sobre.bachelor">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:75,77</note>
+      </notes>
+      <segment>
+        <source> Information Management, 2006–2009 </source>
+        <target>Information Management, 2006–2009</target>
+      </segment>
+    </unit>
+    <unit id="sobre.cv">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:104,106</note>
+      </notes>
+      <segment>
+        <source>Pídeme mi CV</source>
+        <target>Ask for my CV</target>
+      </segment>
+    </unit>
+    <unit id="sobre.school">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:80,87</note>
+      </notes>
+      <segment>
+        <source> Ambos en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;https://www.fh-joanneum.at/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+          &gt;" dispEnd="&lt;/a
+        &gt;">FH JOANNEUM – University of Applied Sciences<pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;sr-only&quot;&gt;" dispEnd="&lt;/span
+          &gt;"> (se abre en una pestaña nueva)</pc></pc>, en Graz, Austria. Estudié desarrollo de software, bases de datos, seguridad, usabilidad y arquitectura de sistemas, con prácticas profesionales en empresa en ambos programas. </source>
+        <target>Both at <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;https://www.fh-joanneum.at/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+          &gt;" dispEnd="&lt;/a
+        &gt;">FH JOANNEUM – University of Applied Sciences<pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;sr-only&quot;&gt;" dispEnd="&lt;/span
+          &gt;"> (opens in a new tab)</pc></pc>, in Graz, Austria. I studied software development, databases, security, usability and systems architecture, with professional internships in both programmes.</target>
       </segment>
     </unit>
   </file>
