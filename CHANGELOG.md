@@ -1,3 +1,9 @@
+## 0.1.26 (2026-10-20)
+
+### 🚀 Features
+
+- **web:** add the Sobre mí page ([79916d9](https://github.com/schreibse/koshi-web/commit/79916d9))
+
 ## 0.1.25 (2026-10-20)
 
 ### 🩹 Fixes
