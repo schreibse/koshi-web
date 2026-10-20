@@ -1,3 +1,13 @@
+## 0.1.24 (2026-10-20)
+
+### 🚀 Features
+
+- **web:** add the Libro de Reclamaciones case study ([55a5c3a](https://github.com/schreibse/koshi-web/commit/55a5c3a))
+
+### 🩹 Fixes
+
+- **web:** say cotización, the Peruvian word for a quote ([fb71661](https://github.com/schreibse/koshi-web/commit/fb71661))
+
 ## 0.1.23 (2026-10-20)
 
 ### 🩹 Fixes
