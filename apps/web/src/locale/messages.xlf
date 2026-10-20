@@ -606,7 +606,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:48</note>
       </notes>
       <segment>
-        <source>En regla</source>
+        <source>Páginas legales</source>
       </segment>
     </unit>
     <unit id="empresas.legal.text">
@@ -614,7 +614,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:49</note>
       </notes>
       <segment>
-        <source>Lo que la ley peruana pide a tu web.</source>
+        <source>Las preparamos e integramos en tu web.</source>
       </segment>
     </unit>
     <unit id="empresas.legal.libro">
@@ -702,7 +702,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:135,137</note>
       </notes>
       <segment>
-        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y en regla. </source>
+        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y con Libro de Reclamaciones virtual. </source>
       </segment>
     </unit>
     <unit id="empresas.hero.cta">
