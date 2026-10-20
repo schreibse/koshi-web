@@ -3,6 +3,7 @@ import {
   CasoKoshisoftware,
   Empresas,
   Home,
+  PoliticaDePrivacidad,
 } from '@koshi/frontend/home/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
@@ -38,6 +39,10 @@ export const appRoutes: Route[] = [
   {
     path: `${slug('proyectos', locale)}/koshisoftware`,
     component: CasoKoshisoftware,
+  },
+  {
+    path: slug('privacidad', locale),
+    component: PoliticaDePrivacidad,
   },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
     path: from,

@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 import { Wordmark } from './wordmark';
 
 @Component({
@@ -39,7 +45,17 @@ import { Wordmark } from './wordmark';
         </svg>
         <span class="font-semibold">Libro de Reclamaciones</span>
       </a>
+      <p class="mt-6">
+        <a
+          [href]="privacidad"
+          class="text-muted hover:text-ink"
+          i18n="@@footer.privacy"
+          >Política de privacidad</a
+        >
+      </p>
     </div>
   `,
 })
-export class SiteFooter {}
+export class SiteFooter {
+  protected readonly privacidad = `${slug('privacidad', toLocale(inject(LOCALE_ID)))}/`;
+}
