@@ -51,6 +51,7 @@
         ],
         "server": "apps/web/src/main.server.ts",
         "outputMode": "static",
+        "subresourceIntegrity": true,
         "localize": true,
         "polyfills": ["@angular/localize/init"]
       },
