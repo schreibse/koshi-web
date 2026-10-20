@@ -46,7 +46,7 @@ import { Proveedor } from '@koshi/frontend/layout/ui';
       <p i18n="@@politica.email">
         Si nos escribes a hola&#64;koshisoftware.pe o a otra de nuestras
         direcciones, usamos tu nombre, tu correo y lo que nos cuentes para
-        responderte y, si nos contratas, para el presupuesto, el contrato y la
+        responderte y, si nos contratas, para la cotización, el contrato y la
         facturación. No los usamos para publicidad ni los compartimos, salvo que
         la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona
         con Proton AG (Suiza), que trata los mensajes como encargado.
