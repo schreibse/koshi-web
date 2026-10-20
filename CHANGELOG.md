@@ -1,3 +1,10 @@
+## 0.1.25 (2026-10-20)
+
+### 🩹 Fixes
+
+- **web:** drop "mandatory" from the English case-study lead ([a6bdb94](https://github.com/schreibse/koshi-web/commit/a6bdb94))
+- **web:** describe the legal pages on /empresas instead of claiming compliance ([6ac254c](https://github.com/schreibse/koshi-web/commit/6ac254c))
+
 ## 0.1.24 (2026-10-20)
 
 ### 🚀 Features
