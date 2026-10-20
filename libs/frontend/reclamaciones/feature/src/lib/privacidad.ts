@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Proveedor } from './proveedor';
+import { Proveedor } from '@koshi/frontend/layout/ui';
 
 /** The privacy notice Ley 29733 art. 18 requires before the sheet's data is collected. */
 @Component({
