@@ -15,7 +15,7 @@ class_name = "Respaldo"
 
 # Mondays 06:00 UTC (01:00 in Lima). A cron trigger, not Workflow `schedules`: those need a paid plan.
 [triggers]
-crons = ["0 6 * * 1"]
+crons = ["0 6 * * MON"]
 
 [[r2_buckets]]
 binding = "RESPALDOS"
