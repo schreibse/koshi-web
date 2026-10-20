@@ -1,3 +1,9 @@
+## 0.1.27 (2026-10-20)
+
+### 🚀 Features
+
+- **web:** add an faq to the business page ([c92043e](https://github.com/schreibse/koshi-web/commit/c92043e))
+
 ## 0.1.26 (2026-10-20)
 
 ### 🚀 Features
