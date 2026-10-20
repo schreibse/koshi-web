@@ -1,3 +1,13 @@
+## 0.1.22 (2026-10-20)
+
+### 🚀 Features
+
+- **web:** add a site-wide privacy policy, linked from the footer ([89638f1](https://github.com/schreibse/koshi-web/commit/89638f1))
+
+### 🩹 Fixes
+
+- **backup:** run the weekly export on Mondays ([6440e9d](https://github.com/schreibse/koshi-web/commit/6440e9d))
+
 ## 0.1.21 (2026-10-19)
 
 ### 🚀 Features
