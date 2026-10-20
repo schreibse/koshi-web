@@ -9,6 +9,7 @@ import {
   CasoKoshisoftware,
   Empresas,
   Home,
+  PoliticaDePrivacidad,
 } from '@koshi/frontend/home/feature';
 import { NotFound, SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
 import {
@@ -22,11 +23,12 @@ const locale = toLocale($localize.locale ?? 'es');
 
 const PAGES: Record<
   string,
-  'home' | 'empresas' | 'caso' | 'libro' | 'privacidad'
+  'home' | 'empresas' | 'caso' | 'politica' | 'libro' | 'privacidad'
 > = {
   '': 'home',
   [slug('empresas', locale)]: 'empresas',
   [`${slug('proyectos', locale)}/koshisoftware`]: 'caso',
+  [slug('privacidad', locale)]: 'politica',
   'libro-de-reclamaciones': 'libro',
   'libro-de-reclamaciones/privacidad': 'privacidad',
 };
@@ -37,6 +39,7 @@ const PAGES: Record<
     Home,
     Empresas,
     CasoKoshisoftware,
+    PoliticaDePrivacidad,
     LibroDeReclamaciones,
     Privacidad,
     NotFound,
@@ -57,6 +60,11 @@ const PAGES: Record<
         }
         @case ('caso') {
           <ks-caso-koshisoftware />
+        }
+        @case ('politica') {
+          @defer (hydrate never) {
+            <ks-politica-de-privacidad />
+          }
         }
         @case ('libro') {
           @defer (hydrate never) {

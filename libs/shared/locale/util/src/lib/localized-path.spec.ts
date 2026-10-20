@@ -31,6 +31,7 @@ describe('localizedUrl', () => {
     ['/empresas#incluye', 'es', 'en', '/business#incluye'],
     ['/empresas?ref=x', 'es', 'en', '/business?ref=x'],
     ['/proyectos/koshisoftware/', 'es', 'en', '/projects/koshisoftware/'],
+    ['/privacy/', 'en', 'es', '/privacidad/'],
     ['/', 'es', 'en', '/'],
     ['/#contacto', 'es', 'en', '/#contacto'],
     [
@@ -66,10 +67,12 @@ describe('crossLocaleRedirects', () => {
     expect(crossLocaleRedirects('en')).toEqual([
       { from: 'empresas', to: 'business' },
       { from: 'proyectos', to: 'projects' },
+      { from: 'privacidad', to: 'privacy' },
     ]);
     expect(crossLocaleRedirects('es')).toEqual([
       { from: 'business', to: 'empresas' },
       { from: 'projects', to: 'proyectos' },
+      { from: 'privacy', to: 'privacidad' },
     ]);
   });
 });

@@ -922,6 +922,156 @@
         <source>Mentoría y pair programming</source>
       </segment>
     </unit>
+    <unit id="politica.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:22,24</note>
+      </notes>
+      <segment>
+        <source> Política de privacidad </source>
+      </segment>
+    </unit>
+    <unit id="politica.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:25,28</note>
+      </notes>
+      <segment>
+        <source> Cómo tratamos tus datos personales cuando visitas este sitio o nos escribes, conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, y su Reglamento. Última actualización: octubre de 2026. </source>
+      </segment>
+    </unit>
+    <unit id="privacidad.owner.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:30,32</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:33,36</note>
+      </notes>
+      <segment>
+        <source>Responsable</source>
+      </segment>
+    </unit>
+    <unit id="politica.owner.email">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:33,36</note>
+      </notes>
+      <segment>
+        <source> Correo: hola@koshisoftware.pe </source>
+      </segment>
+    </unit>
+    <unit id="politica.visit.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:36,37</note>
+      </notes>
+      <segment>
+        <source>Cuando visitas el sitio</source>
+      </segment>
+    </unit>
+    <unit id="politica.visit">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:38,42</note>
+      </notes>
+      <segment>
+        <source> Este sitio no usa cookies, no mide visitas con herramientas de analítica y no carga contenido de terceros. Nosotros no llevamos registros de visitas. Cloudflare, Inc. (Estados Unidos) aloja el sitio y, como encargado, procesa tu dirección IP y datos técnicos de tu navegador para entregarte las páginas y protegerlas de ataques. </source>
+      </segment>
+    </unit>
+    <unit id="politica.email.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:45,46</note>
+      </notes>
+      <segment>
+        <source>Cuando nos escribes</source>
+      </segment>
+    </unit>
+    <unit id="politica.email">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:47,52</note>
+      </notes>
+      <segment>
+        <source> Si nos escribes a hola@koshisoftware.pe o a otra de nuestras direcciones, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para el presupuesto, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona con Proton AG (Suiza), que trata los mensajes como encargado. </source>
+      </segment>
+    </unit>
+    <unit id="politica.libro.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:55,56</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones</source>
+      </segment>
+    </unit>
+    <unit id="politica.libro">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:57,64</note>
+      </notes>
+      <segment>
+        <source> Los datos de una hoja de reclamación tienen su propia política, con su banco de datos inscrito, sus plazos y sus encargados: <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+          &gt;" dispEnd="&lt;/a
+        &gt;">Política de privacidad del Libro de Reclamaciones</pc>. </source>
+      </segment>
+    </unit>
+    <unit id="privacidad.transfer.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:64,65</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,62</note>
+      </notes>
+      <segment>
+        <source>Transferencia internacional</source>
+      </segment>
+    </unit>
+    <unit id="politica.transfer">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:66,70</note>
+      </notes>
+      <segment>
+        <source> Como Cloudflare y Proton están fuera del Perú, tus datos se tratan en Estados Unidos y en Suiza, por nuestra cuenta y bajo contrato. </source>
+      </segment>
+    </unit>
+    <unit id="privacidad.retention.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:70,71</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:73,74</note>
+      </notes>
+      <segment>
+        <source>Cuánto tiempo los guardamos</source>
+      </segment>
+    </unit>
+    <unit id="politica.retention">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:72,75</note>
+      </notes>
+      <segment>
+        <source> Guardamos tus correos mientras sean útiles para atender tu consulta o nuestra relación comercial, y durante los plazos que exija la ley, por ejemplo los tributarios. Si nos pides borrarlos, lo hacemos. </source>
+      </segment>
+    </unit>
+    <unit id="privacidad.rights.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:77,78</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:79,80</note>
+      </notes>
+      <segment>
+        <source>Tus derechos</source>
+      </segment>
+    </unit>
+    <unit id="politica.rights">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:79,83</note>
+      </notes>
+      <segment>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a hola@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+      </segment>
+    </unit>
+    <unit id="politica.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:92</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad · Koshisoftware</source>
+      </segment>
+    </unit>
+    <unit id="politica.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:96</note>
+      </notes>
+      <segment>
+        <source>Cómo Koshisoftware E.I.R.L. trata los datos personales de quienes visitan este sitio o le escriben.</source>
+      </segment>
+    </unit>
     <unit id="process.talk.title">
       <notes>
         <note category="location">libs/frontend/home/feature/src/lib/process-pipeline.ts:31</note>
@@ -1080,6 +1230,30 @@
       </notes>
       <segment>
         <source>Página no encontrada · Koshisoftware</source>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.provider.name">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/proveedor.ts:12,14</note>
+      </notes>
+      <segment>
+        <source> Razón social </source>
+      </segment>
+    </unit>
+    <unit id="reclamaciones.provider.address">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/proveedor.ts:18,21</note>
+      </notes>
+      <segment>
+        <source> Dirección </source>
+      </segment>
+    </unit>
+    <unit id="footer.privacy">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:53,56</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad</source>
       </segment>
     </unit>
     <unit id="nav.services">
@@ -1459,7 +1633,7 @@
     </unit>
     <unit id="recibo.print">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:327,328</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:329,330</note>
       </notes>
       <segment>
         <source> Imprimir o guardar PDF </source>
@@ -1467,7 +1641,7 @@
     </unit>
     <unit id="recibo.home">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:329,331</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:331,333</note>
       </notes>
       <segment>
         <source>Volver al inicio</source>
@@ -1475,7 +1649,7 @@
     </unit>
     <unit id="reclamaciones.error.required">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:337</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:339</note>
       </notes>
       <segment>
         <source>Este campo es obligatorio.</source>
@@ -1483,7 +1657,7 @@
     </unit>
     <unit id="reclamaciones.error.email">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:338</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:340</note>
       </notes>
       <segment>
         <source>Escribe un correo válido.</source>
@@ -1491,7 +1665,7 @@
     </unit>
     <unit id="reclamaciones.error.idNumber">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:339</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:341</note>
       </notes>
       <segment>
         <source>DNI: 8 dígitos. RUC: 11 dígitos. Otros: solo letras y números.</source>
@@ -1499,7 +1673,7 @@
     </unit>
     <unit id="reclamaciones.error.invalid">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:340</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:342</note>
       </notes>
       <segment>
         <source>Revisa este campo.</source>
@@ -1507,7 +1681,7 @@
     </unit>
     <unit id="reclamaciones.failed.verification">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:341</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:343</note>
       </notes>
       <segment>
         <source>Completa la verificación de seguridad y vuelve a enviar.</source>
@@ -1515,7 +1689,7 @@
     </unit>
     <unit id="reclamaciones.failed">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:342</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:344</note>
       </notes>
       <segment>
         <source>No pudimos registrar tu hoja. Inténtalo de nuevo en unos minutos.</source>
@@ -1523,7 +1697,7 @@
     </unit>
     <unit id="reclamaciones.pageTitle">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:347</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:349</note>
       </notes>
       <segment>
         <source>Libro de Reclamaciones · Koshisoftware</source>
@@ -1531,7 +1705,7 @@
     </unit>
     <unit id="reclamaciones.description">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:351</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/libro-de-reclamaciones.ts:353</note>
       </notes>
       <segment>
         <source>Libro de Reclamaciones virtual de Koshisoftware E.I.R.L.</source>
@@ -1551,14 +1725,6 @@
       </notes>
       <segment>
         <source> Cómo tratamos los datos que nos das al presentar una hoja de reclamación, conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, y su Reglamento. </source>
-      </segment>
-    </unit>
-    <unit id="privacidad.owner.title">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:33,36</note>
-      </notes>
-      <segment>
-        <source>Responsable</source>
       </segment>
     </unit>
     <unit id="privacidad.purpose.title">
@@ -1609,14 +1775,6 @@
         <source> Tus datos se guardan en el banco de datos «Quejas y reclamos» de Koshisoftware E.I.R.L., inscrito en el Registro Nacional de Protección de Datos Personales con el código PJ-2026-5408. Solo los ven Koshisoftware y, si lo solicitan, el INDECOPI u otras autoridades competentes. </source>
       </segment>
     </unit>
-    <unit id="privacidad.transfer.title">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:61,62</note>
-      </notes>
-      <segment>
-        <source>Transferencia internacional</source>
-      </segment>
-    </unit>
     <unit id="privacidad.transfer">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:63,70</note>
@@ -1625,28 +1783,12 @@
         <source> Este sitio y su base de datos funcionan en la infraestructura de Cloudflare, Inc. (Estados Unidos), que trata los datos como encargado, por nuestra cuenta y bajo contrato. Por eso tus datos se almacenan fuera del Perú. Para proteger el formulario de envíos automatizados, Cloudflare Turnstile analiza tu dirección IP y datos técnicos de tu navegador. La copia de la hoja te la enviamos por correo con Sweego (Mindbaz SAS, Francia), y recibimos y respondemos las reclamaciones en nuestro correo de Proton AG (Suiza), ambos también como encargados. </source>
       </segment>
     </unit>
-    <unit id="privacidad.retention.title">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:73,74</note>
-      </notes>
-      <segment>
-        <source>Cuánto tiempo los guardamos</source>
-      </segment>
-    </unit>
     <unit id="privacidad.retention">
       <notes>
         <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:75,79</note>
       </notes>
       <segment>
         <source> Dos años desde que presentas la hoja, el plazo que exige el Reglamento del Libro de Reclamaciones. Después los eliminamos. </source>
-      </segment>
-    </unit>
-    <unit id="privacidad.rights.title">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:79,80</note>
-      </notes>
-      <segment>
-        <source>Tus derechos</source>
       </segment>
     </unit>
     <unit id="privacidad.rights">
@@ -1679,22 +1821,6 @@
       </notes>
       <segment>
         <source>Cómo Koshisoftware E.I.R.L. trata los datos personales registrados en el Libro de Reclamaciones.</source>
-      </segment>
-    </unit>
-    <unit id="reclamaciones.provider.name">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/proveedor.ts:10,12</note>
-      </notes>
-      <segment>
-        <source> Razón social </source>
-      </segment>
-    </unit>
-    <unit id="reclamaciones.provider.address">
-      <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/proveedor.ts:16,19</note>
-      </notes>
-      <segment>
-        <source> Dirección </source>
       </segment>
     </unit>
   </file>

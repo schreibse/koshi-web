@@ -4,6 +4,7 @@ import { Locale } from './preferred-locale';
 const SLUGS = {
   empresas: { es: 'empresas', en: 'business' },
   proyectos: { es: 'proyectos', en: 'projects' },
+  privacidad: { es: 'privacidad', en: 'privacy' },
 } satisfies Record<string, Record<Locale, string>>;
 
 export type LocalizedPage = keyof typeof SLUGS;

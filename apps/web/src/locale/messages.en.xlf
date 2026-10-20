@@ -1907,5 +1907,144 @@
         <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to reclamaciones@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
       </segment>
     </unit>
+    <unit id="politica.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:22,24</note>
+      </notes>
+      <segment>
+        <source> Política de privacidad </source>
+        <target>Privacy policy</target>
+      </segment>
+    </unit>
+    <unit id="politica.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:25,28</note>
+      </notes>
+      <segment>
+        <source> Cómo tratamos tus datos personales cuando visitas este sitio o nos escribes, conforme a la Ley N.º 29733, Ley de Protección de Datos Personales, y su Reglamento. Última actualización: octubre de 2026. </source>
+        <target>How we process your personal data when you visit this site or write to us, under Ley N.º 29733, Peru's Personal Data Protection Law, and its regulation. Last updated: October 2026.</target>
+      </segment>
+    </unit>
+    <unit id="politica.owner.email">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:33,36</note>
+      </notes>
+      <segment>
+        <source> Correo: hola@koshisoftware.pe </source>
+        <target>Email: hola@koshisoftware.pe</target>
+      </segment>
+    </unit>
+    <unit id="politica.visit.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:36,37</note>
+      </notes>
+      <segment>
+        <source>Cuando visitas el sitio</source>
+        <target>When you visit the site</target>
+      </segment>
+    </unit>
+    <unit id="politica.visit">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:38,42</note>
+      </notes>
+      <segment>
+        <source> Este sitio no usa cookies, no mide visitas con herramientas de analítica y no carga contenido de terceros. Nosotros no llevamos registros de visitas. Cloudflare, Inc. (Estados Unidos) aloja el sitio y, como encargado, procesa tu dirección IP y datos técnicos de tu navegador para entregarte las páginas y protegerlas de ataques. </source>
+        <target>This site sets no cookies, measures no visits with analytics tools and loads no third-party content. We keep no visitor logs. Cloudflare, Inc. (United States) hosts the site and, as our processor, processes your IP address and technical data from your browser to deliver the pages and protect them from attacks.</target>
+      </segment>
+    </unit>
+    <unit id="politica.email.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:45,46</note>
+      </notes>
+      <segment>
+        <source>Cuando nos escribes</source>
+        <target>When you write to us</target>
+      </segment>
+    </unit>
+    <unit id="politica.email">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:47,52</note>
+      </notes>
+      <segment>
+        <source> Si nos escribes a hola@koshisoftware.pe o a otra de nuestras direcciones, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para el presupuesto, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona con Proton AG (Suiza), que trata los mensajes como encargado. </source>
+        <target>If you write to hola@koshisoftware.pe or another of our addresses, we use your name, your email address and what you tell us to answer you and, if you hire us, for the quote, the contract and invoicing. We do not use them for advertising or share them, unless the law requires it (for example, towards SUNAT, the tax authority). Our email runs on Proton AG (Switzerland), which processes the messages as our processor.</target>
+      </segment>
+    </unit>
+    <unit id="politica.libro.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:55,56</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones</source>
+        <target>Libro de Reclamaciones</target>
+      </segment>
+    </unit>
+    <unit id="politica.libro">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:57,64</note>
+      </notes>
+      <segment>
+        <source> Los datos de una hoja de reclamación tienen su propia política, con su banco de datos inscrito, sus plazos y sus encargados: <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+          &gt;" dispEnd="&lt;/a
+        &gt;">Política de privacidad del Libro de Reclamaciones</pc>. </source>
+        <target>The data in a complaint sheet has its own policy, with its registered data bank, its periods and its processors: <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;libro-de-reclamaciones/privacidad/&quot;
+          &gt;" dispEnd="&lt;/a
+        &gt;">Privacy policy of the Libro de Reclamaciones</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="politica.transfer">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:66,70</note>
+      </notes>
+      <segment>
+        <source> Como Cloudflare y Proton están fuera del Perú, tus datos se tratan en Estados Unidos y en Suiza, por nuestra cuenta y bajo contrato. </source>
+        <target>As Cloudflare and Proton are outside Peru, your data is processed in the United States and Switzerland, on our behalf and under contract.</target>
+      </segment>
+    </unit>
+    <unit id="politica.retention">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:72,75</note>
+      </notes>
+      <segment>
+        <source> Guardamos tus correos mientras sean útiles para atender tu consulta o nuestra relación comercial, y durante los plazos que exija la ley, por ejemplo los tributarios. Si nos pides borrarlos, lo hacemos. </source>
+        <target>We keep your emails while they are useful to handle your enquiry or our business relationship, and for the periods the law requires, such as tax periods. If you ask us to delete them, we do.</target>
+      </segment>
+    </unit>
+    <unit id="politica.rights">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:79,83</note>
+      </notes>
+      <segment>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a hola@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to hola@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
+      </segment>
+    </unit>
+    <unit id="politica.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:92</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad · Koshisoftware</source>
+        <target>Privacy policy · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="politica.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:96</note>
+      </notes>
+      <segment>
+        <source>Cómo Koshisoftware E.I.R.L. trata los datos personales de quienes visitan este sitio o le escriben.</source>
+        <target>How Koshisoftware E.I.R.L. processes the personal data of people who visit this site or write to it.</target>
+      </segment>
+    </unit>
+    <unit id="footer.privacy">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:53,56</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad</source>
+        <target>Privacy policy</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
