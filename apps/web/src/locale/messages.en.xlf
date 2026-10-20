@@ -570,11 +570,11 @@
     </unit>
     <unit id="empresas.web.design">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:35</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:33</note>
       </notes>
       <segment>
-        <source>Diseño a medida y responsivo</source>
-        <target>Custom, responsive design</target>
+        <source>Diseño adaptado a tu marca, pensado para el celular</source>
+        <target>Designed around your brand, built for phones</target>
       </segment>
     </unit>
     <unit id="empresas.web.languages">
@@ -588,11 +588,11 @@
     </unit>
     <unit id="empresas.web.seo">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:37</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:35</note>
       </notes>
       <segment>
-        <source>Optimizada para Google y Lighthouse</source>
-        <target>Optimised for Google and Lighthouse</target>
+        <source>Hecha para que Google la encuentre</source>
+        <target>Built so Google can find it</target>
       </segment>
     </unit>
     <unit id="empresas.care.title">
@@ -721,6 +721,150 @@
         <target>Integration with your provider (OSE or PSE)</target>
       </segment>
     </unit>
+    <unit id="empresas.faq.time.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:68</note>
+      </notes>
+      <segment>
+        <source>¿Cuánto demora hacer mi web?</source>
+        <target>How long does it take to build my website?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.time.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:69</note>
+      </notes>
+      <segment>
+        <source>Depende de lo que necesite tu web. Una web basada en un diseño ya hecho, que adapto a tu marca, está lista en menos tiempo; un diseño desde cero, o extras como reservas en línea, toman más. También influye la cantidad de páginas e idiomas. Tu cotización incluye una fecha de entrega estimada, contada desde el día en que recibo tus textos y fotos.</source>
+        <target>That depends on what your site needs. A site based on a ready-made design that I adapt to your brand is done sooner; a design made from scratch, or extras like online bookings, take longer. The number of pages and languages counts too. Your quote includes an estimated delivery date, counted from the day I have your texts and photos.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.content.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:72</note>
+      </notes>
+      <segment>
+        <source>¿Qué necesito enviarte?</source>
+        <target>What do I need to send you?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.content.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:73</note>
+      </notes>
+      <segment>
+        <source>Tu logo, tus fotos y los textos de cada página. No te preocupes si no sabes qué escribir: te doy una lista de lo que necesita cada página. Si solo tienes los textos en español, también puedo escribir la versión en inglés; en ese caso la incluyo en tu cotización como un ítem separado.</source>
+        <target>Your logo, your photos and the texts for each page. Don't worry if you're not sure what to write: I give you a list of what each page needs. If you only have the texts in Spanish, I can also write the English version for you; it then appears as its own item in your quote.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.edit.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:76</note>
+      </notes>
+      <segment>
+        <source>¿Puedo hacer cambios en mi web por mi cuenta?</source>
+        <target>Can I change things on my website myself?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.edit.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:77</note>
+      </notes>
+      <segment>
+        <source>Sí. La web es tuya, así que tienes acceso completo. Cambiar textos y fotos o publicar noticias, en ambos idiomas, es sencillo una vez que lo ves, y te enseño cómo hacerlo cuando te entrego la web. Para cambios más grandes, como agregar una sección nueva o una función nueva, lo mejor es que me consultes primero, para que nada deje de funcionar por accidente. Con gusto me encargo de esos cambios como un trabajo aparte, o dentro del soporte mensual si cuentas con él.</source>
+        <target>Yes. The site is yours, so you get full access. Changing texts and photos or adding news is simple once you've seen it, in both languages, and I show you how when I hand over the site. For bigger changes, like a new section or a new function, it's best to ask me first so nothing stops working by accident. I'm glad to take care of those as a separate job, or as part of monthly support if you have it.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.owner.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:80</note>
+      </notes>
+      <segment>
+        <source>¿De quién es mi web?</source>
+        <target>Who owns my website?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.owner.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:81</note>
+      </notes>
+      <segment>
+        <source>Tuya. Toda web necesita un dominio, que es tu dirección en internet (como tuempresa.pe), y un hosting, el servicio que la mantiene en línea. Algunas también necesitan un diseño o funciones adicionales que tienen costo. Todo eso lo compras tú, a tu nombre: esos pagos van directo a cada proveedor, no a KOSHISOFTWARE, y no forman parte de mi cotización. El dominio y el hosting los pagas de nuevo cada año. Yo te ayudo a elegirlos y configuro todo. Como todo está a tu nombre, nunca dependes de mí: si algún día quieres trabajar con otra persona, tu web se va contigo.</source>
+        <target>You do. Every website needs a domain, which is your web address (like yourbusiness.pe), and hosting, the service that keeps it online. Some also need a paid design or extra functions. You buy these yourself, in your name, and pay the providers directly: these costs are separate from KOSHISOFTWARE and are not part of my quote. You pay for the domain and hosting again every year. I help you choose them and set everything up. Because it is all in your name, you are never tied to me: if you ever want to work with someone else, your site goes with you.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.google.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:84</note>
+      </notes>
+      <segment>
+        <source>¿Mi web va a aparecer en Google?</source>
+        <target>Will my website appear on Google?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.google.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:85</note>
+      </notes>
+      <segment>
+        <source>La construyo para que Google pueda encontrarla y entenderla: está hecha para cargar rápido, está bien organizada y las páginas en español y en inglés tienen cada una su propia dirección. Además, la conecto a tu propia cuenta en la herramienta gratuita de Google para dueños de sitios web, para que veas cómo te encuentra la gente. Nadie puede prometerte con honestidad los primeros lugares en Google. Conseguir más visitas con el tiempo requiere un trabajo constante, y con gusto te acompaño en eso como un servicio aparte.</source>
+        <target>I build it so Google can find and understand it: it is made to load fast, it is clearly organized, and the Spanish and English pages each have their own address. I also connect it to your own account in Google's free tool for site owners, so you can see how people find you. Nobody can honestly promise you a top spot on Google. Getting more visitors over time takes ongoing work, and I'm glad to support you with it as a separate service.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.fixes.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:88</note>
+      </notes>
+      <segment>
+        <source>¿Y si algo falla después de publicar mi web?</source>
+        <target>What if something doesn't work after launch?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.fixes.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:89</note>
+      </notes>
+      <segment>
+        <source>Si algo que hice no funciona como lo acordamos, lo arreglo sin costo durante los primeros 30 días desde que se publica la web. Los problemas del servicio de hosting, o los que vengan de cambios hechos después de la publicación, no están incluidos, pero con gusto también te ayudo con ellos. Pasados esos 30 días, los arreglos están incluidos si tienes soporte mensual; si no, me encargo de ellos como un trabajo aparte.</source>
+        <target>If something I built doesn't work as we agreed, I fix it free of charge during the first 30 days after launch. Problems with the hosting service, or with changes made to the site after launch, aren't included, but I'm happy to help with those too. After those 30 days, fixes are included if you have monthly support; otherwise I take care of them as a separate job.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.existing.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:92</note>
+      </notes>
+      <segment>
+        <source>Ya tengo una web. ¿La puedes mejorar?</source>
+        <target>I already have a website. Can you improve it?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.existing.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:93</note>
+      </notes>
+      <segment>
+        <source>Sí. Primero la reviso: qué tan rápido carga, cómo se ve en el celular, si se mantiene al día con sus actualizaciones y cómo maneja los idiomas. Luego te digo con honestidad si vale la pena mejorarla o si conviene empezar de nuevo.</source>
+        <target>Yes. First I look at it: how fast it loads, how it looks on a phone, whether its software is kept up to date, and how it handles languages. Then I tell you honestly whether it is worth improving or better to start again.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.payment.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:96</note>
+      </notes>
+      <segment>
+        <source>¿Cómo es el pago?</source>
+        <target>How does payment work?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.payment.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:97</note>
+      </notes>
+      <segment>
+        <source>Lo acordamos juntos y queda por escrito en tu cotización antes de empezar a trabajar, para que no haya sorpresas. La cotización cubre solo mi trabajo; el dominio, el hosting y cualquier otra cosa que compres se los pagas directamente a cada proveedor.</source>
+        <target>We agree on it together, and it is written in your quote before any work starts, so there are no surprises. The quote covers only my work; the domain, hosting and anything else you buy, you pay directly to those providers.</target>
+      </segment>
+    </unit>
     <unit id="empresas.mailSubject">
       <notes>
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:68</note>
@@ -750,11 +894,11 @@
     </unit>
     <unit id="empresas.hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:135,137</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:170,172</note>
       </notes>
       <segment>
-        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y con Libro de Reclamaciones virtual. </source>
-        <target>Fast, responsive WordPress sites for businesses in Peru: maintained, secure and with an online complaints book.</target>
+        <source> Sitios WordPress rápidos en el celular para empresas en Perú: con tu Libro de Reclamaciones virtual y, si quieres, al día con sus actualizaciones. </source>
+        <target>WordPress sites that are fast on phones, for businesses in Peru: with your Libro de Reclamaciones online, and kept up to date if you want.</target>
       </segment>
     </unit>
     <unit id="empresas.hero.cta">
@@ -831,11 +975,11 @@
     </unit>
     <unit id="empresas.modes.project.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:262,264</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:372,374</note>
       </notes>
       <segment>
-        <source> Conversamos, te envío una propuesta con precio cerrado y construyo tu web. </source>
-        <target>We talk, I send you a proposal with a fixed price, and I build your site.</target>
+        <source> Conversamos, te envío una cotización con lo que incluye y el precio, y construyo tu web. </source>
+        <target>We talk, I send you a quote with what's included and the price, and I build your site.</target>
       </segment>
     </unit>
     <unit id="empresas.modes.monthly.title">
@@ -854,6 +998,42 @@
       <segment>
         <source> Una cuota fija para mantenimiento, cambios pequeños y tranquilidad. </source>
         <target>A fixed fee for maintenance, small changes and peace of mind.</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:398,400</note>
+      </notes>
+      <segment>
+        <source>Preguntas frecuentes</source>
+        <target>FAQ</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:401,403</note>
+      </notes>
+      <segment>
+        <source> Antes de empezar </source>
+        <target>Before we start</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.other">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:404,406</note>
+      </notes>
+      <segment>
+        <source>¿Tienes otra pregunta?</source>
+        <target>Have another question?</target>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.write">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:410,412</note>
+      </notes>
+      <segment>
+        <source>Escríbeme a hola@koshisoftware.pe</source>
+        <target>Email me at hola@koshisoftware.pe</target>
       </segment>
     </unit>
     <unit id="empresas.contact.eyebrow">

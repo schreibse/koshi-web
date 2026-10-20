@@ -255,6 +255,34 @@ for (const { home, caso } of [
   });
 }
 
+for (const { path, first, other } of [
+  {
+    path: '/es/empresas',
+    first: '¿Cuánto demora hacer mi web?',
+    other: '¿De quién es mi web?',
+  },
+  {
+    path: '/en/business',
+    first: 'How long does it take to build my website?',
+    other: 'Who owns my website?',
+  },
+]) {
+  test(`${path} opens the first question and the others on click`, async ({
+    page,
+  }) => {
+    await page.goto(path);
+    const faq = page.locator('#preguntas');
+    const answer = (question: string) =>
+      faq.locator('details', { hasText: question }).locator('p');
+
+    await expect(answer(first)).toBeVisible();
+    await expect(answer(other)).toBeHidden();
+
+    await faq.getByText(other).click();
+    await expect(answer(other)).toBeVisible();
+  });
+}
+
 test('a slug of the other locale redirects to this one', async ({ page }) => {
   await page.goto('/en/empresas');
   await expect(page).toHaveURL(/\/en\/business\/?$/);

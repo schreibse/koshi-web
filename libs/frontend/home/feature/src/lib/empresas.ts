@@ -30,9 +30,9 @@ const OFERTAS = [
     titulo: $localize`:@@empresas.web.title:Web multilingüe`,
     texto: $localize`:@@empresas.web.text:Tu sitio WordPress en español e inglés, rápido en el celular y fácil de encontrar.`,
     puntos: [
-      $localize`:@@empresas.web.design:Diseño a medida y responsivo`,
+      $localize`:@@empresas.web.design:Diseño adaptado a tu marca, pensado para el celular`,
       $localize`:@@empresas.web.languages:Español e inglés, cada uno con su URL`,
-      $localize`:@@empresas.web.seo:Optimizada para Google y Lighthouse`,
+      $localize`:@@empresas.web.seo:Hecha para que Google la encuentre`,
     ],
   },
   {
@@ -60,6 +60,41 @@ const OFERTAS = [
       $localize`:@@empresas.sunat.receipts:Boletas y facturas desde tu web`,
       $localize`:@@empresas.sunat.provider:Integración con tu proveedor (OSE o PSE)`,
     ],
+  },
+];
+
+const PREGUNTAS = [
+  {
+    pregunta: $localize`:@@empresas.faq.time.q:¿Cuánto demora hacer mi web?`,
+    respuesta: $localize`:@@empresas.faq.time.a:Depende de lo que necesite tu web. Una web basada en un diseño ya hecho, que adapto a tu marca, está lista en menos tiempo; un diseño desde cero, o extras como reservas en línea, toman más. También influye la cantidad de páginas e idiomas. Tu cotización incluye una fecha de entrega estimada, contada desde el día en que recibo tus textos y fotos.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.content.q:¿Qué necesito enviarte?`,
+    respuesta: $localize`:@@empresas.faq.content.a:Tu logo, tus fotos y los textos de cada página. No te preocupes si no sabes qué escribir: te doy una lista de lo que necesita cada página. Si solo tienes los textos en español, también puedo escribir la versión en inglés; en ese caso la incluyo en tu cotización como un ítem separado.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.edit.q:¿Puedo hacer cambios en mi web por mi cuenta?`,
+    respuesta: $localize`:@@empresas.faq.edit.a:Sí. La web es tuya, así que tienes acceso completo. Cambiar textos y fotos o publicar noticias, en ambos idiomas, es sencillo una vez que lo ves, y te enseño cómo hacerlo cuando te entrego la web. Para cambios más grandes, como agregar una sección nueva o una función nueva, lo mejor es que me consultes primero, para que nada deje de funcionar por accidente. Con gusto me encargo de esos cambios como un trabajo aparte, o dentro del soporte mensual si cuentas con él.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.owner.q:¿De quién es mi web?`,
+    respuesta: $localize`:@@empresas.faq.owner.a:Tuya. Toda web necesita un dominio, que es tu dirección en internet (como tuempresa.pe), y un hosting, el servicio que la mantiene en línea. Algunas también necesitan un diseño o funciones adicionales que tienen costo. Todo eso lo compras tú, a tu nombre: esos pagos van directo a cada proveedor, no a KOSHISOFTWARE, y no forman parte de mi cotización. El dominio y el hosting los pagas de nuevo cada año. Yo te ayudo a elegirlos y configuro todo. Como todo está a tu nombre, nunca dependes de mí: si algún día quieres trabajar con otra persona, tu web se va contigo.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.google.q:¿Mi web va a aparecer en Google?`,
+    respuesta: $localize`:@@empresas.faq.google.a:La construyo para que Google pueda encontrarla y entenderla: está hecha para cargar rápido, está bien organizada y las páginas en español y en inglés tienen cada una su propia dirección. Además, la conecto a tu propia cuenta en la herramienta gratuita de Google para dueños de sitios web, para que veas cómo te encuentra la gente. Nadie puede prometerte con honestidad los primeros lugares en Google. Conseguir más visitas con el tiempo requiere un trabajo constante, y con gusto te acompaño en eso como un servicio aparte.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.fixes.q:¿Y si algo falla después de publicar mi web?`,
+    respuesta: $localize`:@@empresas.faq.fixes.a:Si algo que hice no funciona como lo acordamos, lo arreglo sin costo durante los primeros 30 días desde que se publica la web. Los problemas del servicio de hosting, o los que vengan de cambios hechos después de la publicación, no están incluidos, pero con gusto también te ayudo con ellos. Pasados esos 30 días, los arreglos están incluidos si tienes soporte mensual; si no, me encargo de ellos como un trabajo aparte.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.existing.q:Ya tengo una web. ¿La puedes mejorar?`,
+    respuesta: $localize`:@@empresas.faq.existing.a:Sí. Primero la reviso: qué tan rápido carga, cómo se ve en el celular, si se mantiene al día con sus actualizaciones y cómo maneja los idiomas. Luego te digo con honestidad si vale la pena mejorarla o si conviene empezar de nuevo.`,
+  },
+  {
+    pregunta: $localize`:@@empresas.faq.payment.q:¿Cómo es el pago?`,
+    respuesta: $localize`:@@empresas.faq.payment.a:Lo acordamos juntos y queda por escrito en tu cotización antes de empezar a trabajar, para que no haya sorpresas. La cotización cubre solo mi trabajo; el dominio, el hosting y cualquier otra cosa que compres se los pagas directamente a cada proveedor.`,
   },
 ];
 
@@ -132,8 +167,9 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
             class="mt-6 max-w-xl text-xl text-muted"
             i18n="@@empresas.hero.lead"
           >
-            Sitios WordPress rápidos y responsivos para empresas en Perú:
-            mantenidos, seguros y con Libro de Reclamaciones virtual.
+            Sitios WordPress rápidos en el celular para empresas en Perú: con tu
+            Libro de Reclamaciones virtual y, si quieres, al día con sus
+            actualizaciones.
           </p>
           <div class="mt-10 flex flex-wrap gap-3">
             <a [href]="mail" class="btn btn-primary" i18n="@@empresas.hero.cta"
@@ -333,8 +369,8 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
               Proyecto
             </h3>
             <p class="text-muted" i18n="@@empresas.modes.project.text">
-              Conversamos, te envío una propuesta con precio cerrado y construyo
-              tu web.
+              Conversamos, te envío una cotización con lo que incluye y el
+              precio, y construyo tu web.
             </p>
           </div>
           <div class="rounded-base bg-tint-strong p-8">
@@ -349,6 +385,57 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
               tranquilidad.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas" class="border-t border-line py-16 md:py-28">
+      <div
+        class="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)] md:gap-16 md:px-10"
+      >
+        <div class="md:sticky md:top-24">
+          <span class="eyebrow" i18n="@@empresas.faq.eyebrow"
+            >Preguntas frecuentes</span
+          >
+          <h2 class="text-3xl md:text-5xl" i18n="@@empresas.faq.title">
+            Antes de empezar
+          </h2>
+          <p class="mt-6 text-muted">
+            <span i18n="@@empresas.faq.other">¿Tienes otra pregunta?</span>
+            <br />
+            <a
+              [href]="mail"
+              class="font-semibold text-accent underline"
+              i18n="@@empresas.faq.write"
+              >Escríbeme a hola&#64;koshisoftware.pe</a
+            >
+          </p>
+        </div>
+        <div class="border-b border-line">
+          @for (item of preguntas; track item.pregunta; let primera = $first) {
+            <details
+              class="group border-t border-line"
+              [attr.open]="primera ? '' : null"
+            >
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden"
+              >
+                {{ item.pregunta }}
+                <svg
+                  aria-hidden="true"
+                  class="size-5 flex-none stroke-muted group-open:rotate-180"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </summary>
+              <p class="pb-6 text-muted md:pr-10">{{ item.respuesta }}</p>
+            </details>
+          }
         </div>
       </div>
     </section>
@@ -369,6 +456,7 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
 export class Empresas {
   protected readonly ejemplo = EJEMPLO;
   protected readonly ofertas = OFERTAS;
+  protected readonly preguntas = PREGUNTAS;
   protected readonly mail = MAIL;
   // <base href> would send a bare #incluye to the home page.
   protected readonly incluye = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/#incluye`;
