@@ -5,6 +5,7 @@ import { ProjectShot } from './project-shot';
 /** What the home's teaser and the case page both show. */
 export const KOSHISOFTWARE = {
   path: 'koshisoftware',
+  titulo: 'koshisoftware.pe',
   host: 'koshisoftware.pe',
   image: 'img/koshisoftware',
   alt: $localize`:@@caso.ks.alt:Página de inicio de koshisoftware.pe`,
@@ -19,7 +20,7 @@ export const KOSHISOFTWARE = {
   ],
 };
 
-const LIGHTHOUSE = [
+export const LIGHTHOUSE = [
   $localize`:@@caso.lighthouse.performance:Rendimiento`,
   $localize`:@@caso.lighthouse.a11y:Accesibilidad`,
   $localize`:@@caso.lighthouse.practices:Prácticas recomendadas`,

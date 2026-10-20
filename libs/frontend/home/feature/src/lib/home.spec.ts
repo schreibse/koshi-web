@@ -21,12 +21,15 @@ describe('Home', () => {
   });
 
   // TestBed's LOCALE_ID is en-US, hence the English slug.
-  it('links the project card to its case study', async () => {
-    const link = (await render()).querySelector<HTMLAnchorElement>(
+  it('links each project card to its case study', async () => {
+    const links = (await render()).querySelectorAll<HTMLAnchorElement>(
       '#proyectos a.btn',
     );
 
-    expect(link?.getAttribute('href')).toBe('projects/koshisoftware/');
+    expect([...links].map((a) => a.getAttribute('href'))).toEqual([
+      'projects/koshisoftware/',
+      'projects/libro-de-reclamaciones/',
+    ]);
   });
 
   it('links every tool in the stack, named next to its logo, in a new tab', async () => {

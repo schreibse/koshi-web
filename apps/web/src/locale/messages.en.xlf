@@ -1966,7 +1966,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:47,52</note>
       </notes>
       <segment>
-        <source> Si nos escribes a hola@koshisoftware.pe o a otra de nuestras direcciones, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para el presupuesto, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona con Proton AG (Suiza), que trata los mensajes como encargado. </source>
+        <source> Si nos escribes a hola@koshisoftware.pe o a otra de nuestras direcciones, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para la cotización, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona con Proton AG (Suiza), que trata los mensajes como encargado. </source>
         <target>If you write to hola@koshisoftware.pe or another of our addresses, we use your name, your email address and what you tell us to answer you and, if you hire us, for the quote, the contract and invoicing. We do not use them for advertising or share them, unless the law requires it (for example, towards SUNAT, the tax authority). Our email runs on Proton AG (Switzerland), which processes the messages as our processor.</target>
       </segment>
     </unit>
@@ -2044,6 +2044,281 @@
       <segment>
         <source>Política de privacidad</source>
         <target>Privacy policy</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:9</note>
+      </notes>
+      <segment>
+        <source>Libro de Reclamaciones virtual</source>
+        <target>Online Libro de Reclamaciones</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.alt">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:12</note>
+      </notes>
+      <segment>
+        <source>Formulario de la hoja de reclamación en koshisoftware.pe</source>
+        <target>The complaint sheet form on koshisoftware.pe</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.category">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:13</note>
+      </notes>
+      <segment>
+        <source>Formulario legal · Cloudflare</source>
+        <target>Legal form · Cloudflare</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:14</note>
+      </notes>
+      <segment>
+        <source>Nuestro propio Libro de Reclamaciones en la web: cada hoja con su número, copia inmediata al correo de quien reclama y un respaldo cada semana. Sin costo mensual adicional.</source>
+        <target>Our own Libro de Reclamaciones (Peru's mandatory complaints book) on the web: every sheet numbered, an instant copy to the complainant's email and a backup every week. No added monthly cost.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.reviewed">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:75,77</note>
+      </notes>
+      <segment>
+        <source> Información revisada al 19 de octubre de 2026. Es un caso de estudio, no asesoría legal (ver el <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#aviso&quot;&gt;" dispEnd="&lt;/a&gt;">aviso</pc>). </source>
+        <target>Information reviewed on 19 October 2026. This is a case study, not legal advice (see the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#aviso&quot;&gt;" dispEnd="&lt;/a&gt;">notice</pc>).</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.measured">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:101,103</note>
+      </notes>
+      <segment>
+        <source> Mediana de tres mediciones en producción del formulario, en celular y computadora, al 19/10/2026. </source>
+        <target>Median of three production measurements of the form, on mobile and desktop, on 19/10/2026.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.challenge">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:107,115</note>
+      </notes>
+      <segment>
+        <source> Nuestra web es el canal donde iniciamos la relación con nuestros clientes, así que quisimos un Libro de Reclamaciones virtual propio, en lugar de un PDF o un formulario genérico. Nos pusimos tres condiciones: seguir el formato y los pasos del Reglamento del Libro de Reclamaciones <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc><pc id="1" equivStart="START_LINK_1" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-2&quot;&gt;" dispEnd="&lt;/a&gt;">[2]</pc>, tratar los datos conforme a la Ley N.º 29733 y su Reglamento <pc id="2" equivStart="START_LINK_2" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-3&quot;&gt;" dispEnd="&lt;/a&gt;">[3]</pc><pc id="3" equivStart="START_LINK_3" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>, y no sumar costos mensuales. </source>
+        <target>Our website is where we start working with our clients, so we wanted our own online Libro de Reclamaciones instead of a PDF or a generic form. We set ourselves three conditions: follow the format and steps of the Reglamento del Libro de Reclamaciones <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc><pc id="1" equivStart="START_LINK_1" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-2&quot;&gt;" dispEnd="&lt;/a&gt;">[2]</pc>, handle the data under Ley N.º 29733 and its regulation <pc id="2" equivStart="START_LINK_2" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-3&quot;&gt;" dispEnd="&lt;/a&gt;">[3]</pc><pc id="3" equivStart="START_LINK_3" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>, and add no monthly costs.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.form">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:119,122</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">La hoja del Anexo I.</pc> El formulario pide los datos del formato oficial de hoja de reclamación <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-5&quot;&gt;" dispEnd="&lt;/a&gt;">[5]</pc>, en español e inglés, y explica cada error junto al campo. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">The Anexo I sheet.</pc> The form asks for the data of the official complaint sheet format <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-5&quot;&gt;" dispEnd="&lt;/a&gt;">[5]</pc>, in Spanish and English, and explains each error next to its field.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.number">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:125,129</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Numeración correlativa.</pc> Cada hoja recibe su número al guardarse, por ejemplo Nº 000000001-2026. El Anexo I pide una «numeración correlativa impresa o que deberá aparecer por defecto» <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-5&quot;&gt;" dispEnd="&lt;/a&gt;">[5]</pc>. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Sequential numbering.</pc> Each sheet gets its number when it is saved, for example Nº 000000001-2026. Anexo I asks for a «numeración correlativa impresa o que deberá aparecer por defecto» <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-5&quot;&gt;" dispEnd="&lt;/a&gt;">[5]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.copy">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:131,138</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Copia inmediata.</pc> Apenas se envía la hoja, se puede imprimir o guardar como PDF, y una copia llega al correo de quien reclama con la fecha y hora de presentación. El art. 4-B del Reglamento dice: «se debe permitir la impresión de la Hoja de Reclamación y enviarse automáticamente al correo electrónico indicado por el consumidor, dejándose constancia de la fecha y hora de presentación» <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">An instant copy.</pc> As soon as the sheet is sent, it can be printed or saved as a PDF, and a copy reaches the complainant's email with the date and time it was filed. Art. 4-B of the Reglamento says: «se debe permitir la impresión de la Hoja de Reclamación y enviarse automáticamente al correo electrónico indicado por el consumidor, dejándose constancia de la fecha y hora de presentación» <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.notice">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:140,144</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">El aviso, en todas las páginas.</pc> El ícono de libro con el texto «Libro de Reclamaciones» está en el pie de todas las páginas, incluida la de inicio, según el formato del Anexo III (art. 9) <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">The notice, on every page.</pc> The book icon with the words «Libro de Reclamaciones» sits in the footer of every page, the home page included, following the Anexo III format (art. 9) <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.data">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:146,155</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Datos personales.</pc> Antes de enviar, el formulario enlaza a su propia política de privacidad (Ley N.º 29733, art. 18) <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-3&quot;&gt;" dispEnd="&lt;/a&gt;">[3]</pc>. Inscribimos el banco de datos «Quejas y reclamos» en el Registro Nacional de Protección de Datos Personales, con el código PJ-2026-5408 y los flujos transfronterizos declarados <pc id="2" equivStart="START_LINK_1" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-6&quot;&gt;" dispEnd="&lt;/a&gt;">[6]</pc><pc id="3" equivStart="START_LINK_2" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-7&quot;&gt;" dispEnd="&lt;/a&gt;">[7]</pc>, y aprobamos un documento de seguridad con fecha cierta notarial (Reglamento de la Ley N.º 29733, art. 47) <pc id="4" equivStart="START_LINK_3" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Personal data.</pc> Before sending, the form links to its own privacy policy (Ley N.º 29733, art. 18) <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-3&quot;&gt;" dispEnd="&lt;/a&gt;">[3]</pc>. We registered the «Quejas y reclamos» data bank in the Registro Nacional de Protección de Datos Personales, with code PJ-2026-5408 and its cross-border transfers declared <pc id="2" equivStart="START_LINK_1" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-6&quot;&gt;" dispEnd="&lt;/a&gt;">[6]</pc><pc id="3" equivStart="START_LINK_2" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-7&quot;&gt;" dispEnd="&lt;/a&gt;">[7]</pc>, and approved a security document with a notarised certain date (regulation of Ley N.º 29733, art. 47) <pc id="4" equivStart="START_LINK_3" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.bots">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:157,159</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Sin acertijos.</pc> Cloudflare Turnstile filtra los envíos automatizados sin pedir que resuelvas imágenes, y un límite de envíos por dirección IP frena los abusos. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">No puzzles.</pc> Cloudflare Turnstile filters automated submissions without asking you to solve images, and a per-IP submission limit curbs abuse.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.approach.backup">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:162,168</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Respaldo y conservación.</pc> Cada semana se guarda una copia completa de la base en un almacenamiento aparte, con su suma de verificación SHA-256. Conservamos cada hoja dos años, el mínimo que fija el art. 12 del Reglamento («como mínimo por el lapso de dos (02) años desde la fecha de presentación») <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>, y después la eliminamos. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Backup and retention.</pc> Every week a full copy of the database is saved to separate storage, with its SHA-256 checksum. We keep each sheet for two years, the minimum set by art. 12 of the Reglamento («como mínimo por el lapso de dos (02) años desde la fecha de presentación») <pc id="1" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-1&quot;&gt;" dispEnd="&lt;/a&gt;">[1]</pc>, and then delete it.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.result.lighthouse">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:173,175</note>
+      </notes>
+      <segment>
+        <source> 100 en rendimiento, accesibilidad, prácticas recomendadas y SEO en el formulario, en celular y computadora. </source>
+        <target>100 in performance, accessibility, best practices and SEO on the form, on mobile and desktop.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.result.cost">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:177,179</note>
+      </notes>
+      <segment>
+        <source> El Libro no suma costo mensual: funciona dentro de los planes gratuitos de Cloudflare y Sweego. </source>
+        <target>The Libro adds no monthly cost: it runs within the free plans of Cloudflare and Sweego.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.result.registry">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:181,185</note>
+      </notes>
+      <segment>
+        <source> El banco de datos «Quejas y reclamos» está inscrito desde el 14 de octubre de 2026; según el Reglamento de la Ley N.º 29733, esa inscripción «es de aprobación automática» (art. 45.2) <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>. </source>
+        <target>The «Quejas y reclamos» data bank has been registered since 14 October 2026; under the regulation of Ley N.º 29733, that registration «es de aprobación automática» (art. 45.2) <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-4&quot;&gt;" dispEnd="&lt;/a&gt;">[4]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.setbacks.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:188,190</note>
+      </notes>
+      <segment>
+        <source> Tres tropiezos en el camino </source>
+        <target>Three stumbles along the way</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.setbacks.header">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:192,198</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Un encabezado que apuntaba mal.</pc> Cloudflare Pages convierte las precargas de JavaScript del HTML en un encabezado <pc id="1" equivStart="START_TAG_CODE" equivEnd="CLOSE_TAG_CODE" type="other" dispStart="&lt;code&gt;" dispEnd="&lt;/code&gt;">Link</pc>. El navegador resuelve ese encabezado contra la URL de la página y no contra la base del sitio, así que en las páginas internas pedía un archivo que no existe. La solución fue una línea: con integridad de subrecursos, la precarga lleva un atributo más y Cloudflare ya no la convierte. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">A header that pointed the wrong way.</pc> Cloudflare Pages turns the HTML's JavaScript preloads into a <pc id="1" equivStart="START_TAG_CODE" equivEnd="CLOSE_TAG_CODE" type="other" dispStart="&lt;code&gt;" dispEnd="&lt;/code&gt;">Link</pc> header. The browser resolves that header against the page URL rather than the site's base, so on nested pages it asked for a file that does not exist. The fix was one line: with subresource integrity the preload carries one more attribute, and Cloudflare no longer converts it.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.setbacks.cron">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:202,205</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">El respaldo que salió un domingo.</pc> Programamos el respaldo para los lunes con <pc id="1" equivStart="START_TAG_CODE" equivEnd="CLOSE_TAG_CODE" type="other" dispStart="&lt;code&gt;" dispEnd="&lt;/code&gt;">0 6 * * 1</pc>, pero en Cloudflare el 1 es domingo. Como nuestro documento de seguridad dice «cada lunes», cambiamos el código, no el documento. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">The backup that ran on a Sunday.</pc> We scheduled the backup for Mondays with <pc id="1" equivStart="START_TAG_CODE" equivEnd="CLOSE_TAG_CODE" type="other" dispStart="&lt;code&gt;" dispEnd="&lt;/code&gt;">0 6 * * 1</pc>, but in Cloudflare 1 is Sunday. Since our security document says «cada lunes», we changed the code, not the document.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.setbacks.print">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:208,211</note>
+      </notes>
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">La impresión con el menú del sitio.</pc> La primera constancia impresa salía con el encabezado y el pie de la web, y el bloque del proveedor se partía en dos páginas. Ahora se imprime solo la hoja, en una página. </source>
+        <target><pc id="0" equivStart="START_TAG_STRONG" equivEnd="CLOSE_TAG_STRONG" type="other" dispStart="&lt;strong&gt;" dispEnd="&lt;/strong&gt;">Printing with the site menu.</pc> The first printed receipt came out with the site's header and footer, and the provider block split across two pages. Now only the sheet prints, on one page.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.cta">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:216,217</note>
+      </notes>
+      <segment>
+        <source>¿Te interesa algo así para tu negocio?</source>
+        <target>Interested in something like this for your business?</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.cta.link">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:219,221</note>
+      </notes>
+      <segment>
+        <source>Escríbenos</source>
+        <target>Write to us</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.sources.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:223,224</note>
+      </notes>
+      <segment>
+        <source>Fuentes</source>
+        <target>Sources</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.sources.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:225,230</note>
+      </notes>
+      <segment>
+        <source> Normas citadas, en el texto vigente consultado el 19 de octubre de 2026. Hay un proyecto de modificación del Reglamento del Libro de Reclamaciones, publicado con la RM N.° 244-2026-PCM el 18 de julio de 2026, que aún no estaba vigente a esa fecha <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-8&quot;&gt;" dispEnd="&lt;/a&gt;">[8]</pc>. </source>
+        <target>Rules cited, in the text in force as consulted on 19 October 2026. A draft amendment to the Reglamento del Libro de Reclamaciones, published with RM N.° 244-2026-PCM on 18 July 2026, was not yet in force on that date <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;#fuente-8&quot;&gt;" dispEnd="&lt;/a&gt;">[8]</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.sources.accessed">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:239,241</note>
+      </notes>
+      <segment>
+        <source>Consultado el 19 de octubre de 2026.</source>
+        <target>Consulted on 19 October 2026.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.disclaimer.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:250,251</note>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:251,252</note>
+      </notes>
+      <segment>
+        <source>Aviso</source>
+        <target>Notice</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.disclaimer">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:253,264</note>
+      </notes>
+      <segment>
+        <source> Este caso de estudio describe cómo KOSHISOFTWARE E.I.R.L. implementó su propio Libro de Reclamaciones virtual. Es información general, basada en nuestra lectura de las normas vigentes al 19 de octubre de 2026, y no constituye asesoría legal: no somos abogados. Las normas cambian y cada caso es distinto. Antes de tomar decisiones, revisa los textos oficiales enlazados arriba o consulta con un abogado. Si encuentras un error o una norma más reciente, escríbenos a <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;mailto:hola@koshisoftware.pe&quot;
+                  &gt;" dispEnd="&lt;/a
+                &gt;">hola@koshisoftware.pe</pc> y lo corregimos. </source>
+        <target>This case study describes how KOSHISOFTWARE E.I.R.L. built its own online Libro de Reclamaciones. It is general information based on our reading of the rules in force on 19 October 2026, and it is not legal advice: we are not lawyers. Rules change and every case is different. Before you make decisions, check the official texts linked above or consult a lawyer. If you find a mistake or a newer rule, write to us at <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;mailto:hola@koshisoftware.pe&quot;
+                  &gt;" dispEnd="&lt;/a
+                &gt;">hola@koshisoftware.pe</pc> and we will correct it.</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:351</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio: Libro de Reclamaciones virtual · Koshisoftware</source>
+        <target>Case study: online Libro de Reclamaciones · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="caso.libro.description">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:355</note>
+      </notes>
+      <segment>
+        <source>Caso de estudio: cómo Koshisoftware implementó su Libro de Reclamaciones virtual, con numeración correlativa, copia al correo y respaldo semanal, y las normas peruanas que cita.</source>
+        <target>Case study: how Koshisoftware built its online Libro de Reclamaciones, with sequential numbering, an email copy and weekly backups, and the Peruvian rules it cites.</target>
       </segment>
     </unit>
   </file>
