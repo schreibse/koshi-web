@@ -145,6 +145,37 @@ const localizedPages = [
       en: '/en/projects/koshisoftware/',
     },
   })),
+  ...(['es', 'en'] as const).map((lang) => ({
+    path:
+      lang === 'es'
+        ? '/es/proyectos/libro-de-reclamaciones'
+        : '/en/projects/libro-de-reclamaciones',
+    lang,
+    heading:
+      lang === 'es'
+        ? 'Libro de Reclamaciones virtual'
+        : 'Online Libro de Reclamaciones',
+    title:
+      lang === 'es'
+        ? 'Caso de estudio: Libro de Reclamaciones virtual · Koshisoftware'
+        : 'Case study: online Libro de Reclamaciones · Koshisoftware',
+    switchTo:
+      lang === 'es'
+        ? {
+            label: 'EN',
+            path: '/en/projects/libro-de-reclamaciones',
+            lang: 'en',
+          }
+        : {
+            label: 'ES',
+            path: '/es/proyectos/libro-de-reclamaciones',
+            lang: 'es',
+          },
+    alternates: {
+      es: '/es/proyectos/libro-de-reclamaciones/',
+      en: '/en/projects/libro-de-reclamaciones/',
+    },
+  })),
 ] as const;
 
 for (const page of localizedPages) {

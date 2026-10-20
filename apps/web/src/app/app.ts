@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import {
   CasoKoshisoftware,
+  CasoLibro,
   Empresas,
   Home,
   PoliticaDePrivacidad,
@@ -23,11 +24,18 @@ const locale = toLocale($localize.locale ?? 'es');
 
 const PAGES: Record<
   string,
-  'home' | 'empresas' | 'caso' | 'politica' | 'libro' | 'privacidad'
+  | 'home'
+  | 'empresas'
+  | 'caso'
+  | 'casoLibro'
+  | 'politica'
+  | 'libro'
+  | 'privacidad'
 > = {
   '': 'home',
   [slug('empresas', locale)]: 'empresas',
   [`${slug('proyectos', locale)}/koshisoftware`]: 'caso',
+  [`${slug('proyectos', locale)}/libro-de-reclamaciones`]: 'casoLibro',
   [slug('privacidad', locale)]: 'politica',
   'libro-de-reclamaciones': 'libro',
   'libro-de-reclamaciones/privacidad': 'privacidad',
@@ -39,6 +47,7 @@ const PAGES: Record<
     Home,
     Empresas,
     CasoKoshisoftware,
+    CasoLibro,
     PoliticaDePrivacidad,
     LibroDeReclamaciones,
     Privacidad,
@@ -60,6 +69,11 @@ const PAGES: Record<
         }
         @case ('caso') {
           <ks-caso-koshisoftware />
+        }
+        @case ('casoLibro') {
+          @defer (hydrate never) {
+            <ks-caso-libro />
+          }
         }
         @case ('politica') {
           @defer (hydrate never) {

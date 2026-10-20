@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 import {
   CasoKoshisoftware,
+  CasoLibro,
   Empresas,
   Home,
   PoliticaDePrivacidad,
@@ -39,6 +40,10 @@ export const appRoutes: Route[] = [
   {
     path: `${slug('proyectos', locale)}/koshisoftware`,
     component: CasoKoshisoftware,
+  },
+  {
+    path: `${slug('proyectos', locale)}/libro-de-reclamaciones`,
+    component: CasoLibro,
   },
   {
     path: slug('privacidad', locale),
