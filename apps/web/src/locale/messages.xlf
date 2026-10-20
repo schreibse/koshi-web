@@ -543,7 +543,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:33</note>
       </notes>
       <segment>
-        <source>Diseño a medida y responsivo</source>
+        <source>Diseño adaptado a tu marca, pensado para el celular</source>
       </segment>
     </unit>
     <unit id="empresas.web.languages">
@@ -559,7 +559,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:35</note>
       </notes>
       <segment>
-        <source>Optimizada para Google y Lighthouse</source>
+        <source>Hecha para que Google la encuentre</source>
       </segment>
     </unit>
     <unit id="empresas.care.title">
@@ -674,9 +674,137 @@
         <source>Integración con tu proveedor (OSE o PSE)</source>
       </segment>
     </unit>
+    <unit id="empresas.faq.time.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:68</note>
+      </notes>
+      <segment>
+        <source>¿Cuánto demora hacer mi web?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.time.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:69</note>
+      </notes>
+      <segment>
+        <source>Depende de lo que necesite tu web. Una web basada en un diseño ya hecho, que adapto a tu marca, está lista en menos tiempo; un diseño desde cero, o extras como reservas en línea, toman más. También influye la cantidad de páginas e idiomas. Tu cotización incluye una fecha de entrega estimada, contada desde el día en que recibo tus textos y fotos.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.content.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:72</note>
+      </notes>
+      <segment>
+        <source>¿Qué necesito enviarte?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.content.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:73</note>
+      </notes>
+      <segment>
+        <source>Tu logo, tus fotos y los textos de cada página. No te preocupes si no sabes qué escribir: te doy una lista de lo que necesita cada página. Si solo tienes los textos en español, también puedo escribir la versión en inglés; en ese caso la incluyo en tu cotización como un ítem separado.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.edit.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:76</note>
+      </notes>
+      <segment>
+        <source>¿Puedo hacer cambios en mi web por mi cuenta?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.edit.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:77</note>
+      </notes>
+      <segment>
+        <source>Sí. La web es tuya, así que tienes acceso completo. Cambiar textos y fotos o publicar noticias, en ambos idiomas, es sencillo una vez que lo ves, y te enseño cómo hacerlo cuando te entrego la web. Para cambios más grandes, como agregar una sección nueva o una función nueva, lo mejor es que me consultes primero, para que nada deje de funcionar por accidente. Con gusto me encargo de esos cambios como un trabajo aparte, o dentro del soporte mensual si cuentas con él.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.owner.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:80</note>
+      </notes>
+      <segment>
+        <source>¿De quién es mi web?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.owner.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:81</note>
+      </notes>
+      <segment>
+        <source>Tuya. Toda web necesita un dominio, que es tu dirección en internet (como tuempresa.pe), y un hosting, el servicio que la mantiene en línea. Algunas también necesitan un diseño o funciones adicionales que tienen costo. Todo eso lo compras tú, a tu nombre: esos pagos van directo a cada proveedor, no a KOSHISOFTWARE, y no forman parte de mi cotización. El dominio y el hosting los pagas de nuevo cada año. Yo te ayudo a elegirlos y configuro todo. Como todo está a tu nombre, nunca dependes de mí: si algún día quieres trabajar con otra persona, tu web se va contigo.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.google.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:84</note>
+      </notes>
+      <segment>
+        <source>¿Mi web va a aparecer en Google?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.google.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:85</note>
+      </notes>
+      <segment>
+        <source>La construyo para que Google pueda encontrarla y entenderla: está hecha para cargar rápido, está bien organizada y las páginas en español y en inglés tienen cada una su propia dirección. Además, la conecto a tu propia cuenta en la herramienta gratuita de Google para dueños de sitios web, para que veas cómo te encuentra la gente. Nadie puede prometerte con honestidad los primeros lugares en Google. Conseguir más visitas con el tiempo requiere un trabajo constante, y con gusto te acompaño en eso como un servicio aparte.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.fixes.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:88</note>
+      </notes>
+      <segment>
+        <source>¿Y si algo falla después de publicar mi web?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.fixes.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:89</note>
+      </notes>
+      <segment>
+        <source>Si algo que hice no funciona como lo acordamos, lo arreglo sin costo durante los primeros 30 días desde que se publica la web. Los problemas del servicio de hosting, o los que vengan de cambios hechos después de la publicación, no están incluidos, pero con gusto también te ayudo con ellos. Pasados esos 30 días, los arreglos están incluidos si tienes soporte mensual; si no, me encargo de ellos como un trabajo aparte.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.existing.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:92</note>
+      </notes>
+      <segment>
+        <source>Ya tengo una web. ¿La puedes mejorar?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.existing.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:93</note>
+      </notes>
+      <segment>
+        <source>Sí. Primero la reviso: qué tan rápido carga, cómo se ve en el celular, si se mantiene al día con sus actualizaciones y cómo maneja los idiomas. Luego te digo con honestidad si vale la pena mejorarla o si conviene empezar de nuevo.</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.payment.q">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:96</note>
+      </notes>
+      <segment>
+        <source>¿Cómo es el pago?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.payment.a">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:97</note>
+      </notes>
+      <segment>
+        <source>Lo acordamos juntos y queda por escrito en tu cotización antes de empezar a trabajar, para que no haya sorpresas. La cotización cubre solo mi trabajo; el dominio, el hosting y cualquier otra cosa que compres se los pagas directamente a cada proveedor.</source>
+      </segment>
+    </unit>
     <unit id="empresas.mailSubject">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:66</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:101</note>
       </notes>
       <segment>
         <source>Web para mi empresa</source>
@@ -684,7 +812,7 @@
     </unit>
     <unit id="empresas.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:124,126</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:159,161</note>
       </notes>
       <segment>
         <source>Para empresas</source>
@@ -692,7 +820,7 @@
     </unit>
     <unit id="empresas.hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:129,131</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:164,166</note>
       </notes>
       <segment>
         <source> Tu web en español e inglés, lista para vender </source>
@@ -700,15 +828,15 @@
     </unit>
     <unit id="empresas.hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:135,137</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:170,172</note>
       </notes>
       <segment>
-        <source> Sitios WordPress rápidos y responsivos para empresas en Perú: mantenidos, seguros y con Libro de Reclamaciones virtual. </source>
+        <source> Sitios WordPress rápidos en el celular para empresas en Perú: con tu Libro de Reclamaciones virtual y, si quieres, al día con sus actualizaciones. </source>
       </segment>
     </unit>
     <unit id="empresas.hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:140,142</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:176,178</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -716,7 +844,7 @@
     </unit>
     <unit id="empresas.hero.more">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:143,145</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:179,181</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -724,7 +852,7 @@
     </unit>
     <unit id="empresas.hero.example">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:151,153</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:187,189</note>
       </notes>
       <segment>
         <source>Ejemplo: la misma web en español y en inglés</source>
@@ -732,7 +860,7 @@
     </unit>
     <unit id="empresas.offer.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:286,287</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:322,323</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -740,7 +868,7 @@
     </unit>
     <unit id="empresas.offer.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:288,290</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:324,326</note>
       </notes>
       <segment>
         <source> Todo lo que tu web necesita </source>
@@ -748,7 +876,7 @@
     </unit>
     <unit id="empresas.modes.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:322,324</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:358,360</note>
       </notes>
       <segment>
         <source>Cómo trabajamos</source>
@@ -756,7 +884,7 @@
     </unit>
     <unit id="empresas.modes.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:325,327</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:361,363</note>
       </notes>
       <segment>
         <source> Un proyecto o una cuota mensual </source>
@@ -764,7 +892,7 @@
     </unit>
     <unit id="empresas.modes.project.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:333,335</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:369,371</note>
       </notes>
       <segment>
         <source> Proyecto </source>
@@ -772,15 +900,15 @@
     </unit>
     <unit id="empresas.modes.project.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:336,338</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:372,374</note>
       </notes>
       <segment>
-        <source> Conversamos, te envío una propuesta con precio cerrado y construyo tu web. </source>
+        <source> Conversamos, te envío una cotización con lo que incluye y el precio, y construyo tu web. </source>
       </segment>
     </unit>
     <unit id="empresas.modes.monthly.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:345,347</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:381,383</note>
       </notes>
       <segment>
         <source> Soporte mensual </source>
@@ -788,15 +916,47 @@
     </unit>
     <unit id="empresas.modes.monthly.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:348,350</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:384,386</note>
       </notes>
       <segment>
         <source> Una cuota fija para mantenimiento, cambios pequeños y tranquilidad. </source>
       </segment>
     </unit>
+    <unit id="empresas.faq.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:398,400</note>
+      </notes>
+      <segment>
+        <source>Preguntas frecuentes</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.title">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:401,403</note>
+      </notes>
+      <segment>
+        <source> Antes de empezar </source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.other">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:404,406</note>
+      </notes>
+      <segment>
+        <source>¿Tienes otra pregunta?</source>
+      </segment>
+    </unit>
+    <unit id="empresas.faq.write">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:410,412</note>
+      </notes>
+      <segment>
+        <source>Escríbeme a hola@koshisoftware.pe</source>
+      </segment>
+    </unit>
     <unit id="empresas.contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:358,359</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:445,446</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -804,7 +964,7 @@
     </unit>
     <unit id="empresas.contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:360,362</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:447,449</note>
       </notes>
       <segment>
         <source> ¿Hablamos de tu web? </source>
@@ -812,7 +972,7 @@
     </unit>
     <unit id="empresas.contact.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:363,366</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:450,453</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -820,7 +980,7 @@
     </unit>
     <unit id="empresas.pageTitle">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:378</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:466</note>
       </notes>
       <segment>
         <source>Webs para empresas en Perú · Koshisoftware</source>
@@ -828,7 +988,7 @@
     </unit>
     <unit id="empresas.description">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:382</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:470</note>
       </notes>
       <segment>
         <source>Webs WordPress en español e inglés para empresas en Perú: diseño, mantenimiento, Libro de Reclamaciones y facturación electrónica.</source>
@@ -1453,7 +1613,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:10</note>
       </notes>
       <segment>
-        <source>SharePoint con C# y PowerShell; web con JavaScript, HTML y CSS.</source>
+        <source>Primero junto con mis estudios; luego SharePoint con C# y PowerShell, y web con JavaScript, HTML y CSS.</source>
       </segment>
     </unit>
     <unit id="sobre.stage2.role">
