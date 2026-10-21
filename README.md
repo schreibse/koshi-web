@@ -1,7 +1,7 @@
 # koshisoftware
 
 [![CI](https://github.com/schreibse/koshi-web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/schreibse/koshi-web/actions/workflows/ci.yml)
-[![Deploy](https://img.shields.io/github/check-runs/schreibse/koshi-web/main?nameFilter=Cloudflare%20Pages&logo=cloudflare&label=deploy)](https://koshisoftware.pe)
+[![Deploy](https://img.shields.io/github/check-runs/schreibse/koshi-web/main?nameFilter=Workers%20Builds%3A%20koshisoftware&logo=cloudflare&label=deploy)](https://koshisoftware.pe)
 [![License: MIT](https://img.shields.io/github/license/schreibse/koshi-web)](LICENSE)
 [![Angular](https://img.shields.io/github/package-json/dependency-version/schreibse/koshi-web/@angular/core?logo=angular&label=angular)](https://angular.dev)
 [![Nx](https://img.shields.io/github/package-json/dependency-version/schreibse/koshi-web/dev/nx?logo=nx&label=nx)](https://nx.dev)
