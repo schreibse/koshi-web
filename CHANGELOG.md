@@ -1,3 +1,9 @@
+## 0.1.28 (2026-10-21)
+
+### 🩹 Fixes
+
+- **web:** serve the headers file from the asset root ([6f84c4c](https://github.com/schreibse/koshi-web/commit/6f84c4c))
+
 ## 0.1.27 (2026-10-20)
 
 ### 🚀 Features
