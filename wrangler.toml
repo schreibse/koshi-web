@@ -1,7 +1,9 @@
 name = "koshisoftware"
 main = "worker/index.ts"
 compatibility_date = "2026-10-01"
+workers_dev = true
 preview_urls = true
+routes = [{ pattern = "koshisoftware.pe/*", zone_name = "koshisoftware.pe" }]
 
 [assets]
 directory = "dist/apps/web/browser"
