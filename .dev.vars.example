@@ -1,4 +1,4 @@
-# Copy to .dev.vars for `wrangler pages dev`; also names the secrets for `wrangler types`.
+# Copy to .dev.vars for `wrangler dev`; also names the secrets for `wrangler types`.
 # Cloudflare test secret: every Turnstile token passes.
 TURNSTILE_SECRET=1x0000000000000000000000000000000AA
 # Empty: copies are logged, not sent.

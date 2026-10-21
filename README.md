@@ -10,7 +10,7 @@
 The website of Koshisoftware E.I.R.L.: senior Angular frontend and NestJS backend work for
 clients in Peru and abroad.
 
-The site is bilingual (Spanish and English), prerendered to static HTML and deployed to Cloudflare Pages.
+The site is bilingual (Spanish and English), prerendered to static HTML and deployed as a Cloudflare Worker with static assets.
 
 ## Stack
 
@@ -18,7 +18,8 @@ The site is bilingual (Spanish and English), prerendered to static HTML and depl
 - **Nx 23**: integrated monorepo, module boundaries derived from folder paths
 - **Tailwind CSS 4**: utilities only, colours from brand tokens with light and dark themes
 - **Vitest** for unit tests, **Playwright** with **axe** for end-to-end and accessibility checks
-- **Cloudflare Pages**: static hosting, plus one Pages Function that redirects `/` by `Accept-Language`
+- **Cloudflare Workers**: static assets, plus a small Worker that redirects `/` by `Accept-Language`
+  and files complaints from the Libro de Reclamaciones into D1
 
 ## Layout
 
@@ -26,8 +27,8 @@ The site is bilingual (Spanish and English), prerendered to static HTML and depl
 apps/web                 the Angular app (shell, routes, i18n)
 apps/web-e2e             Playwright smoke and axe tests against the static build
 libs/frontend/<domain>/  feature and ui libraries
-libs/shared/<domain>/    framework-free code, shared with the edge function
-functions/               Cloudflare Pages Functions
+libs/shared/<domain>/    framework-free code, shared with the Worker
+worker/                  the Cloudflare Worker and its D1 migrations
 tools/nx/path-tags.ts    derives project tags (platform, scope, type) from the path
 ```
 
@@ -44,6 +45,7 @@ pnpm nx serve web                  # dev server, Spanish locale
 pnpm nx build web                  # prerenders /es and /en into dist/apps/web/browser
 pnpm nx run-many -t lint stylelint typecheck test
 pnpm nx e2e web-e2e                # builds, serves on :4890, runs Playwright
+pnpm exec wrangler dev             # the build plus the Worker, as deployed, on :8787
 pnpm nx extract-i18n web           # refresh source messages after changing copy
 ```
 

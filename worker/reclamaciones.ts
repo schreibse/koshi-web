@@ -41,11 +41,11 @@ const COPIA_ENVIADA = `
   UPDATE hojas SET copia_enviada = ?1, copia_id = ?2
   WHERE anio = ?3 AND secuencia = ?4`;
 
-export const onRequestPost: PagesFunction<Env> = async ({
-  request,
-  env,
-  waitUntil,
-}) => {
+export const registrarHoja = async (
+  request: Request,
+  env: Env,
+  ctx: ExecutionContext,
+): Promise<Response> => {
   const texto = await request.text();
   if (texto.length > MAX_BYTES) return error(413);
 
@@ -78,7 +78,7 @@ export const onRequestPost: PagesFunction<Env> = async ({
 
   const numero = numeroDeHoja(fila.secuencia, anio);
   // The sheet is filed by now; a failed copy is logged and shows as copia_enviada IS NULL.
-  waitUntil(
+  ctx.waitUntil(
     enviarCopias(env, guardada, anio, fila.secuencia, numero, registrada, {
       idioma: request.headers.get('Content-Language') === 'en' ? 'en' : 'es',
     }).catch((e) => console.error('copias', numero, e)),

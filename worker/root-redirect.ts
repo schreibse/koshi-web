@@ -1,7 +1,6 @@
 import { preferredLocale } from '@koshi/shared/locale/util';
 
-// Only `/` runs this function; everything else is served as static files.
-export const onRequestGet = ({ request }: { request: Request }): Response => {
+export const rootRedirect = (request: Request): Response => {
   const locale = preferredLocale(request.headers.get('Accept-Language'));
   return new Response(null, {
     status: 302,
@@ -12,5 +11,3 @@ export const onRequestGet = ({ request }: { request: Request }): Response => {
     },
   });
 };
-
-export const onRequestHead = onRequestGet;

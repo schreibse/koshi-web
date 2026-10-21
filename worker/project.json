@@ -1,15 +1,15 @@
 {
-  "name": "functions",
+  "name": "worker",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "functions",
+  "sourceRoot": "worker",
   "projectType": "application",
   "targets": {
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "wrangler types functions/worker-configuration.d.ts --env-file .dev.vars.example",
-          "tsc --noEmit -p functions/tsconfig.json"
+          "wrangler types worker/worker-configuration.d.ts --env-file .dev.vars.example",
+          "tsc --noEmit -p worker/tsconfig.json"
         ],
         "parallel": false
       }

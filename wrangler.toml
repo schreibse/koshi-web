@@ -1,9 +1,16 @@
 name = "koshisoftware"
-pages_build_output_dir = "dist/apps/web/browser"
+main = "worker/index.ts"
 compatibility_date = "2026-10-01"
+preview_urls = true
+
+[assets]
+directory = "dist/apps/web/browser"
+binding = "ASSETS"
+not_found_handling = "404-page"
+run_worker_first = ["/", "/api/*"]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "koshi-reclamaciones"
 database_id = "44544861-9656-4972-b0c5-8f2ace9fd9f4"
-migrations_dir = "functions/migrations"
+migrations_dir = "worker/migrations"

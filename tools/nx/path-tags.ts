@@ -10,7 +10,7 @@ import { dirname, join } from 'node:path';
  * project outside the layout fails the graph instead of going untagged.
  */
 
-const APPS: Record<string, string> = { web: 'frontend', functions: 'edge' };
+const APPS: Record<string, string> = { web: 'frontend', worker: 'edge' };
 
 const LIB_TYPES: Record<string, readonly string[]> = {
   frontend: ['feature', 'data-access', 'ui', 'util'],
@@ -20,7 +20,7 @@ const LIB_TYPES: Record<string, readonly string[]> = {
 const KEBAB = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 
 export const createNodes: CreateNodes = [
-  '{apps/*,libs/**,functions}/project.json',
+  '{apps/*,libs/**,worker}/project.json',
   (files, options, context) =>
     createNodesFromFiles(
       (file) => {
@@ -43,8 +43,8 @@ export const createNodes: CreateNodes = [
 function tagsFor(root: string): string[] {
   const segments = root.split('/');
 
-  if (root === 'functions') {
-    return [`platform:${APPS['functions']}`, 'type:app'];
+  if (root === 'worker') {
+    return [`platform:${APPS['worker']}`, 'type:app'];
   }
 
   if (segments[0] === 'apps' && segments.length === 2 && segments[1] in APPS) {
@@ -69,7 +69,7 @@ function tagsFor(root: string): string[] {
   }
 
   throw new Error(
-    `${root} is outside the layout: apps/web, apps/web-e2e, functions, or ` +
+    `${root} is outside the layout: apps/web, apps/web-e2e, worker, or ` +
       `libs/<frontend|shared>/<domain>/<type>.`,
   );
 }

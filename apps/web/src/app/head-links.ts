@@ -70,7 +70,7 @@ function replaceHeadLinks(
       href: localized(target),
     });
   }
-  // Only the root redirects by Accept-Language (functions/index.ts).
+  // Only the root redirects by Accept-Language (worker/root-redirect.ts).
   if (url === '/') {
     appendLink(document, {
       rel: 'alternate',
