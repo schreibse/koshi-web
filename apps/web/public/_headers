@@ -1,3 +1,0 @@
-# Cloudflare turns modulepreload links into Link headers, which resolve against the page URL and ignore <base href>.
-/*
-  ! Link
