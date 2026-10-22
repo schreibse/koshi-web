@@ -1,3 +1,9 @@
+## 0.1.29 (2026-10-22)
+
+### 🚀 Features
+
+- **web:** add a contact form and take email addresses off the pages ([37ce6ef](https://github.com/schreibse/koshi-web/commit/37ce6ef))
+
 ## 0.1.28 (2026-10-21)
 
 ### 🩹 Fixes
