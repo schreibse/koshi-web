@@ -4,7 +4,7 @@ import {
   Tipo,
   errores,
 } from '@koshi/shared/reclamacion/util';
-import { verificacion } from './verificacion';
+import { verificacion } from '@koshi/frontend/layout/ui';
 
 type Error = 'required' | 'email' | 'documento' | 'invalid';
 
