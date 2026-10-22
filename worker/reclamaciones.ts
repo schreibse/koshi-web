@@ -6,22 +6,13 @@ import {
   normalizada,
   numeroDeHoja,
 } from '@koshi/shared/reclamacion/util';
+import { Buzon, enviar } from './correo';
+import { humano } from './turnstile';
 
 const MAX_BYTES = 32_000;
-const SITEVERIFY = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-const SWEEGO = 'https://api.sweego.io/send';
 // Generous, so a real consumer is never refused a copy, but a stranger's inbox cannot be flooded.
 const COPIAS_POR_DIA = 3;
 
-interface Buzon {
-  email: string;
-  name: string;
-}
-
-const REMITENTE: Buzon = {
-  email: 'libro@mail.koshisoftware.pe',
-  name: 'Koshisoftware',
-};
 const BUZON: Buzon = {
   email: 'reclamaciones@koshisoftware.pe',
   name: 'Koshisoftware',
@@ -92,20 +83,6 @@ export const registrarHoja = async (
 
 const error = (status: number) => new Response(null, { status });
 
-async function humano(request: Request, secret: string): Promise<boolean> {
-  const token = request.headers.get('X-Turnstile-Token');
-  if (!token) return false;
-  const datos = new FormData();
-  datos.append('secret', secret);
-  datos.append('response', token);
-  const ip = request.headers.get('CF-Connecting-IP');
-  if (ip) datos.append('remoteip', ip);
-  const respuesta = await fetch(SITEVERIFY, { method: 'POST', body: datos });
-  if (!respuesta.ok) return false;
-  const { success } = await respuesta.json<{ success: boolean }>();
-  return success;
-}
-
 async function enviarCopias(
   env: Env,
   hoja: HojaDeReclamacion,
@@ -144,40 +121,3 @@ async function enviarCopias(
 }
 
 const buzon = (c: Contacto): Buzon => ({ email: c.email, name: c.nombre });
-
-/** Sends through Sweego; returns its transaction id, or null when nothing was sent. */
-async function enviar(
-  env: Env,
-  para: Buzon,
-  responderA: Buzon,
-  { asunto, texto }: { asunto: string; texto: string },
-): Promise<string | null> {
-  if (!env.SWEEGO_API_KEY) {
-    console.log('sin SWEEGO_API_KEY, no enviado:', para.email, asunto);
-    return null;
-  }
-  const respuesta = await fetch(SWEEGO, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Api-Key': env.SWEEGO_API_KEY,
-    },
-    body: JSON.stringify({
-      channel: 'email',
-      provider: 'sweego',
-      from: REMITENTE,
-      'reply-to': responderA,
-      recipients: [para],
-      subject: asunto,
-      'message-txt': texto,
-    }),
-  });
-  if (!respuesta.ok) {
-    console.error('sweego', respuesta.status, await respuesta.text());
-    return null;
-  }
-  const { transaction_id } = await respuesta.json<{
-    transaction_id?: string;
-  }>();
-  return transaction_id ?? '';
-}
