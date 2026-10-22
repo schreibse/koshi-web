@@ -1,5 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 
 // Roles say "Desarrollador", never "Ingeniero": the title is regulated in Peru.
 const TRAYECTORIA = [
@@ -97,10 +103,7 @@ const TRAYECTORIA = [
             >(se abre en una pestaña nueva)</span
           ></a
         >
-        <a
-          href="mailto:hola@koshisoftware.pe?subject=CV"
-          class="btn btn-primary"
-          i18n="@@sobre.cv"
+        <a [href]="cv" class="btn btn-primary" i18n="@@sobre.cv"
           >Pídeme mi CV</a
         >
       </div>
@@ -109,6 +112,7 @@ const TRAYECTORIA = [
 })
 export class SobreMi {
   protected readonly trayectoria = TRAYECTORIA;
+  protected readonly cv = `${slug('contacto', toLocale(inject(LOCALE_ID)))}/?tema=cv`;
 
   constructor() {
     inject(Title).setTitle(

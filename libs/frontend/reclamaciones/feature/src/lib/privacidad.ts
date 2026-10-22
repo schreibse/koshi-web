@@ -1,6 +1,12 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Proveedor } from '@koshi/frontend/layout/ui';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 
 /** The privacy notice Ley 29733 art. 18 requires before the sheet's data is collected. */
 @Component({
@@ -79,11 +85,12 @@ import { Proveedor } from '@koshi/frontend/layout/ui';
       <h2 i18n="@@privacidad.rights.title">Tus derechos</h2>
       <p i18n="@@privacidad.rights">
         Puedes pedir información sobre tus datos, acceder a ellos,
-        rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a
-        reclamaciones&#64;koshisoftware.pe o a la dirección de arriba.
-        Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no
-        estás conforme con la respuesta, puedes acudir a la Autoridad Nacional
-        de Protección de Datos Personales.
+        rectificarlos, cancelarlos u oponerte a su tratamiento desde el
+        <a [href]="contacto">formulario de contacto</a> (tema «Datos
+        personales») o escribiendo a la dirección de arriba. Antes de atender
+        una solicitud, confirmamos tu identidad. Respondemos en los plazos del
+        Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta,
+        puedes acudir a la Autoridad Nacional de Protección de Datos Personales.
       </p>
 
       <a
@@ -96,6 +103,8 @@ import { Proveedor } from '@koshi/frontend/layout/ui';
   `,
 })
 export class Privacidad {
+  protected readonly contacto = `${slug('contacto', toLocale(inject(LOCALE_ID)))}/?tema=datos`;
+
   constructor() {
     inject(Title).setTitle(
       $localize`:@@privacidad.pageTitle:Política de privacidad · Koshisoftware`,

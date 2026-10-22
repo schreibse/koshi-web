@@ -98,8 +98,6 @@ const PREGUNTAS = [
   },
 ];
 
-const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localize`:@@empresas.mailSubject:Web para mi empresa`)}`;
-
 /** The offer for small businesses: multilingual WordPress sites, kept up to date, with their legal pages. */
 @Component({
   selector: 'ks-empresas',
@@ -407,7 +405,7 @@ const MAIL = `mailto:hola@koshisoftware.pe?subject=${encodeURIComponent($localiz
               [href]="mail"
               class="font-semibold text-accent underline"
               i18n="@@empresas.faq.write"
-              >Escríbeme a hola&#64;koshisoftware.pe</a
+              >Escríbeme</a
             >
           </p>
         </div>
@@ -457,7 +455,7 @@ export class Empresas {
   protected readonly ejemplo = EJEMPLO;
   protected readonly ofertas = OFERTAS;
   protected readonly preguntas = PREGUNTAS;
-  protected readonly mail = MAIL;
+  protected readonly mail = `${slug('contacto', toLocale(inject(LOCALE_ID)))}/?tema=proyecto`;
   // <base href> would send a bare #incluye to the home page.
   protected readonly incluye = `${slug('empresas', toLocale(inject(LOCALE_ID)))}/#incluye`;
 

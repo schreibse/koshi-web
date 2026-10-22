@@ -2,6 +2,7 @@ import { Locale } from './preferred-locale';
 
 /** Pages whose path differs per locale; a page missing here has the same path in every locale. */
 const SLUGS = {
+  contacto: { es: 'contacto', en: 'contact' },
   empresas: { es: 'empresas', en: 'business' },
   proyectos: { es: 'proyectos', en: 'projects' },
   privacidad: { es: 'privacidad', en: 'privacy' },

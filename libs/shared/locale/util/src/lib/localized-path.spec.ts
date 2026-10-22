@@ -65,12 +65,14 @@ describe('withTrailingSlash', () => {
 describe('crossLocaleRedirects', () => {
   it("sends the other locale's slug to this locale's page", () => {
     expect(crossLocaleRedirects('en')).toEqual([
+      { from: 'contacto', to: 'contact' },
       { from: 'empresas', to: 'business' },
       { from: 'proyectos', to: 'projects' },
       { from: 'privacidad', to: 'privacy' },
       { from: 'sobre-mi', to: 'about' },
     ]);
     expect(crossLocaleRedirects('es')).toEqual([
+      { from: 'contact', to: 'contacto' },
       { from: 'business', to: 'empresas' },
       { from: 'projects', to: 'proyectos' },
       { from: 'privacy', to: 'privacidad' },

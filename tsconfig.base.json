@@ -17,7 +17,16 @@
       "@koshi/frontend/home/feature": [
         "./libs/frontend/home/feature/src/index.ts"
       ],
+      "@koshi/frontend/contacto/feature": [
+        "./libs/frontend/contacto/feature/src/index.ts"
+      ],
+      "@koshi/frontend/contacto/feature/activar": [
+        "./libs/frontend/contacto/feature/src/activar.ts"
+      ],
       "@koshi/frontend/layout/ui": ["./libs/frontend/layout/ui/src/index.ts"],
+      "@koshi/shared/contacto/util": [
+        "./libs/shared/contacto/util/src/index.ts"
+      ],
       "@koshi/shared/locale/util": ["./libs/shared/locale/util/src/index.ts"],
       "@koshi/shared/reclamacion/util": [
         "./libs/shared/reclamacion/util/src/index.ts"

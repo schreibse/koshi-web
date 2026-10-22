@@ -1,5 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  LOCALE_ID,
+  inject,
+} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { slug, toLocale } from '@koshi/shared/locale/util';
 import { LIGHTHOUSE } from './caso-koshisoftware';
 import { ProjectShot } from './project-shot';
 
@@ -264,11 +270,9 @@ const FUENTES = [
                 legal: no somos abogados. Las normas cambian y cada caso es
                 distinto. Antes de tomar decisiones, revisa los textos oficiales
                 enlazados arriba o consulta con un abogado. Si encuentras un
-                error o una norma más reciente, escríbenos a
-                <a href="mailto:hola@koshisoftware.pe"
-                  >hola&#64;koshisoftware.pe</a
-                >
-                y lo corregimos.
+                error o una norma más reciente, escríbenos desde el
+                <a [href]="correccion">formulario de contacto</a> y lo
+                corregimos.
               </p>
             </aside>
           </div>
@@ -352,6 +356,7 @@ export class CasoLibro {
   protected readonly caso = LIBRO;
   protected readonly lighthouse = LIGHTHOUSE;
   protected readonly fuentes = FUENTES;
+  protected readonly correccion = `${slug('contacto', toLocale(inject(LOCALE_ID)))}/?tema=correccion`;
 
   constructor() {
     inject(Title).setTitle(

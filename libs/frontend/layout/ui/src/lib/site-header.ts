@@ -46,7 +46,7 @@ import { Wordmark } from './wordmark';
           i18n="@@nav.business"
           >Empresas</a
         >
-        <a href="#contacto" class="btn btn-primary" i18n="@@nav.contact"
+        <a [href]="contacto" class="btn btn-primary" i18n="@@nav.contact"
           >Hablemos</a
         >
       </nav>
@@ -61,4 +61,5 @@ export class SiteHeader {
   private readonly locale = toLocale(inject(LOCALE_ID));
   protected readonly empresas = `${slug('empresas', this.locale)}/`;
   protected readonly sobreMi = `${slug('sobre-mi', this.locale)}/`;
+  protected readonly contacto = `${slug('contacto', this.locale)}/?tema=proyecto`;
 }
