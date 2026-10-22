@@ -176,6 +176,18 @@ const localizedPages = [
       en: '/en/projects/libro-de-reclamaciones/',
     },
   })),
+  ...(['es', 'en'] as const).map((lang) => ({
+    path: lang === 'es' ? '/es/contacto' : '/en/contact',
+    lang,
+    heading: lang === 'es' ? 'Escríbeme' : 'Write to me',
+    title:
+      lang === 'es' ? 'Contacto · Koshisoftware' : 'Contact · Koshisoftware',
+    switchTo:
+      lang === 'es'
+        ? { label: 'EN', path: '/en/contact', lang: 'en' }
+        : { label: 'ES', path: '/es/contacto', lang: 'es' },
+    alternates: { es: '/es/contacto/', en: '/en/contact/' },
+  })),
 ] as const;
 
 for (const page of localizedPages) {

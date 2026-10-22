@@ -13,6 +13,8 @@ import {
   PoliticaDePrivacidad,
   SobreMi,
 } from '@koshi/frontend/home/feature';
+import { Contacto } from '@koshi/frontend/contacto/feature';
+import { activarContacto } from '@koshi/frontend/contacto/feature/activar';
 import { NotFound, SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
 import {
   LibroDeReclamaciones,
@@ -31,6 +33,7 @@ const PAGES: Record<
   | 'casoLibro'
   | 'politica'
   | 'sobreMi'
+  | 'contacto'
   | 'libro'
   | 'privacidad'
 > = {
@@ -40,6 +43,7 @@ const PAGES: Record<
   [`${slug('proyectos', locale)}/libro-de-reclamaciones`]: 'casoLibro',
   [slug('privacidad', locale)]: 'politica',
   [slug('sobre-mi', locale)]: 'sobreMi',
+  [slug('contacto', locale)]: 'contacto',
   'libro-de-reclamaciones': 'libro',
   'libro-de-reclamaciones/privacidad': 'privacidad',
 };
@@ -53,6 +57,7 @@ const PAGES: Record<
     CasoLibro,
     PoliticaDePrivacidad,
     SobreMi,
+    Contacto,
     LibroDeReclamaciones,
     Privacidad,
     NotFound,
@@ -89,6 +94,11 @@ const PAGES: Record<
             <ks-sobre-mi />
           }
         }
+        @case ('contacto') {
+          @defer (hydrate never) {
+            <ks-contacto />
+          }
+        }
         @case ('libro') {
           @defer (hydrate never) {
             <ks-libro-de-reclamaciones />
@@ -119,6 +129,7 @@ export class App {
   constructor() {
     afterNextRender(() => {
       if (this.page === 'libro') activarLibro();
+      if (this.page === 'contacto') activarContacto();
     });
   }
 }

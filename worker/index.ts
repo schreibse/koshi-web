@@ -1,3 +1,4 @@
+import { enviarMensaje } from './contacto';
 import { registrarHoja } from './reclamaciones';
 import { rootRedirect } from './root-redirect';
 
@@ -11,6 +12,9 @@ export default {
     }
     if (pathname === '/api/reclamaciones' && method === 'POST') {
       return registrarHoja(request, env, ctx);
+    }
+    if (pathname === '/api/contacto' && method === 'POST') {
+      return enviarMensaje(request, env);
     }
     return env.ASSETS.fetch(request);
   },

@@ -35,8 +35,14 @@ describe('worker', () => {
     expect(res.status).toBe(422);
   });
 
+  it('sends a contact message on POST, validating it first', async () => {
+    const res = await fetchAt('/api/contacto', { method: 'POST', body: '{}' });
+    expect(res.status).toBe(422);
+  });
+
   it.each([
     ['POST', '/'],
+    ['GET', '/api/contacto'],
     ['GET', '/api/reclamaciones'],
     ['POST', '/api/nada'],
   ])('leaves %s %s to the assets', async (method, path) => {

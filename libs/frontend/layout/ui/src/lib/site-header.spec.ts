@@ -22,7 +22,7 @@ describe('SiteHeader', () => {
       '#proyectos',
       'sobre-mi/',
       'empresas/',
-      '#contacto',
+      'contacto/?tema=proyecto',
     ]);
   });
 });

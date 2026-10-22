@@ -164,10 +164,7 @@ import { TechStack } from './tech-stack';
           ¿Tienes un proyecto en mente?
         </h2>
         <div class="flex flex-wrap gap-3">
-          <a
-            href="mailto:hola@koshisoftware.pe"
-            class="btn btn-primary"
-            i18n="@@contact.email"
+          <a [href]="contacto" class="btn btn-primary" i18n="@@contact.email"
             >Escríbeme</a
           >
         </div>
@@ -180,6 +177,7 @@ export class Home {
   private readonly locale = toLocale(inject(LOCALE_ID));
   protected readonly empresas = `${slug('empresas', this.locale)}/`;
   protected readonly sobreMi = `${slug('sobre-mi', this.locale)}/`;
+  protected readonly contacto = `${slug('contacto', this.locale)}/?tema=proyecto`;
   protected readonly casos = [KOSHISOFTWARE, LIBRO].map((caso) => ({
     ...caso,
     url: `${slug('proyectos', this.locale)}/${caso.path}/`,

@@ -201,11 +201,11 @@
     </unit>
     <unit id="contact.email">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:145,147</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:168,170</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
-        <target>Email me</target>
+        <target>Write to me</target>
       </segment>
     </unit>
     <unit id="home.description">
@@ -865,15 +865,6 @@
         <target>We agree on it together, and it is written in your quote before any work starts, so there are no surprises. The quote covers only my work; the domain, hosting and anything else you buy, you pay directly to those providers.</target>
       </segment>
     </unit>
-    <unit id="empresas.mailSubject">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:68</note>
-      </notes>
-      <segment>
-        <source>Web para mi empresa</source>
-        <target>A website for my business</target>
-      </segment>
-    </unit>
     <unit id="empresas.eyebrow">
       <notes>
         <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:124,126</note>
@@ -1029,11 +1020,11 @@
     </unit>
     <unit id="empresas.faq.write">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:410,412</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:408,411</note>
       </notes>
       <segment>
-        <source>Escríbeme a hola@koshisoftware.pe</source>
-        <target>Email me at hola@koshisoftware.pe</target>
+        <source>Escríbeme</source>
+        <target>Write to me</target>
       </segment>
     </unit>
     <unit id="empresas.contact.eyebrow">
@@ -2080,11 +2071,11 @@
     </unit>
     <unit id="privacidad.rights">
       <notes>
-        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:75,79</note>
+        <note category="location">libs/frontend/reclamaciones/feature/src/lib/privacidad.ts:87,94</note>
       </notes>
       <segment>
-        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a reclamaciones@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
-        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to reclamaciones@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento desde el <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;contacto&quot;&gt;" dispEnd="&lt;/a&gt;">formulario de contacto</pc> (tema «Datos personales») o escribiendo a la dirección de arriba. Antes de atender una solicitud, confirmamos tu identidad. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing through the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;contacto&quot;&gt;" dispEnd="&lt;/a&gt;">contact form</pc> (topic “Personal data”) or by writing to the address above. Before acting on a request, we confirm your identity. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
       </segment>
     </unit>
     <unit id="politica.title">
@@ -2105,15 +2096,6 @@
         <target>How we process your personal data when you visit this site or write to us, under Ley N.º 29733, Peru's Personal Data Protection Law, and its regulation. Last updated: October 2026.</target>
       </segment>
     </unit>
-    <unit id="politica.owner.email">
-      <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:33,36</note>
-      </notes>
-      <segment>
-        <source> Correo: hola@koshisoftware.pe </source>
-        <target>Email: hola@koshisoftware.pe</target>
-      </segment>
-    </unit>
     <unit id="politica.visit.title">
       <notes>
         <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:36,37</note>
@@ -2128,8 +2110,26 @@
         <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:38,42</note>
       </notes>
       <segment>
-        <source> Este sitio no usa cookies, no mide visitas con herramientas de analítica y no carga contenido de terceros. Nosotros no llevamos registros de visitas. Cloudflare, Inc. (Estados Unidos) aloja el sitio y, como encargado, procesa tu dirección IP y datos técnicos de tu navegador para entregarte las páginas y protegerlas de ataques. </source>
-        <target>This site sets no cookies, measures no visits with analytics tools and loads no third-party content. We keep no visitor logs. Cloudflare, Inc. (United States) hosts the site and, as our processor, processes your IP address and technical data from your browser to deliver the pages and protect them from attacks.</target>
+        <source> Este sitio no usa cookies. Nosotros no llevamos registros de visitas. Cloudflare, Inc. (Estados Unidos) aloja el sitio y, como encargado, procesa tu dirección IP y datos técnicos de tu navegador para entregarte las páginas y protegerlas de ataques. </source>
+        <target>This site sets no cookies. We keep no visitor logs. Cloudflare, Inc. (United States) hosts the site and, as our processor, processes your IP address and technical data from your browser to deliver the pages and protect them from attacks.</target>
+      </segment>
+    </unit>
+    <unit id="politica.visit.analytics">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:47,51</note>
+      </notes>
+      <segment>
+        <source> En cada página, un script de Cloudflare (Web Analytics) mide cuánto tarda en cargar y reporta qué página visitaste, el sitio desde el que llegaste, tu país, tipo de dispositivo, navegador y sistema operativo. Nosotros solo vemos totales, no visitas individuales. </source>
+        <target>On every page, a Cloudflare script (Web Analytics) measures how fast the page loads and reports which page you visited, the site you came from, your country, device type, browser and operating system. We only see totals, not individual visits.</target>
+      </segment>
+    </unit>
+    <unit id="politica.visit.turnstile">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:53,58</note>
+      </notes>
+      <segment>
+        <source> El formulario de contacto y el Libro de Reclamaciones además cargan Cloudflare Turnstile, que comprueba que quien los envía es una persona y no un programa. </source>
+        <target>The contact form and the Libro de Reclamaciones also load Cloudflare Turnstile, which checks that a person and not a program is sending them.</target>
       </segment>
     </unit>
     <unit id="politica.email.title">
@@ -2143,11 +2143,11 @@
     </unit>
     <unit id="politica.email">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:47,52</note>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:50,57</note>
       </notes>
       <segment>
-        <source> Si nos escribes a hola@koshisoftware.pe o a otra de nuestras direcciones, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para la cotización, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). Nuestro correo funciona con Proton AG (Suiza), que trata los mensajes como encargado. </source>
-        <target>If you write to hola@koshisoftware.pe or another of our addresses, we use your name, your email address and what you tell us to answer you and, if you hire us, for the quote, the contract and invoicing. We do not use them for advertising or share them, unless the law requires it (for example, towards SUNAT, the tax authority). Our email runs on Proton AG (Switzerland), which processes the messages as our processor.</target>
+        <source> Si nos escribes desde el formulario de contacto o por correo, usamos tu nombre, tu correo y lo que nos cuentes para responderte y, si nos contratas, para la cotización, el contrato y la facturación. No los usamos para publicidad ni los compartimos, salvo que la ley nos obligue (por ejemplo, ante la SUNAT). El formulario nos envía tu mensaje con Sweego (Mindbaz SAS, Francia), y Cloudflare Turnstile lo protege de envíos automatizados analizando tu dirección IP y datos técnicos de tu navegador. Nuestro correo funciona con Proton AG (Suiza). Todos ellos tratan los datos como encargados. </source>
+        <target>If you write to us through the contact form or by email, we use your name, your email address and what you tell us to answer you and, if you hire us, for the quote, the contract and invoicing. We do not use them for advertising or share them, unless the law requires it (for example, towards SUNAT, the tax authority). The form sends your message to us through Sweego (Mindbaz SAS, France), and Cloudflare Turnstile protects it against automated submissions by analysing your IP address and technical data from your browser. Our email runs on Proton AG (Switzerland). All of them process the data as our processors.</target>
       </segment>
     </unit>
     <unit id="politica.libro.title">
@@ -2174,11 +2174,11 @@
     </unit>
     <unit id="politica.transfer">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:66,70</note>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:72,75</note>
       </notes>
       <segment>
-        <source> Como Cloudflare y Proton están fuera del Perú, tus datos se tratan en Estados Unidos y en Suiza, por nuestra cuenta y bajo contrato. </source>
-        <target>As Cloudflare and Proton are outside Peru, your data is processed in the United States and Switzerland, on our behalf and under contract.</target>
+        <source> Como Cloudflare, Sweego y Proton están fuera del Perú, tus datos se tratan en Estados Unidos, Francia y Suiza, por nuestra cuenta y bajo contrato. </source>
+        <target>As Cloudflare, Sweego and Proton are outside Peru, your data is processed in the United States, France and Switzerland, on our behalf and under contract.</target>
       </segment>
     </unit>
     <unit id="politica.retention">
@@ -2192,11 +2192,11 @@
     </unit>
     <unit id="politica.rights">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:79,83</note>
+        <note category="location">libs/frontend/home/feature/src/lib/politica-de-privacidad.ts:86,92</note>
       </notes>
       <segment>
-        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento escribiendo a hola@koshisoftware.pe o a la dirección de arriba. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
-        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing by writing to hola@koshisoftware.pe or to the address above. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
+        <source> Puedes pedir información sobre tus datos, acceder a ellos, rectificarlos, cancelarlos u oponerte a su tratamiento desde el <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;contacto&quot;&gt;" dispEnd="&lt;/a&gt;">formulario de contacto</pc> (tema «Datos personales») o escribiendo a la dirección de arriba. Antes de atender una solicitud, confirmamos tu identidad. Respondemos en los plazos del Reglamento de la Ley N.º 29733. Si no estás conforme con la respuesta, puedes acudir a la Autoridad Nacional de Protección de Datos Personales. </source>
+        <target>You can ask for information about your data, access, rectify or delete it, or object to its processing through the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;contacto&quot;&gt;" dispEnd="&lt;/a&gt;">contact form</pc> (topic “Personal data”) or by writing to the address above. Before acting on a request, we confirm your identity. We answer within the deadlines of the regulation of Ley N.º 29733. If you disagree with our answer, you can turn to the National Personal Data Protection Authority.</target>
       </segment>
     </unit>
     <unit id="politica.pageTitle">
@@ -2472,15 +2472,11 @@
     </unit>
     <unit id="caso.libro.disclaimer">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:253,264</note>
+        <note category="location">libs/frontend/home/feature/src/lib/caso-libro.ts:266,275</note>
       </notes>
       <segment>
-        <source> Este caso de estudio describe cómo KOSHISOFTWARE E.I.R.L. implementó su propio Libro de Reclamaciones virtual. Es información general, basada en nuestra lectura de las normas vigentes al 19 de octubre de 2026, y no constituye asesoría legal: no somos abogados. Las normas cambian y cada caso es distinto. Antes de tomar decisiones, revisa los textos oficiales enlazados arriba o consulta con un abogado. Si encuentras un error o una norma más reciente, escríbenos a <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;mailto:hola@koshisoftware.pe&quot;
-                  &gt;" dispEnd="&lt;/a
-                &gt;">hola@koshisoftware.pe</pc> y lo corregimos. </source>
-        <target>This case study describes how KOSHISOFTWARE E.I.R.L. built its own online Libro de Reclamaciones. It is general information based on our reading of the rules in force on 19 October 2026, and it is not legal advice: we are not lawyers. Rules change and every case is different. Before you make decisions, check the official texts linked above or consult a lawyer. If you find a mistake or a newer rule, write to us at <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a href=&quot;mailto:hola@koshisoftware.pe&quot;
-                  &gt;" dispEnd="&lt;/a
-                &gt;">hola@koshisoftware.pe</pc> and we will correct it.</target>
+        <source> Este caso de estudio describe cómo KOSHISOFTWARE E.I.R.L. implementó su propio Libro de Reclamaciones virtual. Es información general, basada en nuestra lectura de las normas vigentes al 19 de octubre de 2026, y no constituye asesoría legal: no somos abogados. Las normas cambian y cada caso es distinto. Antes de tomar decisiones, revisa los textos oficiales enlazados arriba o consulta con un abogado. Si encuentras un error o una norma más reciente, escríbenos desde el <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;correccion&quot;&gt;" dispEnd="&lt;/a&gt;">formulario de contacto</pc> y lo corregimos. </source>
+        <target>This case study describes how KOSHISOFTWARE E.I.R.L. built its own online Libro de Reclamaciones. It is general information based on our reading of the rules in force on 19 October 2026, and it is not legal advice: we are not lawyers. Rules change and every case is different. Before you make decisions, check the official texts linked above or consult a lawyer. If you find a mistake or a newer rule, write to us through the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;correccion&quot;&gt;" dispEnd="&lt;/a&gt;">contact form</pc> and we will correct it.</target>
       </segment>
     </unit>
     <unit id="caso.libro.pageTitle">
@@ -2676,6 +2672,195 @@
           &gt;" dispEnd="&lt;/a
         &gt;">FH JOANNEUM – University of Applied Sciences<pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span class=&quot;sr-only&quot;&gt;" dispEnd="&lt;/span
           &gt;"> (opens in a new tab)</pc></pc>, in Graz, Austria. I studied software development, databases, security, usability and systems architecture, with professional internships in both programmes.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.eyebrow">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:18,19</note>
+      </notes>
+      <segment>
+        <source>Contacto</source>
+        <target>Contact</target>
+      </segment>
+    </unit>
+    <unit id="contacto.title">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:19,20</note>
+      </notes>
+      <segment>
+        <source>Escríbeme</source>
+        <target>Write to me</target>
+      </segment>
+    </unit>
+    <unit id="contacto.lead">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:21,25</note>
+      </notes>
+      <segment>
+        <source> Cuéntame qué necesitas. Te respondo por correo a la dirección que me indiques. </source>
+        <target>Tell me what you need. I'll reply by email to the address you give me.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.name">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:38</note>
+      </notes>
+      <segment>
+        <source>Nombre</source>
+        <target>Name</target>
+      </segment>
+    </unit>
+    <unit id="contacto.email">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:41</note>
+      </notes>
+      <segment>
+        <source>Correo electrónico</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:50</note>
+      </notes>
+      <segment>
+        <source>Tema</source>
+        <target>Topic</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic.proyecto">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:53,55</note>
+      </notes>
+      <segment>
+        <source> Proyecto web </source>
+        <target>Web project</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic.cv">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:55,56</note>
+      </notes>
+      <segment>
+        <source>CV</source>
+        <target>CV</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic.correccion">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:57,59</note>
+      </notes>
+      <segment>
+        <source> Corrección </source>
+        <target>Correction</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic.datos">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:60,61</note>
+      </notes>
+      <segment>
+        <source> Datos personales </source>
+        <target>Personal data</target>
+      </segment>
+    </unit>
+    <unit id="contacto.topic.otro">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:62,64</note>
+      </notes>
+      <segment>
+        <source>Otro</source>
+        <target>Other</target>
+      </segment>
+    </unit>
+    <unit id="contacto.datosNote">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:71,74</note>
+      </notes>
+      <segment>
+        <source> Para atender una solicitud sobre tus datos personales, primero te pediré por correo que confirmes tu identidad. </source>
+        <target>To act on a request about your personal data, I'll first ask you by email to confirm who you are.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.message">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:74</note>
+      </notes>
+      <segment>
+        <source>Mensaje</source>
+        <target>Message</target>
+      </segment>
+    </unit>
+    <unit id="contacto.privacy">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:80,82</note>
+      </notes>
+      <segment>
+        <source> Uso tu nombre, tu correo y tu mensaje solo para responderte. Más en la <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;privacidad&quot;&gt;" dispEnd="&lt;/a&gt;">política de privacidad</pc>. </source>
+        <target>I use your name, email and message only to answer you. More in the <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK" type="link" dispStart="&lt;a [href]=&quot;privacidad&quot;&gt;" dispEnd="&lt;/a&gt;">privacy policy</pc>.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.submit">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:90,91</note>
+      </notes>
+      <segment>
+        <source> Enviar mensaje </source>
+        <target>Send message</target>
+      </segment>
+    </unit>
+    <unit id="contacto.sent.title">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:104,106</note>
+      </notes>
+      <segment>
+        <source> Mensaje enviado </source>
+        <target>Message sent</target>
+      </segment>
+    </unit>
+    <unit id="contacto.sent.lead">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:107,109</note>
+      </notes>
+      <segment>
+        <source> Te responderé a <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>. </source>
+        <target>I'll reply to you at <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span data-campo=&quot;email&quot;&gt;" dispEnd="&lt;/span&gt;"></pc>.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.sent.home">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:110,115</note>
+      </notes>
+      <segment>
+        <source>Volver al inicio</source>
+        <target>Back to home</target>
+      </segment>
+    </unit>
+    <unit id="contacto.failed">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:122</note>
+      </notes>
+      <segment>
+        <source>No se pudo enviar tu mensaje. Inténtalo de nuevo en unos minutos.</source>
+        <target>Your message couldn't be sent. Please try again in a few minutes.</target>
+      </segment>
+    </unit>
+    <unit id="contacto.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:126</note>
+      </notes>
+      <segment>
+        <source>Contacto · Koshisoftware</source>
+        <target>Contact · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="contacto.description">
+      <notes>
+        <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:129</note>
+      </notes>
+      <segment>
+        <source>Escríbele a Koshisoftware: proyectos web, CV, correcciones o tus datos personales.</source>
+        <target>Write to Koshisoftware: web projects, CV, corrections or your personal data.</target>
       </segment>
     </unit>
   </file>
