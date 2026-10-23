@@ -106,4 +106,41 @@ describe('paginaBlog', () => {
     expect(await pedir('/es/blog/nada/', blogDb({}).env)).toBeNull();
     expect(renderizar).not.toHaveBeenCalled();
   });
+
+  it('gives uploaded images their stored size', async () => {
+    const id = '0123456789abcdef0123456789abcdef';
+    const { env, consultas } = blogDb({
+      first: {
+        slug: 'gatos',
+        titulo: 'Gatos',
+        descripcion: 'd',
+        publicado: '2026-10-23',
+        cuerpo: `![Un gato](/media/${id})\n\n> ![Otro](https://x.pe/a.png)`,
+        otroLocale: 'en',
+        otroSlug: 'cats',
+      },
+      all: [{ id, ancho: 1376, alto: 900 }],
+    });
+
+    await pedir('/es/blog/gatos/', env);
+
+    expect(consultas[1].params).toEqual([JSON.stringify([id])]);
+    const [, contexto] = renderizar.mock.calls[0] as unknown as [
+      Request,
+      { blog: { post: { bloques: unknown[] } } },
+    ];
+    expect(contexto.blog.post.bloques).toEqual([
+      {
+        tipo: 'imagen',
+        src: `/media/${id}`,
+        alt: 'Un gato',
+        ancho: 1376,
+        alto: 900,
+      },
+      {
+        tipo: 'cita',
+        hijos: [{ tipo: 'imagen', src: 'https://x.pe/a.png', alt: 'Otro' }],
+      },
+    ]);
+  });
 });

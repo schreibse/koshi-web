@@ -28,6 +28,9 @@
       "@koshi/frontend/blog/feature": [
         "./libs/frontend/blog/feature/src/index.ts"
       ],
+      "@koshi/frontend/blog/feature/contenido": [
+        "./libs/frontend/blog/feature/src/contenido.ts"
+      ],
       "@koshi/shared/contacto/util": [
         "./libs/shared/contacto/util/src/index.ts"
       ],

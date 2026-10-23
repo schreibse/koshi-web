@@ -1,5 +1,7 @@
 import {
   aBloques,
+  RUTA_IMAGEN,
+  type Bloque,
   type PaginaBlog,
   type Resumen,
 } from '@koshi/shared/blog/util';
@@ -81,11 +83,41 @@ async function post(
     tipo: 'post',
     post: {
       ...resumen,
-      bloques: aBloques(cuerpo),
+      bloques: await conTamanos(db, aBloques(cuerpo)),
       rutas: {
         [locale]: `/blog/${slug}/`,
         [otroLocale]: `/blog/${otroSlug}/`,
       } as Record<Locale, string>,
     },
   };
+}
+
+/** Uploaded images get their stored size, so the page reserves their space before they load. */
+async function conTamanos(
+  db: D1Database,
+  bloques: Bloque[],
+): Promise<Bloque[]> {
+  const imagenes = new Map<string, Extract<Bloque, { tipo: 'imagen' }>[]>();
+  (function recorrer(lista: Bloque[]) {
+    for (const bloque of lista) {
+      if (bloque.tipo === 'cita') recorrer(bloque.hijos);
+      const id = bloque.tipo === 'imagen' && RUTA_IMAGEN.exec(bloque.src)?.[1];
+      if (bloque.tipo === 'imagen' && id) {
+        imagenes.set(id, [...(imagenes.get(id) ?? []), bloque]);
+      }
+    }
+  })(bloques);
+  if (imagenes.size === 0) return bloques;
+  const { results } = await db
+    .prepare(
+      'SELECT id, ancho, alto FROM imagenes WHERE id IN (SELECT value FROM json_each(?1))',
+    )
+    .bind(JSON.stringify([...imagenes.keys()]))
+    .all<{ id: string; ancho: number; alto: number }>();
+  for (const { id, ancho, alto } of results) {
+    for (const imagen of imagenes.get(id) ?? []) {
+      Object.assign(imagen, { ancho, alto });
+    }
+  }
+  return bloques;
 }
