@@ -1,3 +1,13 @@
+## 0.1.32 (2026-10-23)
+
+### 🚀 Features
+
+- **web:** add a blog rendered from D1, dark until the first post ([c994c70](https://github.com/schreibse/koshi-web/commit/c994c70))
+
+### 🩹 Fixes
+
+- **worker:** send contact-form mail from hola@mail.koshisoftware.pe ([10f3df2](https://github.com/schreibse/koshi-web/commit/10f3df2))
+
 ## 0.1.31 (2026-10-23)
 
 ### 🚀 Features
