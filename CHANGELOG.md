@@ -1,3 +1,9 @@
+## 0.1.31 (2026-10-23)
+
+### 🚀 Features
+
+- **web:** sea-toned sections and a beach cevichería on the business page ([23b3b34](https://github.com/schreibse/koshi-web/commit/23b3b34))
+
 ## 0.1.30 (2026-10-23)
 
 ### 🚀 Features
