@@ -15,10 +15,13 @@ export type Bloque =
   | { tipo: 'lista'; ordenada: boolean; items: Linea[][] }
   | { tipo: 'codigo'; lenguaje: string; texto: string }
   | { tipo: 'cita'; hijos: Bloque[] }
-  | { tipo: 'imagen'; src: string; alt: string };
+  | { tipo: 'imagen'; src: string; alt: string; ancho?: number; alto?: number };
 
 // Only absolute https URLs and paths on this site; javascript:, data: and the like stay text.
-const URL_PERMITIDA = /^(https:\/\/|\/(?!\/))/;
+export const URL_PERMITIDA = /^(https:\/\/|\/(?!\/))/;
+
+/** An image uploaded through the admin, as Markdown refers to it; the id is its R2 key. */
+export const RUTA_IMAGEN = /^\/media\/([0-9a-f]{32})$/;
 
 export function aBloques(markdown: string): Bloque[] {
   return bloques(new Lexer().lex(markdown));

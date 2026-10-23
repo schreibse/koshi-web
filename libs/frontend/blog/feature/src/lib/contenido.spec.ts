@@ -36,4 +36,26 @@ describe('Contenido', () => {
     expect(el.querySelector('pre code')?.textContent).toBe('<b>x</b>');
     expect(el.querySelector('pre b')).toBeNull();
   });
+
+  it('reserves the space of an image whose size is known', async () => {
+    const fixture = TestBed.createComponent(Contenido);
+    fixture.componentRef.setInput('bloques', [
+      {
+        tipo: 'imagen',
+        src: '/media/x',
+        alt: 'Un gato',
+        ancho: 1376,
+        alto: 900,
+      },
+      { tipo: 'imagen', src: '/media/y', alt: 'Otro' },
+    ]);
+    await fixture.whenStable();
+    const [conTamano, sinTamano] = (
+      fixture.nativeElement as HTMLElement
+    ).querySelectorAll('img');
+
+    expect(conTamano.getAttribute('width')).toBe('1376');
+    expect(conTamano.getAttribute('height')).toBe('900');
+    expect(sinTamano.hasAttribute('width')).toBe(false);
+  });
 });

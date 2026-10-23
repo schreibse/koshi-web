@@ -119,7 +119,13 @@ import type { Bloque } from '@koshi/shared/blog/util';
             </blockquote>
           }
           @case ('imagen') {
-            <img [src]="bloque.src" [alt]="bloque.alt" loading="lazy" />
+            <img
+              [src]="bloque.src"
+              [alt]="bloque.alt"
+              [attr.width]="bloque.ancho ?? null"
+              [attr.height]="bloque.alto ?? null"
+              loading="lazy"
+            />
           }
         }
       }
