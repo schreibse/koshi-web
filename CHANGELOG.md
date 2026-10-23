@@ -1,3 +1,14 @@
+## 0.1.34 (2026-10-23)
+
+### 🚀 Features
+
+- **layout:** link the blog in the header and footer ([482a672](https://github.com/schreibse/koshi-web/commit/482a672))
+- **worker:** list blog posts in the sitemap ([228bbc5](https://github.com/schreibse/koshi-web/commit/228bbc5))
+
+### 🩹 Fixes
+
+- **layout:** keep the header on one line on tablets ([ec40cee](https://github.com/schreibse/koshi-web/commit/ec40cee))
+
 ## 0.1.33 (2026-10-23)
 
 ### 🚀 Features
