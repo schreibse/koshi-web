@@ -26,3 +26,4 @@
 
 - Every merged PR with a `feat`, `fix` or `perf` commit is a release; PRs with only other types wait for the next one.
 - Cut it right after the merge, as a `release/vX.Y.Z` PR, then tag and publish it — steps in the README's "Releasing" section.
+- Only `web` is versioned (`nx.json` `release.projects`): a PR that touches only `worker/` deploys on merge but is no release.
