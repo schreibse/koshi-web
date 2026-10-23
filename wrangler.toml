@@ -24,6 +24,10 @@ database_name = "koshi-blog"
 database_id = "e767c744-1e65-4d45-80cb-3898a5508c4f"
 migrations_dir = "worker/blog-migrations"
 
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "koshi-blog-media"
+
 # Previews get no secrets, so the Libro form stops at Turnstile before it writes here.
 [[previews.d1_databases]]
 binding = "DB"
@@ -32,6 +36,11 @@ database_id = "44544861-9656-4972-b0c5-8f2ace9fd9f4"
 [[previews.d1_databases]]
 binding = "BLOG"
 database_id = "e767c744-1e65-4d45-80cb-3898a5508c4f"
+
+# Read-only in practice: previews have no Access token, so the admin API answers 403 there.
+[[previews.r2_buckets]]
+binding = "MEDIA"
+bucket_name = "koshi-blog-media"
 
 [alias]
 "angular-server" = "./dist/apps/web/server/server.mjs"

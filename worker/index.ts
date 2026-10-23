@@ -1,7 +1,10 @@
 import { redireccion } from 'angular-server';
 import { withTrailingSlash } from '@koshi/shared/locale/util';
+import { autorizado } from './acceso';
+import { admin } from './admin';
 import { paginaBlog } from './blog';
 import { enviarMensaje } from './contacto';
+import { imagen } from './media';
 import { registrarHoja } from './reclamaciones';
 import { rootRedirect } from './root-redirect';
 
@@ -19,10 +22,17 @@ export default {
     if (pathname === '/api/contacto' && method === 'POST') {
       return enviarMensaje(request, env);
     }
+    if (/^\/(api\/)?admin(\/|$)/.test(pathname)) {
+      if (!(await autorizado(request, env))) {
+        return new Response('Forbidden', { status: 403 });
+      }
+      if (pathname.startsWith('/api/')) return admin(request, env);
+    }
     const lectura = method === 'GET' || method === 'HEAD';
     if (lectura) {
-      const blog = await paginaBlog(request, env);
-      if (blog) return blog;
+      const respuesta =
+        (await imagen(request, env)) ?? (await paginaBlog(request, env));
+      if (respuesta) return respuesta;
     }
     const asset = await env.ASSETS.fetch(request);
     if (asset.status !== 404 || !lectura) return asset;
