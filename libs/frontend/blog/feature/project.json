@@ -1,0 +1,7 @@
+{
+  "name": "frontend-blog-feature",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/blog/feature/src",
+  "prefix": "ks",
+  "projectType": "library"
+}

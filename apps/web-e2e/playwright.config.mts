@@ -11,7 +11,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'pnpm nx run web:serve-static',
+    command: 'pnpm nx run worker:serve',
     url: baseURL,
     reuseExistingServer: true,
     cwd: workspaceRoot,

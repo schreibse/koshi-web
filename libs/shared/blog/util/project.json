@@ -1,0 +1,6 @@
+{
+  "name": "shared-blog-util",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/blog/util/src",
+  "projectType": "library"
+}

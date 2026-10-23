@@ -10,22 +10,22 @@
 The website of Koshisoftware E.I.R.L.: senior Angular frontend and NestJS backend work for
 clients in Peru and abroad.
 
-The site is bilingual (Spanish and English), prerendered to static HTML and deployed as a Cloudflare Worker with static assets.
+The site is bilingual (Spanish and English), prerendered to static HTML except the blog, which is rendered per request from D1, and deployed as a Cloudflare Worker with static assets.
 
 ## Stack
 
-- **Angular 22**: zoneless, signals, OnPush, built-in i18n, `outputMode: static`
+- **Angular 22**: zoneless, signals, OnPush, built-in i18n, `outputMode: server` with every page but the blog prerendered
 - **Nx 23**: integrated monorepo, module boundaries derived from folder paths
 - **Tailwind CSS 4**: utilities only, colours from brand tokens with light and dark themes
 - **Vitest** for unit tests, **Playwright** with **axe** for end-to-end and accessibility checks
-- **Cloudflare Workers**: static assets, plus a small Worker that redirects `/` by `Accept-Language`
-  and files complaints from the Libro de Reclamaciones into D1
+- **Cloudflare Workers**: static assets, plus a Worker that redirects `/` by `Accept-Language`, renders
+  the blog from D1 with Angular's server, and files complaints from the Libro de Reclamaciones into D1
 
 ## Layout
 
 ```
 apps/web                 the Angular app (shell, routes, i18n)
-apps/web-e2e             Playwright smoke and axe tests against the static build
+apps/web-e2e             Playwright smoke and axe tests against the build, served by the Worker
 libs/frontend/<domain>/  feature and ui libraries
 libs/shared/<domain>/    framework-free code, shared with the Worker
 worker/                  the Cloudflare Worker and its D1 migrations
@@ -42,9 +42,9 @@ Node 24 and pnpm (version pinned in `packageManager`).
 ```sh
 pnpm install
 pnpm nx serve web                  # dev server, Spanish locale
-pnpm nx build web                  # prerenders /es and /en into dist/apps/web/browser
+pnpm nx build web                  # prerenders /es and /en, and bundles the blog's server rendering
 pnpm nx run-many -t lint stylelint typecheck test
-pnpm nx e2e web-e2e                # builds, serves on :4890, runs Playwright
+pnpm nx e2e web-e2e                # builds, serves the Worker on :4890, runs Playwright
 pnpm exec wrangler dev             # the build plus the Worker, as deployed, on :8787
 pnpm nx extract-i18n web           # refresh source messages after changing copy
 ```

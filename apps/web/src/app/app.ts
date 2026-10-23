@@ -2,8 +2,10 @@ import { Location } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  TransferState,
   afterNextRender,
   inject,
+  makeStateKey,
 } from '@angular/core';
 import {
   CasoKoshisoftware,
@@ -13,6 +15,7 @@ import {
   PoliticaDePrivacidad,
   SobreMi,
 } from '@koshi/frontend/home/feature';
+import { BlogIndice, BlogPost } from '@koshi/frontend/blog/feature';
 import { Contacto } from '@koshi/frontend/contacto/feature';
 import { activarContacto } from '@koshi/frontend/contacto/feature/activar';
 import { NotFound, SiteFooter, SiteHeader } from '@koshi/frontend/layout/ui';
@@ -36,6 +39,7 @@ const PAGES: Record<
   | 'contacto'
   | 'libro'
   | 'privacidad'
+  | 'blog'
 > = {
   '': 'home',
   [slug('empresas', locale)]: 'empresas',
@@ -46,7 +50,13 @@ const PAGES: Record<
   [slug('contacto', locale)]: 'contacto',
   'libro-de-reclamaciones': 'libro',
   'libro-de-reclamaciones/privacidad': 'privacidad',
+  blog: 'blog',
 };
+
+type Page = (typeof PAGES)[string] | 'post' | 'notFound';
+
+// The browser takes the server's pick: a 404 page is served under any URL, even one that looks like a post.
+const PAGE = makeStateKey<Page>('page');
 
 // Every link is a full page load, so the page is picked once from the URL; the router only runs on the server.
 @Component({
@@ -60,6 +70,8 @@ const PAGES: Record<
     Contacto,
     LibroDeReclamaciones,
     Privacidad,
+    BlogIndice,
+    BlogPost,
     NotFound,
     SiteHeader,
     SiteFooter,
@@ -109,6 +121,16 @@ const PAGES: Record<
             <ks-privacidad />
           }
         }
+        @case ('blog') {
+          @defer (hydrate never) {
+            <ks-blog-indice />
+          }
+        }
+        @case ('post') {
+          @defer (hydrate never) {
+            <ks-blog-post />
+          }
+        }
         @default {
           <ks-not-found />
         }
@@ -118,13 +140,7 @@ const PAGES: Record<
   `,
 })
 export class App {
-  protected readonly page =
-    PAGES[
-      inject(Location)
-        .path()
-        .replace(/[?#].*$/, '')
-        .replace(/^\/|\/$/g, '')
-    ];
+  protected readonly page = pickPage();
 
   constructor() {
     afterNextRender(() => {
@@ -132,4 +148,17 @@ export class App {
       if (this.page === 'contacto') activarContacto();
     });
   }
+}
+
+function pickPage(): Page {
+  const state = inject(TransferState);
+  const page = state.get(PAGE, null) ?? pageFor(inject(Location).path());
+  state.set(PAGE, page);
+  return page;
+}
+
+function pageFor(url: string): Page {
+  const path = url.replace(/[?#].*$/, '').replace(/^\/|\/$/g, '');
+  if (/^blog\/[^/]+$/.test(path)) return 'post';
+  return PAGES[path] ?? 'notFound';
 }

@@ -1,10 +1,13 @@
+import { redireccion } from 'angular-server';
+import { withTrailingSlash } from '@koshi/shared/locale/util';
+import { paginaBlog } from './blog';
 import { enviarMensaje } from './contacto';
 import { registrarHoja } from './reclamaciones';
 import { rootRedirect } from './root-redirect';
 
-// Only the paths in wrangler.toml's `run_worker_first` reach this; every other request is a static asset.
+// Only the paths in wrangler.toml's `run_worker_first` reach this; files are served without it.
 export default {
-  fetch(request, env, ctx) {
+  async fetch(request, env, ctx) {
     const { pathname } = new URL(request.url);
     const { method } = request;
     if (pathname === '/' && (method === 'GET' || method === 'HEAD')) {
@@ -16,6 +19,24 @@ export default {
     if (pathname === '/api/contacto' && method === 'POST') {
       return enviarMensaje(request, env);
     }
-    return env.ASSETS.fetch(request);
+    const lectura = method === 'GET' || method === 'HEAD';
+    if (lectura) {
+      const blog = await paginaBlog(request, env);
+      if (blog) return blog;
+    }
+    const asset = await env.ASSETS.fetch(request);
+    if (asset.status !== 404 || !lectura) return asset;
+    const redirect = await redireccion(request);
+    return redirect ? conBarra(redirect) : asset;
   },
 } satisfies ExportedHandler<Env>;
+
+/** Angular redirects to the unslashed path; sending the slashed one saves a second hop. */
+function conBarra(redirect: Response): Response {
+  const location = redirect.headers.get('Location');
+  if (!location) return redirect;
+  return new Response(null, {
+    status: redirect.status,
+    headers: { Location: withTrailingSlash(location) },
+  });
+}

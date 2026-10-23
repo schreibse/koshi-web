@@ -2863,5 +2863,50 @@
         <target>Write to Koshisoftware: web projects, CV, corrections or your personal data.</target>
       </segment>
     </unit>
+    <unit id="blog.title">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:15,17</note>
+      </notes>
+      <segment>
+        <source> Notas de mi trabajo </source>
+        <target>Notes from my work</target>
+      </segment>
+    </unit>
+    <unit id="blog.empty">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:35,37</note>
+      </notes>
+      <segment>
+        <source> Todavía no hay artículos. </source>
+        <target>No posts yet.</target>
+      </segment>
+    </unit>
+    <unit id="blog.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:48</note>
+      </notes>
+      <segment>
+        <source>Blog · Koshisoftware</source>
+        <target>Blog · Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="blog.description">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:52</note>
+      </notes>
+      <segment>
+        <source>Artículos sobre desarrollo web con Angular: decisiones, errores y lo que aprendí al medirlos.</source>
+        <target>Articles on web development with Angular: decisions, mistakes, and what measuring them taught me.</target>
+      </segment>
+    </unit>
+    <unit id="blog.all">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:15,17</note>
+      </notes>
+      <segment>
+        <source>Todos los artículos</source>
+        <target>All posts</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
