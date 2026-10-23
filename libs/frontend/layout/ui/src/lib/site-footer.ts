@@ -45,7 +45,10 @@ import { Wordmark } from './wordmark';
         </svg>
         <span class="font-semibold">Libro de Reclamaciones</span>
       </a>
-      <p class="mt-6">
+      <p class="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+        <a href="blog/" class="text-muted hover:text-ink" i18n="@@footer.blog"
+          >Blog</a
+        >
         <a
           [href]="privacidad"
           class="text-muted hover:text-ink"

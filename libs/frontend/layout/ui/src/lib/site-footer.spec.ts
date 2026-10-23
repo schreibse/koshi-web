@@ -13,6 +13,16 @@ describe('SiteFooter', () => {
     expect(link?.textContent?.trim()).toBe('Libro de Reclamaciones');
   });
 
+  it('links the blog, so phones reach it too', async () => {
+    const fixture = TestBed.createComponent(SiteFooter);
+    await fixture.whenStable();
+    const link = (fixture.nativeElement as HTMLElement).querySelector(
+      'a[href="blog/"]',
+    );
+
+    expect(link?.textContent?.trim()).toBe('Blog');
+  });
+
   it('links the privacy policy in this locale', async () => {
     TestBed.configureTestingModule({
       providers: [{ provide: LOCALE_ID, useValue: 'es' }],

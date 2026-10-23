@@ -2061,9 +2061,17 @@
         <source> Dirección </source>
       </segment>
     </unit>
+    <unit id="footer.blog">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:51,53</note>
+      </notes>
+      <segment>
+        <source>Blog</source>
+      </segment>
+    </unit>
     <unit id="footer.privacy">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:53,56</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:56,59</note>
       </notes>
       <segment>
         <source>Política de privacidad</source>
@@ -2095,15 +2103,23 @@
     </unit>
     <unit id="nav.business">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:47,49</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:47,50</note>
       </notes>
       <segment>
         <source>Empresas</source>
       </segment>
     </unit>
+    <unit id="nav.blog">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:54,55</note>
+      </notes>
+      <segment>
+        <source>Blog</source>
+      </segment>
+    </unit>
     <unit id="nav.contact">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:50,52</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:56,58</note>
       </notes>
       <segment>
         <source>Hablemos</source>

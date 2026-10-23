@@ -46,6 +46,12 @@ import { Wordmark } from './wordmark';
           i18n="@@nav.business"
           >Empresas</a
         >
+        <a
+          href="blog/"
+          class="hidden text-muted no-underline hover:text-ink md:inline"
+          i18n="@@nav.blog"
+          >Blog</a
+        >
         <a [href]="contacto" class="btn btn-primary" i18n="@@nav.contact"
           >Hablemos</a
         >
