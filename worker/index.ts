@@ -2,7 +2,7 @@ import { redireccion } from 'angular-server';
 import { withTrailingSlash } from '@koshi/shared/locale/util';
 import { autorizado } from './acceso';
 import { admin } from './admin';
-import { paginaBlog } from './blog';
+import { paginaBlog, sitemapBlog } from './blog';
 import { enviarMensaje } from './contacto';
 import { imagen } from './media';
 import { registrarHoja } from './reclamaciones';
@@ -31,7 +31,9 @@ export default {
     const lectura = method === 'GET' || method === 'HEAD';
     if (lectura) {
       const respuesta =
-        (await imagen(request, env)) ?? (await paginaBlog(request, env));
+        (await imagen(request, env)) ??
+        (await sitemapBlog(request, env)) ??
+        (await paginaBlog(request, env));
       if (respuesta) return respuesta;
     }
     const asset = await env.ASSETS.fetch(request);

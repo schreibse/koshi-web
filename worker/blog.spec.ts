@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { paginaBlog } from './blog';
+import { paginaBlog, sitemapBlog } from './blog';
 
 const renderizar = vi.hoisted(() =>
   vi.fn(async () => new Response('rendered')),
@@ -16,6 +16,10 @@ function blogDb(filas: { all?: unknown[]; first?: unknown }) {
           all: async () => ({ results: filas.all ?? [] }),
           first: async () => filas.first ?? null,
         };
+      },
+      all: async () => {
+        consultas.push({ sql, params: [] });
+        return { results: filas.all ?? [] };
       },
     }),
   };
@@ -142,5 +146,60 @@ describe('paginaBlog', () => {
         hijos: [{ tipo: 'imagen', src: 'https://x.pe/a.png', alt: 'Otro' }],
       },
     ]);
+  });
+});
+
+describe('sitemapBlog', () => {
+  const pedirSitemap = (path: string, env: Env) =>
+    sitemapBlog(new Request(`https://koshisoftware.pe${path}`), env);
+
+  it('leaves other paths alone', async () => {
+    expect(await pedirSitemap('/blog/sitemap/', blogDb({}).env)).toBeNull();
+    expect(await pedirSitemap('/es/blog/', blogDb({}).env)).toBeNull();
+  });
+
+  it('lists both blog indexes and every public post with its last change', async () => {
+    const { env } = blogDb({
+      all: [
+        {
+          locale: 'en',
+          slug: 'why-angular',
+          actualizado: '2026-10-23T21:00:00Z',
+        },
+        {
+          locale: 'es',
+          slug: 'por-que-angular',
+          actualizado: '2026-10-23T21:00:00Z',
+        },
+        { locale: 'es', slug: 'viejo', actualizado: '2026-10-01T08:00:00Z' },
+      ],
+    });
+
+    const res = await pedirSitemap('/blog/sitemap', env);
+
+    expect(res?.headers.get('Content-Type')).toBe(
+      'application/xml; charset=utf-8',
+    );
+    const locs = [
+      ...((await res?.text()) ?? '').matchAll(
+        /<url><loc>(.+?)<\/loc><lastmod>(.+?)<\/lastmod>/g,
+      ),
+    ].map(([, loc, lastmod]) => [loc, lastmod]);
+    expect(locs).toEqual([
+      ['https://koshisoftware.pe/es/blog/', '2026-10-23T21:00:00Z'],
+      ['https://koshisoftware.pe/en/blog/', '2026-10-23T21:00:00Z'],
+      ['https://koshisoftware.pe/en/blog/why-angular/', '2026-10-23T21:00:00Z'],
+      [
+        'https://koshisoftware.pe/es/blog/por-que-angular/',
+        '2026-10-23T21:00:00Z',
+      ],
+      ['https://koshisoftware.pe/es/blog/viejo/', '2026-10-01T08:00:00Z'],
+    ]);
+  });
+
+  it('leaves the empty blog indexes out', async () => {
+    const res = await pedirSitemap('/blog/sitemap', blogDb({}).env);
+
+    expect(await res?.text()).not.toContain('<url>');
   });
 });

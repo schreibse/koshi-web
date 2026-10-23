@@ -32,3 +32,25 @@ test('an unknown post is a 404', async ({ page }) => {
     page.getByRole('heading', { level: 1, name: 'Página no encontrada' }),
   ).toBeVisible();
 });
+
+test('the sitemap index points crawlers at the pages and the blog', async ({
+  request,
+}) => {
+  const robots = await (await request.get('/robots.txt')).text();
+  expect(robots).toContain('Sitemap: https://koshisoftware.pe/sitemap.xml');
+
+  const indice = await (await request.get('/sitemap.xml')).text();
+  expect(
+    [...indice.matchAll(/<loc>(.+?)<\/loc>/g)].map(([, loc]) => loc),
+  ).toEqual([
+    'https://koshisoftware.pe/sitemap-paginas.xml',
+    'https://koshisoftware.pe/blog/sitemap',
+  ]);
+
+  const paginas = await (await request.get('/sitemap-paginas.xml')).text();
+  expect(paginas).toContain('<loc>https://koshisoftware.pe/es/</loc>');
+
+  const blog = await request.get('/blog/sitemap');
+  expect(blog.headers()['content-type']).toBe('application/xml; charset=utf-8');
+  expect(await blog.text()).not.toContain('<url>');
+});

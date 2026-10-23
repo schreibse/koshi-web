@@ -45,6 +45,52 @@ export async function paginaBlog(
   return new Response(pagina.body, { status: pagina.status, headers });
 }
 
+/** The blog's part of the sitemap index the build writes; posts live in D1, so the build can't list them. */
+export async function sitemapBlog(
+  request: Request,
+  env: Env,
+): Promise<Response | null> {
+  const { origin, pathname } = new URL(request.url);
+  if (pathname !== '/blog/sitemap') return null;
+  const { results } = await env.BLOG.prepare(
+    `SELECT t.locale, t.slug, a.actualizado
+     FROM articulos a JOIN textos t ON t.articulo = a.id
+     WHERE ${PUBLICO}
+       AND EXISTS (SELECT 1 FROM textos o WHERE o.articulo = a.id AND o.locale != t.locale)
+     ORDER BY t.locale, a.publicado DESC, a.id DESC`,
+  ).all<{ locale: Locale; slug: string; actualizado: string }>();
+  const ultimo = results.reduce(
+    (max, { actualizado }) => (actualizado > max ? actualizado : max),
+    '',
+  );
+  const indices = ultimo
+    ? (['es', 'en'] as const).map((locale) => ({
+        loc: `/${locale}/blog/`,
+        lastmod: ultimo,
+      }))
+    : [];
+  const urls = [
+    ...indices,
+    ...results.map(({ locale, slug, actualizado }) => ({
+      loc: `/${locale}/blog/${slug}/`,
+      lastmod: actualizado,
+    })),
+  ];
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...urls.map(
+      ({ loc, lastmod }) =>
+        `  <url><loc>${origin}${loc}</loc><lastmod>${lastmod}</lastmod></url>`,
+    ),
+    '</urlset>',
+    '',
+  ].join('\n');
+  return new Response(xml, {
+    headers: { ...CABECERAS, 'Content-Type': 'application/xml; charset=utf-8' },
+  });
+}
+
 async function indice(db: D1Database, locale: Locale): Promise<PaginaBlog> {
   const { results } = await db
     .prepare(
