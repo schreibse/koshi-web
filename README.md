@@ -20,11 +20,13 @@ The site is bilingual (Spanish and English), prerendered to static HTML except t
 - **Vitest** for unit tests, **Playwright** with **axe** for end-to-end and accessibility checks
 - **Cloudflare Workers**: static assets, plus a Worker that redirects `/` by `Accept-Language`, renders
   the blog from D1 with Angular's server, and files complaints from the Libro de Reclamaciones into D1
+- **Blog admin** at `/admin/` behind Cloudflare Access: posts in D1, images in R2
 
 ## Layout
 
 ```
 apps/web                 the Angular app (shell, routes, i18n)
+apps/admin               the blog admin, an English-only Angular app served at /admin/
 apps/web-e2e             Playwright smoke and axe tests against the build, served by the Worker
 libs/frontend/<domain>/  feature and ui libraries
 libs/shared/<domain>/    framework-free code, shared with the Worker
@@ -43,9 +45,10 @@ Node 24 and pnpm (version pinned in `packageManager`).
 pnpm install
 pnpm nx serve web                  # dev server, Spanish locale
 pnpm nx build web                  # prerenders /es and /en, and bundles the blog's server rendering
+pnpm nx build worker               # web plus admin, assembled in dist/site for the Worker
 pnpm nx run-many -t lint stylelint typecheck test
 pnpm nx e2e web-e2e                # builds, serves the Worker on :4890, runs Playwright
-pnpm exec wrangler dev             # the build plus the Worker, as deployed, on :8787
+pnpm exec wrangler dev             # dist/site plus the Worker, as deployed, on :8787
 pnpm nx extract-i18n web           # refresh source messages after changing copy
 ```
 

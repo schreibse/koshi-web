@@ -45,6 +45,7 @@ describe('validar', () => {
       `Mira ![a](${IMAGEN})`,
       `An image needs a paragraph of its own: ![a](${IMAGEN})`,
     ],
+    [`![](${IMAGEN})`, `Images need alt text: ![](${IMAGEN})`],
     ['- a\n  - b', 'Only text is allowed in a list item: - b'],
     ['- [ ] tarea', 'Task lists are not allowed: - [ ] tarea'],
     ['> <div>x</div>', 'Not allowed (html): <div>x</div>'],

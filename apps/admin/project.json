@@ -1,0 +1,56 @@
+{
+  "name": "admin",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ks",
+  "sourceRoot": "apps/admin/src",
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/admin",
+        "browser": "apps/admin/src/main.ts",
+        "tsConfig": "apps/admin/tsconfig.app.json",
+        "styles": [
+          "@fontsource-variable/geist/index.css",
+          "@fontsource-variable/geist-mono/index.css",
+          "apps/web/src/styles.css",
+          "apps/web/src/styles.scss",
+          "apps/admin/src/styles.css"
+        ],
+        "subresourceIntegrity": true
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/admin/**/*.css"]
+      }
+    }
+  }
+}

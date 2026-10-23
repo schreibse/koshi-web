@@ -16,5 +16,18 @@ export default defineConfig({
     reuseExistingServer: true,
     cwd: workspaceRoot,
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [
+    {
+      name: 'chromium',
+      testIgnore: 'admin.spec.ts',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    // Last: it publishes a post, and the blog specs expect the e2e blog to be empty.
+    {
+      name: 'admin',
+      testMatch: 'admin.spec.ts',
+      dependencies: ['chromium'],
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
 });
