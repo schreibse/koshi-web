@@ -5,14 +5,10 @@ export interface Buzon {
   name: string;
 }
 
-const REMITENTE: Buzon = {
-  email: 'libro@mail.koshisoftware.pe',
-  name: 'Koshisoftware',
-};
-
 /** Sends through Sweego; returns its transaction id, or null when nothing was sent. */
 export async function enviar(
   env: Env,
+  de: Buzon,
   para: Buzon,
   responderA: Buzon,
   { asunto, texto }: { asunto: string; texto: string },
@@ -30,7 +26,7 @@ export async function enviar(
     body: JSON.stringify({
       channel: 'email',
       provider: 'sweego',
-      from: REMITENTE,
+      from: de,
       'reply-to': responderA,
       recipients: [para],
       subject: asunto,
