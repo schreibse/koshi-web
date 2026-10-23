@@ -18,6 +18,11 @@ const BUZON: Buzon = {
   name: 'Koshisoftware',
 };
 
+const REMITENTE: Buzon = {
+  email: 'libro@mail.koshisoftware.pe',
+  name: 'Koshisoftware',
+};
+
 // One statement, so D1's single writer hands out each number exactly once.
 const INSERTAR = `
   INSERT INTO hojas (anio, secuencia, registrada, hoja)
@@ -102,7 +107,7 @@ async function enviarCopias(
 
   if (alConsumidor) {
     const copia = copiaDeHoja(hoja, numero, registrada, idioma);
-    const id = await enviar(env, consumidor, BUZON, copia);
+    const id = await enviar(env, REMITENTE, consumidor, BUZON, copia);
     if (id !== null) {
       await env.DB.prepare(COPIA_ENVIADA)
         .bind(new Date().toISOString(), id, anio, secuencia)
@@ -114,7 +119,7 @@ async function enviarCopias(
   const aviso = alConsumidor
     ? ''
     : `Copia al consumidor NO enviada: ${recientes} hojas de ${consumidor.email} en 24 h.\n\n`;
-  await enviar(env, BUZON, consumidor, {
+  await enviar(env, REMITENTE, BUZON, consumidor, {
     asunto: `[Libro] ${interna.asunto}`,
     texto: aviso + interna.texto,
   });

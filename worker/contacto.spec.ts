@@ -34,6 +34,20 @@ const servicios = ({ humano = true, sweego = true } = {}) => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe('enviarMensaje', () => {
+  it('sends from hola@mail. to hola@, replying to the sender', async () => {
+    const fetch = servicios();
+    expect((await post(mensaje)).status).toBe(204);
+    const [, init] = fetch.mock.calls.find(([url]) =>
+      url.includes('sweego'),
+    ) as unknown as [string, RequestInit];
+    const cuerpo = JSON.parse(init.body as string);
+    expect(cuerpo.from.email).toBe('hola@mail.koshisoftware.pe');
+    expect(cuerpo.recipients).toEqual([
+      { email: 'hola@koshisoftware.pe', name: 'Koshisoftware' },
+    ]);
+    expect(cuerpo['reply-to'].email).toBe('ana@example.pe');
+  });
+
   it('rejects malformed JSON and invalid messages without spending the token', async () => {
     const fetch = servicios();
     expect((await post('nope')).status).toBe(400);

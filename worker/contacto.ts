@@ -11,6 +11,11 @@ const MAX_BYTES = 16_000;
 
 const BUZON: Buzon = { email: 'hola@koshisoftware.pe', name: 'Koshisoftware' };
 
+const REMITENTE: Buzon = {
+  email: 'hola@mail.koshisoftware.pe',
+  name: 'Koshisoftware',
+};
+
 /** Mails a contact-form message to our inbox only; the sender gets no copy, so the form cannot mail strangers. */
 export const enviarMensaje = async (
   request: Request,
@@ -36,6 +41,7 @@ export const enviarMensaje = async (
   // Awaited, unlike the Libro's copies: nothing else records the message, so a failure must reach the sender.
   const id = await enviar(
     env,
+    REMITENTE,
     BUZON,
     { email: limpio.email, name: limpio.nombre },
     correoInterno(limpio),
