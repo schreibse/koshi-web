@@ -1,3 +1,9 @@
+## 0.1.30 (2026-10-23)
+
+### 🚀 Features
+
+- **web:** switch the accent color from terracotta to teal ([23e68ec](https://github.com/schreibse/koshi-web/commit/23e68ec))
+
 ## 0.1.29 (2026-10-22)
 
 ### 🚀 Features
