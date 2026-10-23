@@ -48,6 +48,14 @@ describe('worker', () => {
     expect(res.status).toBe(422);
   });
 
+  it.each(['/admin/', '/admin', '/api/admin/articulos'])(
+    'keeps %s behind Access',
+    async (path) => {
+      const res = await fetchAt(path);
+      expect(res.status).toBe(403);
+    },
+  );
+
   it('sends the blog to its slashed URL', async () => {
     const res = await fetchAt('/es/blog');
     expect(res.status).toBe(307);

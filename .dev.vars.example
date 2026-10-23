@@ -3,3 +3,9 @@
 TURNSTILE_SECRET=1x0000000000000000000000000000000AA
 # Empty: copies are logged, not sent.
 SWEEGO_API_KEY=
+# Cloudflare Access for /admin: https://<team>.cloudflareaccess.com and the app's AUD tag.
+# Empty: the admin answers 403.
+ACCESS_TEAM_DOMAIN=
+ACCESS_AUD=
+# A public JWK that replaces Access's keys; only the e2e server sets it (worker/e2e.env).
+ACCESS_TEST_JWK=
