@@ -1,3 +1,15 @@
+## 0.1.33 (2026-10-23)
+
+### 🚀 Features
+
+- **admin:** add the blog admin at /admin ([1f87e9d](https://github.com/schreibse/koshi-web/commit/1f87e9d))
+- **blog:** validate posts strictly and size uploaded images ([22eb681](https://github.com/schreibse/koshi-web/commit/22eb681))
+- **worker:** add the admin API behind Cloudflare Access ([8814d75](https://github.com/schreibse/koshi-web/commit/8814d75))
+
+### 🩹 Fixes
+
+- **blog:** space paragraphs and images in a post ([1f6bb07](https://github.com/schreibse/koshi-web/commit/1f6bb07))
+
 ## 0.1.32 (2026-10-23)
 
 ### 🚀 Features
