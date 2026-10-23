@@ -11,17 +11,17 @@ import { slug, toLocale } from '@koshi/shared/locale/util';
 const EJEMPLO = [
   {
     lang: 'es',
-    nav: ['Habitaciones', 'Tours', 'Contacto'],
-    titulo: 'Tu casa a pasos de la Plaza de Armas',
-    texto: 'Habitaciones con calefacción, mate de coca y tours a Machu Picchu.',
-    cta: 'Reservar',
+    nav: ['Carta', 'Reservas', 'Contacto'],
+    titulo: 'Ceviche fresco a pasos del mar',
+    texto: 'Pescado del día, leche de tigre y vista a las olas.',
+    cta: 'Reservar mesa',
   },
   {
     lang: 'en',
-    nav: ['Rooms', 'Tours', 'Contact'],
-    titulo: 'Your home steps from the Plaza de Armas',
-    texto: 'Heated rooms, coca tea and tours to Machu Picchu.',
-    cta: 'Book now',
+    nav: ['Menu', 'Reservations', 'Contact'],
+    titulo: 'Fresh ceviche steps from the sea',
+    texto: 'Catch of the day, leche de tigre and a view of the waves.',
+    cta: 'Book a table',
   },
 ];
 
@@ -103,6 +103,34 @@ const PREGUNTAS = [
   selector: 'ks-empresas',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
+    .escena {
+      --sc-sun: #dcc28c;
+      --sc-hill: #3a3128;
+      --sc-hill2: #4a3e31;
+      --sc-sea: #1d4f4a;
+      --sc-sea2: #2b7069;
+      --sc-foam: #e6efe9;
+      --sc-sand: #8c7652;
+      --sc-rock: #2c2620;
+      --sc-wood: #6b4f36;
+      --sc-thatch: #b89a62;
+      --sc-wall: #efe6d6;
+      --sc-red: #d0644a;
+    }
+    :host-context([data-theme='light']) .escena {
+      --sc-sun: #e7c873;
+      --sc-hill: #cdb995;
+      --sc-hill2: #bba47d;
+      --sc-sea: #3f8a82;
+      --sc-sea2: #5ea79e;
+      --sc-foam: #ffffff;
+      --sc-sand: #ead8ad;
+      --sc-rock: #7d6a55;
+      --sc-wood: #7a5a3c;
+      --sc-thatch: #c9a96a;
+      --sc-wall: #fbf7ef;
+      --sc-red: #c4553c;
+    }
     .idiomas {
       display: grid;
     }
@@ -187,7 +215,7 @@ const PREGUNTAS = [
           @for (sitio of ejemplo; track sitio.lang) {
             <div
               aria-hidden="true"
-              class="rounded-xl overflow-hidden bg-surface shadow-[var(--ks-window-shadow)]"
+              class="rounded-xl flex flex-col overflow-hidden bg-surface shadow-[var(--ks-window-shadow)]"
             >
               <div
                 class="flex items-center gap-1.5 border-b border-line px-3 py-2.5"
@@ -197,12 +225,12 @@ const PREGUNTAS = [
                 <span class="size-2 rounded-full bg-line"></span>
                 <span
                   class="rounded-md ml-2 flex-1 truncate bg-page px-2.5 py-1 font-mono text-xs text-muted"
-                  >hostalcusco.pe/{{ sitio.lang }}/</span
+                  >cevicherialaola.pe/{{ sitio.lang }}/</span
                 >
               </div>
-              <div class="bg-page px-5 pt-4 pb-6">
+              <div class="flex-1 bg-page px-5 pt-4 pb-6">
                 <div class="mb-6 flex items-center gap-4 text-xs text-muted">
-                  <b class="text-sm text-ink">Hostal Cusco</b>
+                  <b class="text-sm text-ink">Cevichería La Ola</b>
                   <span class="flex-1"></span>
                   @for (item of sitio.nav; track item) {
                     <span class="hidden sm:inline">{{ item }}</span>
@@ -223,82 +251,199 @@ const PREGUNTAS = [
                     }
                   </span>
                 </div>
-                <!-- Cusco: the cathedral on the Plaza de Armas below the Andes, drawn in the site's tokens. -->
+                <!-- A beach cevichería on the coast south of Lima, in its own colors per theme (see .escena). -->
                 <svg
-                  class="rounded-lg mb-4 block h-34 w-full"
+                  class="escena rounded-lg mb-4 block h-34 w-full"
                   viewBox="0 0 400 140"
                   preserveAspectRatio="xMidYMid slice"
                 >
-                  <rect width="400" height="140" class="fill-tint" />
+                  <rect class="fill-tint" width="400" height="140" />
                   <circle
-                    cx="70"
+                    class="fill-(--sc-sun)"
+                    cx="292"
                     cy="40"
-                    r="13"
-                    class="fill-accent"
-                    opacity="0.8"
+                    r="12"
+                    opacity=".9"
                   />
                   <path
-                    d="M0 84 60 50 100 66 150 36 200 60 250 30 300 58 350 42 400 62V140H0Z"
-                    class="fill-muted"
-                    fill-opacity="0.32"
+                    class="fill-(--sc-hill)"
+                    d="M0 64 50 50 96 58 150 44 204 56 250 48 300 60 350 52 400 60V88H0Z"
                   />
                   <path
-                    d="M143 41 150 36 157 41 150 40ZM243 35 250 30 257 35 250 34Z"
-                    fill="#f7f2ea"
-                    opacity="0.9"
+                    class="fill-(--sc-hill2)"
+                    d="M0 76 70 66 130 74 210 64 290 72 400 68V88H0Z"
                   />
-                  <g class="fill-muted" fill-opacity="0.75">
-                    <path
-                      d="M160 70h10v-12l5-6 5 6v12h40v-12l5-6 5 6v12h10v50h-80z"
+                  <path class="fill-(--sc-sea)" d="M0 84H400V140H0Z" />
+                  <path
+                    class="stroke-(--sc-sea2)"
+                    d="M18 92h50M120 89h70M206 96h60M40 100h80M290 103h40"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    class="fill-(--sc-rock)"
+                    d="M342 84 354 70 370 64 388 66 400 62V112H330Z"
+                  />
+                  <path
+                    class="stroke-(--sc-foam)"
+                    d="M334 104q8-4 14 0t14 0 14 0 14 0 10 0"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-opacity=".8"
+                  />
+                  <path
+                    class="fill-(--sc-sand)"
+                    d="M0 108Q120 98 250 106T400 110V140H0Z"
+                  />
+                  <path
+                    class="stroke-(--sc-foam)"
+                    d="M0 108Q120 98 250 106T400 110"
+                    fill="none"
+                    stroke-width="2"
+                    stroke-opacity=".85"
+                  />
+                  <g transform="translate(0 -4)">
+                    <rect
+                      class="fill-(--sc-wall)"
+                      x="66"
+                      y="94"
+                      width="104"
+                      height="28"
                     />
-                    <path d="M186 70 200 58 214 70z" />
+                    <rect
+                      class="fill-(--sc-sea)"
+                      x="76"
+                      y="98"
+                      width="84"
+                      height="12"
+                      opacity=".55"
+                    />
+                    <rect
+                      class="fill-(--sc-wood)"
+                      x="72"
+                      y="110"
+                      width="92"
+                      height="12"
+                    />
+                    <path
+                      class="stroke-(--sc-red)"
+                      d="M72 113h92"
+                      stroke-width="2"
+                    />
+                    <path
+                      class="fill-(--sc-thatch)"
+                      d="M56 96 74 78H162L180 96Z"
+                    />
+                    <path
+                      class="fill-(--sc-thatch)"
+                      d="M56 96l4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4 4 4 4-4"
+                    />
+                    <path
+                      class="stroke-(--sc-wood)"
+                      d="M76 84h84M70 90h96"
+                      stroke-opacity=".35"
+                      stroke-width="1.2"
+                    />
+                    <rect
+                      class="fill-(--sc-wall)"
+                      x="100"
+                      y="68"
+                      width="36"
+                      height="10"
+                      rx="1.5"
+                    />
+                    <path
+                      class="stroke-(--sc-sea)"
+                      d="M106 74q3-3 6 0t6 0 6 0 6 0"
+                      fill="none"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      class="stroke-(--sc-wood)"
+                      d="M66 94v28M170 94v28"
+                      stroke-width="3"
+                    />
+                    <g>
+                      <path
+                        class="fill-(--sc-red)"
+                        d="M188 104a16 7 0 0 1 32 0z"
+                      />
+                      <path
+                        class="fill-(--sc-sun)"
+                        d="M236 106a16 7 0 0 1 32 0z"
+                      />
+                    </g>
+                    <g
+                      class="stroke-(--sc-wood)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    >
+                      <path d="M204 104v18M252 106v16" />
+                      <path d="M194 116h20M242 117h20" />
+                      <path d="M197 116v6M211 116v6M245 117v5M259 117v5" />
+                    </g>
+                    <path
+                      class="stroke-(--sc-wood)"
+                      d="M170 97q16 6 34 3t48 3"
+                      fill="none"
+                      stroke-width=".8"
+                    />
+                    <g class="fill-(--sc-sun)">
+                      <circle cx="176" cy="99.5" r="1.3" />
+                      <circle cx="186" cy="101.5" r="1.3" />
+                      <circle cx="196" cy="101" r="1.3" />
+                      <circle cx="214" cy="99.6" r="1.3" />
+                      <circle cx="226" cy="100.4" r="1.3" />
+                      <circle cx="240" cy="101.6" r="1.3" />
+                    </g>
+                    <g class="fill-(--sc-wall)">
+                      <ellipse cx="88" cy="110" rx="5" ry="1.6" />
+                      <ellipse cx="106" cy="110" rx="5" ry="1.6" />
+                      <ellipse cx="124" cy="110" rx="5" ry="1.6" />
+                      <ellipse cx="142" cy="110" rx="5" ry="1.6" />
+                    </g>
+                    <g class="fill-(--sc-sun)">
+                      <circle cx="87" cy="109" r="1.1" />
+                      <circle cx="105" cy="109" r="1.1" />
+                      <circle cx="123" cy="109" r="1.1" />
+                      <circle cx="141" cy="109" r="1.1" />
+                    </g>
+                    <g class="fill-(--sc-red)">
+                      <circle cx="89.5" cy="109.2" r=".8" />
+                      <circle cx="107.5" cy="109.2" r=".8" />
+                      <circle cx="125.5" cy="109.2" r=".8" />
+                      <circle cx="143.5" cy="109.2" r=".8" />
+                    </g>
+                    <g transform="translate(46 108)">
+                      <path
+                        class="stroke-(--sc-wood)"
+                        d="M0 14 3 0h12l3 14"
+                        fill="none"
+                        stroke-width="1.4"
+                      />
+                      <rect
+                        class="fill-(--sc-rock)"
+                        x="2"
+                        y="1"
+                        width="14"
+                        height="10"
+                        rx="1"
+                      />
+                      <path
+                        class="stroke-(--sc-wall)"
+                        d="M5 4h8M5 6.5h6M5 9h7"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                      />
+                    </g>
+                    <g class="fill-(--sc-wall)">
+                      <ellipse cx="200" cy="115.4" rx="3.2" ry="1" />
+                      <ellipse cx="208" cy="115.4" rx="3.2" ry="1" />
+                      <ellipse cx="254" cy="116.4" rx="3.2" ry="1" />
+                    </g>
                   </g>
-                  <path
-                    d="M195 120v-14a5 5 0 0 1 10 0v14z"
-                    class="fill-ink"
-                    opacity="0.55"
-                  />
-                  <g class="fill-surface">
-                    <rect x="20" y="92" width="54" height="28" />
-                    <rect x="82" y="88" width="62" height="32" />
-                    <rect x="256" y="90" width="58" height="30" />
-                    <rect x="322" y="94" width="64" height="26" />
-                  </g>
-                  <g class="fill-accent" opacity="0.75">
-                    <path d="M16 94 47 82 78 94z" />
-                    <path d="M78 90 113 78 148 90z" />
-                    <path d="M252 92 285 80 318 92z" />
-                    <path d="M318 96 354 84 390 96z" />
-                  </g>
-                  <g class="fill-ink" opacity="0.5">
-                    <rect x="30" y="100" width="7" height="9" />
-                    <rect x="56" y="100" width="7" height="9" />
-                    <rect x="92" y="97" width="8" height="10" />
-                    <rect x="124" y="97" width="8" height="10" />
-                    <rect x="88" y="94" width="48" height="2" />
-                    <rect x="268" y="98" width="7" height="10" />
-                    <rect x="296" y="98" width="7" height="10" />
-                    <rect x="334" y="102" width="7" height="9" />
-                    <rect x="364" y="102" width="7" height="9" />
-                  </g>
-                  <rect
-                    y="120"
-                    width="400"
-                    height="20"
-                    class="fill-code-string"
-                    fill-opacity="0.6"
-                  />
-                  <path
-                    class="fill-ink"
-                    opacity="0.85"
-                    transform="translate(226 104) scale(0.5)"
-                    d="M3 15C0 13 1 8 5 8C6 5 10 5 11 7C12 4 17 4 18 7C19 4 23 4 25 7C26 3 25-2 26-6C25-9 27-13 30-15C31-18 35-18 36-16C38-15 40-12 41-10C41.5-8 40-7 38.5-7C37.5-3 38 3 37.5 8C38.5 11 38 15 36 17L35.5 26 35 32H33V26L32.5 19H30.5L30 26 29.5 32H27.5V26L27 19.5H14L13.5 26 13 32H11V26L10.5 19.5H8.5L8 26 7.5 32H5.5V26L5 18C3.5 17.5 3 16.5 3 15ZM3 10C.5 9.5-1 12 1 14L3 13ZM30.5-15.5C29.5-19 30-21.5 31-22 32-20.5 32.2-18 32-16ZM33.2-16.8C33-20.5 33.8-23 34.8-23.2 35.6-21.5 35.4-19 34.8-16.6Z"
-                  />
-                  <path
-                    d="M0 124H400"
-                    class="stroke-ink"
-                    stroke-opacity="0.15"
-                  />
                 </svg>
                 <div class="mb-1.5 text-[1.35rem] leading-tight font-extrabold">
                   {{ sitio.titulo }}
