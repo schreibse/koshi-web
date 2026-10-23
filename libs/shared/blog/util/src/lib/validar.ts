@@ -25,9 +25,11 @@ function bloques(tokens: Token[]): string[] {
         const hijos = (token as Tokens.Paragraph).tokens ?? [];
         const [solo] = hijos;
         if (hijos.length === 1 && solo.type === 'image') {
-          return RUTA_IMAGEN.test((solo as Tokens.Image).href)
-            ? []
-            : [`Images must be uploaded ones (/media/…): ${cita(solo)}`];
+          const { href, text } = solo as Tokens.Image;
+          if (!RUTA_IMAGEN.test(href)) {
+            return [`Images must be uploaded ones (/media/…): ${cita(solo)}`];
+          }
+          return text.trim() ? [] : [`Images need alt text: ${cita(solo)}`];
         }
         return lineas(hijos);
       }

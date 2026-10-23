@@ -4,14 +4,30 @@
   "sourceRoot": "worker",
   "projectType": "application",
   "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "dependsOn": [
+        {
+          "projects": ["web", "admin"],
+          "target": "build"
+        }
+      ],
+      "outputs": ["{workspaceRoot}/dist/site"],
+      "options": {
+        "commands": [
+          "rm -rf dist/site && cp -r dist/apps/web/browser dist/site && cp -r dist/apps/admin/browser dist/site/admin"
+        ]
+      }
+    },
     "serve": {
       "continuous": true,
       "executor": "nx:run-commands",
-      "dependsOn": ["web:build"],
+      "dependsOn": ["build"],
       "options": {
         "commands": [
+          "rm -rf dist/.wrangler-e2e",
           "wrangler d1 migrations apply koshi-blog --local --persist-to dist/.wrangler-e2e",
-          "wrangler dev --port 4890 --persist-to dist/.wrangler-e2e"
+          "wrangler dev --port 4890 --persist-to dist/.wrangler-e2e --env-file worker/e2e.env"
         ],
         "parallel": false
       }

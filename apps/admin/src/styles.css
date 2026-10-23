@@ -1,0 +1,13 @@
+button.btn {
+  cursor: pointer;
+}
+
+/* The site's .btn is written for links; as a button it would keep the browser's grey face. */
+button.btn:not(.btn-primary) {
+  background: transparent;
+}
+
+button.btn:disabled {
+  cursor: default;
+  opacity: 0.45;
+}

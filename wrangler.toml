@@ -6,7 +6,7 @@ preview_urls = true
 routes = [{ pattern = "koshisoftware.pe/*", zone_name = "koshisoftware.pe" }]
 
 [assets]
-directory = "dist/apps/web/browser"
+directory = "dist/site"
 binding = "ASSETS"
 not_found_handling = "404-page"
 # Every page path, so the Worker can answer what no file holds (blog, old slugs); files with a dot stay pure assets.

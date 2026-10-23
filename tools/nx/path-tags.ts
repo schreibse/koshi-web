@@ -10,7 +10,11 @@ import { dirname, join } from 'node:path';
  * project outside the layout fails the graph instead of going untagged.
  */
 
-const APPS: Record<string, string> = { web: 'frontend', worker: 'edge' };
+const APPS: Record<string, string> = {
+  web: 'frontend',
+  admin: 'frontend',
+  worker: 'edge',
+};
 
 const LIB_TYPES: Record<string, readonly string[]> = {
   frontend: ['feature', 'data-access', 'ui', 'util'],
@@ -69,7 +73,7 @@ function tagsFor(root: string): string[] {
   }
 
   throw new Error(
-    `${root} is outside the layout: apps/web, apps/web-e2e, worker, or ` +
+    `${root} is outside the layout: apps/web, apps/admin, apps/web-e2e, worker, or ` +
       `libs/<frontend|shared>/<domain>/<type>.`,
   );
 }
