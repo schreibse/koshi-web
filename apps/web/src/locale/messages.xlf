@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es">
   <file id="ngi18n" original="ng.template">
+    <unit id="blog.title">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:15,17</note>
+      </notes>
+      <segment>
+        <source> Notas de mi trabajo </source>
+      </segment>
+    </unit>
+    <unit id="blog.empty">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:35,37</note>
+      </notes>
+      <segment>
+        <source> Todavía no hay artículos. </source>
+      </segment>
+    </unit>
+    <unit id="blog.pageTitle">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:48</note>
+      </notes>
+      <segment>
+        <source>Blog · Koshisoftware</source>
+      </segment>
+    </unit>
+    <unit id="blog.description">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:52</note>
+      </notes>
+      <segment>
+        <source>Artículos sobre desarrollo web con Angular: decisiones, errores y lo que aprendí al medirlos.</source>
+      </segment>
+    </unit>
+    <unit id="blog.all">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:15,17</note>
+      </notes>
+      <segment>
+        <source>Todos los artículos</source>
+      </segment>
+    </unit>
     <unit id="contacto.eyebrow">
       <notes>
         <note category="location">libs/frontend/contacto/feature/src/lib/contacto.ts:18,19</note>
@@ -1006,7 +1046,7 @@
     </unit>
     <unit id="empresas.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:157,159</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:185,187</note>
       </notes>
       <segment>
         <source>Para empresas</source>
@@ -1014,7 +1054,7 @@
     </unit>
     <unit id="empresas.hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:162,164</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:190,192</note>
       </notes>
       <segment>
         <source> Tu web en español e inglés, lista para vender </source>
@@ -1022,7 +1062,7 @@
     </unit>
     <unit id="empresas.hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:168,170</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:196,198</note>
       </notes>
       <segment>
         <source> Sitios WordPress rápidos en el celular para empresas en Perú: con tu Libro de Reclamaciones virtual y, si quieres, al día con sus actualizaciones. </source>
@@ -1030,7 +1070,7 @@
     </unit>
     <unit id="empresas.hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:174,176</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:202,204</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -1038,7 +1078,7 @@
     </unit>
     <unit id="empresas.hero.more">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:177,179</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:205,207</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -1046,7 +1086,7 @@
     </unit>
     <unit id="empresas.hero.example">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:185,187</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:213,215</note>
       </notes>
       <segment>
         <source>Ejemplo: la misma web en español y en inglés</source>
@@ -1054,7 +1094,7 @@
     </unit>
     <unit id="empresas.offer.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:320,321</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:465,466</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -1062,7 +1102,7 @@
     </unit>
     <unit id="empresas.offer.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:322,324</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:467,469</note>
       </notes>
       <segment>
         <source> Todo lo que tu web necesita </source>
@@ -1070,7 +1110,7 @@
     </unit>
     <unit id="empresas.modes.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:356,358</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:501,503</note>
       </notes>
       <segment>
         <source>Cómo trabajamos</source>
@@ -1078,7 +1118,7 @@
     </unit>
     <unit id="empresas.modes.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:359,361</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:504,506</note>
       </notes>
       <segment>
         <source> Un proyecto o una cuota mensual </source>
@@ -1086,7 +1126,7 @@
     </unit>
     <unit id="empresas.modes.project.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:367,369</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:512,514</note>
       </notes>
       <segment>
         <source> Proyecto </source>
@@ -1094,7 +1134,7 @@
     </unit>
     <unit id="empresas.modes.project.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:370,372</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:515,517</note>
       </notes>
       <segment>
         <source> Conversamos, te envío una cotización con lo que incluye y el precio, y construyo tu web. </source>
@@ -1102,7 +1142,7 @@
     </unit>
     <unit id="empresas.modes.monthly.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:379,381</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:524,526</note>
       </notes>
       <segment>
         <source> Soporte mensual </source>
@@ -1110,7 +1150,7 @@
     </unit>
     <unit id="empresas.modes.monthly.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:382,384</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:527,529</note>
       </notes>
       <segment>
         <source> Una cuota fija para mantenimiento, cambios pequeños y tranquilidad. </source>
@@ -1118,7 +1158,7 @@
     </unit>
     <unit id="empresas.faq.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:396,398</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:541,543</note>
       </notes>
       <segment>
         <source>Preguntas frecuentes</source>
@@ -1126,7 +1166,7 @@
     </unit>
     <unit id="empresas.faq.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:399,401</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:544,546</note>
       </notes>
       <segment>
         <source> Antes de empezar </source>
@@ -1134,7 +1174,7 @@
     </unit>
     <unit id="empresas.faq.other">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:402,404</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:547,549</note>
       </notes>
       <segment>
         <source>¿Tienes otra pregunta?</source>
@@ -1142,7 +1182,7 @@
     </unit>
     <unit id="empresas.faq.write">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:408,411</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:553,556</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
@@ -1150,7 +1190,7 @@
     </unit>
     <unit id="empresas.contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:443,444</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:588,589</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -1158,7 +1198,7 @@
     </unit>
     <unit id="empresas.contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:445,447</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:590,592</note>
       </notes>
       <segment>
         <source> ¿Hablamos de tu web? </source>
@@ -1166,7 +1206,7 @@
     </unit>
     <unit id="empresas.contact.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:448,451</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:593,596</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -1174,7 +1214,7 @@
     </unit>
     <unit id="empresas.pageTitle">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:464</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:609</note>
       </notes>
       <segment>
         <source>Webs para empresas en Perú · Koshisoftware</source>
@@ -1182,7 +1222,7 @@
     </unit>
     <unit id="empresas.description">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:468</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:613</note>
       </notes>
       <segment>
         <source>Webs WordPress en español e inglés para empresas en Perú: diseño, mantenimiento, Libro de Reclamaciones y facturación electrónica.</source>

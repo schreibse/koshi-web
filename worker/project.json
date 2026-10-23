@@ -4,6 +4,18 @@
   "sourceRoot": "worker",
   "projectType": "application",
   "targets": {
+    "serve": {
+      "continuous": true,
+      "executor": "nx:run-commands",
+      "dependsOn": ["web:build"],
+      "options": {
+        "commands": [
+          "wrangler d1 migrations apply koshi-blog --local --persist-to dist/.wrangler-e2e",
+          "wrangler dev --port 4890 --persist-to dist/.wrangler-e2e"
+        ],
+        "parallel": false
+      }
+    },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {

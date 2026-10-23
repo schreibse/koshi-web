@@ -7,6 +7,7 @@ import {
   PoliticaDePrivacidad,
   SobreMi,
 } from '@koshi/frontend/home/feature';
+import { BlogIndice, BlogPost } from '@koshi/frontend/blog/feature';
 import { Contacto } from '@koshi/frontend/contacto/feature';
 import { NotFound } from '@koshi/frontend/layout/ui';
 import {
@@ -58,6 +59,14 @@ export const appRoutes: Route[] = [
   {
     path: slug('contacto', locale),
     component: Contacto,
+  },
+  {
+    path: 'blog',
+    component: BlogIndice,
+  },
+  {
+    path: 'blog/:slug',
+    component: BlogPost,
   },
   ...crossLocaleRedirects(locale).map(({ from, to }): Route => ({
     path: from,

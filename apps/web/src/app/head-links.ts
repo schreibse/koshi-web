@@ -2,12 +2,14 @@ import { DOCUMENT } from '@angular/common';
 import {
   EnvironmentProviders,
   LOCALE_ID,
+  REQUEST_CONTEXT,
   inject,
   makeEnvironmentProviders,
   provideAppInitializer,
 } from '@angular/core';
 import { BEFORE_APP_SERIALIZED } from '@angular/platform-server';
 import { NavigationEnd, Router } from '@angular/router';
+import type { ContextoBlog } from '@koshi/shared/blog/util';
 import {
   Locale,
   SUPPORTED_LOCALES,
@@ -26,6 +28,11 @@ export function provideHeadLinks(): EnvironmentProviders {
       const document = inject(DOCUMENT);
       const locale = toLocale(inject(LOCALE_ID));
       const router = inject(Router);
+      // A post's slug differs per locale and lives in D1, so the Worker sends its paths along.
+      const blog = (
+        inject(REQUEST_CONTEXT, { optional: true }) as ContextoBlog | null
+      )?.blog;
+      const postRutas = blog?.tipo === 'post' ? blog.post.rutas : undefined;
       router.events
         .pipe(filter((event) => event instanceof NavigationEnd))
         .subscribe(({ urlAfterRedirects }) =>
@@ -34,6 +41,7 @@ export function provideHeadLinks(): EnvironmentProviders {
             locale,
             urlAfterRedirects,
             isNotFound(router),
+            postRutas,
           ),
         );
     }),
@@ -54,6 +62,7 @@ function replaceHeadLinks(
   locale: Locale,
   url: string,
   notFound: boolean,
+  postRutas?: Record<Locale, string>,
 ) {
   document.head
     .querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]')
@@ -61,7 +70,7 @@ function replaceHeadLinks(
 
   if (notFound) return;
   const localized = (target: Locale) =>
-    `${SITE_ORIGIN}/${target}${withTrailingSlash(localizedUrl(url, locale, target))}`;
+    `${SITE_ORIGIN}/${target}${postRutas?.[target] ?? withTrailingSlash(localizedUrl(url, locale, target))}`;
   appendLink(document, { rel: 'canonical', href: localized(locale) });
   for (const target of SUPPORTED_LOCALES) {
     appendLink(document, {

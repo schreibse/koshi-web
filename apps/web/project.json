@@ -51,7 +51,18 @@
           "apps/web/src/styles.scss"
         ],
         "server": "apps/web/src/main.server.ts",
-        "outputMode": "static",
+        "outputMode": "server",
+        "ssr": {
+          "entry": "apps/web/src/server.ts",
+          "platform": "neutral"
+        },
+        "security": {
+          "allowedHosts": [
+            "koshisoftware.pe",
+            "*.koshisoftware.workers.dev",
+            "localhost"
+          ]
+        },
         "subresourceIntegrity": true,
         "localize": true,
         "polyfills": ["@angular/localize/init"]
@@ -98,15 +109,6 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/web/**/*.css", "apps/web/**/*.scss"]
-      }
-    },
-    "serve-static": {
-      "continuous": true,
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "web:build",
-        "staticFilePath": "dist/apps/web/browser",
-        "port": 4890
       }
     },
     "extract-i18n": {

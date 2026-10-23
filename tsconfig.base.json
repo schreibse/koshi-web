@@ -24,6 +24,10 @@
         "./libs/frontend/contacto/feature/src/activar.ts"
       ],
       "@koshi/frontend/layout/ui": ["./libs/frontend/layout/ui/src/index.ts"],
+      "@koshi/shared/blog/util": ["./libs/shared/blog/util/src/index.ts"],
+      "@koshi/frontend/blog/feature": [
+        "./libs/frontend/blog/feature/src/index.ts"
+      ],
       "@koshi/shared/contacto/util": [
         "./libs/shared/contacto/util/src/index.ts"
       ],
