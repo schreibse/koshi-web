@@ -24,31 +24,31 @@ import { Wordmark } from './wordmark';
       <nav class="ml-auto hidden items-center gap-6 sm:flex">
         <a
           href="#servicios"
-          class="hidden text-muted no-underline hover:text-ink md:inline"
+          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
           i18n="@@nav.services"
           >Servicios</a
         >
         <a
           href="#proyectos"
-          class="hidden text-muted no-underline hover:text-ink md:inline"
+          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
           i18n="@@nav.work"
           >Proyectos</a
         >
         <a
           [href]="sobreMi"
-          class="hidden text-muted no-underline hover:text-ink md:inline"
+          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
           i18n="@@nav.about"
           >Sobre mí</a
         >
         <a
           [href]="empresas"
-          class="hidden text-muted no-underline hover:text-ink md:inline"
+          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
           i18n="@@nav.business"
           >Empresas</a
         >
         <a
           href="blog/"
-          class="hidden text-muted no-underline hover:text-ink md:inline"
+          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
           i18n="@@nav.blog"
           >Blog</a
         >
