@@ -13,6 +13,9 @@ import type { Bloque } from '@koshi/shared/blog/util';
       font-size: 1.125rem;
       line-height: 1.75;
     }
+    p {
+      margin: 1.25rem 0;
+    }
     h2 {
       margin: 2.5rem 0 1rem;
       font-size: 1.875rem;
@@ -36,6 +39,8 @@ import type { Bloque } from '@koshi/shared/blog/util';
       color: var(--color-muted);
     }
     img {
+      display: block;
+      margin: 2rem 0;
       max-width: 100%;
       height: auto;
       border-radius: 0.5rem;
