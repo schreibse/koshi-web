@@ -62,9 +62,9 @@ const files: Record<Tab, { name: string; lines: Token[][] }> = {
 };
 
 const kindClass: Record<Kind, string> = {
-  keyword: 'text-accent',
+  keyword: 'text-code-keyword',
   string: 'text-code-string',
-  comment: 'text-muted',
+  comment: 'text-code-comment',
 };
 
 /** A GNOME-style editor window that shows the web and the api side of one feature in turn. */

@@ -22,36 +22,40 @@ import { Wordmark } from './wordmark';
         ><ks-wordmark
       /></a>
       <nav class="ml-auto hidden items-center gap-6 sm:flex">
-        <a
-          href="#servicios"
-          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
-          i18n="@@nav.services"
-          >Servicios</a
+        <span
+          class="hidden gap-7 rounded-full border border-line bg-surface px-[1.4rem] py-[0.55rem] lg:flex"
         >
-        <a
-          href="#proyectos"
-          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
-          i18n="@@nav.work"
-          >Proyectos</a
-        >
-        <a
-          [href]="sobreMi"
-          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
-          i18n="@@nav.about"
-          >Sobre mí</a
-        >
-        <a
-          [href]="empresas"
-          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
-          i18n="@@nav.business"
-          >Empresas</a
-        >
-        <a
-          href="blog/"
-          class="hidden whitespace-nowrap text-muted no-underline hover:text-ink lg:inline"
-          i18n="@@nav.blog"
-          >Blog</a
-        >
+          <a
+            href="#servicios"
+            class="font-mono text-[0.8rem] tracking-[0.06em] whitespace-nowrap text-muted uppercase no-underline hover:text-ink"
+            i18n="@@nav.services"
+            >Servicios</a
+          >
+          <a
+            href="#proyectos"
+            class="font-mono text-[0.8rem] tracking-[0.06em] whitespace-nowrap text-muted uppercase no-underline hover:text-ink"
+            i18n="@@nav.work"
+            >Proyectos</a
+          >
+          <a
+            [href]="sobreMi"
+            class="font-mono text-[0.8rem] tracking-[0.06em] whitespace-nowrap text-muted uppercase no-underline hover:text-ink"
+            i18n="@@nav.about"
+            >Sobre mí</a
+          >
+          <a
+            [href]="empresas"
+            class="font-mono text-[0.8rem] tracking-[0.06em] whitespace-nowrap text-muted uppercase no-underline hover:text-ink"
+            i18n="@@nav.business"
+            >Empresas</a
+          >
+          <a
+            href="blog/"
+            class="font-mono text-[0.8rem] tracking-[0.06em] whitespace-nowrap text-muted uppercase no-underline hover:text-ink"
+            i18n="@@nav.blog"
+            >Blog</a
+          >
+        </span>
         <a [href]="contacto" class="btn btn-primary" i18n="@@nav.contact"
           >Hablemos</a
         >

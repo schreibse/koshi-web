@@ -120,7 +120,7 @@ export class SobreMi {
     );
     inject(Meta).updateTag({
       name: 'description',
-      content: $localize`:@@sobre.description:Stephan Schreiber, fundador de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.`,
+      content: $localize`:@@sobre.description:Stephan Schreiber, titular de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.`,
     });
   }
 }

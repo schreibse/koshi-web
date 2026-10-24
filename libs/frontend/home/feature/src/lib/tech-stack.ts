@@ -70,10 +70,10 @@ const STACK: Tool[] = [
           Tecnologías con las que trabajo
         </h2>
         <ul
-          class="m-0 grid list-none grid-cols-2 border-t border-l border-line p-0 md:grid-cols-4"
+          class="m-0 mx-auto flex max-w-240 list-none flex-wrap justify-center gap-x-2 p-0"
         >
           @for (tool of stack; track tool.url) {
-            <li class="flex border-r border-b border-line">
+            <li class="flex">
               <a
                 [href]="tool.url"
                 target="_blank"

@@ -15,18 +15,40 @@ import { paginaBlog } from './contexto';
         Notas de mi trabajo
       </h1>
       @if (posts.length) {
-        <ul class="m-0 mt-10 grid list-none gap-10 p-0">
+        <ul class="m-0 mt-10 list-none p-0">
           @for (post of posts; track post.slug) {
-            <li>
-              <p class="m-0 text-sm text-muted">
+            <li
+              class="group relative grid grid-cols-[1fr_auto] items-center gap-x-6 gap-y-2 border-t border-line px-1 py-6 last:border-b hover:bg-surface md:grid-cols-[13rem_1fr_auto] md:gap-x-8 md:px-3 md:py-7"
+            >
+              <p
+                class="col-span-full m-0 font-mono text-[0.8rem] tracking-[0.06em] text-accent uppercase md:col-span-1"
+              >
                 <time [attr.datetime]="post.publicado">{{
                   post.publicado | date: 'longDate'
                 }}</time>
               </p>
-              <h2 class="m-0 mt-1 text-2xl">
-                <a [href]="'blog/' + post.slug + '/'">{{ post.titulo }}</a>
-              </h2>
-              <p class="m-0 mt-2 text-muted">{{ post.descripcion }}</p>
+              <div>
+                <h2 class="m-0 text-2xl group-hover:text-accent">
+                  <a
+                    class="text-inherit no-underline after:absolute after:inset-0 after:content-['']"
+                    [href]="'blog/' + post.slug + '/'"
+                    >{{ post.titulo }}</a
+                  >
+                </h2>
+                <p class="m-0 mt-2 text-muted">{{ post.descripcion }}</p>
+              </div>
+              <svg
+                class="size-5 text-muted transition-transform group-hover:translate-x-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </li>
           }
         </ul>

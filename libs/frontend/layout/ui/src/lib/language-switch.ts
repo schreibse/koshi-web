@@ -24,12 +24,27 @@ export const POST_PATHS = makeStateKey<Record<Locale, string>>('postPaths');
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <a
-      class="font-semibold text-ink no-underline"
+      class="inline-flex items-center gap-1.5 font-medium text-ink no-underline"
       [href]="href"
       [attr.hreflang]="other"
       [attr.lang]="other"
     >
-      {{ other.toUpperCase() }}
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+        <path d="M2 12h20" />
+      </svg>
+      {{ nombres[other] }}
     </a>
   `,
 })
@@ -37,6 +52,10 @@ export class LanguageSwitch {
   private readonly url = inject(Location).path() || '/';
   private readonly locale = toLocale(inject(LOCALE_ID));
   protected readonly other: Locale = this.locale === 'es' ? 'en' : 'es';
+  protected readonly nombres: Record<Locale, string> = {
+    es: 'Español',
+    en: 'English',
+  };
   private readonly postPaths = postPaths();
 
   // A plain href, not routerLink: each locale is a separate build under its own base href.

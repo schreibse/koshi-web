@@ -1,37 +1,41 @@
 :root {
-  --ks-page: #1c1410;
-  --ks-surface: #33241a;
-  --ks-band: #2a1e16;
-  --ks-ink: #f4eee3;
-  --ks-muted: #b8a897;
-  --ks-accent: #4cb8ac;
-  --ks-on-accent: #1c1410;
-  --ks-line: #3d2c20;
-  --ks-tint: #182120;
-  --ks-tint-strong: #22302d;
+  --ks-page: #1e1f29;
+  --ks-surface: #282a36;
+  --ks-band: #232530;
+  --ks-ink: #f8f8f2;
+  --ks-muted: #a4a8c4;
+  --ks-accent: #5fd0c2;
+  --ks-on-accent: #1e1f29;
+  --ks-line: #3a3c4e;
+  --ks-tint: #192630;
+  --ks-tint-strong: #21333c;
   --ks-font: 'Geist Variable', system-ui, sans-serif;
   --ks-font-mono: 'Geist Mono Variable', ui-monospace, monospace;
   --ks-radius: 4px;
-  --ks-code-string: #dcc28c;
+  --ks-code-string: #f1fa8c;
+  --ks-code-keyword: #ff79c6;
+  --ks-code-comment: #8a95c8;
   --ks-window-shadow:
     0 50px 90px -10px #000, 0 20px 30px -10px #000, 0 0 0 1px #ffffff26;
-  --ks-window-backdrop: #4d3929;
+  --ks-window-backdrop: #44475a;
 
   color-scheme: dark;
 }
 
 :root[data-theme='light'] {
-  --ks-page: #ece3d2;
-  --ks-surface: #f5efe4;
-  --ks-band: #e2d6c1;
-  --ks-ink: #2b1d14;
-  --ks-muted: #6b5a4c;
-  --ks-accent: #1a625b;
-  --ks-on-accent: #f4eee3;
-  --ks-line: #d4c6b0;
-  --ks-tint: #d6e2dc;
-  --ks-tint-strong: #eef3ef;
-  --ks-code-string: #6e5313;
+  --ks-page: #ebecf2;
+  --ks-surface: #f8f8fb;
+  --ks-band: #dfe0ea;
+  --ks-ink: #21222c;
+  --ks-muted: #565972;
+  --ks-accent: #11655d;
+  --ks-on-accent: #f8f8f2;
+  --ks-line: #cdcfdd;
+  --ks-tint: #d8e7ea;
+  --ks-tint-strong: #f1f7f8;
+  --ks-code-string: #5f5a00;
+  --ks-code-keyword: #a8186c;
+  --ks-code-comment: #4f5a8a;
   --ks-window-shadow: 0 30px 60px -20px #000a;
   --ks-window-backdrop: transparent;
 
@@ -159,23 +163,6 @@
       content: '';
       inset: -30% -20%;
       pointer-events: none;
-    }
-  }
-
-  .cta-band {
-    --ks-ink: var(--ks-on-accent);
-
-    background: var(--ks-accent);
-    color: var(--ks-ink);
-
-    .eyebrow {
-      color: inherit;
-    }
-
-    .btn-primary {
-      border-color: var(--ks-on-accent);
-      background: var(--ks-on-accent);
-      color: var(--ks-accent);
     }
   }
 

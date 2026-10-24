@@ -8,7 +8,7 @@ const locales = [
     path: '/es/',
     lang: 'es',
     heading: 'Software koshi, hecho en Perú.',
-    switchTo: { label: 'EN', path: '/en/', lang: 'en' },
+    switchTo: { label: 'English', path: '/en/', lang: 'en' },
     themeToggle: 'Cambiar tema claro/oscuro',
     title: 'Koshisoftware · Desarrollo Angular y NestJS en Perú',
     description: /^Koshisoftware desarrolla aplicaciones web/,
@@ -21,7 +21,7 @@ const locales = [
     path: '/en/',
     lang: 'en',
     heading: 'Koshi software, built in Peru.',
-    switchTo: { label: 'ES', path: '/es/', lang: 'es' },
+    switchTo: { label: 'Español', path: '/es/', lang: 'es' },
     themeToggle: 'Toggle light/dark theme',
     title: 'Koshisoftware · Angular and NestJS development in Peru',
     description: /^Koshisoftware builds web applications/,
@@ -137,7 +137,7 @@ const localizedPages = [
     lang: 'es',
     heading: 'Tu web en español e inglés, lista para vender',
     title: 'Webs para empresas en Perú · Koshisoftware',
-    switchTo: { label: 'EN', path: '/en/business', lang: 'en' },
+    switchTo: { label: 'English', path: '/en/business', lang: 'en' },
     alternates: { es: '/es/empresas/', en: '/en/business/' },
   },
   {
@@ -145,7 +145,7 @@ const localizedPages = [
     lang: 'en',
     heading: 'Your website in Spanish and English, ready to sell',
     title: 'Websites for businesses in Peru · Koshisoftware',
-    switchTo: { label: 'ES', path: '/es/empresas', lang: 'es' },
+    switchTo: { label: 'Español', path: '/es/empresas', lang: 'es' },
     alternates: { es: '/es/empresas/', en: '/en/business/' },
   },
   ...(['es', 'en'] as const).map((lang) => ({
@@ -161,8 +161,8 @@ const localizedPages = [
         : 'Case study: koshisoftware.pe · Koshisoftware',
     switchTo:
       lang === 'es'
-        ? { label: 'EN', path: '/en/projects/koshisoftware', lang: 'en' }
-        : { label: 'ES', path: '/es/proyectos/koshisoftware', lang: 'es' },
+        ? { label: 'English', path: '/en/projects/koshisoftware', lang: 'en' }
+        : { label: 'Español', path: '/es/proyectos/koshisoftware', lang: 'es' },
     alternates: {
       es: '/es/proyectos/koshisoftware/',
       en: '/en/projects/koshisoftware/',
@@ -185,12 +185,12 @@ const localizedPages = [
     switchTo:
       lang === 'es'
         ? {
-            label: 'EN',
+            label: 'English',
             path: '/en/projects/libro-de-reclamaciones',
             lang: 'en',
           }
         : {
-            label: 'ES',
+            label: 'Español',
             path: '/es/proyectos/libro-de-reclamaciones',
             lang: 'es',
           },
@@ -207,8 +207,8 @@ const localizedPages = [
       lang === 'es' ? 'Contacto · Koshisoftware' : 'Contact · Koshisoftware',
     switchTo:
       lang === 'es'
-        ? { label: 'EN', path: '/en/contact', lang: 'en' }
-        : { label: 'ES', path: '/es/contacto', lang: 'es' },
+        ? { label: 'English', path: '/en/contact', lang: 'en' }
+        : { label: 'Español', path: '/es/contacto', lang: 'es' },
     alternates: { es: '/es/contacto/', en: '/en/contact/' },
   })),
 ] as const;

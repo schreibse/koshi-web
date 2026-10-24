@@ -19,6 +19,8 @@
   --color-tint: var(--ks-tint);
   --color-tint-strong: var(--ks-tint-strong);
   --color-code-string: var(--ks-code-string);
+  --color-code-keyword: var(--ks-code-keyword);
+  --color-code-comment: var(--ks-code-comment);
   --font-*: initial;
   --font-sans: var(--ks-font);
   --font-mono: var(--ks-font-mono);
