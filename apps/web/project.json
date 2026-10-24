@@ -27,7 +27,8 @@
           "{ echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?>'; echo '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">'; grep -rhoP '<link rel=\"canonical\" href=\"\\K[^\"]+' dist/apps/web/browser --include=index.html | sort -u | sed 's|.*|  <url><loc>&</loc></url>|'; echo '</urlset>'; } > dist/apps/web/browser/sitemap-paginas.xml",
           "{ echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?>'; echo '<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">'; for s in sitemap-paginas.xml blog/sitemap; do echo \"  <sitemap><loc>https://koshisoftware.pe/$s</loc></sitemap>\"; done; echo '</sitemapindex>'; } > dist/apps/web/browser/sitemap.xml",
           "cp apps/web/robots.txt dist/apps/web/browser/robots.txt",
-          "cp apps/web/_headers dist/apps/web/browser/_headers"
+          "cp apps/web/_headers dist/apps/web/browser/_headers",
+          "cp apps/web/public/favicon.ico apps/web/public/favicon.svg apps/web/public/apple-touch-icon.png dist/apps/web/browser/"
         ],
         "parallel": false
       }
