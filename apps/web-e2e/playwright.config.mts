@@ -15,6 +15,7 @@ export default defineConfig({
     url: baseURL,
     reuseExistingServer: true,
     cwd: workspaceRoot,
+    gracefulShutdown: { signal: 'SIGTERM', timeout: 10_000 },
   },
   projects: [
     {
