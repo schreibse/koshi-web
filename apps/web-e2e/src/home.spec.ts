@@ -12,6 +12,10 @@ const locales = [
     themeToggle: 'Cambiar tema claro/oscuro',
     title: 'Koshisoftware · Desarrollo Angular y NestJS en Perú',
     description: /^Koshisoftware desarrolla aplicaciones web/,
+    heroLinks: [
+      { name: 'Hablemos →', section: 'contacto' },
+      { name: 'Ver proyectos', section: 'proyectos' },
+    ],
   },
   {
     path: '/en/',
@@ -21,6 +25,10 @@ const locales = [
     themeToggle: 'Toggle light/dark theme',
     title: 'Koshisoftware · Angular and NestJS development in Peru',
     description: /^Koshisoftware builds web applications/,
+    heroLinks: [
+      { name: "Let's talk →", section: 'contacto' },
+      { name: 'See projects', section: 'proyectos' },
+    ],
   },
 ] as const;
 
@@ -64,6 +72,21 @@ for (const locale of locales) {
         });
       });
     }
+
+    test.describe('on a phone', () => {
+      test.use({ viewport: { width: 390, height: 844 }, hasTouch: true });
+
+      for (const { name, section } of locale.heroLinks) {
+        test(`hero link "${name}" jumps to its section`, async ({ page }) => {
+          await page.goto(locale.path);
+          await page
+            .getByRole('link', { name, exact: true })
+            .first()
+            .tap({ timeout: 5000 });
+          await expect(page).toHaveURL(new RegExp(`#${section}$`));
+        });
+      }
+    });
 
     test('language switch keeps the page', async ({ page }) => {
       await page.goto(locale.path);
