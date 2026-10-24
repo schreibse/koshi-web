@@ -1,3 +1,9 @@
+## 0.1.36 (2026-10-24)
+
+### 🩹 Fixes
+
+- **layout:** link a blog post's language switch to the translated post ([6c43cbf](https://github.com/schreibse/koshi-web/commit/6c43cbf))
+
 ## 0.1.35 (2026-10-24)
 
 ### 🩹 Fixes
