@@ -19,6 +19,9 @@
     0 50px 90px -10px #000, 0 20px 30px -10px #000, 0 0 0 1px #ffffff26;
   --ks-window-backdrop: #44475a;
 
+  /* Translucent so background patterns stay visible on the window backdrop's glow. */
+  --ks-cell: #f8f8f22e;
+
   color-scheme: dark;
 }
 
@@ -38,6 +41,7 @@
   --ks-code-comment: #4f5a8a;
   --ks-window-shadow: 0 30px 60px -20px #000a;
   --ks-window-backdrop: transparent;
+  --ks-cell: #21222c29;
 
   color-scheme: light;
 }

@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 import { LIGHTHOUSE } from './caso-koshisoftware';
 import { ProjectShot } from './project-shot';
+import { SignalTraces } from './signal-traces';
 
 /** What the home's teaser and the case page both show. */
 export const LIBRO = {
@@ -60,7 +61,7 @@ const FUENTES = [
 /** Case study: the site's own Libro de Reclamaciones, with its legal sources. */
 @Component({
   selector: 'ks-caso-libro',
-  imports: [ProjectShot],
+  imports: [ProjectShot, SignalTraces],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <article class="mx-auto max-w-6xl px-4 py-16 md:px-10 md:py-20">
@@ -84,14 +85,16 @@ const FUENTES = [
             Información revisada al 19 de octubre de 2026. Es un caso de
             estudio, no asesoría legal (ver el <a href="#aviso">aviso</a>).
           </p>
-          <ks-project-shot
-            class="mt-10"
-            [host]="caso.host"
-            [image]="caso.image"
-            [alt]="caso.alt"
-            sizes="(min-width: 1024px) 820px, (min-width: 768px) calc(100vw - 5rem), calc(100vw - 2rem)"
-            [priority]="true"
-          />
+          <div class="relative isolate mt-10">
+            <ks-signal-traces />
+            <ks-project-shot
+              [host]="caso.host"
+              [image]="caso.image"
+              [alt]="caso.alt"
+              sizes="(min-width: 1024px) 820px, (min-width: 768px) calc(100vw - 5rem), calc(100vw - 2rem)"
+              [priority]="true"
+            />
+          </div>
           <ul
             class="m-0 mt-10 grid list-none grid-cols-2 gap-6 rounded-base bg-surface p-6 sm:grid-cols-4"
             aria-label="Lighthouse"
