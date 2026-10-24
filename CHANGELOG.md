@@ -1,3 +1,9 @@
+## 0.1.38 (2026-10-24)
+
+### 🚀 Features
+
+- **web:** switch to a Dracula-style palette and restyle the sections ([f09d65f](https://github.com/schreibse/koshi-web/commit/f09d65f))
+
 ## 0.1.37 (2026-10-24)
 
 ### 🩹 Fixes
