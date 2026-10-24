@@ -103,6 +103,10 @@ test.describe('with an Access token', () => {
     await expect(
       publico.locator('link[rel="alternate"][hreflang="es"]'),
     ).toHaveAttribute('href', new RegExp(`/es/blog/${slugs.es}/$`));
+    await publico.getByRole('link', { name: 'ES', exact: true }).click();
+    await expect(
+      publico.getByRole('heading', { level: 1, name: 'Gatos' }),
+    ).toBeVisible();
 
     await page.getByRole('button', { name: 'Unpublish' }).click();
     await expect(page.getByRole('status')).toHaveText('Unpublished.');
