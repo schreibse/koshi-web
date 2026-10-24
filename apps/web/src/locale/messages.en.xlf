@@ -2989,5 +2989,41 @@
         <target>Legal</target>
       </segment>
     </unit>
+    <unit id="services.lead">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:80,82</note>
+      </notes>
+      <segment>
+        <source> La web y la API están en un mismo repositorio y comparten sus tipos, así que un cambio que rompa una de las dos se detecta antes de salir a producción. </source>
+        <target>The web app and the API live in one repository and share their types, so a change that would break one side is caught before it ships.</target>
+      </segment>
+    </unit>
+    <unit id="services.graph.module">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/project-graph.ts:24</note>
+      </notes>
+      <segment>
+        <source>módulo · NestJS</source>
+        <target>module · NestJS</target>
+      </segment>
+    </unit>
+    <unit id="services.graph.shared">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/project-graph.ts:32</note>
+      </notes>
+      <segment>
+        <source>lib · tipos compartidos</source>
+        <target>lib · shared types</target>
+      </segment>
+    </unit>
+    <unit id="services.graph.label">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/project-graph.ts:205,207</note>
+      </notes>
+      <segment>
+        <source>Ejemplo de proyecto: una app Angular y una API NestJS que comparten contratos</source>
+        <target>Example project: an Angular app and a NestJS API that share contracts</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { ProjectShot } from './project-shot';
+import { SignalTraces } from './signal-traces';
 
 /** What the home's teaser and the case page both show. */
 export const KOSHISOFTWARE = {
@@ -30,7 +31,7 @@ export const LIGHTHOUSE = [
 /** Case study: this site, built for speed in two languages. */
 @Component({
   selector: 'ks-caso-koshisoftware',
-  imports: [ProjectShot],
+  imports: [ProjectShot, SignalTraces],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <article class="mx-auto max-w-6xl px-4 py-16 md:px-10 md:py-20">
@@ -48,14 +49,16 @@ export const LIGHTHOUSE = [
           <h1 class="text-4xl md:text-6xl">{{ caso.host }}</h1>
           <p class="mt-5 max-w-2xl text-xl text-muted">{{ caso.lead }}</p>
 
-          <ks-project-shot
-            class="mt-10"
-            [host]="caso.host"
-            [image]="caso.image"
-            [alt]="caso.alt"
-            sizes="(min-width: 1024px) 820px, (min-width: 768px) calc(100vw - 5rem), calc(100vw - 2rem)"
-            [priority]="true"
-          />
+          <div class="relative isolate mt-10">
+            <ks-signal-traces />
+            <ks-project-shot
+              [host]="caso.host"
+              [image]="caso.image"
+              [alt]="caso.alt"
+              sizes="(min-width: 1024px) 820px, (min-width: 768px) calc(100vw - 5rem), calc(100vw - 2rem)"
+              [priority]="true"
+            />
+          </div>
 
           <ul
             class="m-0 mt-10 grid list-none grid-cols-2 gap-6 rounded-base bg-surface p-6 sm:grid-cols-4"

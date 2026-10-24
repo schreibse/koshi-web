@@ -7,6 +7,7 @@ import {
   inject,
   signal,
 } from '@angular/core';
+import { ContributionGrid } from './contribution-grid';
 
 type Tab = 'web' | 'api';
 type Kind = 'keyword' | 'string' | 'comment';
@@ -70,6 +71,7 @@ const kindClass: Record<Kind, string> = {
 /** A GNOME-style editor window that shows the web and the api side of one feature in turn. */
 @Component({
   selector: 'ks-hero-editor',
+  imports: [ContributionGrid],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div
@@ -79,6 +81,7 @@ const kindClass: Record<Kind, string> = {
       (focusin)="paused = true"
       (focusout)="paused = false"
     >
+      <ks-contribution-grid />
       <div
         class="overflow-hidden rounded-[12px] border border-line bg-surface shadow-[var(--ks-window-shadow)]"
       >

@@ -7,6 +7,7 @@ import {
 import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 import { ContactoTerminal } from './contacto-terminal';
+import { DotField } from './dot-field';
 
 // The example client in the hero's browser window; deliberately the same text on both locale builds.
 const EJEMPLO = [
@@ -102,7 +103,7 @@ const PREGUNTAS = [
 /** The offer for small businesses: multilingual WordPress sites, kept up to date, with their legal pages. */
 @Component({
   selector: 'ks-empresas',
-  imports: [ContactoTerminal],
+  imports: [ContactoTerminal, DotField],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     .escena {
@@ -179,9 +180,10 @@ const PREGUNTAS = [
     }
   `,
   template: `
-    <section class="overflow-x-clip">
+    <section class="relative overflow-x-clip">
+      <ks-dot-field />
       <div
-        class="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-14 px-4 py-20 md:px-10 md:py-28 lg:grid-cols-2"
+        class="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)] items-center gap-14 px-4 py-20 md:px-10 md:py-28 lg:grid-cols-2"
       >
         <div>
           <span class="eyebrow" i18n="@@empresas.eyebrow">Para empresas</span>

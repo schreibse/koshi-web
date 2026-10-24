@@ -11,6 +11,7 @@ import { LIBRO } from './caso-libro';
 import { ContactoTerminal } from './contacto-terminal';
 import { HeroEditor } from './hero-editor';
 import { ProcessPipeline } from './process-pipeline';
+import { ProjectGraph } from './project-graph';
 import { ProjectShot } from './project-shot';
 import { TechStack } from './tech-stack';
 
@@ -20,6 +21,7 @@ import { TechStack } from './tech-stack';
     ContactoTerminal,
     HeroEditor,
     ProcessPipeline,
+    ProjectGraph,
     ProjectShot,
     TechStack,
   ],
@@ -66,10 +68,22 @@ import { TechStack } from './tech-stack';
 
     <section id="servicios" class="border-t border-line bg-band py-16 md:py-28">
       <div class="mx-auto max-w-6xl px-4 md:px-10">
-        <span class="eyebrow" i18n="@@services.eyebrow">Servicios</span>
-        <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@services.title">
-          Lo que hago
-        </h2>
+        <div
+          class="mb-12 grid grid-cols-[minmax(0,1fr)] items-center gap-10 lg:grid-cols-[5fr_6fr]"
+        >
+          <div>
+            <span class="eyebrow" i18n="@@services.eyebrow">Servicios</span>
+            <h2 class="mb-6 text-3xl md:text-5xl" i18n="@@services.title">
+              Lo que hago
+            </h2>
+            <p class="max-w-xl text-xl text-muted" i18n="@@services.lead">
+              La web y la API están en un mismo repositorio y comparten sus
+              tipos, así que un cambio que rompa una de las dos se detecta antes
+              de salir a producción.
+            </p>
+          </div>
+          <ks-project-graph />
+        </div>
         <ul class="m-0 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-4">
           @for (servicio of servicios; track servicio.titulo) {
             <li class="rounded-base bg-surface p-8">
