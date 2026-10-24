@@ -71,7 +71,7 @@ const PASOS = [
             class="mb-6 flex items-center justify-between font-mono text-sm text-muted"
           >
             <span i18n="@@process.pipeline">pipeline #tu-proyecto</span>
-            <span class="text-code-string">● passed</span>
+            <span class="text-accent">● passed</span>
           </div>
           <ol class="m-0 grid list-none gap-0 p-0 md:grid-cols-5">
             @for (
@@ -93,7 +93,7 @@ const PASOS = [
                   ></span>
                 }
                 <span
-                  class="relative grid size-13 place-items-center rounded-full border-[1.5px] border-code-string bg-[color-mix(in_srgb,var(--ks-code-string)_18%,var(--ks-surface))] text-code-string shadow-[0_0_0_5px_var(--ks-surface)]"
+                  class="relative grid size-13 place-items-center rounded-full border-[1.5px] border-accent bg-surface text-accent shadow-[0_0_0_5px_var(--ks-surface)]"
                 >
                   <svg
                     aria-hidden="true"
@@ -118,7 +118,7 @@ const PASOS = [
                     {{ paso.titulo }}
                     <svg
                       aria-hidden="true"
-                      class="size-[15px] flex-none text-code-string"
+                      class="size-[15px] flex-none text-accent"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"

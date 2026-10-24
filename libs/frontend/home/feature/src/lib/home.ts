@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
 import { KOSHISOFTWARE } from './caso-koshisoftware';
 import { LIBRO } from './caso-libro';
+import { ContactoTerminal } from './contacto-terminal';
 import { HeroEditor } from './hero-editor';
 import { ProcessPipeline } from './process-pipeline';
 import { ProjectShot } from './project-shot';
@@ -15,7 +16,13 @@ import { TechStack } from './tech-stack';
 
 @Component({
   selector: 'ks-home',
-  imports: [HeroEditor, ProcessPipeline, ProjectShot, TechStack],
+  imports: [
+    ContactoTerminal,
+    HeroEditor,
+    ProcessPipeline,
+    ProjectShot,
+    TechStack,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="overflow-x-clip">
@@ -30,8 +37,11 @@ import { TechStack } from './tech-stack';
             class="max-w-[8.5em] text-5xl md:text-7xl lg:text-6xl"
             i18n="@@hero.title"
           >
-            Software <em class="text-accent not-italic">koshi</em>, hecho en
-            Perú.
+            Software
+            <em
+              class="font-mono font-semibold tracking-[-0.04em] text-accent not-italic"
+              >koshi</em
+            >, hecho en Perú.
           </h1>
           <p class="mt-6 max-w-xl text-xl text-muted" i18n="@@hero.lead">
             Desarrollo frontend con Angular y backend con NestJS para empresas
@@ -63,7 +73,14 @@ import { TechStack } from './tech-stack';
         <ul class="m-0 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-4">
           @for (servicio of servicios; track servicio.titulo) {
             <li class="rounded-base bg-surface p-8">
-              <h3 class="mb-2 text-[1.35rem]">{{ servicio.titulo }}</h3>
+              <h3 class="mb-2 text-[1.35rem]">
+                <span
+                  class="font-mono text-[0.9em] font-medium text-accent"
+                  aria-hidden="true"
+                  >({{ $index + 1 }})</span
+                >
+                {{ servicio.titulo }}
+              </h3>
               <p class="mb-5 text-muted">{{ servicio.texto }}</p>
               <ul class="m-0 grid list-none gap-2 p-0 text-base">
                 @for (punto of servicio.puntos; track punto) {
@@ -147,27 +164,47 @@ import { TechStack } from './tech-stack';
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@about.title">
           Una persona, un compromiso
         </h2>
-        <p class="max-w-2xl text-xl text-muted" i18n="@@about.text">
-          Koshisoftware es una empresa individual en Perú. Trabajas directamente
-          con quien escribe el código, en tu zona horaria y en tu idioma.
-        </p>
-        <p class="mt-8 text-lg">
-          <a [href]="sobreMi" i18n="@@about.more">Más sobre mí →</a>
-        </p>
+        <div
+          class="max-w-3xl rounded-base border border-line bg-surface p-8 shadow-[var(--ks-window-shadow)]"
+        >
+          <p
+            class="mb-4 font-mono text-[0.9rem] font-medium text-muted"
+            aria-hidden="true"
+          >
+            <span class="text-accent">$</span> whoami
+          </p>
+          <p class="text-xl font-bold">Stephan Schreiber</p>
+          <p class="mb-4 text-muted" i18n="@@about.role">
+            Desarrollador y titular de Koshisoftware
+          </p>
+          <p class="max-w-2xl text-xl text-muted" i18n="@@about.text">
+            Koshisoftware es una empresa individual en Perú. Trabajas
+            directamente con quien escribe el código, en tu zona horaria y en tu
+            idioma.
+          </p>
+          <p class="mt-5 text-lg">
+            <a [href]="sobreMi" i18n="@@about.more">Más sobre mí →</a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <section id="contacto" class="cta-band py-16 md:py-28">
-      <div class="mx-auto max-w-6xl px-4 md:px-10">
-        <span class="eyebrow" i18n="@@contact.eyebrow">Contacto</span>
-        <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@contact.title">
-          ¿Tienes un proyecto en mente?
-        </h2>
-        <div class="flex flex-wrap gap-3">
-          <a [href]="contacto" class="btn btn-primary" i18n="@@contact.email"
-            >Escríbeme</a
-          >
+    <section id="contacto" class="border-t border-line py-16 md:py-28">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 md:px-10"
+      >
+        <div>
+          <span class="eyebrow" i18n="@@contact.eyebrow">Contacto</span>
+          <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@contact.title">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            <a [href]="contacto" class="btn btn-primary" i18n="@@contact.email"
+              >Escríbeme</a
+            >
+          </div>
         </div>
+        <ks-contacto-terminal />
       </div>
     </section>
   `,

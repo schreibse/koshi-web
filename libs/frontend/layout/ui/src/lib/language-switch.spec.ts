@@ -37,7 +37,7 @@ describe('LanguageSwitch', () => {
     const a = await link('es', '/servicios');
     expect(a.getAttribute('href')).toBe('/en/servicios/');
     expect(a.getAttribute('hreflang')).toBe('en');
-    expect(a.textContent?.trim()).toBe('EN');
+    expect(a.textContent?.trim()).toBe('English');
   });
 
   it('links from English to Spanish', async () => {

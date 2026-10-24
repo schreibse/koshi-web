@@ -6,6 +6,7 @@ import {
 } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { slug, toLocale } from '@koshi/shared/locale/util';
+import { ContactoTerminal } from './contacto-terminal';
 
 // The example client in the hero's browser window; deliberately the same text on both locale builds.
 const EJEMPLO = [
@@ -101,17 +102,18 @@ const PREGUNTAS = [
 /** The offer for small businesses: multilingual WordPress sites, kept up to date, with their legal pages. */
 @Component({
   selector: 'ks-empresas',
+  imports: [ContactoTerminal],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     .escena {
       --sc-sun: #dcc28c;
-      --sc-hill: #3a3128;
-      --sc-hill2: #4a3e31;
-      --sc-sea: #1d4f4a;
-      --sc-sea2: #2b7069;
+      --sc-hill: #3a3c4e;
+      --sc-hill2: #44475a;
+      --sc-sea: #1d4a4f;
+      --sc-sea2: #2a6b6b;
       --sc-foam: #e6efe9;
       --sc-sand: #8c7652;
-      --sc-rock: #2c2620;
+      --sc-rock: #282a36;
       --sc-wood: #6b4f36;
       --sc-thatch: #b89a62;
       --sc-wall: #efe6d6;
@@ -119,13 +121,13 @@ const PREGUNTAS = [
     }
     :host-context([data-theme='light']) .escena {
       --sc-sun: #e7c873;
-      --sc-hill: #cdb995;
-      --sc-hill2: #bba47d;
-      --sc-sea: #3f8a82;
-      --sc-sea2: #5ea79e;
+      --sc-hill: #cdcfdd;
+      --sc-hill2: #bfc2d6;
+      --sc-sea: #3f8a86;
+      --sc-sea2: #5ea7a2;
       --sc-foam: #ffffff;
       --sc-sand: #ead8ad;
-      --sc-rock: #7d6a55;
+      --sc-rock: #8a8da6;
       --sc-wood: #7a5a3c;
       --sc-thatch: #c9a96a;
       --sc-wall: #fbf7ef;
@@ -583,15 +585,25 @@ const PREGUNTAS = [
       </div>
     </section>
 
-    <section class="cta-band py-16 md:py-28">
-      <div class="mx-auto max-w-6xl px-4 md:px-10">
-        <span class="eyebrow" i18n="@@empresas.contact.eyebrow">Contacto</span>
-        <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@empresas.contact.title">
-          ¿Hablamos de tu web?
-        </h2>
-        <a [href]="mail" class="btn btn-primary" i18n="@@empresas.contact.cta"
-          >Cotiza tu web →</a
-        >
+    <section class="border-t border-line py-16 md:py-28">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-12 px-4 md:grid-cols-2 md:px-10"
+      >
+        <div>
+          <span class="eyebrow" i18n="@@empresas.contact.eyebrow"
+            >Contacto</span
+          >
+          <h2
+            class="mb-10 text-3xl md:text-5xl"
+            i18n="@@empresas.contact.title"
+          >
+            ¿Hablamos de tu web?
+          </h2>
+          <a [href]="mail" class="btn btn-primary" i18n="@@empresas.contact.cta"
+            >Cotiza tu web →</a
+          >
+        </div>
+        <ks-contacto-terminal />
       </div>
     </section>
   `,

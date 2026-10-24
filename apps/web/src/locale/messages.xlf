@@ -11,7 +11,7 @@
     </unit>
     <unit id="blog.empty">
       <notes>
-        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:35,37</note>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:57,59</note>
       </notes>
       <segment>
         <source> Todavía no hay artículos. </source>
@@ -19,7 +19,7 @@
     </unit>
     <unit id="blog.pageTitle">
       <notes>
-        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:48</note>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:70</note>
       </notes>
       <segment>
         <source>Blog · Koshisoftware</source>
@@ -27,7 +27,7 @@
     </unit>
     <unit id="blog.description">
       <notes>
-        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:52</note>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-indice.ts:74</note>
       </notes>
       <segment>
         <source>Artículos sobre desarrollo web con Angular: decisiones, errores y lo que aprendí al medirlos.</source>
@@ -35,10 +35,18 @@
     </unit>
     <unit id="blog.all">
       <notes>
-        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:15,17</note>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:31,33</note>
       </notes>
       <segment>
         <source>Todos los artículos</source>
+      </segment>
+    </unit>
+    <unit id="blog.readingTime">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:40,41</note>
+      </notes>
+      <segment>
+        <source><ph id="0" equiv="INTERPOLATION" disp="{{ minutos }}"/> min de lectura</source>
       </segment>
     </unit>
     <unit id="contacto.eyebrow">
@@ -764,9 +772,25 @@
         <source>Caso de estudio: cómo Koshisoftware implementó su Libro de Reclamaciones virtual, con numeración correlativa, copia al correo y respaldo semanal, y las normas peruanas que cita.</source>
       </segment>
     </unit>
+    <unit id="contact.terminalCommand">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/contacto-terminal.ts:20,21</note>
+      </notes>
+      <segment>
+        <source>nuevo-proyecto</source>
+      </segment>
+    </unit>
+    <unit id="contact.terminalQuestion">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/contacto-terminal.ts:22,24</note>
+      </notes>
+      <segment>
+        <source>? ¿Qué quieres construir?</source>
+      </segment>
+    </unit>
     <unit id="empresas.web.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:30</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:31</note>
       </notes>
       <segment>
         <source>Web multilingüe</source>
@@ -774,7 +798,7 @@
     </unit>
     <unit id="empresas.web.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:31</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:32</note>
       </notes>
       <segment>
         <source>Tu sitio WordPress en español e inglés, rápido en el celular y fácil de encontrar.</source>
@@ -782,7 +806,7 @@
     </unit>
     <unit id="empresas.web.design">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:33</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:34</note>
       </notes>
       <segment>
         <source>Diseño adaptado a tu marca, pensado para el celular</source>
@@ -790,7 +814,7 @@
     </unit>
     <unit id="empresas.web.languages">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:34</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:35</note>
       </notes>
       <segment>
         <source>Español e inglés, cada uno con su URL</source>
@@ -798,7 +822,7 @@
     </unit>
     <unit id="empresas.web.seo">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:35</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:36</note>
       </notes>
       <segment>
         <source>Hecha para que Google la encuentre</source>
@@ -806,7 +830,7 @@
     </unit>
     <unit id="empresas.care.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:39</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:40</note>
       </notes>
       <segment>
         <source>Mantenimiento</source>
@@ -814,7 +838,7 @@
     </unit>
     <unit id="empresas.care.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:40</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:41</note>
       </notes>
       <segment>
         <source>Tu web siempre al día, sin que tengas que pensar en ella.</source>
@@ -822,7 +846,7 @@
     </unit>
     <unit id="empresas.care.updates">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:42</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:43</note>
       </notes>
       <segment>
         <source>Actualizaciones de WordPress y plugins</source>
@@ -830,7 +854,7 @@
     </unit>
     <unit id="empresas.care.backups">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:43</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:44</note>
       </notes>
       <segment>
         <source>Copias de seguridad</source>
@@ -838,7 +862,7 @@
     </unit>
     <unit id="empresas.care.hosting">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:44</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:45</note>
       </notes>
       <segment>
         <source>Hosting, dominio y correo</source>
@@ -846,7 +870,7 @@
     </unit>
     <unit id="empresas.legal.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:48</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:49</note>
       </notes>
       <segment>
         <source>Páginas legales</source>
@@ -854,7 +878,7 @@
     </unit>
     <unit id="empresas.legal.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:49</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:50</note>
       </notes>
       <segment>
         <source>Las preparamos e integramos en tu web.</source>
@@ -862,7 +886,7 @@
     </unit>
     <unit id="empresas.legal.libro">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:51</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:52</note>
       </notes>
       <segment>
         <source>Libro de Reclamaciones virtual</source>
@@ -870,7 +894,7 @@
     </unit>
     <unit id="empresas.legal.privacy">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:52</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:53</note>
       </notes>
       <segment>
         <source>Política de privacidad (Ley 29733)</source>
@@ -878,7 +902,7 @@
     </unit>
     <unit id="empresas.legal.cookies">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:53</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:54</note>
       </notes>
       <segment>
         <source>Aviso de cookies</source>
@@ -886,7 +910,7 @@
     </unit>
     <unit id="empresas.sunat.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:57</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:58</note>
       </notes>
       <segment>
         <source>Facturación electrónica</source>
@@ -894,7 +918,7 @@
     </unit>
     <unit id="empresas.sunat.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:58</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:59</note>
       </notes>
       <segment>
         <source>Tu web o tienda conectada a la facturación electrónica de SUNAT.</source>
@@ -902,7 +926,7 @@
     </unit>
     <unit id="empresas.sunat.receipts">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:60</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:61</note>
       </notes>
       <segment>
         <source>Boletas y facturas desde tu web</source>
@@ -910,7 +934,7 @@
     </unit>
     <unit id="empresas.sunat.provider">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:61</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:62</note>
       </notes>
       <segment>
         <source>Integración con tu proveedor (OSE o PSE)</source>
@@ -918,7 +942,7 @@
     </unit>
     <unit id="empresas.faq.time.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:68</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:69</note>
       </notes>
       <segment>
         <source>¿Cuánto demora hacer mi web?</source>
@@ -926,7 +950,7 @@
     </unit>
     <unit id="empresas.faq.time.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:69</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:70</note>
       </notes>
       <segment>
         <source>Depende de lo que necesite tu web. Una web basada en un diseño ya hecho, que adapto a tu marca, está lista en menos tiempo; un diseño desde cero, o extras como reservas en línea, toman más. También influye la cantidad de páginas e idiomas. Tu cotización incluye una fecha de entrega estimada, contada desde el día en que recibo tus textos y fotos.</source>
@@ -934,7 +958,7 @@
     </unit>
     <unit id="empresas.faq.content.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:72</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:73</note>
       </notes>
       <segment>
         <source>¿Qué necesito enviarte?</source>
@@ -942,7 +966,7 @@
     </unit>
     <unit id="empresas.faq.content.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:73</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:74</note>
       </notes>
       <segment>
         <source>Tu logo, tus fotos y los textos de cada página. No te preocupes si no sabes qué escribir: te doy una lista de lo que necesita cada página. Si solo tienes los textos en español, también puedo escribir la versión en inglés; en ese caso la incluyo en tu cotización como un ítem separado.</source>
@@ -950,7 +974,7 @@
     </unit>
     <unit id="empresas.faq.edit.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:76</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:77</note>
       </notes>
       <segment>
         <source>¿Puedo hacer cambios en mi web por mi cuenta?</source>
@@ -958,7 +982,7 @@
     </unit>
     <unit id="empresas.faq.edit.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:77</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:78</note>
       </notes>
       <segment>
         <source>Sí. La web es tuya, así que tienes acceso completo. Cambiar textos y fotos o publicar noticias, en ambos idiomas, es sencillo una vez que lo ves, y te enseño cómo hacerlo cuando te entrego la web. Para cambios más grandes, como agregar una sección nueva o una función nueva, lo mejor es que me consultes primero, para que nada deje de funcionar por accidente. Con gusto me encargo de esos cambios como un trabajo aparte, o dentro del soporte mensual si cuentas con él.</source>
@@ -966,7 +990,7 @@
     </unit>
     <unit id="empresas.faq.owner.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:80</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:81</note>
       </notes>
       <segment>
         <source>¿De quién es mi web?</source>
@@ -974,7 +998,7 @@
     </unit>
     <unit id="empresas.faq.owner.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:81</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:82</note>
       </notes>
       <segment>
         <source>Tuya. Toda web necesita un dominio, que es tu dirección en internet (como tuempresa.pe), y un hosting, el servicio que la mantiene en línea. Algunas también necesitan un diseño o funciones adicionales que tienen costo. Todo eso lo compras tú, a tu nombre: esos pagos van directo a cada proveedor, no a KOSHISOFTWARE, y no forman parte de mi cotización. El dominio y el hosting los pagas de nuevo cada año. Yo te ayudo a elegirlos y configuro todo. Como todo está a tu nombre, nunca dependes de mí: si algún día quieres trabajar con otra persona, tu web se va contigo.</source>
@@ -982,7 +1006,7 @@
     </unit>
     <unit id="empresas.faq.google.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:84</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:85</note>
       </notes>
       <segment>
         <source>¿Mi web va a aparecer en Google?</source>
@@ -990,7 +1014,7 @@
     </unit>
     <unit id="empresas.faq.google.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:85</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:86</note>
       </notes>
       <segment>
         <source>La construyo para que Google pueda encontrarla y entenderla: está hecha para cargar rápido, está bien organizada y las páginas en español y en inglés tienen cada una su propia dirección. Además, la conecto a tu propia cuenta en la herramienta gratuita de Google para dueños de sitios web, para que veas cómo te encuentra la gente. Nadie puede prometerte con honestidad los primeros lugares en Google. Conseguir más visitas con el tiempo requiere un trabajo constante, y con gusto te acompaño en eso como un servicio aparte.</source>
@@ -998,7 +1022,7 @@
     </unit>
     <unit id="empresas.faq.fixes.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:88</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:89</note>
       </notes>
       <segment>
         <source>¿Y si algo falla después de publicar mi web?</source>
@@ -1006,7 +1030,7 @@
     </unit>
     <unit id="empresas.faq.fixes.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:89</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:90</note>
       </notes>
       <segment>
         <source>Si algo que hice no funciona como lo acordamos, lo arreglo sin costo durante los primeros 30 días desde que se publica la web. Los problemas del servicio de hosting, o los que vengan de cambios hechos después de la publicación, no están incluidos, pero con gusto también te ayudo con ellos. Pasados esos 30 días, los arreglos están incluidos si tienes soporte mensual; si no, me encargo de ellos como un trabajo aparte.</source>
@@ -1014,7 +1038,7 @@
     </unit>
     <unit id="empresas.faq.existing.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:92</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:93</note>
       </notes>
       <segment>
         <source>Ya tengo una web. ¿La puedes mejorar?</source>
@@ -1022,7 +1046,7 @@
     </unit>
     <unit id="empresas.faq.existing.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:93</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:94</note>
       </notes>
       <segment>
         <source>Sí. Primero la reviso: qué tan rápido carga, cómo se ve en el celular, si se mantiene al día con sus actualizaciones y cómo maneja los idiomas. Luego te digo con honestidad si vale la pena mejorarla o si conviene empezar de nuevo.</source>
@@ -1030,7 +1054,7 @@
     </unit>
     <unit id="empresas.faq.payment.q">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:96</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:97</note>
       </notes>
       <segment>
         <source>¿Cómo es el pago?</source>
@@ -1038,7 +1062,7 @@
     </unit>
     <unit id="empresas.faq.payment.a">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:97</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:98</note>
       </notes>
       <segment>
         <source>Lo acordamos juntos y queda por escrito en tu cotización antes de empezar a trabajar, para que no haya sorpresas. La cotización cubre solo mi trabajo; el dominio, el hosting y cualquier otra cosa que compres se los pagas directamente a cada proveedor.</source>
@@ -1046,7 +1070,7 @@
     </unit>
     <unit id="empresas.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:185,187</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:187,189</note>
       </notes>
       <segment>
         <source>Para empresas</source>
@@ -1054,7 +1078,7 @@
     </unit>
     <unit id="empresas.hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:190,192</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:192,194</note>
       </notes>
       <segment>
         <source> Tu web en español e inglés, lista para vender </source>
@@ -1062,7 +1086,7 @@
     </unit>
     <unit id="empresas.hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:196,198</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:198,200</note>
       </notes>
       <segment>
         <source> Sitios WordPress rápidos en el celular para empresas en Perú: con tu Libro de Reclamaciones virtual y, si quieres, al día con sus actualizaciones. </source>
@@ -1070,7 +1094,7 @@
     </unit>
     <unit id="empresas.hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:202,204</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:204,206</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -1078,7 +1102,7 @@
     </unit>
     <unit id="empresas.hero.more">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:205,207</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:207,209</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -1086,7 +1110,7 @@
     </unit>
     <unit id="empresas.hero.example">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:213,215</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:215,217</note>
       </notes>
       <segment>
         <source>Ejemplo: la misma web en español y en inglés</source>
@@ -1094,7 +1118,7 @@
     </unit>
     <unit id="empresas.offer.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:465,466</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:467,468</note>
       </notes>
       <segment>
         <source>Qué incluye</source>
@@ -1102,7 +1126,7 @@
     </unit>
     <unit id="empresas.offer.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:467,469</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:469,471</note>
       </notes>
       <segment>
         <source> Todo lo que tu web necesita </source>
@@ -1110,7 +1134,7 @@
     </unit>
     <unit id="empresas.modes.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:501,503</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:503,505</note>
       </notes>
       <segment>
         <source>Cómo trabajamos</source>
@@ -1118,7 +1142,7 @@
     </unit>
     <unit id="empresas.modes.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:504,506</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:506,508</note>
       </notes>
       <segment>
         <source> Un proyecto o una cuota mensual </source>
@@ -1126,7 +1150,7 @@
     </unit>
     <unit id="empresas.modes.project.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:512,514</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:514,516</note>
       </notes>
       <segment>
         <source> Proyecto </source>
@@ -1134,7 +1158,7 @@
     </unit>
     <unit id="empresas.modes.project.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:515,517</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:517,519</note>
       </notes>
       <segment>
         <source> Conversamos, te envío una cotización con lo que incluye y el precio, y construyo tu web. </source>
@@ -1142,7 +1166,7 @@
     </unit>
     <unit id="empresas.modes.monthly.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:524,526</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:526,528</note>
       </notes>
       <segment>
         <source> Soporte mensual </source>
@@ -1150,7 +1174,7 @@
     </unit>
     <unit id="empresas.modes.monthly.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:527,529</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:529,531</note>
       </notes>
       <segment>
         <source> Una cuota fija para mantenimiento, cambios pequeños y tranquilidad. </source>
@@ -1158,7 +1182,7 @@
     </unit>
     <unit id="empresas.faq.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:541,543</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:543,545</note>
       </notes>
       <segment>
         <source>Preguntas frecuentes</source>
@@ -1166,7 +1190,7 @@
     </unit>
     <unit id="empresas.faq.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:544,546</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:546,548</note>
       </notes>
       <segment>
         <source> Antes de empezar </source>
@@ -1174,7 +1198,7 @@
     </unit>
     <unit id="empresas.faq.other">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:547,549</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:549,551</note>
       </notes>
       <segment>
         <source>¿Tienes otra pregunta?</source>
@@ -1182,7 +1206,7 @@
     </unit>
     <unit id="empresas.faq.write">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:553,556</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:555,558</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
@@ -1190,7 +1214,7 @@
     </unit>
     <unit id="empresas.contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:588,589</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:594,597</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -1198,7 +1222,7 @@
     </unit>
     <unit id="empresas.contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:590,592</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:600,602</note>
       </notes>
       <segment>
         <source> ¿Hablamos de tu web? </source>
@@ -1206,7 +1230,7 @@
     </unit>
     <unit id="empresas.contact.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:593,596</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:603,606</note>
       </notes>
       <segment>
         <source>Cotiza tu web →</source>
@@ -1214,7 +1238,7 @@
     </unit>
     <unit id="empresas.pageTitle">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:609</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:621</note>
       </notes>
       <segment>
         <source>Webs para empresas en Perú · Koshisoftware</source>
@@ -1222,7 +1246,7 @@
     </unit>
     <unit id="empresas.description">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:613</note>
+        <note category="location">libs/frontend/home/feature/src/lib/empresas.ts:625</note>
       </notes>
       <segment>
         <source>Webs WordPress en español e inglés para empresas en Perú: diseño, mantenimiento, Libro de Reclamaciones y facturación electrónica.</source>
@@ -1254,7 +1278,7 @@
     </unit>
     <unit id="hero.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:27,29</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:34,36</note>
       </notes>
       <segment>
         <source>Desarrollo web senior · Perú y remoto</source>
@@ -1262,15 +1286,18 @@
     </unit>
     <unit id="hero.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:33,35</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:40,46</note>
       </notes>
       <segment>
-        <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em class=&quot;text-accent not-italic&quot;&gt;" dispEnd="&lt;/em&gt;">koshi</pc>, hecho en Perú. </source>
+        <source> Software <pc id="0" equivStart="START_EMPHASISED_TEXT" equivEnd="CLOSE_EMPHASISED_TEXT" type="fmt" dispStart="&lt;em
+              class=&quot;font-mono font-semibold tracking-[-0.04em] text-accent not-italic&quot;
+              &gt;" dispEnd="&lt;/em
+            &gt;">koshi</pc>, hecho en Perú. </source>
       </segment>
     </unit>
     <unit id="hero.lead">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:37,39</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:47,49</note>
       </notes>
       <segment>
         <source> Desarrollo frontend con Angular y backend con NestJS para empresas en Perú y el extranjero. </source>
@@ -1278,7 +1305,7 @@
     </unit>
     <unit id="hero.cta">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:42,44</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:52,54</note>
       </notes>
       <segment>
         <source>Hablemos →</source>
@@ -1286,7 +1313,7 @@
     </unit>
     <unit id="hero.work">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:45,47</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:55,57</note>
       </notes>
       <segment>
         <source>Ver proyectos</source>
@@ -1294,7 +1321,7 @@
     </unit>
     <unit id="services.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:59,60</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:69,70</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -1302,7 +1329,7 @@
     </unit>
     <unit id="services.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:61,63</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:71,73</note>
       </notes>
       <segment>
         <source> Lo que hago </source>
@@ -1310,7 +1337,7 @@
     </unit>
     <unit id="services.business">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:91,94</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:108,111</note>
       </notes>
       <segment>
         <source>¿Tienes un negocio y necesitas una web? Webs para empresas →</source>
@@ -1318,7 +1345,7 @@
     </unit>
     <unit id="work.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:99,100</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:116,117</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -1326,7 +1353,7 @@
     </unit>
     <unit id="work.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:101,103</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:118,120</note>
       </notes>
       <segment>
         <source> Trabajo reciente </source>
@@ -1334,7 +1361,7 @@
     </unit>
     <unit id="work.read">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:125,126</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:142,143</note>
       </notes>
       <segment>
         <source>Leer el caso de estudio</source>
@@ -1342,7 +1369,7 @@
     </unit>
     <unit id="about.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:146,147</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:163,164</note>
       </notes>
       <segment>
         <source>Nosotros</source>
@@ -1350,15 +1377,23 @@
     </unit>
     <unit id="about.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:148,150</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:165,167</note>
       </notes>
       <segment>
         <source> Una persona, un compromiso </source>
       </segment>
     </unit>
+    <unit id="about.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:178,179</note>
+      </notes>
+      <segment>
+        <source> Desarrollador y titular de Koshisoftware </source>
+      </segment>
+    </unit>
     <unit id="about.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:151,153</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:181,183</note>
       </notes>
       <segment>
         <source> Koshisoftware es una empresa individual en Perú. Trabajas directamente con quien escribe el código, en tu zona horaria y en tu idioma. </source>
@@ -1366,7 +1401,7 @@
     </unit>
     <unit id="about.more">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:155,157</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:186,188</note>
       </notes>
       <segment>
         <source>Más sobre mí →</source>
@@ -1374,7 +1409,7 @@
     </unit>
     <unit id="contact.eyebrow">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:162,163</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:197,198</note>
       </notes>
       <segment>
         <source>Contacto</source>
@@ -1382,7 +1417,7 @@
     </unit>
     <unit id="contact.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:164,166</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:199,201</note>
       </notes>
       <segment>
         <source> ¿Tienes un proyecto en mente? </source>
@@ -1390,7 +1425,7 @@
     </unit>
     <unit id="contact.email">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:168,170</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:203,205</note>
       </notes>
       <segment>
         <source>Escríbeme</source>
@@ -1398,7 +1433,7 @@
     </unit>
     <unit id="home.pageTitle">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:188</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:225</note>
       </notes>
       <segment>
         <source>Koshisoftware · Desarrollo Angular y NestJS en Perú</source>
@@ -1406,7 +1441,7 @@
     </unit>
     <unit id="home.description">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:192</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:229</note>
       </notes>
       <segment>
         <source>Koshisoftware desarrolla aplicaciones web con Angular y NestJS para empresas en Perú y el extranjero.</source>
@@ -1414,7 +1449,7 @@
     </unit>
     <unit id="services.build.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:199</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:236</note>
       </notes>
       <segment>
         <source>Construir</source>
@@ -1422,7 +1457,7 @@
     </unit>
     <unit id="services.build.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:200</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:237</note>
       </notes>
       <segment>
         <source>Aplicaciones y APIs en TypeScript, rápidas y fáciles de mantener.</source>
@@ -1430,7 +1465,7 @@
     </unit>
     <unit id="services.build.angular">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:202</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:239</note>
       </notes>
       <segment>
         <source>Aplicaciones Angular multilenguaje</source>
@@ -1438,7 +1473,7 @@
     </unit>
     <unit id="services.build.nest">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:203</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:240</note>
       </notes>
       <segment>
         <source>APIs y servicios con NestJS</source>
@@ -1446,7 +1481,7 @@
     </unit>
     <unit id="services.build.team">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:204</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:241</note>
       </notes>
       <segment>
         <source>Un desarrollador senior en tu equipo</source>
@@ -1454,7 +1489,7 @@
     </unit>
     <unit id="services.improve.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:208</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:245</note>
       </notes>
       <segment>
         <source>Mejorar</source>
@@ -1462,7 +1497,7 @@
     </unit>
     <unit id="services.improve.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:209</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:246</note>
       </notes>
       <segment>
         <source>Tu código actual, más rápido, accesible y al día.</source>
@@ -1470,7 +1505,7 @@
     </unit>
     <unit id="services.improve.review">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:211</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:248</note>
       </notes>
       <segment>
         <source>Code reviews</source>
@@ -1478,7 +1513,7 @@
     </unit>
     <unit id="services.improve.upgrade">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:212</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:249</note>
       </notes>
       <segment>
         <source>Upgrades de Angular</source>
@@ -1486,7 +1521,7 @@
     </unit>
     <unit id="services.improve.rescue">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:213</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:250</note>
       </notes>
       <segment>
         <source>Migración de AngularJS y proyectos abandonados</source>
@@ -1494,7 +1529,7 @@
     </unit>
     <unit id="services.improve.lighthouse">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:214</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:251</note>
       </notes>
       <segment>
         <source>Lighthouse y SEO con SSR</source>
@@ -1502,7 +1537,7 @@
     </unit>
     <unit id="services.improve.a11y">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:215</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:252</note>
       </notes>
       <segment>
         <source>Accesibilidad y UX</source>
@@ -1510,7 +1545,7 @@
     </unit>
     <unit id="services.ship.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:219</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:256</note>
       </notes>
       <segment>
         <source>Entregar</source>
@@ -1518,7 +1553,7 @@
     </unit>
     <unit id="services.ship.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:220</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:257</note>
       </notes>
       <segment>
         <source>Herramientas y procesos que escalan con tu equipo.</source>
@@ -1526,7 +1561,7 @@
     </unit>
     <unit id="services.ship.nx">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:222</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:259</note>
       </notes>
       <segment>
         <source>Monorepos con Nx</source>
@@ -1534,7 +1569,7 @@
     </unit>
     <unit id="services.ship.ci">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:223</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:260</note>
       </notes>
       <segment>
         <source>Pipelines de CI/CD</source>
@@ -1542,7 +1577,7 @@
     </unit>
     <unit id="services.ship.tests">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:224</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:261</note>
       </notes>
       <segment>
         <source>Tests con Vitest y Playwright</source>
@@ -1550,7 +1585,7 @@
     </unit>
     <unit id="services.teach.title">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:228</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:265</note>
       </notes>
       <segment>
         <source>Enseñar</source>
@@ -1558,7 +1593,7 @@
     </unit>
     <unit id="services.teach.text">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:229</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:266</note>
       </notes>
       <segment>
         <source>Tu equipo aprende haciendo, en línea.</source>
@@ -1566,7 +1601,7 @@
     </unit>
     <unit id="services.teach.workshops">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:231</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:268</note>
       </notes>
       <segment>
         <source>Talleres de Angular, NestJS y Nx</source>
@@ -1574,7 +1609,7 @@
     </unit>
     <unit id="services.teach.mentoring">
       <notes>
-        <note category="location">libs/frontend/home/feature/src/lib/home.ts:232</note>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:269</note>
       </notes>
       <segment>
         <source>Mentoría y pair programming</source>
@@ -1986,7 +2021,7 @@
         <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:123</note>
       </notes>
       <segment>
-        <source>Stephan Schreiber, fundador de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.</source>
+        <source>Stephan Schreiber, titular de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.</source>
       </segment>
     </unit>
     <unit id="stack.title">
@@ -2061,25 +2096,26 @@
         <source> Dirección </source>
       </segment>
     </unit>
-    <unit id="footer.blog">
+    <unit id="footer.nav">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:51,53</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:55,57</note>
       </notes>
       <segment>
-        <source>Blog</source>
+        <source>Pie de página</source>
       </segment>
     </unit>
-    <unit id="footer.privacy">
+    <unit id="footer.site">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:56,59</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:62,63</note>
       </notes>
       <segment>
-        <source>Política de privacidad</source>
+        <source> Sitio </source>
       </segment>
     </unit>
     <unit id="nav.services">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:29,32</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:68,70</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:32,34</note>
       </notes>
       <segment>
         <source>Servicios</source>
@@ -2087,7 +2123,8 @@
     </unit>
     <unit id="nav.work">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:35,37</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:74,76</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:38,40</note>
       </notes>
       <segment>
         <source>Proyectos</source>
@@ -2095,7 +2132,8 @@
     </unit>
     <unit id="nav.about">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:41,43</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:80,82</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:44,46</note>
       </notes>
       <segment>
         <source>Sobre mí</source>
@@ -2103,15 +2141,40 @@
     </unit>
     <unit id="nav.business">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:47,50</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:86,88</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:50,52</note>
       </notes>
       <segment>
         <source>Empresas</source>
       </segment>
     </unit>
+    <unit id="footer.blog">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:93,94</note>
+      </notes>
+      <segment>
+        <source>Blog</source>
+      </segment>
+    </unit>
+    <unit id="footer.legal">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:100,102</note>
+      </notes>
+      <segment>
+        <source> Legal </source>
+      </segment>
+    </unit>
+    <unit id="footer.privacy">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:106,108</note>
+      </notes>
+      <segment>
+        <source>Política de privacidad</source>
+      </segment>
+    </unit>
     <unit id="nav.blog">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:54,55</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:57,58</note>
       </notes>
       <segment>
         <source>Blog</source>
@@ -2119,7 +2182,7 @@
     </unit>
     <unit id="nav.contact">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:56,58</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-header.ts:60,62</note>
       </notes>
       <segment>
         <source>Hablemos</source>
@@ -2127,7 +2190,7 @@
     </unit>
     <unit id="theme.toggle">
       <notes>
-        <note category="location">libs/frontend/layout/ui/src/lib/theme-toggle.ts:15,18</note>
+        <note category="location">libs/frontend/layout/ui/src/lib/theme-toggle.ts:25,28</note>
       </notes>
       <segment>
         <source>Cambiar tema claro/oscuro</source>

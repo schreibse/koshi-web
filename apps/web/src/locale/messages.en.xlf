@@ -2610,8 +2610,8 @@
         <note category="location">libs/frontend/home/feature/src/lib/sobre-mi.ts:119</note>
       </notes>
       <segment>
-        <source>Stephan Schreiber, fundador de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.</source>
-        <target>Stephan Schreiber, founder of Koshisoftware: web developer working with Angular from Peru, trained in Austria.</target>
+        <source>Stephan Schreiber, titular de Koshisoftware: desarrollador web con Angular desde Perú, formado en Austria.</source>
+        <target>Stephan Schreiber, owner of Koshisoftware: web developer working with Angular from Peru, trained in Austria.</target>
       </segment>
     </unit>
     <unit id="sobre.eyebrow">
@@ -2924,6 +2924,69 @@
       <segment>
         <source>Todos los artículos</source>
         <target>All posts</target>
+      </segment>
+    </unit>
+    <unit id="blog.readingTime">
+      <notes>
+        <note category="location">libs/frontend/blog/feature/src/lib/blog-post.ts:40,41</note>
+      </notes>
+      <segment>
+        <source><ph id="0" equiv="INTERPOLATION" disp="{{ minutos }}"/> min de lectura</source>
+        <target><ph id="0" equiv="INTERPOLATION" disp="{{ minutos }}"/> min read</target>
+      </segment>
+    </unit>
+    <unit id="about.role">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:171,172</note>
+      </notes>
+      <segment>
+        <source> Desarrollador y titular de Koshisoftware </source>
+        <target>Developer and owner of Koshisoftware</target>
+      </segment>
+    </unit>
+    <unit id="contact.terminalCommand">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:211,212</note>
+      </notes>
+      <segment>
+        <source>nuevo-proyecto</source>
+        <target>new-project</target>
+      </segment>
+    </unit>
+    <unit id="contact.terminalQuestion">
+      <notes>
+        <note category="location">libs/frontend/home/feature/src/lib/home.ts:213,215</note>
+      </notes>
+      <segment>
+        <source>? ¿Qué quieres construir?</source>
+        <target>? What do you want to build?</target>
+      </segment>
+    </unit>
+    <unit id="footer.nav">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:55,57</note>
+      </notes>
+      <segment>
+        <source>Pie de página</source>
+        <target>Footer</target>
+      </segment>
+    </unit>
+    <unit id="footer.site">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:62,63</note>
+      </notes>
+      <segment>
+        <source> Sitio </source>
+        <target>Site</target>
+      </segment>
+    </unit>
+    <unit id="footer.legal">
+      <notes>
+        <note category="location">libs/frontend/layout/ui/src/lib/site-footer.ts:100,102</note>
+      </notes>
+      <segment>
+        <source> Legal </source>
+        <target>Legal</target>
       </segment>
     </unit>
   </file>
