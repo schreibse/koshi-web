@@ -1,3 +1,9 @@
+## 0.1.40 (2026-10-24)
+
+### 🩹 Fixes
+
+- **web:** reserve the scrollbar gutter so the layout does not shift ([8075bc5](https://github.com/schreibse/koshi-web/commit/8075bc5))
+
 ## 0.1.39 (2026-10-24)
 
 ### 🚀 Features
