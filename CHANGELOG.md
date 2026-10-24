@@ -1,3 +1,9 @@
+## 0.1.37 (2026-10-24)
+
+### 🩹 Fixes
+
+- **web:** serve the favicons at the site root ([9b82879](https://github.com/schreibse/koshi-web/commit/9b82879))
+
 ## 0.1.36 (2026-10-24)
 
 ### 🩹 Fixes
