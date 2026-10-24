@@ -1,3 +1,9 @@
+## 0.1.35 (2026-10-24)
+
+### 🩹 Fixes
+
+- **home:** let the hero links take taps on phones and tablets ([7089bc0](https://github.com/schreibse/koshi-web/commit/7089bc0))
+
 ## 0.1.34 (2026-10-23)
 
 ### 🚀 Features
