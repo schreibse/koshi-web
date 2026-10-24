@@ -1,3 +1,9 @@
+## 0.1.39 (2026-10-24)
+
+### 🚀 Features
+
+- **web:** add quiet motion to the heroes, services and contact terminal ([3536a0a](https://github.com/schreibse/koshi-web/commit/3536a0a))
+
 ## 0.1.38 (2026-10-24)
 
 ### 🚀 Features
