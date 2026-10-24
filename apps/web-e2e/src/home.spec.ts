@@ -344,3 +344,15 @@ for (const { lang, heading, home } of [
     await expect(page).toHaveURL(new RegExp(`/${lang}/$`));
   });
 }
+
+test('the icons are served at the site root too', async ({ request }) => {
+  for (const [path, type] of [
+    ['/favicon.ico', 'image/vnd.microsoft.icon'],
+    ['/favicon.svg', 'image/svg+xml'],
+    ['/apple-touch-icon.png', 'image/png'],
+  ]) {
+    const response = await request.get(path);
+    expect(response.status(), path).toBe(200);
+    expect(response.headers()['content-type'], path).toBe(type);
+  }
+});
