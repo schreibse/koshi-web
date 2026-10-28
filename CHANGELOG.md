@@ -1,3 +1,9 @@
+## 0.1.41 (2026-10-28)
+
+### 🚀 Features
+
+- **web:** add a kené pattern to the Nosotros section and the Sobre mí page ([09b0615](https://github.com/schreibse/koshi-web/commit/09b0615))
+
 ## 0.1.40 (2026-10-24)
 
 ### 🩹 Fixes
