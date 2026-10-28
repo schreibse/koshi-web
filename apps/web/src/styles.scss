@@ -21,6 +21,7 @@
 
   /* Translucent so background patterns stay visible on the window backdrop's glow. */
   --ks-cell: #f8f8f22e;
+  --ks-kene: #f8f8f212;
 
   color-scheme: dark;
 }
@@ -42,6 +43,7 @@
   --ks-window-shadow: 0 30px 60px -20px #000a;
   --ks-window-backdrop: transparent;
   --ks-cell: #21222c29;
+  --ks-kene: #21222c0f;
 
   color-scheme: light;
 }
@@ -167,6 +169,29 @@
       );
       content: '';
       inset: -30% -20%;
+      pointer-events: none;
+    }
+  }
+
+  /* Shipibo-Konibo kené, fading in from the right edge. */
+  .kene-edge {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(420px, 40%);
+      background: var(--ks-kene);
+      content: '';
+      mask:
+        url('./kene.svg') right -60px top -40px / auto 1100px no-repeat,
+        linear-gradient(to left, #000, transparent 75%);
+      mask-composite: intersect;
       pointer-events: none;
     }
   }

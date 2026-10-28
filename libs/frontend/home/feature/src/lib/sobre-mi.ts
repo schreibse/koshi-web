@@ -33,6 +33,7 @@ const TRAYECTORIA = [
 @Component({
   selector: 'ks-sobre-mi',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { class: 'kene-edge block' },
   styles: `
     h2 {
       margin: 3rem 0 1.25rem;

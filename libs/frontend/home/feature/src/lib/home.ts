@@ -172,7 +172,10 @@ import { TechStack } from './tech-stack';
       <ks-process-pipeline />
     }
 
-    <section id="nosotros" class="border-t border-line py-16 md:py-28">
+    <section
+      id="nosotros"
+      class="kene-edge border-t border-line py-16 md:py-28"
+    >
       <div class="mx-auto max-w-6xl px-4 md:px-10">
         <span class="eyebrow" i18n="@@about.eyebrow">Nosotros</span>
         <h2 class="mb-10 text-3xl md:text-5xl" i18n="@@about.title">
